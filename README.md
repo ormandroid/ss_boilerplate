@@ -4,11 +4,19 @@ A rapid development theme based on Bootstrap 3.0
 
 ## Installation ##
 
-Install SS
-Add [`SiteConfig:
+Install SS.
+
+Copy across all of the files.
+
+Add
+```
+SiteConfig:
   extensions:
-    - BoilerplateConfig`]
+    - BoilerplateConfig
+```
 
-to your config.yml file in the [`mysite/_config`] directory.
+to your config.yml file in the `mysite/_config` directory.
 
-Run a [`dev/build`] and a [`?flush=all`]
+Run a `dev/build` and `?flush=all`
+
+All done!
