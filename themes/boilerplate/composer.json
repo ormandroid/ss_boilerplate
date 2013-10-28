@@ -1,0 +1,16 @@
+{
+    "name": "Boilerplate",
+    "description": "Boilerplate theme for Silverstripe 3",
+    "type": "silverstripe-theme",
+    "keywords": ["silverstripe", "theme"],
+    "stability": "dev",
+    "authors": [
+        {
+            "name": "Ryan Potter",
+            "email": "ryan@toast.co.nz"
+        }
+    ],
+    "require": {
+
+    }
+}

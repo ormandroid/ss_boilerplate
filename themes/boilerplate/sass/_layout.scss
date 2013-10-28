@@ -1,0 +1,231 @@
+/*======================================================================*\
+    Global
+\*======================================================================*/
+
+html,
+body{width: 100%;height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-overflow-scrolling: touch;
+}
+
+img{width: auto;height: auto;max-width:100%;}
+
+input:focus,
+textarea:focus,
+.form-control:focus{
+    @include box-shadow(0,0,0,#000,0);
+}
+
+/*======================================================================*\
+    Header
+\*======================================================================*/
+
+#header{background: $default-background-color-hover;padding: add($gap-sm, $gap-xs) 0;margin-bottom: $gap-md;}
+#logo-container{display: block;}
+
+@media (min-width: $break-sm){
+    #header{padding: $gap-lg 0;margin-bottom: $gap-lg;}
+}
+
+/*---------------------------------------------*\
+    Navigation
+\*---------------------------------------------*/
+
+#main-nav{margin-bottom: 0;background: transparent none;border-width: 0;}
+#main-nav .collapse{padding: 0;}
+#main-nav .navbar-brand{padding-left: 0;}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus,
+#main-nav > .collapse > .nav > li.section > a,
+#main-nav > .collapse > .nav > li.current > a{background: darken($default-background-color, 10%);}
+#select-navigation{border-top-width: 0;}
+#select-navigation.collapse{border-top-width: 0;padding: 0 $gap-lg;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
+#select-navigation select{width: $gap-lg;height: $gap-lg;z-index: 2;border: 0;position: absolute;top: 50%;right:0;margin-top: -$gap-md;background: none transparent;-webkit-appearance: none;opacity: 0;padding:0;}
+#select-navigation .menu-icon{position: absolute;font-size: 1.3em;right: 0;top: 50%;margin-top: -$gap-md;height: $gap-lg;width: $gap-lg;text-align: center;line-height: $gap-lg;
+    @include border-radius(4px);
+}
+#select-navigation .menu-icon.search{right: add($gap-lg, $gap-sm);border-style: solid;border-width: 1px;}
+
+@media (min-width: $break-sm){
+    #select-navigation.navbar-collapse {display: none !important;}
+}
+
+/*======================================================================*\
+    Page
+\*======================================================================*/
+
+#mainContent{margin-bottom: $gap-lg;}
+
+/*---------------------------------------------*\
+    Sidebar
+\*---------------------------------------------*/
+
+#sidebar{margin-top:$gap-lg;}
+.sidebar-nav{background: $default-background-color;
+    @include border-radius();
+}
+.sidebar-nav ul{margin: 0;padding:0;}
+.sidebar-nav ul li{list-style: none;}
+.sidebar-nav ul li a{color: $default-color;display: block;padding: $gap-xs 0;}
+.sidebar-nav ul li a:hover{color: $default-color-hover;text-decoration: none;}
+.sidebar-nav ul ul{margin-left: $gap-sm;}
+.sidebar-nav li.current > a{color: $primary-background-color;}
+.sidebar-nav li.current > a:hover{color: $primary-border-color;}
+
+/*---------------------------------------------*\
+    Blog
+\*---------------------------------------------*/
+
+.blog-item{margin-bottom: $gap-lg}
+
+/*======================================================================*\
+    Footer
+\*======================================================================*/
+
+#footer{padding: add($gap-sm, $gap-xs) 0;background: $default-background-color-hover;}
+
+@media (min-width: $break-sm){
+    #footer{padding: $gap-lg 0;}
+}
+
+/*======================================================================*\
+    Buttons
+\*======================================================================*/
+
+@mixin button($background-color: $default-background-color, $color: $default-color, $border-color: $default-border-color, $background-color-hover: $default-background-color-hover, $color-hover: $default-color-hover, $border-color-hover: $default-border-color-hover){
+    @include palette($background-color, $color, $border-color);
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+        @include palette($background-color-hover, $color-hover, $border-color-hover);
+    }
+    &.btn-shadow{margin-bottom: 4px;
+        @include palette($background-color-hover, $color-hover, $border-color-hover);
+        @include box-shadow(0, 4px, 0, $border-color, $opacity: 1);
+    }
+    &.btn-shadow:active{margin-bottom: 0;margin-top: 4px;
+        @include box-shadow(0, 0, 0, $border-color, $opacity: 0);
+    }
+}
+
+.btn-default{
+    @include palette($default-background-color, $default-color, $default-border-color);
+}
+.btn-default.btn-shadow{
+    margin-bottom: 4px;
+    box-shadow: 0 4px $default-border-color;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {text-decoration: none;
+    @include palette($default-background-color-hover, $default-color-hover, $default-border-color-hover);
+}
+.btn-inverse{
+    @include palette($inverse-background-color, $inverse-color, $inverse-border-color);
+}
+.btn-inverse.btn-shadow{
+    box-shadow: 0 4px $inverse-border-color;
+}
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.open .dropdown-toggle.btn-inverse {text-decoration: none;
+    @include palette($inverse-background-color-hover, $inverse-color-hover, $inverse-border-color-hover);
+}
+.btn-primary{
+    @include button($primary-background-color, $primary-color, $primary-border-color, $primary-background-color-hover, $primary-color-hover, $primary-border-color-hover);
+}
+.btn-success{
+    @include palette($success-background-color, $success-color, $success-border-color);
+}
+.btn-success.btn-shadow{
+    box-shadow: 0 4px $success-border-color;
+}
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.open .dropdown-toggle.btn-success {text-decoration: none;
+    @include palette($success-background-color-hover, $success-color-hover, $success-border-color-hover);
+}
+.btn-info{
+    @include palette($info-background-color, $info-color, $info-border-color);
+}
+.btn-info.btn-shadow{
+    box-shadow: 0 4px $info-border-color;
+}
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {text-decoration: none;
+    @include palette($info-background-color-hover, $info-color-hover, $info-border-color-hover);
+}
+.btn-warning{
+    @include palette($warning-background-color, $warning-color, $warning-border-color);
+}
+.btn-warning.btn-shadow{
+    box-shadow: 0 4px $warning-border-color;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.open .dropdown-toggle.btn-warning {text-decoration: none;
+    @include palette($warning-background-color-hover, $warning-color-hover, $warning-border-color-hover);
+}
+.btn-danger{
+    @include palette($danger-background-color, $danger-color, $danger-border-color);
+}
+.btn-danger.btn-shadow{
+    box-shadow: 0 4px $danger-border-color;
+}
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.open .dropdown-toggle.btn-danger {text-decoration: none;
+    @include palette($danger-background-color-hover, $danger-color-hover, $danger-border-color-hover);
+}
+
+.btn-shadow{margin-bottom:4px;}
+.btn-shadow:active{margin-bottom: 0;margin-top: 4px;
+    box-shadow: none!important;
+}
+
+/*======================================================================*\
+    Alerts
+\*======================================================================*/
+
+.message{padding: $gap-sm;margin-top: $gap-sm;border: 1px solid transparent;display: inline-block;
+    @include border-radius(4px);
+    @include palette($info-background-color, $info-color, $info-border-color);
+}
+
+.message.required{
+    @include palette($danger-background-color, $danger-color, $danger-border-color);
+}
+
+/*======================================================================*\
+    Forms
+\*======================================================================*/
+
+.form-control:focus {border-color: $primary-background-color}
+
+.holder-required input,
+.holder-required input:focus,
+.holder-required textarea:focus,
+.holder-required textarea{border-color: $danger-border-color}
+
+/*======================================================================*\
+    Vendors
+\*======================================================================*/
+
+.breadcrumb{background: $default-background-color;padding: 0;}

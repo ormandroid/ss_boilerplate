@@ -1,0 +1,17 @@
+assets/
+cms/
+/CONTRIBUTING.md
+/.htaccess
+/favicon.ico
+framework/
+/index.php
+/install_.php
+/install-frameworkmissing.html
+/Makefile
+/mysite/.htaccess
+/mysite/_config.php
+/mysite/code/
+/themes/boilerplate/.sass-cache/
+nbproject/
+vendor/
+/web.config
