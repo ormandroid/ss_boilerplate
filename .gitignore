@@ -10,6 +10,7 @@ framework/
 /Makefile
 /mysite/.htaccess
 /mysite/_config.php
+/mysite/_config/
 /mysite/code/
 /themes/boilerplate/.sass-cache/
 nbproject/
