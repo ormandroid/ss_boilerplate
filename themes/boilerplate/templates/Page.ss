@@ -36,7 +36,6 @@
                 <section id="mainContent">
                     <div class="container">
                         <div class="typography" role="main">
-                            <a href="#" class="btn btn-lg btn-primary btn-shadow">Button Text</a>
                             <% if SiteConfig.Breadcrumbs %>
                                 <% include Breadcrumbs %>
                             <% end_if %>
