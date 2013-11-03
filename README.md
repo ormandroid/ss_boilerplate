@@ -18,5 +18,3 @@ SiteConfig:
 to your config.yml file in the `mysite/_config` directory.
 
 Run a `dev/build` and `?flush=all`
-
-All done!
