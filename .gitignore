@@ -1,8 +1,18 @@
-# Ignore these
-*
-# Except these
-!mysite/Boilerplate/
-!mysite/_config/config.yml
-!themes/boilerplate/
-!.gitignore
-!README.md
+.htaccess
+assets/
+cms/
+CONTRIBUTING.md
+favicon.ico
+framework/
+index.php
+install-frameworkmissing.html
+install.php
+Makefile
+mysite/_config.php
+mysite/.htaccess
+mysite/code
+nbproject
+themes/.DS_Store
+vendor/
+web.config
+themes/boilerplate/.sass-cache

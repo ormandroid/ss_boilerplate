@@ -6,7 +6,7 @@
             </a><!-- /.logo-container .pull-left -->
         <% else %>
             <div class="navbar-header">
-                <a class="navbar-brand hidden-sm" href="$BaseHref" rel="home">
+                <a class="navbar-brand" href="$BaseHref" rel="home">
                     $SiteConfig.Title
                 </a>
             </div>
@@ -19,7 +19,7 @@
                     <% loop $Menu(1) %>
                         <% if Children %>
                             <li class="$LinkingMode dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="icon-caret-down"></i></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-caret-down"></i></a>
                                 <ul class="dropdown-menu">
                                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                                     <% loop Children %>
@@ -33,13 +33,13 @@
                     <% end_loop %>
                 </ul><!-- /.nav navbar-nav -->
                 <% if $SearchForm %>
-                    <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="icon-search"></i></a>
+                    <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
                 <% end_if %>
             </div><!-- /.collapse navbar-collapse -->
             <div id="select-navigation" class="collapse navbar-collapse visible-xs">
-                <div class="menu-icon btn-primary btn-shadow"><i class="icon-align-justify"></i></div><!-- /.menu-icon -->
+                <div class="menu-icon btn-primary btn-shadow"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
                 <% if $SearchForm %>
-                    <a data-toggle="modal" href="#searchModal" class="btn-default navbar-btn menu-icon search"><i class="icon-search"></i></a>
+                    <a data-toggle="modal" href="#searchModal" class="btn-default navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
                 <% end_if %>
                 <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
                     <% if LinkOrCurrent = current %>

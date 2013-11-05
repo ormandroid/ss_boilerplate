@@ -105,10 +105,10 @@ textarea:focus,
     }
     &.btn-shadow{margin-bottom: 4px;
         @include palette($background-color-hover, $color-hover, $border-color-hover);
-        @include box-shadow(0, 4px, 0, $border-color, $opacity: 1);
+        @include bp-box-shadow(0, 4px, 0, $border-color, $opacity: 1);
     }
     &.btn-shadow:active{margin-bottom: 0;margin-top: 4px;
-        @include box-shadow(0, 0, 0, $border-color, $opacity: 0);
+        @include bp-box-shadow(0, 0, 0, $border-color, $opacity: 0);
     }
 }
 
@@ -117,7 +117,7 @@ textarea:focus,
 }
 .btn-default.btn-shadow{
     margin-bottom: 4px;
-    box-shadow: 0 4px $default-border-color;
+    bp-box-shadow: 0 4px $default-border-color;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -130,7 +130,7 @@ textarea:focus,
     @include palette($inverse-background-color, $inverse-color, $inverse-border-color);
 }
 .btn-inverse.btn-shadow{
-    box-shadow: 0 4px $inverse-border-color;
+    bp-box-shadow: 0 4px $inverse-border-color;
 }
 .btn-inverse:hover,
 .btn-inverse:focus,
@@ -146,7 +146,7 @@ textarea:focus,
     @include palette($success-background-color, $success-color, $success-border-color);
 }
 .btn-success.btn-shadow{
-    box-shadow: 0 4px $success-border-color;
+    bp-box-shadow: 0 4px $success-border-color;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -159,7 +159,7 @@ textarea:focus,
     @include palette($info-background-color, $info-color, $info-border-color);
 }
 .btn-info.btn-shadow{
-    box-shadow: 0 4px $info-border-color;
+    bp-box-shadow: 0 4px $info-border-color;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -172,7 +172,7 @@ textarea:focus,
     @include palette($warning-background-color, $warning-color, $warning-border-color);
 }
 .btn-warning.btn-shadow{
-    box-shadow: 0 4px $warning-border-color;
+    bp-box-shadow: 0 4px $warning-border-color;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -185,7 +185,7 @@ textarea:focus,
     @include palette($danger-background-color, $danger-color, $danger-border-color);
 }
 .btn-danger.btn-shadow{
-    box-shadow: 0 4px $danger-border-color;
+    bp-box-shadow: 0 4px $danger-border-color;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -197,7 +197,7 @@ textarea:focus,
 
 .btn-shadow{margin-bottom:4px;}
 .btn-shadow:active{margin-bottom: 0;margin-top: 4px;
-    box-shadow: none!important;
+    bp-box-shadow: none!important;
 }
 
 /*======================================================================*\

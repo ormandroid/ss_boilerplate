@@ -91,7 +91,7 @@ $danger-border-color-hover: darken($danger-background-color, 20%);
     border-radius: $radius;
 }
 
-@mixin box-shadow($h: 1px, $v: 1px, $s: 3px, $color: #000000, $opacity: 0.15){
+@mixin bp-box-shadow($h: 1px, $v: 1px, $s: 3px, $color: #000000, $opacity: 0.15){
     -moz-box-shadow: $h $v $s rgba($color, $opacity);
     -webkit-box-shadow: $h $v $s rgba($color, $opacity);
     box-shadow: $h $v $s rgba($color, $opacity);
