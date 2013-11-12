@@ -1,8 +1,8 @@
-<% if $Menu(2) %><div class="row"><% end_if %>
+<div class="row">
 
-    <div class="hidden-xs"><% include SideBar %></div><!-- /.hidden-xs -->
+    <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
-    <% if $Menu(2) %><div class="col-xs-12 col-sm-9"><% end_if %>
+    <div class="col-xs-12 col-sm-9">
         <article>
             <% if $BlogImage %>
                 <p>$BlogImage.setWidth(850)</p>
@@ -17,8 +17,8 @@
         </article>
         $Form
         $PageComments
-    <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 --><% end_if %>
+    <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 -->
 
-    <div class="visible-xs"><% include SideBar %></div><!-- /.hidden-xs -->
+    <div class="visible-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
-<% if $Menu(2) %></div><!-- /.row --><% end_if %>
+</div><!-- /.row -->

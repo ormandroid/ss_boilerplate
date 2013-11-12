@@ -1,12 +1,4 @@
 /*======================================================================*\
-    Media Breakpoints
-\*======================================================================*/
-
-$break-sm: 768px;
-$break-md: 992px;
-$break-lg: 1200px;
-
-/*======================================================================*\
     Gaps
 \*======================================================================*/
 
@@ -14,88 +6,6 @@ $gap-lg: 40px;
 $gap-md: 20px;
 $gap-sm: 10px;
 $gap-xs: 5px;
-
-/*======================================================================*\
-    Colors
-\*======================================================================*/
-
-$default-color: #777;
-$default-color-hover: #555;
-$default-background-color: #fff;
-$default-background-color-hover: darken($default-background-color, 5%);
-$default-border-color: darken($default-background-color, 10%);
-$default-border-color-hover: darken($default-background-color, 20%);
-
-$inverse-color: #fff;
-$inverse-color-hover: #fff;
-$inverse-background-color: #363636;
-$inverse-background-color-hover: darken($inverse-background-color, 5%);
-$inverse-border-color: darken($inverse-background-color, 10%);
-$inverse-border-color-hover: darken($inverse-background-color, 20%);
-
-$primary-color: #fff;
-$primary-color-hover: #fff;
-$primary-background-color: #41cac0;
-$primary-background-color-hover: darken($primary-background-color, 5%);
-$primary-border-color: darken($primary-background-color, 10%);
-$primary-border-color-hover: darken($primary-background-color, 20%);
-
-$success-color: #fff;
-$success-color-hover: #fff;
-$success-background-color: #78CD51;
-$success-background-color-hover: darken($success-background-color, 5%);
-$success-border-color: darken($success-background-color, 10%);
-$success-border-color-hover: darken($success-background-color, 20%);
-
-$info-color: #fff;
-$info-color-hover: #fff;
-$info-background-color: #58c9f3;
-$info-background-color-hover: darken($info-background-color, 5%);
-$info-border-color: darken($info-background-color, 10%);
-$info-border-color-hover: darken($info-background-color, 20%);
-
-$warning-color: #fff;
-$warning-color-hover: #fff;
-$warning-background-color: #f0ad4e;
-$warning-background-color-hover: darken($warning-background-color, 5%);
-$warning-border-color: darken($warning-background-color, 10%);
-$warning-border-color-hover: darken($warning-background-color, 20%);
-
-$danger-color: #fff;
-$danger-color-hover: #fff;
-$danger-background-color: #ff6c60;
-$danger-background-color-hover: darken($danger-background-color, 5%);
-$danger-border-color: darken($danger-background-color, 10%);
-$danger-border-color-hover: darken($danger-background-color, 20%);
-
-/*======================================================================*\
-    Mixins
-\*======================================================================*/
-
-@mixin palette($background-color: $default-background-color, $color: $default-color, $border-color: $default-border-color){
-    background-color: $background-color;
-    border-color: $border-color;
-    color: $color;
-}
-
-@mixin transition($property: all, $duration: .1s, $effect: linear){
-    -webkit-transition: $property $duration $effect;
-    -moz-transition: $property $duration $effect;
-    -o-transition: $property $duration $effect;
-    transition: $property $duration $effect;
-}
-
-@mixin border-radius($radius: 4px){
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-}
-
-@mixin bp-box-shadow($h: 1px, $v: 1px, $s: 3px, $color: #000000, $opacity: 0.15){
-    -moz-box-shadow: $h $v $s rgba($color, $opacity);
-    -webkit-box-shadow: $h $v $s rgba($color, $opacity);
-    box-shadow: $h $v $s rgba($color, $opacity);
-}
 
 /*======================================================================*\
     Functions

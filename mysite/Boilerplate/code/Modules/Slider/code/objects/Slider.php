@@ -1,4 +1,5 @@
 <?php
+
 class Slider extends DataObject{
 
     static $db = array (
@@ -17,21 +18,16 @@ class Slider extends DataObject{
 
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab("Root.Main", new TextField("title"), 'Content');
-
-        $gridFieldConfigSlider = GridFieldConfig::create()->addComponents(
-            new GridFieldToolbarHeader(''),
-            new GridFieldAddNewButton(),
-            new GridFieldDataColumns(),
-            new GridFieldEditButton(),
-            new GridFieldDeleteAction(''),
-            new GridFieldDetailForm()
-        );
-        $gridFieldSliderItem = new GridField('SliderItems', 'SliderItem', new DataList('SliderItem'), $gridFieldConfigSlider);
-        $fields->addFieldToTab('Root.Main', $gridFieldSliderItem);
+        $fields->addFieldToTab("Root.Main", new TextField('title'), 'Content');
+        $fields->addFieldToTab('Root.Main', new HiddenField('SiteConfigID'));
 
         return $fields;
 
+    }
+
+    public function populateDefaults() {
+        $this->SiteConfigID = SiteConfig::current_site_config()->ID;
+        parent::populateDefaults();
     }
 
 }

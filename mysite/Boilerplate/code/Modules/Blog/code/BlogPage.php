@@ -10,6 +10,10 @@ class BlogPage extends Page {
         'BlogImage' => 'Image'
     );
 
+    private static $defaults = array(
+        'ShowInMenus' => 0
+    );
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();

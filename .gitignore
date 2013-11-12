@@ -10,7 +10,6 @@ install.php
 Makefile
 mysite/_config.php
 mysite/.htaccess
-mysite/code
 nbproject
 themes/.DS_Store
 vendor/

@@ -48,7 +48,6 @@ class BoilerplateConfig extends DataExtension {
         $fields->addFieldToTab("Root.Main", new HeaderField("Logo"));
         $fields->addFieldToTab("Root.Main", new UploadField("LogoImage", "Choose an Image For Your Site Logo"));
 
-
     }
 
 }

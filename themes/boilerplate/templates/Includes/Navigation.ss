@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-xs-8 col-sm-2">
+    <div class="col-xs-8 col-sm-3 col-md-2">
         <% if SiteConfig.LogoImage %>
             <a id="logo-container" class="pull-left" href="$BaseHref" rel="home">
                 $SiteConfig.LogoImage
@@ -8,11 +8,11 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="$BaseHref" rel="home">
                     $SiteConfig.Title
-                </a>
-            </div>
+                </a><!-- /.navbar-brand -->
+            </div><!-- /.navbar-header -->
         <% end_if %>
-    </div><!-- /.col-xs-8 col-sm-2 -->
-    <div class="col-xs-4 col-sm-10">
+    </div><!-- /.col-xs-8 col-sm-3 col-md-2 -->
+    <div class="col-xs-4 col-sm-9 col-md-10">
         <nav id="main-nav" class="navbar navbar-default" role="navigation">
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
@@ -37,7 +37,7 @@
                 <% end_if %>
             </div><!-- /.collapse navbar-collapse -->
             <div id="select-navigation" class="collapse navbar-collapse visible-xs">
-                <div class="menu-icon btn-primary btn-shadow"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
+                <div class="menu-icon btn-primary"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
                 <% if $SearchForm %>
                     <a data-toggle="modal" href="#searchModal" class="btn-default navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
                 <% end_if %>
@@ -73,7 +73,7 @@
                 <div class="clearfix"></div><!-- /.clearfix -->
             </div><!-- /.select-navigation -->
         </nav><!-- /#main-nav .navbar navbar-default -->
-    </div><!-- /.col-xs-2 col-sm-10 -->
+    </div><!-- /.col-xs-2 col-sm-9 col-md-10 -->
 </div><!-- /.row -->
 
 <% if $SearchForm %>

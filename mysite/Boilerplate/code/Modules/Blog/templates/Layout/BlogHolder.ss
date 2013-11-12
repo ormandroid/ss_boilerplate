@@ -1,8 +1,8 @@
-<% if $Menu(2) %><div class="row"><% end_if %>
+<div class="row">
 
-    <div class="hidden-xs"><% include SideBar %></div><!-- /.hidden-xs -->
+    <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
-    <% if $Menu(2) %><div class="col-xs-12 col-sm-9"><% end_if %>
+    <div class="col-xs-12 col-sm-9">
         <article>
             <div class="page-header">
                 <h1>$Title</h1>
@@ -10,7 +10,7 @@
             <div class="content">$Content</div><!-- /.content -->
         </article>
         <div class="row">
-            <% loop $Children %>
+            <% loop $AllChildren %>
                 <article class="blog-item $Top.ColumnClass">
                     <h2 class="blog-title"><a href="$Link" title="Read more on &quot;{$Title}&quot;">$Title</a></h2><!-- /.blog-title -->
                     <% if $Date && $Author %>
@@ -35,8 +35,8 @@
         </div><!-- /.row -->
         $Form
         $PageComments
-    <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 --><% end_if %>
+    </div><!-- /.col-xs-12 col-sm-9 -->
 
-    <div class="visible-xs"><% include SideBar %></div><!-- /.hidden-xs -->
+    <div class="visible-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
-<% if $Menu(2) %></div><!-- /.row --><% end_if %>
+</div><!-- /.row -->

@@ -8,16 +8,14 @@ class SliderConfig extends DataExtension {
 
     public function updateCMSFields(FieldList $fields) {
 
-		$gridFieldConfigSlider = GridFieldConfig::create()->addComponents(
-            new GridFieldToolbarHeader(''),
-            new GridFieldAddNewButton(),
-            new GridFieldDataColumns(),
-            new GridFieldEditButton(),
-            new GridFieldDeleteAction(''),
-            new GridFieldDetailForm()
+        $config = GridFieldConfig_RecordEditor::create();
+        $gridField = new GridField(
+            'Sliders',
+            'Sliders',
+            Slider::get(),
+            $config
         );
-        $gridFieldSlider = new GridField('Sliders', 'Slider', new DataList('Slider'), $gridFieldConfigSlider);
-        $fields->addFieldToTab('Root.Slider', $gridFieldSlider);
+        $fields->addFieldToTab('Root.Sliders', $gridField);
 
     }
 

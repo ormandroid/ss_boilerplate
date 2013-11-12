@@ -1,0 +1,31 @@
+/*======================================================================*\
+    Forms
+\*======================================================================*/
+
+/*---------------------------------------------*\
+    Inputs
+\*---------------------------------------------*/
+
+input:focus,
+textarea:focus,
+.form-control:focus{
+    @include box-shadow(none);
+}
+.form-control:focus {border-color: $gray}
+
+.holder-required{
+    input,
+    input:focus,
+    textarea,
+    textarea:focus{border-color: $btn-danger-border;}
+}
+
+/*---------------------------------------------*\
+    Messages
+\*---------------------------------------------*/
+
+.message {margin-top: $gap-sm;display: inline-block;padding: $alert-padding;margin-bottom: $line-height-computed;border: 1px solid transparent;border-radius: $alert-border-radius;
+    > p {margin-bottom: 0;}
+    > p + p {margin-top: 5px;}
+    &.required {border-color: $alert-danger-border;color: $alert-danger-text;background-color: $alert-danger-bg;}
+}

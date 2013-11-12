@@ -39,10 +39,22 @@ class ContactPage_Controller extends Page_Controller {
 
     public function ContactForm() {
 
+        $name = new TextField('Name');
+        $name->setAttribute('placeholder', 'Enter your name');
+        $name->setAttribute('required', 'required');
+
+        $email = new EmailField('Email');
+        $email->setAttribute('placeholder', 'Enter your email address');
+        $email->setAttribute('required', 'required');
+
+        $message = new TextareaField('Message');
+        $message->setAttribute('placeholder', 'Enter your message');
+        $message->setAttribute('required', 'required');
+
         $fields = new FieldList(
-            new TextField('Name'),
-            new EmailField('Email'),
-            new TextareaField('Message')
+            $name,
+            $email,
+            $message
         );
 
         $actions = new FieldList(
