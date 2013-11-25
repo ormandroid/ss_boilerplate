@@ -21,8 +21,8 @@ Run a `dev/build` and `?flush=all`
 
 ## Screenshots ##
 
-![Home Screenshot](screenshots/home.jpg "Home")
-![Home Screenshot Mobile](screenshots/home-phone.jpg "Home Mobile")
+![Home Screenshot](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/home.png "Home")
+![Home Screenshot Mobile](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/home-phone.png "Home Mobile")
 
 ## Thanks to ##
 
