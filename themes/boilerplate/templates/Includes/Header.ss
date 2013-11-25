@@ -11,7 +11,29 @@
     <% end_if %>
 <% end_if %>
 <header id="header" role="banner">
-    <section class="container">
-        <% include Navigation %>
-    </section><!-- /.container -->
+    <section id="headingHolder">
+        <div class="container">
+            <hgroup class="site-heading hidden-xs">
+                <% if SiteConfig.LogoImage %>
+                    <div class="media">
+                        <a id="logo-container" class="pull-left" href="$BaseHref" rel="home">
+                            $SiteConfig.LogoImage
+                        </a><!-- /.logo-container .pull-left -->
+                        <div class="media-body">
+                            <h1><a href="$BaseHref">$SiteConfig.Title</a></h1>
+                            <h2 class="tagline">$SiteConfig.Tagline</h2><!-- /.tagline -->
+                        </div>
+                    </div>
+                <% else %>
+                    <h1><a href="$BaseHref">$SiteConfig.Title</a></h1>
+                    <h2 class="tagline">$SiteConfig.Tagline</h2><!-- /.tagline -->
+                <% end_if %>
+            </hgroup><!-- /#headingHolder .site-heading -->
+        </div><!-- /.container -->
+    </section><!-- /#headingContainer -->
+    <section id="navigationHolder">
+        <div class="container">
+            <% include Navigation %>
+        </div><!-- /.container -->
+    </section><!-- /#navigationHolder -->
 </header><!-- /.header -->

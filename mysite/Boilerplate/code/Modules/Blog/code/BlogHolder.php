@@ -1,6 +1,9 @@
 <?php
 class BlogHolder extends Page {
+
     private static $allowed_children = array('BlogPage');
+
+    private static $icon = 'mysite/Boilerplate/code/Modules/Blog/images/blogs-stack.png';
 
     private static $db = array(
         'Columns' => 'Int'
