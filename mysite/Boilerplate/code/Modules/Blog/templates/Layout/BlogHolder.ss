@@ -21,12 +21,12 @@
                         <div class="blog-content media">
                             <% if $BlogImage %>
                                 <a href="$Link" class="pull-left" title="Read more on &quot;{$Title}&quot;">
-                                    <span class="media-object">$BlogImage.CroppedImage(50, 50)</span><!-- /.media-object -->
+                                    <span class="media-object">$BlogImage.CroppedImage(100, 100)</span><!-- /.media-object -->
                                 </a>
                             <% end_if %>
                             <div class="media-body">
-                                <p>$Content.FirstParagraph</p>
-                                <a href="$Link" class="btn btn-sm btn-default" title="Read more on &quot;{$Title}&quot;">Read more</a>
+                                <p>$Content.Summary</p>
+                                <a href="$Link" class="btn btn-sm btn-link" title="Read more on &quot;{$Title}&quot;">Read more</a>
                             </div><!-- /.media-body -->
                         </div><!-- /.blog-content media -->
                     </article><!-- /.blog-item -->

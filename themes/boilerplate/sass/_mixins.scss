@@ -6,3 +6,12 @@
     @include border-top-radius($radius);
     @include border-bottom-radius($radius);
 }
+
+@mixin well-variant($color: $btn-default-color, $brand: $gray-lighter) {
+    color: $color;
+    background-color: $brand;
+    border-color: darken($brand, 5%);
+    a{
+        color: $color;
+    }
+}

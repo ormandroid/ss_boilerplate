@@ -2,8 +2,8 @@
     Colors
 \*======================================================================*/
 
-$brand-secondary: #57c2ae;
-$brand-inverse: #222;
+$brand-secondary: #57c2ae !default;
+$brand-inverse: #444 !default;
 
 $btn-secondary-color: #fff !default;
 $btn-secondary-bg: $brand-secondary !default;
@@ -17,11 +17,11 @@ $btn-inverse-border: darken($btn-inverse-bg, 5%) !default;
     Gaps
 \*======================================================================*/
 
-$gap-xl: 80px;
-$gap-lg: 40px;
-$gap-md: 20px;
-$gap-sm: 10px;
-$gap-xs: 5px;
+$gap-xl: 80px !default;
+$gap-lg: 40px !default;
+$gap-md: 20px !default;
+$gap-sm: 10px !default;
+$gap-xs: 5px !default;
 
 /*======================================================================*\
     Functions

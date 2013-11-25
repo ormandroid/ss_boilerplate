@@ -13,15 +13,16 @@
         <% end_if %>
     </div><!-- /.col-xs-8 col-sm-3 col-md-2 -->
     <div class="col-xs-4 col-sm-9 col-md-10">
+
         <nav id="main-nav" class="navbar navbar-default" role="navigation">
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
+
+            <div class="navbar-collapse hidden-sm hidden-xs">
+                <ul class="nav navbar-nav pull-right">
                     <% loop $Menu(1) %>
                         <% if Children %>
                             <li class="$LinkingMode dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-caret-down"></i></a>
+                                <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
                                 <ul class="dropdown-menu">
-                                    <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                                     <% loop Children %>
                                         <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                                     <% end_loop %>
@@ -36,7 +37,32 @@
                     <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
                 <% end_if %>
             </div><!-- /.collapse navbar-collapse -->
-            <div id="select-navigation" class="collapse navbar-collapse visible-xs">
+
+            <div class="navbar-collapse visible-sm">
+                <ul class="nav navbar-nav pull-right">
+                    <% loop $Menu(1) %>
+                        <% if Children %>
+                            <li class="$LinkingMode dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-caret-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                                    <li class="divider"></li>
+                                    <% loop Children %>
+                                        <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                                    <% end_loop %>
+                                </ul><!-- /.dropdown-menu -->
+                            </li><!-- /.dropdown -->
+                        <% else %>
+                            <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                        <% end_if %>
+                    <% end_loop %>
+                </ul><!-- /.nav navbar-nav -->
+                <% if $SearchForm %>
+                    <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
+                <% end_if %>
+            </div><!-- /.collapse navbar-collapse -->
+
+            <div id="select-navigation" class="visible-xs">
                 <div class="menu-icon btn-primary"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
                 <% if $SearchForm %>
                     <a data-toggle="modal" href="#searchModal" class="btn-default navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
@@ -72,7 +98,9 @@
                 </select><!-- /.input-sm -->
                 <div class="clearfix"></div><!-- /.clearfix -->
             </div><!-- /.select-navigation -->
+
         </nav><!-- /#main-nav .navbar navbar-default -->
+
     </div><!-- /.col-xs-2 col-sm-9 col-md-10 -->
 </div><!-- /.row -->
 
