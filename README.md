@@ -21,8 +21,8 @@ Run a `dev/build` and `?flush=all`
 
 ## Screenshots ##
 
-![Home Screenshot](/screenshots/home.jpg "Home")
-![Home Screenshot Mobile](/screenshots/home-phone.jpg "Home Mobile")
+![Home Screenshot](screenshots/home.jpg "Home")
+![Home Screenshot Mobile](screenshots/home-phone.jpg "Home Mobile")
 
 ## Thanks to ##
 
