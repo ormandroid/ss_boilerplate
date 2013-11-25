@@ -2,24 +2,10 @@
 class Page extends SiteTree {
 
 	private static $db = array(
-        'PageSlider' => 'int'
-    );
+	);
 
-	private static $has_one = array();
-
-    function getCMSFields() {
-
-        $fields = parent::getCMSFields();
-
-        $fields->addFieldToTab('Root.Settings', new HeaderField('Slider'));
-        $sliders = $this->SiteConfig->Sliders()->map();
-        $pageSliders = new DropDownField('PageSlider', 'Slider', $sliders);
-        $pageSliders->setEmptyString('(No Slider)');
-        $fields->addFieldToTab('Root.Settings', $pageSliders);
-
-        return $fields;
-
-    }
+	private static $has_one = array(
+	);
 
 }
 class Page_Controller extends ContentController {
@@ -52,19 +38,6 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS('layout');
 		Requirements::themedCSS('typography');
 		Requirements::themedCSS('form');
-
-     //   var_dump(SiteConfig::current_site_config()); die();
 	}
-
-
-    //TODO: Loop through sliders instead of sliderItems. Y U NO WORK PROPERLY?
-    public function GetSliderItems(){
-        if($this->PageSlider){
-            $sliderItems = SliderItem::get()->filter('SliderID', $this->PageSlider);
-            return $sliderItems;
-        }else{
-            return;
-        }
-    }
 
 }

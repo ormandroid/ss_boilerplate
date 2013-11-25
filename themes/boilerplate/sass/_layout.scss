@@ -89,6 +89,18 @@ img{width: auto;height: auto;max-width:100%;}
     #footer{padding: $gap-lg 0;}
 }
 
+/*---------------------------------------------*\
+    Login form
+\*---------------------------------------------*/
+
+#MemberLoginForm_LoginForm{
+    #ForgotPassword{margin-top: $gap-sm}
+}
+
+@media (min-width: $screen-sm){
+    #MemberLoginForm_LoginForm{max-width: 50%;}
+}
+
 /*======================================================================*\
     Modules
 \*======================================================================*/
@@ -117,6 +129,14 @@ img{width: auto;height: auto;max-width:100%;}
 
 .btn-shadow{margin-bottom:4px;
     &:active{margin-bottom: 0;margin-top: 4px;}
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+
+.btn-inverse {
+  @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
 }
 
 /*======================================================================*\

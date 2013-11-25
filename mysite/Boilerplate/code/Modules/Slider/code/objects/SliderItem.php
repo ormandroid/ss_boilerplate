@@ -3,15 +3,12 @@
 class SliderItem extends DataObject{
 
     static $db = array (
-        'CustomLink' => 'Varchar(255)'
-    );
-
-    static $belongs_to = array(
-        'Slider' => 'Slider'
+        'CustomLink' => 'Varchar(255)',
+        'Caption' => 'HTMLText'
     );
 
     static $has_one = array (
-        'Slider' => 'Slider',
+        'Page' => 'Page',
         'Image' => 'Image',
         'Link' => 'SiteTree'
     );
@@ -30,16 +27,17 @@ class SliderItem extends DataObject{
 
     function getCMSFields() {
 
-        $fields = parent::getCMSFields();
+        $fields = FieldList::create(TabSet::create('Root'));
 
-        //TODO: Find a way to add an empty value into TreeDropdownField
+        //TODO: add empty field to dropdown
         $fields->addFieldToTab('Root.Main', new TreeDropdownField('LinkID', 'Link to page', 'SiteTree'));
         $customLink = new TextField('CustomLink', 'Custom link (Will override "Link to page")');
         $customLink->setAttribute('placeholder', 'Http://');
         $fields->addFieldToTab('Root.Main', $customLink);
 
-        $fields->addFieldToTab("Root.Main", new UploadField("Image"));
-        $fields->addFieldToTab('Root.Main', new HiddenField('SliderID'));
+        $fields->addFieldToTab("Root.Main", new UploadField('Image'));
+        $fields->addFieldToTab("Root.Main", new HtmlEditorField('Caption'));
+
         return $fields;
 
     }
