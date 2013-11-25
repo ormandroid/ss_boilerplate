@@ -2,6 +2,14 @@
 
 A rapid development theme based on Bootstrap 3.0
 
+## Features ##
+
+* [Sass Bootstrap](https://github.com/thomas-mcdonald/bootstrap-sass)
+* [Font Awesome](http://fontawesome.io/)
+* Blog
+* Sliders
+* Contact Form
+
 ## Installation ##
 
 Install SS.
@@ -19,7 +27,7 @@ to your config.yml file in the `mysite/_config` directory.
 
 Run a `dev/build` and `?flush=all`
 
-* Note: The screenshots folder is not neccessary for your website *
+* Note: The screenshots folder is not neccessary for your website
 
 ## Screenshots ##
 
