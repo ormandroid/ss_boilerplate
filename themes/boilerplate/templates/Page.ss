@@ -14,10 +14,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="shortcut icon" href="$ThemeDir/favicon.ico" />
         <% require themedCSS('main') %>
-        <% require javascript({$themedir}j/js/jquery.1.10.2.min.js) %>
-        <% require javascript({$themedir}j/js/modernizr.2.6.2.js) %>
-        <% require javascript({$themedir}j/js/bootstrap.min.js) %>
-        <% require javascript({$themedir}j/js/script.js) %>
+        <% require javascript(themes/boilerplate/js/jquery.1.10.2.min.js) %>
+        <% require javascript(themes/boilerplate/js/modernizr.2.6.2.js) %>
+        <% require javascript(themes/boilerplate/js/bootstrap.min.js) %>
+        <% require javascript(themes/boilerplate/js/script.js) %>
         <!--[if lt IE 9]>
             <script src="$themeDir/js/html5.js"></script>
         <![endif]-->
