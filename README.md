@@ -1,6 +1,6 @@
 # SS Boilerplate #
 
-A rapid development theme based on Bootstrap 3.0
+A rapid development theme based on Bootstrap 3.x
 
 ## Features ##
 
