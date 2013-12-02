@@ -12,7 +12,8 @@ class BoilerplateConfig extends DataExtension {
 		'PanelNavigation' => 'Boolean(1)',
 		'Phone' => 'Varchar(255)',
 		'Email' => 'Varchar(255)',
-		'ShowCompanyDetails' => 'Boolean(1)'
+		'ShowCompanyDetails' => 'Boolean(1)',
+        'PhysicalAddress' => 'HTMLText'
 	);
 
 	public static $defaults = array();
@@ -55,7 +56,7 @@ class BoilerplateConfig extends DataExtension {
                 new UploadField('LogoImage', 'Choose an Image For Your Logo')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.Settings', $toggleFields);
+		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
 
         /* -----------------------------------------
          * Company Details
@@ -67,10 +68,11 @@ class BoilerplateConfig extends DataExtension {
 			array(
                 new Textfield('Phone', 'Phone Number'),
                 new Textfield('Email', 'Public Email Address'),
-                new CheckboxField('ShowCompanyDetails', 'Display Email and phone in the header?')
+                new CheckboxField('ShowCompanyDetails', 'Display Email and phone in the header?'),
+                new HtmlEditorField('PhysicalAddress', 'Physical Address')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.Settings', $toggleFields);
+		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
 
     }
 

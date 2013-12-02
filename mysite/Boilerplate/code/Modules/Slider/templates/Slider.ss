@@ -13,16 +13,29 @@
             <% end_if %>
 
             <div class="carousel-inner">
+
                 <% loop $SliderItems %>
                     <div class="item<%if First %> active<% end_if %>">
                         <% if $Link || $CustomLink %>
                             <% if $CustomLink %>
-                                <a href="$CustomLink">$Image.croppedImage(1140, 500)</a>
+                                <% if $Top.Height %>
+                                    <a href="$CustomLink">$Image.croppedImage(1140, $Top.Height)</a>
+                                <% else %>
+                                    <a href="$CustomLink">$Image.croppedImage(1140, 500)</a>
+                                <% end_if %>
                             <% else %>
-                                <a href="$Link.Link">$Image.croppedImage(1140, 500)</a>
+                                <% if $Top.Height %>
+                                    <a href="$Link.Link">$Image.croppedImage(1140, $Top.Height)</a>
+                                <% else %>
+                                    <a href="$Link.Link">$Image.croppedImage(1140, 500)</a>
+                                <% end_if %>
                             <%  end_if %>
                         <% else %>
-                            $Image.croppedImage(1140, 500)
+                            <% if $Top.Height %>
+                                $Image.croppedImage(1140, $Top.Height)
+                            <% else %>
+                                $Image.croppedImage(1140, 500)
+                            <% end_if %>
                         <% end_if %>
                         <% if $Caption %>
                             <div class="carousel-caption">$Caption</div><!-- /.carousel-caption -->

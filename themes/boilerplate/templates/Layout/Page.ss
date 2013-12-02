@@ -11,6 +11,7 @@
                 </header><!-- /.page-header -->
                 <aside class="content">
                     $Content
+                    <% include PageWidgets %>
                 </aside><!-- /.content -->
             </article>
             $Form

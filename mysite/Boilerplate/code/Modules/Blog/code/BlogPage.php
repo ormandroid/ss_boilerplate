@@ -20,6 +20,9 @@ class BlogPage extends Page {
 
         $fields = parent::getCMSFields();
 
+        $fields->removeByName('Slider');
+        $fields->removeByName('Widgets');
+
         $fields->addFieldToTab('Root.Main', new UploadField('BlogImage','Featured blog image'), 'Content');
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date','Article Date (for example: 20/12/2013)'), 'Content');
         $dateField->setConfig('showcalendar', true);

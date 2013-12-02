@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="shortcut icon" href="$ThemeDir/favicon.ico" />
         <% require themedCSS('main') %>
+        <%-- TODO: Use themeDir somehow for js files --%>
         <% require javascript(themes/boilerplate/js/jquery.1.10.2.min.js) %>
         <% require javascript(themes/boilerplate/js/modernizr.2.6.2.js) %>
         <% require javascript(themes/boilerplate/js/bootstrap.min.js) %>
