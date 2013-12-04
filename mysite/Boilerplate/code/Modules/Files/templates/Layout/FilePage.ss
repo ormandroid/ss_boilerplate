@@ -6,7 +6,9 @@
 
 <div class="container">
     <article>
-        <div class="content">$Content</div><!-- /.content -->
+        <div class="content typography">
+            $Content
+        </div><!-- /.content typography -->
     </article>
     <div class="row">
         <% loop $FileGroups %>

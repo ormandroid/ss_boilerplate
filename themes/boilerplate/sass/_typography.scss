@@ -1,1 +1,56 @@
-.blog-title{margin-top: 0;}
+/*======================================================================*\
+    Fonts
+\*======================================================================*/
+
+h1{font-size: 28px;}
+h2{font-size: 24px;}
+h3{font-size: 20px;}
+h4{font-size: 16px;}
+h5{font-size: 14px;}
+
+@media (min-width: $screen-sm){
+    h1{font-size: 34px;}
+    h2{font-size: 30px;}
+    h3{font-size: 24px;}
+    h4{font-size: 20px;}
+    h5{font-size: 16px;}
+}
+
+.typography{
+    h1,
+    h2{margin-bottom: $gap-md;}
+}
+
+@media (min-width: $screen-sm){
+    .typography{
+
+        + h1,
+        + h2{margin-top: 0;}
+
+        h1{font-size: 34px;}
+        h2{font-size: 30px;}
+        h3{font-size: 24px;}
+        h4{font-size: 20px;}
+        h5{font-size: 16px;}
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6{margin-top: 0;}
+
+        h1,
+        h2{margin-bottom: $gap-md;margin-top: $gap-lg;}
+        h3,
+        h4{margin-bottom: $gap-md;}
+
+        p,
+        ul,
+        ol,
+        pre,
+        code{margin-bottom: $gap-md;}
+        li{margin-bottom: $gap-sm;}
+
+    }
+}

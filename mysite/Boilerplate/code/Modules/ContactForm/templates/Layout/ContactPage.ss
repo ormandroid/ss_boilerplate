@@ -19,7 +19,7 @@
                     </div><!-- /.alert alert-success -->
                 <% end_if %>
 
-                <div class="content">
+                <div class="content typography">
                     <div class="row">
 
                         <section id="sidebar" class="col-xs-12 col-sm-3">
@@ -41,8 +41,9 @@
                                 $ContactForm
                             <% end_if %>
                         </div><!-- /.col-xs-12 col-sm-6 -->
+                        
                     </div><!-- /.row -->
-                </div><!-- /.content -->
+                </div><!-- /.content typography -->
             </article>
             $Form
             $PageComments

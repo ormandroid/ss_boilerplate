@@ -35,9 +35,7 @@
                 <![endif]-->
                 <% include Header %>
                 <section id="mainContent">
-                    <div class="typography" role="main">
-                        $Layout
-                    </div><!-- /.typography -->
+                    $Layout
                 </section><!-- /#mainContent -->
                 <% include Footer %>
             </div><!-- /.inner -->

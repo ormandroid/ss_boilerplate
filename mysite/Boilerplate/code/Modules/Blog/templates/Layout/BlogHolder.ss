@@ -12,7 +12,9 @@
 
         <div class="col-xs-12 col-sm-9">
             <article>
-                <div class="content">$Content</div><!-- /.content -->
+                <div class="content typography">
+                    $Content
+                </div><!-- /.content typography -->
             </article>
             <div class="row">
                 <% loop $AllChildren %>

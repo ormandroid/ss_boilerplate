@@ -21,12 +21,8 @@
             </div><!-- /.col-xs-12 col-sm-9 -->
 
             <div class="col-xs-12 col-sm-3">
-                <aside class="content">
-
-                    $NaturalNext('SiteTree').Link
-
+                <aside class="content typography">
                     <h3 class="portfolio-title">$SubTitle</h3><!-- /.portfolio-title -->
-
                     $Content
                     $Form
                     $PageComments

@@ -16,10 +16,10 @@
 
         <% if $Menu(2) %><div class="col-xs-12 col-sm-9"><% end_if %>
             <article>
-                <aside class="content">
+                <aside class="content typography">
                     $Content
                     <% include PageWidgets %>
-                </aside><!-- /.content -->
+                </aside><!-- /.content typography -->
             </article>
             $Form
             $PageComments

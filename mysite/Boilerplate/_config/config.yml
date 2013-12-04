@@ -1,6 +1,2 @@
 GDBackend:
   default_quality: 100
-
-LeftAndMain:
-  extra_requirements_css:
-    - mysite/Boilerplate/css/cms.css
