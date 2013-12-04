@@ -31,13 +31,7 @@ Run a `dev/build` and `?flush=all`
 
 ## Screenshots ##
 
-### Homepage Desktop ###
-
-![Home Screenshot](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/home.png "Home")
-
-### Homepage Mobile ###
-
-![Home Screenshot Mobile](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/home-phone.png "Home Mobile")
+![Screenshot](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/screenshot.jpg "Screenshot")
 
 ## Thanks to ##
 
