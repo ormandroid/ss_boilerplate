@@ -68,7 +68,6 @@ class BoilerplateConfig extends DataExtension {
 			array(
                 new Textfield('Phone', 'Phone Number'),
                 new Textfield('Email', 'Public Email Address'),
-                new CheckboxField('ShowCompanyDetails', 'Display Email and phone in the header?'),
                 new HtmlEditorField('PhysicalAddress', 'Physical Address')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);

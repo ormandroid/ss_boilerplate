@@ -12,6 +12,10 @@ class BlogPage extends Page {
         'BlogImage' => 'Image'
     );
 
+    private static $many_many = array(
+        'BlogTags' => 'BlogTag'
+    );
+
     private static $defaults = array(
         'ShowInMenus' => 0
     );
@@ -28,6 +32,22 @@ class BlogPage extends Page {
         $dateField->setConfig('showcalendar', true);
         $fields->addFieldToTab('Root.Main', $dateField, 'Content');
         $fields->addFieldToTab('Root.Main', new TextField('Author'), 'Content');
+
+        /* =========================================
+         * Tags
+         =========================================*/
+
+        $config = GridFieldConfig_RecordEditor::create();
+        $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Title' => 'Title'
+        ));
+        $gridField = new GridField(
+            'BlogTags',
+            'Tags',
+            $this->owner->BlogTags(),
+            $config
+        );
+        $fields->addFieldToTab('Root.Tags', $gridField);
 
         return $fields;
 

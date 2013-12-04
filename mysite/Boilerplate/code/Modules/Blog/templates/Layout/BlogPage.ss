@@ -1,3 +1,11 @@
+<header class="page-header">
+    <div class="container">
+        <h1>$Title</h1>
+    </div><!-- /.container -->
+</header><!-- /.page-header -->
+
+<% include Breadcrumbs %>
+
 <div class="container">
 
     <div class="row">
@@ -9,9 +17,6 @@
                 <% if $BlogImage %>
                     <p>$BlogImage.setWidth(850)</p>
                 <% end_if %>
-                <div class="page-header">
-                    <h1>$Title</h1>
-                </div><!-- /.page-header -->
                 <% if $Date && $Author %>
                     <p><i>Posted on $Date.Nice by $Author</i></p>
                 <% end_if %>

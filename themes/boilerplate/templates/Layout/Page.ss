@@ -1,3 +1,13 @@
+<header class="page-header">
+    <div class="container">
+        <h1>$Title</h1>
+    </div><!-- /.container -->
+</header><!-- /.page-header -->
+
+<% include Slider %>
+
+<% include Breadcrumbs %>
+
 <div class="container">
 
     <% if $Menu(2) %><div class="row"><% end_if %>
@@ -6,9 +16,6 @@
 
         <% if $Menu(2) %><div class="col-xs-12 col-sm-9"><% end_if %>
             <article>
-                <header class="page-header">
-                    <h1>$Title</h1>
-                </header><!-- /.page-header -->
                 <aside class="content">
                     $Content
                     <% include PageWidgets %>

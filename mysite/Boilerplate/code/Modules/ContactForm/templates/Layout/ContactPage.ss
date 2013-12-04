@@ -1,3 +1,9 @@
+<header class="page-header">
+    <div class="container">
+        <h1>$Title</h1>
+    </div><!-- /.container -->
+</header><!-- /.page-header -->
+
 <div class="container">
 
     <% if $Menu(2) %><div class="row"><% end_if %>
@@ -28,11 +34,6 @@
                         </section><!-- /#sidebar .col-xs-12 col-sm-3 -->
 
                         <div class="col-xs-12 col-sm-9">
-
-                            <div class="page-header">
-                                <h1>$Title</h1>
-                            </div><!-- /.page-header -->
-
                             <% if Success %>
                                 $Content
                             <% else %>

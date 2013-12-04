@@ -1,44 +1,50 @@
 <?php
-class BlogHolder extends Page {
+class FilePage extends Page {
 
-    private static $allowed_children = array('BlogPage');
-
-    private static $icon = 'mysite/Boilerplate/code/Modules/Blog/images/blogs-stack.png';
+    private static $icon = 'mysite/Boilerplate/code/Modules/Files/images/blue-documents-stack.png';
 
     private static $db = array(
-        'Columns' => 'Int',
-        'BlogSidebarContent' => 'HTMLText'
+        'Columns' => 'Int'
     );
 
-    private static $defaults = array(
-        'Columns' => 0
+    private static $has_many = array(
+        'FileGroups' => 'FileGroup'
     );
 
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();
 
+        $fields->removeByName('Slider');
         $fields->removeByName('Widgets');
 
-        $fields->addFieldToTab('Root.Main', new DropdownField('Columns','How many items to display on each row', array(
+        $fields->addFieldToTab('Root.Main', new DropdownField('Columns','How many groups to display on each row', array(
             'One Item (Full Width)',
             'Two Items',
             'Three Items',
             'Four Items'
         )), 'Content');
 
-        /* =========================================
-         * Blog Sidebar
-         =========================================*/
+        /* -----------------------------------------
+         * Groups
+        ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.BlogSidebar', new HtmlEditorField('BlogSidebarContent','Content For the Sidebar'));
+        $config = GridFieldConfig_RecordEditor::create();
+        $gridField = new GridField(
+            'FileGroups',
+            'Groups',
+            $this->owner->FileGroups(),
+            $config
+        );
+        $fields->addFieldToTab('Root.Groups', $gridField);
 
         return $fields;
 
     }
 
 }
-class BlogHolder_Controller extends Page_Controller {
+
+class FilePage_Controller extends Page_Controller {
 
     public function ColumnClass(){
         switch($this->Columns){

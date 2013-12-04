@@ -1,24 +1,21 @@
 <?php
-class BlogHolder extends Page {
+class PortfolioHolder extends Page {
 
-    private static $allowed_children = array('BlogPage');
+    private static $allowed_children = array('PortfolioPage');
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/Blog/images/blogs-stack.png';
+    private static $icon = 'mysite/Boilerplate/code/Modules/Portfolio/images/blogs-stack.png';
 
     private static $db = array(
-        'Columns' => 'Int',
-        'BlogSidebarContent' => 'HTMLText'
+        'Columns' => 'Int'
     );
 
     private static $defaults = array(
-        'Columns' => 0
+        'Columns' => 2
     );
 
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();
-
-        $fields->removeByName('Widgets');
 
         $fields->addFieldToTab('Root.Main', new DropdownField('Columns','How many items to display on each row', array(
             'One Item (Full Width)',
@@ -27,18 +24,12 @@ class BlogHolder extends Page {
             'Four Items'
         )), 'Content');
 
-        /* =========================================
-         * Blog Sidebar
-         =========================================*/
-
-        $fields->addFieldToTab('Root.BlogSidebar', new HtmlEditorField('BlogSidebarContent','Content For the Sidebar'));
-
         return $fields;
 
     }
 
 }
-class BlogHolder_Controller extends Page_Controller {
+class PortfolioHolder_Controller extends Page_Controller {
 
     public function ColumnClass(){
         switch($this->Columns){

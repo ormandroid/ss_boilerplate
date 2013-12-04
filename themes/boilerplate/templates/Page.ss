@@ -36,10 +36,6 @@
                 <% include Header %>
                 <section id="mainContent">
                     <div class="typography" role="main">
-                        <% include Slider %>
-                        <% if SiteConfig.Breadcrumbs %>
-                            <% include Breadcrumbs %>
-                        <% end_if %>
                         $Layout
                     </div><!-- /.typography -->
                 </section><!-- /#mainContent -->

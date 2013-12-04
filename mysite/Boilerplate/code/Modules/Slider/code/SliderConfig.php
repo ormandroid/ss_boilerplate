@@ -3,7 +3,8 @@
 class SliderConfig extends DataExtension {
 
     private static $db = array(
-        'Height' => 'Varchar(255)'
+        'Height' => 'Varchar(255)',
+        'FullWidth' => 'Boolean(0)'
     );
 
     private static $has_many = array(
@@ -29,6 +30,7 @@ class SliderConfig extends DataExtension {
 			'Advanced',
 			'Advanced',
 			array(
+                new CheckboxField('FullWidth', 'Full width'),
                 new TextField('Height', 'Height of slider')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);

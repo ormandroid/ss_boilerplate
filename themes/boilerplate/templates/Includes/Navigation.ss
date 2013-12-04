@@ -1,20 +1,11 @@
 <nav id="main-nav" class="navbar navbar-default" role="navigation">
 
-    <div class="navbar-header visible-xs">
-        <% if SiteConfig.LogoImage %>
-            <a class="pull-left" href="$BaseHref" rel="home">
-                $SiteConfig.LogoImage.setHeight(50)
-            </a><!-- /.logo-container .pull-left -->
-        <% end_if %>
-        <a class="navbar-brand" href="$BaseHref">$SiteConfig.Title</a>
-    </div>
-
     <div class="navbar-collapse hidden-sm hidden-xs">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav pull-right">
             <% loop $Menu(1) %>
                 <% if Children %>
                     <li class="$LinkingMode dropdown">
-                        <a href="$Link" title="$Title.XML">$MenuTitle.XML</a>
+                        <a href="$Link" title="$Title.XML">$MenuTitle.XML <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <% loop Children %>
                                 <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
@@ -25,18 +16,18 @@
                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
-        </ul><!-- /.nav navbar-nav -->
+        </ul><!-- /.nav navbar-nav pull-right -->
         <% if $SearchForm %>
             <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
         <% end_if %>
     </div><!-- /.collapse navbar-collapse -->
 
     <div class="navbar-collapse visible-sm">
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav pull-right">
             <% loop $Menu(1) %>
                 <% if Children %>
                     <li class="$LinkingMode dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-caret-down"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                             <li class="divider"></li>
@@ -49,7 +40,7 @@
                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
-        </ul><!-- /.nav navbar-nav -->
+        </ul><!-- /.nav navbar-nav pull-right -->
         <% if $SearchForm %>
             <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
         <% end_if %>

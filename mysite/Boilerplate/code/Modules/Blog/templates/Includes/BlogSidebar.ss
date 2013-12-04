@@ -1,7 +1,15 @@
 <section id="sidebar" class="col-xs-12 col-sm-3">
     <aside class="sidebar-nav widget">
+
+        <h4>$MenuTitle.XML</h4>
+
+        <% if $BlogSidebarContent %>
+            <aside class="blog-sidebar-content">
+                $BlogSidebarContent
+            </aside><!-- /.blog-sidebar-content -->
+        <% end_if %>
+
         <ul>
-            <li><h4>$MenuTitle.XML</h4></li>
             <% if $AllChildren %>
                 <% loop $AllChildren %>
                     <li class="$LinkingMode">

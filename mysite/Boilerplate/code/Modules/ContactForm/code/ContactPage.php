@@ -60,7 +60,7 @@ class ContactPage_Controller extends Page_Controller {
         );
 
         $actions = new FieldList(
-            new FormAction('SendContactForm', 'Send')
+            new FormAction('SendContactForm', 'Submit Form')
         );
 
         $validator = new RequiredFields(
