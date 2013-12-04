@@ -7,7 +7,8 @@ A rapid development theme based on Bootstrap 3.x
 * [Sass Bootstrap](https://github.com/thomas-mcdonald/bootstrap-sass)
 * [Font Awesome](http://fontawesome.io/)
 * Blog
-* Sliders
+* Portfolio
+* Files
 * Contact Form
 
 ## Installation ##
