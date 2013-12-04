@@ -7,7 +7,8 @@ A rapid development theme based on Bootstrap 3.x
 * [Sass Bootstrap](https://github.com/thomas-mcdonald/bootstrap-sass)
 * [Font Awesome](http://fontawesome.io/)
 * Blog
-* Sliders
+* Portfolio
+* Files
 * Contact Form
 
 ## Installation ##
@@ -16,28 +17,15 @@ Install SS.
 
 Copy across all of the files.
 
-Add
-```
-SiteConfig:
-  extensions:
-    - BoilerplateConfig
-```
-
-to your config.yml file in the `mysite/_config` directory.
-
 Run a `dev/build` and `?flush=all`
+
+Set Boilerplate as your site's theme.
 
 * Note: The screenshots folder is not neccessary for your website
 
 ## Screenshots ##
 
-### Homepage Desktop ###
-
-![Home Screenshot](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/home.png "Home")
-
-### Homepage Mobile ###
-
-![Home Screenshot Mobile](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/home-phone.png "Home Mobile")
+![Screenshot](https://raw.github.com/Rhym/ss_boilerplate/master/screenshots/screenshot.jpg "Screenshot")
 
 ## Thanks to ##
 
