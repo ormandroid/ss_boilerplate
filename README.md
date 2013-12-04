@@ -16,16 +16,9 @@ Install SS.
 
 Copy across all of the files.
 
-Add
-```
-SiteConfig:
-  extensions:
-    - BoilerplateConfig
-```
-
-to your config.yml file in the `mysite/_config` directory.
-
 Run a `dev/build` and `?flush=all`
+
+Set Boilerplate as your site's theme.
 
 * Note: The screenshots folder is not neccessary for your website
 
