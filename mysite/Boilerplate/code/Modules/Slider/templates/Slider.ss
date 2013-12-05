@@ -21,26 +21,38 @@
                         <% if $Link || $CustomLink %>
                             <% if $CustomLink %>
                                 <a href="$CustomLink">
-                                    <% if $Top.Height %>
-                                        $Image.croppedImage(1140, $Top.Height)
+                                    <% if $Top.FullWidth %>
+                                        $Image
                                     <% else %>
-                                        $Image.croppedImage(1140, 500)
+                                        <% if $Top.Height %>
+                                            $Image.croppedImage(1140, $Top.Height)
+                                        <% else %>
+                                            $Image.croppedImage(1140, 500)
+                                        <% end_if %>
                                     <% end_if %>
                                 </a>
                             <% else %>
                                 <a href="$Link.Link">
-                                    <% if $Top.Height %>
-                                        $Image.croppedImage(1140, $Top.Height)
+                                    <% if $Top.FullWidth %>
+                                        $Image
                                     <% else %>
-                                        $Image.croppedImage(1140, 500)
+                                        <% if $Top.Height %>
+                                            $Image.croppedImage(1140, $Top.Height)
+                                        <% else %>
+                                            $Image.croppedImage(1140, 500)
+                                        <% end_if %>
                                     <% end_if %>
                                 </a>
                             <%  end_if %>
                         <% else %>
-                            <% if $Top.Height %>
-                                $Image.croppedImage(1140, $Top.Height)
+                            <% if $Top.FullWidth %>
+                                $Image
                             <% else %>
-                                $Image.croppedImage(1140, 500)
+                                <% if $Top.Height %>
+                                    $Image.croppedImage(1140, $Top.Height)
+                                <% else %>
+                                    $Image.croppedImage(1140, 500)
+                                <% end_if %>
                             <% end_if %>
                         <% end_if %>
                         <% if $Caption %>

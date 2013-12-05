@@ -3,7 +3,8 @@
 class BoilerplateConfig extends DataExtension {
 
 	public static $has_one = array(
-		'LogoImage' => 'Image'
+		'LogoImage' => 'Image',
+		'Favicon' => 'Image'
 	);
 
 	public static $db = array(
@@ -53,7 +54,8 @@ class BoilerplateConfig extends DataExtension {
 			'Logo',
 			'Logo',
 			array(
-                new UploadField('LogoImage', 'Choose an Image For Your Logo')
+                new UploadField('LogoImage', 'Choose an Image For Your Logo'),
+                new UploadField('Favicon', 'Choose an Image For Your Favicon')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
 		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);

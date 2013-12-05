@@ -12,7 +12,11 @@
         <meta property="og:site_name" content="$SiteConfig.Title<% if SiteConfig.Tagline %> - $SiteConfig.Tagline<% end_if %>"/>
         <meta property="og:title" content="<% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="shortcut icon" href="$ThemeDir/favicon.ico" />
+        <% if $Siteconfig.Favicon %>
+            <link rel="shortcut icon" href="$SiteConfig.Favicon.Link" />
+        <% else %>
+            <link rel="shortcut icon" href="$ThemeDirfavicon.ico" />
+        <% end_if %>
         <% require themedCSS('main') %>
         <%-- TODO: Use themeDir somehow for js files --%>
         <% require javascript(themes/boilerplate/js/jquery.1.10.2.min.js) %>
