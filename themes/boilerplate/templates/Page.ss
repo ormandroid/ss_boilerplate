@@ -44,5 +44,6 @@
                 <% include Footer %>
             </div><!-- /.inner -->
         </div><!-- /#wrapper -->
+        $SiteConfig.TrackingCode
     </body>
 </html>

@@ -175,9 +175,15 @@ img{width: auto;height: auto;max-width:100%;}
             img{
                 -webkit-backface-visibility: hidden;
                 @include transition(.1s linear opacity);
-                &:hover{opacity: 0.9}
             }
             @include absolute-arrow();
+            .hover-icon{display: none;color: $btn-primary-color;
+                @include icon-center();
+            }
+            &:hover{
+                img{opacity: 0.9}
+                .hover-icon{display: block;}
+            }
         }
         .blog-title{
             a{color: $btn-default-color;
@@ -207,20 +213,24 @@ img{width: auto;height: auto;max-width:100%;}
 .portfolio-item{
     margin-bottom: $gap-md;
     a{
-        &:hover{text-decoration: none;
-            img{opacity: 0.9}
-        }
         .portfolio-image{position: relative;display: block;background: $gray-darker;
             @include absolute-arrow();
             img{
                 -webkit-backface-visibility: hidden;
                 @include transition(.1s linear opacity);
             }
+            .hover-icon{display: none;color: $btn-primary-color;
+                @include icon-center();
+            }
         }
         .portfolio-meta{border: 1px solid $gray-lighter;border-top-width: 0;padding: $gap-md;
             @include border-bottom-radius($border-radius-base);
             h5{margin-top: 0;font-weight: bold;color: $gray;}
             .portfolio-subtitle{color: $gray-light;}
+        }
+        &:hover{text-decoration: none;
+            img{opacity: 0.9}
+            .hover-icon{display: block;}
         }
     }
 }
@@ -253,6 +263,15 @@ img{width: auto;height: auto;max-width:100%;}
                 img{width: 100%;}
             }
         }
+    }
+    .carousel-indicators{
+        .active{background: $brand-primary;border-color: $brand-primary;}
+    }
+    .carousel-control{
+        &.right,
+        &.left{background: 0 none;}
+        .fa-angle-left,
+        .fa-angle-right{position: absolute;top: 50%;z-index: 5;display: inline-block;font-size:$gap-lg;margin-top: -$gap-md}
     }
 }
 
@@ -330,10 +349,12 @@ img{width: auto;height: auto;max-width:100%;}
   @include panel-variant($panel-secondary-border, $panel-secondary-text, $panel-secondary-heading-bg, $panel-secondary-border);
 }
 
+/*---------------------------------------------*\
+    Breadcrumbs
+\*---------------------------------------------*/
+
+.breadcrumb{background: none;padding: 0;}
+
 /*======================================================================*\
     Vendors
 \*======================================================================*/
-
-.breadcrumb{background: none;padding: 0;}
-.carousel-control .fa-chevron-left,
-.carousel-control .fa-chevron-right{position: absolute;top: 50%;z-index: 5;display: inline-block;}

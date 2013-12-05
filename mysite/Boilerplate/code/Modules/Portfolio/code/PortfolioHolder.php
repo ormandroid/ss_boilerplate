@@ -33,9 +33,6 @@ class PortfolioHolder_Controller extends Page_Controller {
 
     public function ColumnClass(){
         switch($this->Columns){
-            case 0:
-                return 'col-xs-12 col-sm-12';
-            break;
             case 1:
                 return 'col-xs-12 col-sm-6';
             break;
@@ -52,9 +49,6 @@ class PortfolioHolder_Controller extends Page_Controller {
 
     public function ColumnMultiple(){
         switch($this->Columns){
-            case 0:
-                return 1;
-            break;
             case 1:
                 return 2;
             break;
@@ -66,6 +60,26 @@ class PortfolioHolder_Controller extends Page_Controller {
             break;
             default:
                 return 1;
+        }
+    }
+
+    public function PortfolioThumbnailWidth(){
+        switch($this->Columns){
+            case 0:
+                return '1140';
+                break;
+            default:
+                return '722';
+        }
+    }
+
+    public function PortfolioThumbnailHeight(){
+        switch($this->Columns){
+            case 0:
+                return '555';
+                break;
+            default:
+                return '722';
         }
     }
 

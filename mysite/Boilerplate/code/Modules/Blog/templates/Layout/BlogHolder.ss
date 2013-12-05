@@ -23,6 +23,7 @@
                             <% if $BlogImage %>
                                 <a href="$Link" class="blog-image" title="Read more on &quot;{$Title}&quot;">
                                     $BlogImage.CroppedImage(848, 340)
+                                    <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
                                 </a><!-- /.blog-image -->
                             <% end_if %>
                             <h3 class="blog-title"><a href="$Link" title="Read more on &quot;{$Title}&quot;">$Title</a></h3><!-- /.blog-title -->

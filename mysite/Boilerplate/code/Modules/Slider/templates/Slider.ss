@@ -6,7 +6,7 @@
 
             $SliderItems.TotalCount
 
-            <% if $SliderItems.TotalCount = 1 %>
+            <% if $SliderItems.Count > 1 %>
                 <ol class="carousel-indicators">
                     <% loop $SliderItems %>
                         <li data-target="#pageSlider" data-slide-to="$Pos(0)" class="<%if First %> active<% end_if %>"></li>
@@ -68,12 +68,12 @@
                 <% end_loop %>
             </div><!-- /.carousel-inner -->
 
-            <% if $SliderItems.TotalCount > 1 %>
+            <% if $SliderItems.Count > 1 %>
                 <a class="left carousel-control" href="#pageSlider" data-slide="prev">
-                    <span class="fa fa-chevron-left"></span>
+                    <span class="fa fa-angle-left"></span>
                 </a><!-- /.left carousel-control -->
                 <a class="right carousel-control icon-prev" href="#pageSlider" data-slide="next">
-                    <span class="fa fa-chevron-right"></span>
+                    <span class="fa fa-angle-right"></span>
                 </a><!-- /.right carousel-control icon-prev -->
             <% end_if %>
 

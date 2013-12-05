@@ -17,8 +17,9 @@
                 <a href="$Link">
                     <figure class="portfolio-image">
                         <% loop $PortfolioImages.First %>
-                            $Image.CroppedImage(555, 555)
+                            $Image.CroppedImage($Top.PortfolioThumbnailWidth, $Top.PortfolioThumbnailHeight)
                         <% end_loop %>
+                        <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
                     </figure><!-- /.portfolio-image -->
                     <footer class="portfolio-meta">
                         <h5>$Title</h5>

@@ -15,9 +15,8 @@ class PageWidgetConfig extends DataExtension {
             $this->owner->PageWidgetItems(),
             $config
         );
-        $fields->addFieldToTab('Root.Widgets', $gridField);
+        $fields->addFieldToTab('Root.PageBuilder', $gridField);
 
     }
 
 }
-

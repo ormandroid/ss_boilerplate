@@ -2,19 +2,20 @@
 
 class BoilerplateConfig extends DataExtension {
 
-	public static $has_one = array(
-		'LogoImage' => 'Image',
-		'Favicon' => 'Image'
-	);
-
-	public static $db = array(
+    public static $db = array(
 		'Breadcrumbs' => 'Boolean(1)',
 		'SelectNavigation' => 'Boolean(1)',
 		'PanelNavigation' => 'Boolean(1)',
 		'Phone' => 'Varchar(255)',
 		'Email' => 'Varchar(255)',
 		'ShowCompanyDetails' => 'Boolean(1)',
-        'PhysicalAddress' => 'HTMLText'
+        'PhysicalAddress' => 'HTMLText',
+        'TrackingCode' => 'Text'
+	);
+
+	public static $has_one = array(
+		'LogoImage' => 'Image',
+		'Favicon' => 'Image'
 	);
 
 	public static $defaults = array();
@@ -71,6 +72,19 @@ class BoilerplateConfig extends DataExtension {
                 new Textfield('Phone', 'Phone Number'),
                 new Textfield('Email', 'Public Email Address'),
                 new HtmlEditorField('PhysicalAddress', 'Physical Address')
+			)
+		)->setHeadingLevel(4)->setStartClosed(true);
+		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
+
+        /* -----------------------------------------
+         * Tracking Code
+        ------------------------------------------*/
+
+        $toggleFields = ToggleCompositeField::create(
+			'TrackingCodeToggle',
+			'Tracking Code',
+			array(
+                new TextareaField('TrackingCode', 'Tracking Code'),
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
 		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
