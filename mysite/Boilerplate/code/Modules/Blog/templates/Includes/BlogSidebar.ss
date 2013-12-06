@@ -1,4 +1,4 @@
-<section id="sidebar" class="col-xs-12 col-sm-3">
+<section class="sidebar col-xs-12 col-sm-3">
     <aside class="sidebar-nav widget">
 
         <h4>$MenuTitle.XML</h4>
@@ -21,4 +21,4 @@
             <% end_if %>
         </ul>
     </aside><!-- /.sidebar-nav -->
-</section><!-- /#sidebar .col-xs-12 col-sm-3 -->
+</section><!-- /.sidebar col-xs-12 col-sm-3 -->

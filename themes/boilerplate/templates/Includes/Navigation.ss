@@ -52,11 +52,6 @@
             <a data-toggle="modal" href="#searchModal" class="btn-default navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
         <% end_if %>
         <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
-            <% if LinkOrCurrent = current %>
-                <option selected value="$BaseHref"><% _t('Navigation.HomeLabel', 'Home') %></option>
-            <% else %>
-                <option value="$BaseHref"><% _t('Navigation.HomeLabel', 'Home') %></option>
-            <% end_if %>
             <% loop $Menu(1) %>
                 <% if Children %>
                     <% if LinkOrCurrent = current %>

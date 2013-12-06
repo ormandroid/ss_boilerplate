@@ -44,14 +44,17 @@ class ContactPage_Controller extends Page_Controller {
         $name = new TextField('Name');
         $name->setAttribute('placeholder', 'Enter your name');
         $name->setAttribute('required', 'required');
+        $name->addExtraClass('form-control');
 
         $email = new EmailField('Email');
         $email->setAttribute('placeholder', 'Enter your email address');
         $email->setAttribute('required', 'required');
+        $email->addExtraClass('form-control');
 
         $message = new TextareaField('Message');
         $message->setAttribute('placeholder', 'Enter your message');
         $message->setAttribute('required', 'required');
+        $message->addExtraClass('form-control');
 
         $fields = new FieldList(
             $name,
@@ -59,8 +62,11 @@ class ContactPage_Controller extends Page_Controller {
             $message
         );
 
+        $action = new FormAction('SendContactForm', 'Submit Form');
+        $action->addExtraClass('btn btn-primary btn-lg');
+
         $actions = new FieldList(
-            new FormAction('SendContactForm', 'Submit Form')
+            $action
         );
 
         $validator = new RequiredFields(

@@ -26,7 +26,7 @@
                 $Form
                 $PageComments
             </article><!-- /.blog-single -->
-        <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 -->
+        </div><!-- /.col-xs-12 col-sm-9 -->
 
         <div class="visible-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
