@@ -35,13 +35,13 @@ class PortfolioHolder_Controller extends Page_Controller {
         switch($this->Columns){
             case 1:
                 return 'col-xs-12 col-sm-6';
-            break;
+                break;
             case 2:
                 return 'col-xs-12 col-sm-4';
-            break;
+                break;
             case 3:
                 return 'col-xs-12 col-sm-3';
-            break;
+                break;
             default:
                 return 'col-xs-12 col-sm-12';
         }
@@ -51,13 +51,13 @@ class PortfolioHolder_Controller extends Page_Controller {
         switch($this->Columns){
             case 1:
                 return 2;
-            break;
+                break;
             case 2:
                 return 3;
-            break;
+                break;
             case 3:
                 return 4;
-            break;
+                break;
             default:
                 return 1;
         }

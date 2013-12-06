@@ -8,6 +8,10 @@ class PageWidgetConfig extends DataExtension {
 
     public function updateCMSFields(FieldList $fields) {
 
+        /* -----------------------------------------
+         * Page Widgets
+        ------------------------------------------*/
+
         $config = GridFieldConfig_RecordEditor::create();
         $gridField = new GridField(
             'PageWidgetItems',
