@@ -17,11 +17,6 @@
             <link rel="shortcut icon" href="$ThemeDirfavicon.ico" />
         <% end_if %>
         <% require themedCSS('main') %>
-        <%-- TODO: Use themeDir somehow for js files --%>
-        <% require javascript(themes/boilerplate/js/jquery.1.10.2.min.js) %>
-        <% require javascript(themes/boilerplate/js/modernizr.2.6.2.js) %>
-        <% require javascript(themes/boilerplate/js/bootstrap.min.js) %>
-        <% require javascript(themes/boilerplate/js/script.js) %>
         <!--[if lt IE 9]>
             <script src="$themeDir/js/html5.js"></script>
         <![endif]-->

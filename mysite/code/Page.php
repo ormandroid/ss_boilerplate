@@ -10,23 +10,7 @@ class Page extends SiteTree {
 }
 class Page_Controller extends ContentController {
 
-	/**
-	 * An array of actions that can be accessed via a request. Each array element should be an action name, and the
-	 * permissions or conditions required to allow the user to access it.
-	 *
-	 * <code>
-	 * array (
-	 *     'action', // anyone can access this action
-	 *     'action' => true, // same as above
-	 *     'action' => 'ADMIN', // you must have ADMIN permissions to access this action
-	 *     'action' => '->checkAction' // you can only access this action if $this->checkAction() returns true
-	 * );
-	 * </code>
-	 *
-	 * @var array
-	 */
-	private static $allowed_actions = array (
-	);
+	private static $allowed_actions = array();
 
 	public function init() {
 		parent::init();
@@ -38,6 +22,23 @@ class Page_Controller extends ContentController {
 		Requirements::themedCSS('layout');
 		Requirements::themedCSS('typography');
 		Requirements::themedCSS('form');
+
+        /* =========================================
+         * Combine JS
+         =========================================*/
+
+        $theme = SSViewer::current_theme();
+
+        Requirements::combine_files(
+            'combined.js',
+            array(
+                'themes/'.$theme.'/js/jquery.1.10.2.min.js',
+                'themes/'.$theme.'/js/modernizr.2.6.2.js',
+                'themes/'.$theme.'/js/bootstrap.min.js',
+                'themes/'.$theme.'/js/script.js',
+            )
+        );
+
 	}
 
 }
