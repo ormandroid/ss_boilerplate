@@ -22,6 +22,10 @@ class BoilerplateConfig extends DataExtension {
 
     public function updateCMSFields(FieldList $fields) {
 
+        /* -----------------------------------------
+         * Color Picker
+        ------------------------------------------*/
+
 		Requirements::javascript('mysite/Boilerplate/javascript/colorpicker.min.js');
 		Requirements::css('mysite/Boilerplate/css/colorpicker.css');
 
