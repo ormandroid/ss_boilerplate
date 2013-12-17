@@ -16,7 +16,7 @@ class EditProfilePage_Controller extends Page_Controller {
             return $this->redirect(Director::absoluteBaseURL());
         }
 
-        $name = new TextField('Name');
+        $name = new TextField('FirstName');
         $name->setAttribute('placeholder', 'Enter your name');
         $name->setAttribute('required', 'required');
         $name->addExtraClass('form-control');
@@ -73,17 +73,14 @@ class EditProfilePage_Controller extends Page_Controller {
 
     //Save profile
     public function SaveProfile($data, $form){
-        //Check for a logged in member
+
         if($CurrentMember = Member::currentUser()){
-            //Check for another member with the same email address
-            if($member = DataObject::get_one("Member", "Email = '". Convert::raw2sql($data['Email']) . "' AND ID != " . $CurrentMember->ID)){
+            if($member = DataObject::get_one('Member', "Email = '". Convert::raw2sql($data['Email']) . "' AND ID != " . $CurrentMember->ID)){
                 $form->addErrorMessage('Email', 'Sorry, that Email already exists.', 'validation');
                 //TODO: Make this work
                 //Session::set("FormInfo.Form_EditProfileForm.data", $data);
                 return $this->redirectBack();
-            }
-            //Otherwise check that user IDs match and save
-            else{
+            }else{
                 $form->saveInto($CurrentMember);
                 $CurrentMember->write();
                 return $this->redirect($this->Link('?saved=1'));

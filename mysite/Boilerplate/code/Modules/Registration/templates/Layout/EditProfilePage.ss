@@ -21,7 +21,7 @@
                                 <% loop CurrentMember %>
                                     <tr>
                                         <td>Name:</td>
-                                        <td>$Name</td>
+                                        <td>$FirstName</td>
                                     </tr>
                                     <tr>
                                         <td>Email:</td>

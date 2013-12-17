@@ -10,7 +10,7 @@ class RegistrationPage_Controller extends Page_Controller {
 
     function RegistrationForm(){
 
-        $name = new TextField('Name');
+        $name = new TextField('FirstName');
         $name->setAttribute('placeholder', 'Enter your name');
         $name->setAttribute('required', 'required');
         $name->addExtraClass('form-control');
@@ -36,7 +36,7 @@ class RegistrationPage_Controller extends Page_Controller {
 
         $actions = new FieldList($action);
 
-        $validator = new RequiredFields('Name', 'Email', 'Password');
+        $validator = new RequiredFields('FirstName', 'Email', 'Password');
 
         return new Form($this, 'RegistrationForm', $fields, $actions, $validator);
 
