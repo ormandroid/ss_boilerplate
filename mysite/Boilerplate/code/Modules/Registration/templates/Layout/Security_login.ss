@@ -18,8 +18,7 @@
             <div class="memberLinks">
                 <% if CurrentMember %>
                     <% loop CurrentMember %>
-                        <hr />
-                        <a class="btn btn-secondary" href="$Link">Edit Profile</a>
+                        <a id="editProfile" class="btn btn-secondary" href="$Link">Edit Profile</a>
                     <% end_loop %>
                 <% else %>
                     <a href="$Page(register).Link">Register</a>

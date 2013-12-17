@@ -55,6 +55,7 @@
                     <% end_if %>
 
                     <% include PageWidgets %>
+
                 </aside><!-- /.content typography -->
             </article>
             $Form

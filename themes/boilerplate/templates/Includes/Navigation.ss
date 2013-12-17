@@ -16,17 +16,6 @@
                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
-            <% if CurrentMember %>
-                <% loop CurrentMember %>
-                    <li>
-                        <a href="Security/logout">Logout</a>
-                    </li>
-                <% end_loop %>
-            <% else %>
-                <li>
-                    <a href="Security/login">Login</a>
-                </li>
-            <% end_if %>
         </ul><!-- /.nav navbar-nav pull-right -->
         <% if $SearchForm %>
             <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
@@ -51,17 +40,6 @@
                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
-            <% if CurrentMember %>
-                <% loop CurrentMember %>
-                    <li>
-                        <a href="Security/logout">Logout</a>
-                    </li>
-                <% end_loop %>
-            <% else %>
-                <li>
-                    <a href="Security/login">Login</a>
-                </li>
-            <% end_if %>
         </ul><!-- /.nav navbar-nav pull-right -->
         <% if $SearchForm %>
             <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
@@ -96,13 +74,6 @@
                     <% end_if %>
                 <% end_if %>
             <% end_loop %>
-            <% if CurrentMember %>
-                <% loop CurrentMember %>
-                    <option value="Security/logout">Logout</option>
-                <% end_loop %>
-            <% else %>
-                <option value="Security/login">Login</option>
-            <% end_if %>
         </select><!-- /.input-sm -->
         <div class="clearfix"></div><!-- /.clearfix -->
     </div><!-- /.select-navigation -->

@@ -91,8 +91,7 @@ class ContactPage_Controller extends Page_Controller {
 
     }
 
-    public function Success()
-    {
+    public function Success() {
         return isset($_REQUEST['success']) && $_REQUEST['success'] == "1";
     }
 
