@@ -150,18 +150,6 @@ a{
     #footer{padding: $gap-lg 0;}
 }
 
-/*---------------------------------------------*\
-    Login form
-\*---------------------------------------------*/
-
-#MemberLoginForm_LoginForm{
-    #ForgotPassword{margin-top: $gap-sm}
-}
-
-@media (min-width: $screen-sm){
-    #MemberLoginForm_LoginForm{max-width: 50%;}
-}
-
 /*======================================================================*\
     Modules
 \*======================================================================*/
@@ -293,6 +281,38 @@ a{
         ul{
             &.list-unstyled{margin: 0;}
         }
+    }
+}
+
+/*---------------------------------------------*\
+    Registration
+\*---------------------------------------------*/
+
+#MemberLoginForm_LoginForm{
+    #ForgotPassword{margin-top: $gap-sm}
+}
+
+@media (min-width: $screen-sm){
+    #MemberLoginForm_LoginForm,
+    #Form_EditProfileForm,
+    #Form_RegistrationForm{max-width: 50%;}
+}
+
+#MemberLoginForm_LoginForm,
+#Form_EditProfileForm,
+#Form_RegistrationForm{
+    .text{
+        @extend .form-control;
+    }
+    .action{
+        @extend .btn;
+        @extend .btn-primary;
+    }
+}
+
+#Form_EditProfileForm{
+    .action{
+        @extend .btn-lg;
     }
 }
 

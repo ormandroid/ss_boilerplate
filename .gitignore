@@ -15,3 +15,4 @@ themes/.DS_Store
 vendor/
 web.config
 themes/boilerplate/.sass-cache
+.sass-cache/

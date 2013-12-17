@@ -1,9 +1,8 @@
+<% include PageHeader %>
+
 <div class="container">
 
     <div id="Content" class="searchResults">
-        <div class="page-header">
-            <h1>$Title</h1>
-        </div><!-- /.page-header -->
         <% if $Query %>
             <p class="searchQuery"><% sprintf(_t('PageResults.SearchHeading', 'You searched for "%s"'), $Query) %></p>
         <% end_if %>

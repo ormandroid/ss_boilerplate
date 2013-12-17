@@ -26,8 +26,9 @@ textarea:focus,
     Messages
 \*---------------------------------------------*/
 
-.message {margin-top: $gap-sm;display: inline-block;padding: $alert-padding;margin-bottom: $line-height-computed;border: 1px solid transparent;border-radius: $alert-border-radius;
+.message {margin-top: $gap-sm;display: inline-block;padding: $alert-padding;margin-bottom: $line-height-computed;border: 1px solid transparent;border-radius: $alert-border-radius;border-color: $alert-info-border;color: $alert-info-text;background-color: $alert-info-bg;
     > p {margin-bottom: 0;}
     > p + p {margin-top: 5px;}
-    &.required {border-color: $alert-danger-border;color: $alert-danger-text;background-color: $alert-danger-bg;}
+    &.required,
+    &.validation{border-color: $alert-danger-border;color: $alert-danger-text;background-color: $alert-danger-bg;}
 }
