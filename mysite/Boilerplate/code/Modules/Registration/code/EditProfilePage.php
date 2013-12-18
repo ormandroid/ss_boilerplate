@@ -2,6 +2,8 @@
 
 class EditProfilePage extends Page {
 
+    private static $icon = 'mysite/Boilerplate/code/Modules/Registration/images/user--pencil.png';
+
 }
 
 class EditProfilePage_Controller extends Page_Controller {

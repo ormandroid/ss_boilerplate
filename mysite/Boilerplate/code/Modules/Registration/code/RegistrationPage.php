@@ -2,6 +2,8 @@
 
 class RegistrationPage extends Page {
 
+    private static $icon = 'mysite/Boilerplate/code/Modules/Registration/images/user--plus.png';
+
 }
 
 class RegistrationPage_Controller extends Page_Controller {
