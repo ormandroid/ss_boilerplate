@@ -326,6 +326,16 @@ a{
 \*======================================================================*/
 
 /*---------------------------------------------*\
+    Carousel
+\*---------------------------------------------*/
+
+.carousel-inner{
+    > .item {
+        @include transition(0.6s ease left);
+    }
+}
+
+/*---------------------------------------------*\
     Buttons
 \*---------------------------------------------*/
 
@@ -373,8 +383,23 @@ a{
     @include well-variant($btn-danger-color, $brand-danger);
 }
 
-.panel-secondary {
-  @include panel-variant($panel-secondary-border, $panel-secondary-text, $panel-secondary-heading-bg, $panel-secondary-border);
+/*---------------------------------------------*\
+    Panels
+\*---------------------------------------------*/
+
+.panel{
+    table{
+        &.table{
+            tr{
+                &:first-child{
+                    td{border-top-width: 0;}
+                }
+            }
+        }
+    }
+    &.panel-secondary {
+        @include panel-variant($panel-secondary-border, $panel-secondary-text, $panel-secondary-heading-bg, $panel-secondary-border);
+    }
 }
 
 /*---------------------------------------------*\
