@@ -18,13 +18,13 @@
 
             <div class="content typography">
                 <% if Success %>
-                    <div class="alert alert-success">
-                        $SubmitText
-                    </div><!-- /.alert alert-success -->
                 <% else %>
                     $ContactForm
                 <% end_if %>
                 $Content
+                <% if $Latitude && $Longitude %>
+                    <div id="map-canvas"></div><!-- /#map-canvas -->
+                <% end_if %>
                 $Form
                 $PageComments
             </div><!-- /.content typography -->

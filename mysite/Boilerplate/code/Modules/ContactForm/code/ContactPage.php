@@ -100,7 +100,7 @@ class ContactPage_Controller extends Page_Controller {
             }else{
                 $waterColor = 'false';
             }
-            Requirements::javascript('https://maps.googleapis.com/maps/api/js?sensor=false');
+            Requirements::javascript('https://maps.googleapis.com/maps/api/js?key='.$this->GoogleAPI.'&sensor=false');
             Requirements::javascript('mysite/Boilerplate/code/Modules/ContactForm/js/mapScript.js');
             Requirements::customScript(<<<JS
 (function($) {
