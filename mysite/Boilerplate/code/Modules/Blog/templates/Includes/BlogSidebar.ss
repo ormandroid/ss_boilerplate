@@ -3,9 +3,10 @@
 
         <h4>$MenuTitle.XML</h4>
 
-        <% if $BlogSidebarContent %>
+        <% if $BlogSidebarContent || $Parent.BlogSidebarContent %>
             <aside class="blog-sidebar-content">
                 $BlogSidebarContent
+                $Parent.BlogSidebarContent
             </aside><!-- /.blog-sidebar-content -->
         <% end_if %>
 

@@ -63,7 +63,7 @@ class BoilerplateConfig extends DataExtension {
                 new UploadField('Favicon', 'Choose an Image For Your Favicon')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
+		$fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
 
         /* -----------------------------------------
          * Company Details
@@ -78,7 +78,7 @@ class BoilerplateConfig extends DataExtension {
                 new HtmlEditorField('PhysicalAddress', 'Physical Address')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
+		$fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
 
         /* -----------------------------------------
          * Tracking Code
@@ -91,7 +91,7 @@ class BoilerplateConfig extends DataExtension {
                 new TextareaField('TrackingCode', 'Tracking Code'),
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.ThemeSettings', $toggleFields);
+		$fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
 
     }
 

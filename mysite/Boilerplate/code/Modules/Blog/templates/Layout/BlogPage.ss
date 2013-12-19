@@ -16,13 +16,12 @@
                 <% end_if %>
                 <div class="content typography">
                     $Content
+                    <% include Disqus %>
+                    $Form
+                    $PageComments
                 </div><!-- /.content typography -->
-                $Form
-                $PageComments
             </article><!-- /.blog-single -->
         </div><!-- /.col-xs-12 col-sm-9 -->
-
-        <div class="visible-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
     </div><!-- /.row -->
 
