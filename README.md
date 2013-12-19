@@ -9,6 +9,8 @@ A rapid development theme based on Bootstrap 3.x
 * Blog
 * Portfolio
 * Files
+* User Registration
+* Disqus Comments
 * Contact Form
 
 ## Installation ##
