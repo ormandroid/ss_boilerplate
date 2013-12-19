@@ -76,8 +76,10 @@ class RegistrationPage_Controller extends Page_Controller {
 
         //Get profile page
         if($ProfilePage = DataObject::get_one('EditProfilePage')){
-            return $this->redirect($ProfilePage->Link('?success=1'));
+            $this->setFlash('Welcome ' .$data['FirstName'].', your account has been created!', 'success');
+            return $this->redirect($ProfilePage->Link());
         }else{
+            $this->setFlash('Please add a "Edit Profile Page" in your SiteTree to enable profile editing', 'warning');
             return $this->redirect(Director::absoluteBaseURL());
         }
 

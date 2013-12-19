@@ -10,49 +10,7 @@
             <article>
                 <aside class="content typography">
 
-                    <% if Success %>
-                        <div class="alert alert-success">
-                            <i class="fa fa-check"></i> You have successfully registered!
-                        </div><!-- /.alert alert-success -->
-
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">Your details are as follows:</div>
-                            <table class="table">
-                                <% loop CurrentMember %>
-                                    <tr>
-                                        <td>Name:</td>
-                                        <td>$FirstName</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td>$Email</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Website:</td>
-                                        <td><% if Website %>$Website<% end_if %></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Job Title:</td>
-                                        <td><% if JobTitle %>$JobTitle<% end_if %></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Blurb:</td>
-                                        <td><% if Blurb %>$Blurb<% end_if %></td>
-                                    </tr>
-                                <% end_loop %>
-                            </table><!-- /.table -->
-                        </div><!-- /.panel panel-primary -->
-
-                        <a class="btn btn-secondary" href="$Link">Edit details</a>
-
-                    <% else %>
-                        <% if Saved %>
-                            <div class="alert alert-success">
-                                <i class="fa fa-check"></i> Your profile has been saved!
-                            </div><!-- /.alert alert-success -->
-                        <% end_if %>
-                        $EditProfileForm
-                    <% end_if %>
+                    $EditProfileForm
 
                     <% include PageWidgets %>
 

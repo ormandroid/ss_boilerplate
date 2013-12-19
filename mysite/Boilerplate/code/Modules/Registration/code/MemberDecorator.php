@@ -21,7 +21,7 @@ class MemberDecorator extends DataExtension {
         if($ProfilePage = DataObject::get_one('EditProfilePage')){
             return $ProfilePage->Link();
         }else{
-            return $this->redirect(Director::absoluteBaseURL());
+            return Controller::curr()->redirect(Director::absoluteBaseURL());
         }
     }
 

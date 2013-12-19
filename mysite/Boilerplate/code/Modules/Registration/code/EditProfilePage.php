@@ -15,6 +15,7 @@ class EditProfilePage_Controller extends Page_Controller {
     public function EditProfileForm(){
 
         if(!Member::currentUser()){
+            $this->setFlash('Please login to edit your profile', 'warning');
             return $this->redirect(Director::absoluteBaseURL());
         }
 
@@ -83,9 +84,10 @@ class EditProfilePage_Controller extends Page_Controller {
                 //Session::set("FormInfo.Form_EditProfileForm.data", $data);
                 return $this->redirectBack();
             }else{
+                $this->setFlash('Your profile has been updated', 'success');
                 $form->saveInto($CurrentMember);
                 $CurrentMember->write();
-                return $this->redirect($this->Link('?saved=1'));
+                return $this->redirect($this->Link());
             }
         }else{
             return Security::PermissionFailure($this->controller, 'You must <a href="register">registered</a> and logged in to edit your profile:');
