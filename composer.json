@@ -1,0 +1,25 @@
+{
+	"name": "RyanPotter/ss_boilerplate",
+	"description": "A rapid development theme based on Bootstrap 3.x",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "theme"],
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Ryan Potter",
+			"homepage": "http://ryanpotter.co.nz/",
+			"role": "Developer"
+		}
+	],
+	"require":
+	{
+		"silverstripe/framework": "3.*",
+		"composer/installers": "*"
+	},
+	"support": {
+		"issues": "https://github.com/Rhym/ss_boilerplate/issues"
+	},
+	"extra": {
+		"installer-name": "ss_boilerplate"
+	}
+}
