@@ -1,5 +1,5 @@
 {
-	"name": "Rhym/ss_boilerplate",
+	"name": "ryanpotter/ss_boilerplate",
 	"description": "A rapid development theme based on Bootstrap 3.x",
 	"type": "silverstripe-module",
 	"keywords": ["silverstripe", "theme"],
