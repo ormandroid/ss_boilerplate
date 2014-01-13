@@ -22,6 +22,5 @@
 	"support": {
 		"issues": "https://github.com/Rhym/ss_boilerplate/issues"
 	},
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
