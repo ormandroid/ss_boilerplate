@@ -13,13 +13,14 @@
 	],
 	"require":
 	{
+        "php": ">=5.3.2",
+        "silverstripe/cms": "3.*",
 		"silverstripe/framework": "3.*",
+        "undefinedoffset/sortablegridfield": "dev-master",
 		"composer/installers": "*"
 	},
 	"support": {
 		"issues": "https://github.com/Rhym/ss_boilerplate/issues"
 	},
-	"extra": {
-		"installer-name": "ss_boilerplate"
-	}
+    "minimum-stability": "dev"
 }
