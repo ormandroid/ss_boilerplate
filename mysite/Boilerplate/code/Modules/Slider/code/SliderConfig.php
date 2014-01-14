@@ -13,7 +13,11 @@ class SliderConfig extends DataExtension {
 
     public function updateCMSFields(FieldList $fields) {
 
-        $config = GridFieldConfig_RecordEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+        $config->addComponent(new GridFieldSortableRows('SortOrder'));
+        $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Thumbnail' => 'Thumbnail'
+        ));
         $gridField = new GridField(
             'SliderItems',
             'Slider Items',

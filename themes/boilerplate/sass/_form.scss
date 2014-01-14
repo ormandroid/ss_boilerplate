@@ -26,9 +26,13 @@ textarea:focus,
     Messages
 \*---------------------------------------------*/
 
-.message {margin-top: $gap-sm;display: inline-block;padding: $alert-padding;margin-bottom: $line-height-computed;border: 1px solid transparent;border-radius: $alert-border-radius;border-color: $alert-info-border;color: $alert-info-text;background-color: $alert-info-bg;
+.message {
+    @extend .alert;
+    @extend .alert-info;
     > p {margin-bottom: 0;}
-    > p + p {margin-top: 5px;}
+    > p + p {margin-top: $gap-xs;}
     &.required,
-    &.validation{border-color: $alert-danger-border;color: $alert-danger-text;background-color: $alert-danger-bg;}
+    &.validation{
+        @extend .alert-danger;
+    }
 }

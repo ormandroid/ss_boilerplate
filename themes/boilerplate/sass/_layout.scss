@@ -45,29 +45,38 @@ a{
     Navigation
 \*---------------------------------------------*/
 
-#main-nav{margin-bottom: 0;background: transparent none;border-width: 0;padding: $gap-sm 0;
-    .navbar-collapse{padding: 0;}
+#main-nav{margin-bottom: 0;background: transparent none;border-width: 0;padding: $gap-sm 0;display : table;width: 100%;
+    .navbar-collapse{padding: 0;vertical-align : middle;width: 100%;}
     .nav{
         > li{
-            > a{margin-left: 1px;padding: 8px $gap-sm;font-weight: bold;
+            &.open{
+                > .dropdown-menu{
+                    @include opacity(1);
+                    @include transform(translate(0, 0) scale(1));
+                }
+            }
+            > a{margin-left: 2px;padding: 8px $gap-sm;font-weight: bold;
                 @include border-radius();
                 @include transition(.1s linear background);
             }
         }
     }
-    .dropdown-menu{padding: 0;border-width: 0;
+    .dropdown-menu{padding: 0;border-width: 0;background: transparent none;padding-top: $gap-sm;display: block;
+        @include opacity(0);
         @include border-radius(0);
         @include box-shadow(none);
-        @include transition(.1s linear opacity);
+        @include backface-visibility(hidden);
+        @include transition(all 0.2s ease-in-out);
+        @include transform(translate(0, -50%) scale(0));
         > li{
             &.divider{margin: 0;}
-            > a{padding: $gap-sm;background: $btn-primary-bg;color: $btn-primary-color;border-top: 1px solid lighten($btn-primary-bg, 5%);
-                &:hover{background: lighten($btn-primary-bg, 5%);}
+            > a{padding: $gap-sm;background: $btn-default-bg;color: $btn-default-color;@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
+                &:hover{background: darken($btn-default-bg, 3%)}
                 &:first-child{border-top-width: 0;}
             }
             &:first-child{
                 a{
-                    @include border-top-left-radius();
+                    @include border-top-radius($border-radius-base);
                 }
             }
             &:last-child{
@@ -82,9 +91,6 @@ a{
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus,
 #main-nav > .navbar-collapse > .nav > li:hover > a{background: $btn-primary-bg;color: $btn-primary-color;}
-#main-nav > .navbar-collapse > .nav > li.dropdown:hover > a{
-    @include border-bottom-radius(0);
-}
 #main-nav > .navbar-collapse > .nav > li.section > a,
 #main-nav > .navbar-collapse > .nav > li.current > a{background: $btn-primary-bg;color: $btn-primary-color}
 
@@ -99,11 +105,24 @@ a{
 }
 
 @media (min-width: $screen-sm){
-    #main-nav{padding: 0;}
+    #main-nav{padding: 0;
+        .navbar-collapse{
+            &.visible-sm{display: table-cell !important;}
+        }
+    }
 }
 
 @media (min-width: $screen-md){
-    #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu{display: block;}
+    #main-nav{
+        .navbar-collapse{
+            &.hidden-sm{display: table-cell !important;}
+            &.visible-sm{display: none !important;}
+        }
+    }
+    #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu{
+        @include opacity(1);
+        @include transform(translate(0, 0) scale(1));
+    }
 }
 
 /*---------------------------------------------*\
@@ -129,7 +148,6 @@ a{
 \*---------------------------------------------*/
 
 #mainContent{margin-bottom: $gap-lg;}
-
 
 .page-header{margin: 0 0 $gap-md 0;border-width: 0;padding: $gap-md 0;background: $gray-lighter;
     h1{margin: 0;}
@@ -353,46 +371,65 @@ a{
 
 .btn{border-width: 0;font-weight: bold;
     &:focus{outline: 0;}
-}
-
-.btn-shadow{margin-bottom:4px;
-    &:active{margin-bottom: 0;margin-top: 4px;}
-}
-
-.btn-secondary {
-  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-}
-
-.btn-inverse {
-  @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+    &.btn-shadow{margin-bottom:4px;
+        &:active{margin-bottom: 0;margin-top: 4px;}
+    }
+    &.btn-secondary {
+        @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+    }
+    &.btn-inverse {
+        @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+    }
 }
 
 /*---------------------------------------------*\
     Wells
 \*---------------------------------------------*/
 
-.well-primary{
-    @include well-variant($btn-primary-color, $brand-primary);
+.well{
+    &.well-primary{
+        @include well-variant($btn-primary-color, $brand-primary);
+    }
+    &.well-secondary{
+        @include well-variant($btn-secondary-color, $brand-secondary);
+    }
+    &.well-inverse{
+        @include well-variant($btn-inverse-color, $brand-inverse);
+    }
+    &.well-info{
+        @include well-variant($btn-info-color, $brand-info);
+    }
+    &.well-warning{
+        @include well-variant($btn-warning-color, $brand-warning);
+    }
+    &.well-danger{
+        @include well-variant($btn-danger-color, $brand-danger);
+    }
 }
 
-.well-secondary{
-    @include well-variant($btn-secondary-color, $brand-secondary);
-}
+/*---------------------------------------------*\
+    Alerts
+\*---------------------------------------------*/
 
-.well-inverse{
-    @include well-variant($btn-inverse-color, $brand-inverse);
-}
-
-.well-info{
-    @include well-variant($btn-info-color, $brand-info);
-}
-
-.well-warning{
-    @include well-variant($btn-warning-color, $brand-warning);
-}
-
-.well-danger{
-    @include well-variant($btn-danger-color, $brand-danger);
+.alert{border-width: 0;border-left-width: $gap-xs;
+    @include border-radius(0);
+    a{text-decoration: underline}
+    &.alert-success{
+        @include alert-variant($alert-success-bg, darken($alert-success-border, 15%), $alert-success-text);
+        a{color: $alert-success-text}
+    }
+    &.alert-info{
+        @include alert-variant($alert-info-bg, darken($alert-info-border, 15%), $alert-info-text);
+        a{color: $alert-info-text}
+    }
+    &.alert-warning{
+        @include alert-variant($alert-warning-bg, darken($alert-warning-border, 15%), $alert-warning-text);
+        a{color: $alert-warning-text}
+    }
+    &.alert-danger{
+        @include alert-variant($alert-danger-bg, darken($alert-danger-border, 15%), $alert-danger-text);
+        a{color: $alert-danger-text}
+    }
 }
 
 /*---------------------------------------------*\

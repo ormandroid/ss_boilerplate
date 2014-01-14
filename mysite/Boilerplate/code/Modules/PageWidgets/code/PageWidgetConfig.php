@@ -12,7 +12,11 @@ class PageWidgetConfig extends DataExtension {
          * Page Widgets
         ------------------------------------------*/
 
-        $config = GridFieldConfig_RecordEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+        $config->addComponent(new GridFieldSortableRows('SortOrder'));
+        $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Title' => 'Title'
+        ));
         $gridField = new GridField(
             'PageWidgetItems',
             'Widgets',

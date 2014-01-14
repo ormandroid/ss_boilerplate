@@ -4,7 +4,8 @@ class FileGroup extends DataObject{
 
     static $db = array (
         'Title' => 'Varchar(255)',
-        'PanelClass' => 'Varchar(255)'
+        'PanelClass' => 'Varchar(255)',
+        'SortOrder' => 'Int'
     );
 
     static $has_one = array (
@@ -18,6 +19,8 @@ class FileGroup extends DataObject{
     private static $defaults = array(
         'PanelClass' => 'panel-default'
     );
+
+    private static $default_sort = 'SortOrder';
 
     function getCMSFields() {
 

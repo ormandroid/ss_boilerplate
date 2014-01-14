@@ -2,7 +2,9 @@
 
 class PortfolioImage extends DataObject{
 
-    static $db = array ();
+    static $db = array (
+        'SortOrder' => 'Int'
+    );
 
     static $has_one = array (
         'Page' => 'Page',
@@ -12,6 +14,8 @@ class PortfolioImage extends DataObject{
     public static $summary_fields = array(
   		'Thumbnail'=>'Thumbnail'
  	);
+
+    private static $default_sort = 'SortOrder';
 
     public function getThumbnail() {
 		if ($Image = $this->Image()->ID) {

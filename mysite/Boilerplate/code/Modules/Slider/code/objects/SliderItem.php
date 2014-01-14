@@ -4,7 +4,8 @@ class SliderItem extends DataObject{
 
     static $db = array (
         'CustomLink' => 'Varchar(255)',
-        'Caption' => 'HTMLText'
+        'Caption' => 'HTMLText',
+        'SortOrder' => 'Int'
     );
 
     static $has_one = array (
@@ -24,6 +25,8 @@ class SliderItem extends DataObject{
 			return '(No Image)';
 		}
 	}
+
+    private static $default_sort = 'SortOrder';
 
     function getCMSFields() {
 

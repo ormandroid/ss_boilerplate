@@ -28,7 +28,11 @@ class PortfolioPage extends Page {
          * Images
         ------------------------------------------*/
 
-        $config = GridFieldConfig_RecordEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+        $config->addComponent(new GridFieldSortableRows('SortOrder'));
+        $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Thumbnail' => 'Thumbnail'
+        ));
         $gridField = new GridField(
             'PortfolioImages',
             'Images',

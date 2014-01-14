@@ -29,14 +29,18 @@ class FilePage extends Page {
          * Groups
         ------------------------------------------*/
 
-        $config = GridFieldConfig_RecordEditor::create();
+        $config = GridFieldConfig_RelationEditor::create(10);
+        $config->addComponent(new GridFieldSortableRows('SortOrder'));
+        $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Title' => 'Title'
+        ));
         $gridField = new GridField(
             'FileGroups',
-            'Groups',
+            'File Groups',
             $this->owner->FileGroups(),
             $config
         );
-        $fields->addFieldToTab('Root.Groups', $gridField);
+        $fields->addFieldToTab('Root.FileGroups', $gridField);
 
         return $fields;
 

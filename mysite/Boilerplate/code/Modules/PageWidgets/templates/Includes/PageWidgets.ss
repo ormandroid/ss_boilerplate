@@ -1,6 +1,12 @@
 <% loop $PageWidgetItems %>
 
-    <% if $ColumnOne %>
+    <% if $Content %>
+        $Content
+    <% else_if $AlertContent %>
+        <div class="alert $AlertClass">
+            $AlertContent
+        </div><!-- /.alert -->
+    <% else_if $ColumnOne %>
         <div class="row">
 
             <div class="$ColumnClass">
