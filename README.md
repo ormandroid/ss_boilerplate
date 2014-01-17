@@ -15,6 +15,8 @@ A rapid development theme based on Bootstrap 3.x
 
 ## Installation ##
 
+* Requires: [Sortable Grid Field](https://github.com/UndefinedOffset/SortableGridField)
+
 Install SS.
 
 Copy across all of the files.
