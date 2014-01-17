@@ -9,7 +9,7 @@
     </article>
     <div class="row">
         <% loop $AllChildren %>
-            <article class="portfolio-item $Top.ColumnClass">
+            <article class="portfolio-item $Top.ColumnClass<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
                 <a href="$Link">
                     <figure class="portfolio-image">
                         <% loop $PortfolioImages.First %>

@@ -14,7 +14,7 @@
             </article>
             <div class="row">
                 <% loop $AllChildren %>
-                    <article class="blog-item $Top.ColumnClass">
+                    <article class="blog-item $Top.ColumnClass<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
                         <div class="blog-content">
                             <% if $BlogImage %>
                                 <a href="$Link" class="blog-image" title="Read more on &quot;{$Title}&quot;">

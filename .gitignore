@@ -19,3 +19,4 @@ themes/boilerplate/.sass-cache
 composer.phar
 SortableGridField/
 node_modules/
+.idea/

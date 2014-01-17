@@ -250,14 +250,16 @@ a{
 
 .portfolio-page-item{
     .portfolio-title{margin-top: 0;margin-bottom: $gap-md;color: $gray;}
-    .portfolio-image-item{margin-bottom: $gap-md;
-        &:last-child{margin-bottom: 0;}
-    }
+    .portfolio-image-item{margin-bottom: $gap-md}
     .content{color: $gray-light;}
 }
 
 @media (min-width: $screen-sm){
-    .portfolio-image-item{margin-bottom: $gap-lg;}
+    .portfolio-page-item{
+        .portfolio-image-item{margin-bottom: add($gap-md, $gap-sm);
+            &.last{margin-bottom: 0;}
+        }
+    }
 }
 
 /*---------------------------------------------*\
@@ -374,12 +376,13 @@ a{
     &.btn-shadow{margin-bottom:4px;
         &:active{margin-bottom: 0;margin-top: 4px;}
     }
-    &.btn-secondary {
-        @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
-    }
-    &.btn-inverse {
-        @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
-    }
+}
+
+.btn-secondary {
+    @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-inverse {
+    @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
 }
 
 /*---------------------------------------------*\

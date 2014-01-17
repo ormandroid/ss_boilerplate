@@ -8,7 +8,7 @@
 
             <div class="col-xs-12 col-sm-9">
                 <% loop $PortfolioImages %>
-                    <figure class="portfolio-image-item">
+                    <figure class="portfolio-image-item<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
                         $Image.setWidth(878)
                     </figure><!-- /.portfolio-image-item -->
                 <% end_loop %>

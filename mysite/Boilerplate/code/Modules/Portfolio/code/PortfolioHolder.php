@@ -1,17 +1,19 @@
 <?php
 class PortfolioHolder extends Page {
 
-    private static $allowed_children = array('PortfolioPage');
-
-    private static $icon = 'mysite/Boilerplate/code/Modules/Portfolio/images/blogs-stack.png';
-
     private static $db = array(
         'Columns' => 'Int'
     );
 
+    private static $allowed_children = array('PortfolioPage');
+
+    private static $icon = 'mysite/Boilerplate/code/Modules/Portfolio/images/blogs-stack.png';
+
     private static $defaults = array(
         'Columns' => 2
     );
+
+    private static $description = 'Custom content for different error cases (e.g. "Page not found")';
 
     public function getCMSFields() {
 
