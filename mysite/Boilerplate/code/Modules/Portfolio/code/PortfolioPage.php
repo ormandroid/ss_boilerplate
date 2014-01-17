@@ -15,6 +15,8 @@ class PortfolioPage extends Page {
         'ShowInMenus' => 0
     );
 
+    private static $description = 'Portfolio content page';
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();

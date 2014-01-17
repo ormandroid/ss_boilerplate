@@ -4,11 +4,13 @@ class EditProfilePage extends Page {
 
     private static $icon = 'mysite/Boilerplate/code/Modules/Registration/images/user--pencil.png';
 
+    private static $description = 'Edit profile content page';
+
 }
 
 class EditProfilePage_Controller extends Page_Controller {
 
-    static $allowed_actions = array(
+    private static $allowed_actions = array(
         'EditProfileForm'
     );
 

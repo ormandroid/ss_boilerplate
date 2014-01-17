@@ -19,6 +19,8 @@ class ContactPage extends Page {
         'SubmitText' => 'Thank you for contacting us, we will get back to you as soon as possible.'
     );
 
+    private static $description = 'Contact form page';
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();

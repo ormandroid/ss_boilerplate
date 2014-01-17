@@ -4,11 +4,13 @@ class RegistrationPage extends Page {
 
     private static $icon = 'mysite/Boilerplate/code/Modules/Registration/images/user--plus.png';
 
+    private static $description = 'Registration content page';
+
 }
 
 class RegistrationPage_Controller extends Page_Controller {
 
-    static $allowed_actions = array('RegistrationForm');
+    private static $allowed_actions = array('RegistrationForm');
 
     function RegistrationForm(){
 

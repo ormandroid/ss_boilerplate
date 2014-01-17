@@ -1,8 +1,6 @@
 <?php
 class BlogHolder extends Page {
 
-    private static $allowed_children = array('BlogPage');
-
     private static $icon = 'mysite/Boilerplate/code/Modules/Blog/images/blogs-stack.png';
 
     private static $db = array(
@@ -10,9 +8,13 @@ class BlogHolder extends Page {
         'BlogSidebarContent' => 'HTMLText'
     );
 
+    private static $allowed_children = array('BlogPage');
+
     private static $defaults = array(
         'Columns' => 0
     );
+
+    private static $description = 'Displays all blog child pages';
 
     public function getCMSFields() {
 

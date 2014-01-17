@@ -11,6 +11,8 @@ class FilePage extends Page {
         'FileGroups' => 'FileGroup'
     );
 
+    private static $description = 'Displays all file groups and items';
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();

@@ -13,7 +13,7 @@ class PortfolioHolder extends Page {
         'Columns' => 2
     );
 
-    private static $description = 'Custom content for different error cases (e.g. "Page not found")';
+    private static $description = 'Displays all portfolio child pages';
 
     public function getCMSFields() {
 

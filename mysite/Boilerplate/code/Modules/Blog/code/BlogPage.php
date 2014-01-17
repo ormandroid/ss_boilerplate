@@ -20,6 +20,8 @@ class BlogPage extends Page {
         'ShowInMenus' => 0
     );
 
+    private static $description = 'Blog content page';
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();
