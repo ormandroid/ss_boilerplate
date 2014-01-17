@@ -166,7 +166,12 @@ JS
         $email->setTemplate('ContactEmail');
         $email->populateTemplate($data);
         $email->send();
-        $this->setFlash($this->SubmitText, 'success');
+        if($this->SubmitText){
+            $submitText = $this->SubmitText;
+        }else{
+            $submitText = 'Thank you for contacting us, we will get back to you as soon as possible.';
+        }
+        $this->setFlash($submitText, 'success');
         return $this->redirect($this->Link("?success=1"));
 
     }

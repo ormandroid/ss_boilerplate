@@ -17,12 +17,18 @@
         <div class="col-xs-12 col-sm-9">
 
             <div class="content typography">
-                <% if Success %>
-                <% else %>
-                    $ContactForm
-                <% end_if %>
                 $Content
                 <% include PageItems %>
+                <% if Success %>
+                <% else %>
+                    <% if $Mailto %>
+                        $ContactForm
+                    <% else %>
+                        <div class="alert alert-warning">
+                            Please choose an email address for the contact page to send to.
+                        </div><!-- /.alert alert-warning -->
+                    <% end_if %>
+                <% end_if %>
                 <% if $Latitude && $Longitude %>
                     <div id="map-canvas"></div><!-- /#map-canvas -->
                 <% end_if %>

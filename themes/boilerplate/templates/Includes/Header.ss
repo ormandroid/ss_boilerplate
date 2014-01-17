@@ -7,8 +7,8 @@
                         $SiteConfig.LogoImage
                     </a>
                 <% else %>
-                    <h1><a href="$BaseHref">$SiteConfig.Title</a></h1>
-                    <h2 class="tagline">$SiteConfig.Tagline</h2><!-- /.tagline -->
+                    <h3><a href="$BaseHref">$SiteConfig.Title</a></h3>
+                    <h4 class="tagline">$SiteConfig.Tagline</h4><!-- /.tagline -->
                 <% end_if %>
             </div><!-- /#logoContainer .col-xs-6 col-sm-3 -->
             <div id="navigationContainer" class="col-xs-6 col-sm-9">
