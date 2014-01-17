@@ -18,6 +18,7 @@
                 <aside class="content typography">
                     <h3 class="portfolio-title">$SubTitle</h3><!-- /.portfolio-title -->
                     $Content
+                    <% include PageItems %>
                     $Form
                     $PageComments
                 </aside><!-- /.content -->

@@ -9,15 +9,13 @@
         <% if $Menu(2) %><div class="col-xs-12 col-sm-9"><% end_if %>
             <article>
                 <aside class="content typography">
-
+                    $Content
                     $EditProfileForm
-
-                    <% include PageWidgets %>
-
+                    <% include PageItems %>
+                    $Form
+                    $PageComments
                 </aside><!-- /.content typography -->
             </article>
-            $Form
-            $PageComments
         <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 --><% end_if %>
 
         <div class="visible-xs"><% include SideBar %></div><!-- /.hidden-xs -->

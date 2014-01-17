@@ -1,4 +1,4 @@
-<% loop $PageWidgetItems %>
+<% loop $PageItemItems %>
 
     <% if $Content %>
         $Content

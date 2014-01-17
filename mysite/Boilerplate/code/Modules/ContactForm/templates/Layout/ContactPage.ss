@@ -22,6 +22,7 @@
                     $ContactForm
                 <% end_if %>
                 $Content
+                <% include PageItems %>
                 <% if $Latitude && $Longitude %>
                     <div id="map-canvas"></div><!-- /#map-canvas -->
                 <% end_if %>

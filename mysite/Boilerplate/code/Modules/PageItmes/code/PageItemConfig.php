@@ -1,9 +1,9 @@
 <?php
 
-class PageWidgetConfig extends DataExtension {
+class PageItemConfig extends DataExtension {
 
     private static $has_many = array(
-        'PageWidgetItems' => 'PageWidgetItem'
+        'PageItems' => 'PageItem'
     );
 
     public function updateCMSFields(FieldList $fields) {
@@ -18,9 +18,9 @@ class PageWidgetConfig extends DataExtension {
             'Title' => 'Title'
         ));
         $gridField = new GridField(
-            'PageWidgetItems',
-            'Widgets',
-            $this->owner->PageWidgetItems(),
+            'PageItemItems',
+            'Items',
+            $this->owner->PageItems(),
             $config
         );
         $fields->addFieldToTab('Root.PageBuilder', $gridField);

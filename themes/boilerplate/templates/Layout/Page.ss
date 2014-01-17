@@ -10,11 +10,11 @@
             <article>
                 <aside class="content typography">
                     $Content
-                    <% include PageWidgets %>
+                    <% include PageItems %>
+                    $Form
+                    $PageComments
                 </aside><!-- /.content typography -->
             </article>
-            $Form
-            $PageComments
         <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 --><% end_if %>
 
         <div class="visible-xs"><% include SideBar %></div><!-- /.hidden-xs -->

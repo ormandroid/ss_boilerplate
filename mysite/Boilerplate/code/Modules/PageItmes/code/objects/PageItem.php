@@ -1,6 +1,6 @@
 <?php
 
-class PageWidgetItem extends DataObject{
+class PageItem extends DataObject{
 
     static $db = array (
         'Title' => 'Varchar(255)',

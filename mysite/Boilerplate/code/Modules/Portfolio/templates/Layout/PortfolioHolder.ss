@@ -5,6 +5,9 @@
     <article>
         <div class="content typography">
             $Content
+            <% include PageItems %>
+            $Form
+            $PageComments
         </div><!-- /.content typography -->
     </article>
     <div class="row">
@@ -28,7 +31,5 @@
             <% end_if %>
         <% end_loop %>
     </div><!-- /.row -->
-    $Form
-    $PageComments
 
 </div><!-- /.container -->
