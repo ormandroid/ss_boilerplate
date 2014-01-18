@@ -11,7 +11,7 @@
                 <aside class="content typography">
                     $Content
                     $RegistrationForm
-                    <% include PageWidgets %>
+                    <% include PageItems %>
                 </aside><!-- /.content typography -->
             </article>
             $Form

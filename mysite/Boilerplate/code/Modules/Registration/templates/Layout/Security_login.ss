@@ -10,7 +10,7 @@
             <article>
                 <aside class="content typography">
                     $Content
-                    <% include PageWidgets %>
+                    <% include PageItems %>
                 </aside><!-- /.content typography -->
             </article>
             $Form
