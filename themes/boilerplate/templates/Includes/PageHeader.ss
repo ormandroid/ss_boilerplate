@@ -5,4 +5,4 @@
 </header><!-- /.page-header -->
 $FlashMessage
 <% include Slider %>
-<% include Breadcrumbs %>
+<% include BreadCrumbs %>

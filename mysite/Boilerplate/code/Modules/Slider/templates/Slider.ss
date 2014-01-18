@@ -1,6 +1,6 @@
 <% if $SliderItems %>
 
-    <% if $FullWidth = 0 %><div class="container"><% end_if %>
+    <% if $FullWidth %><% else %><div class="container"><% end_if %>
 
         <div id="pageSlider" class="carousel slide<% if $FullWidth %> full-width<% end_if %> " data-ride="carousel">
 
@@ -79,6 +79,6 @@
 
         </div><!-- /#pageSlider .carousel slide -->
 
-    <% if $FullWidth = 0 %></div><!-- /.container --><% end_if %>
+    <% if $FullWidth %><% else %></div><!-- /.container --><% end_if %>
 
 <% end_if %>
