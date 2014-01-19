@@ -2,6 +2,10 @@
     Mixins
 \*======================================================================*/
 
+/*---------------------------------------------*\
+    Border Radii
+\*---------------------------------------------*/
+
 @mixin border-radius($radius: $border-radius-base) {
     @include border-top-radius($radius);
     @include border-bottom-radius($radius);
@@ -31,6 +35,10 @@
     border-bottom-right-radius: $radius;
 }
 
+/*---------------------------------------------*\
+    Wells
+\*---------------------------------------------*/
+
 @mixin well-variant($color: $btn-default-color, $brand: $gray-lighter) {
     color: $color;
     background-color: $brand;
@@ -40,14 +48,41 @@
     }
 }
 
-@mixin transform($transformation) {
-  -webkit-transform: $transformation;
-      -ms-transform: $transformation; // IE9+
-          transform: $transformation;
+/*---------------------------------------------*\
+    Transformations
+\*---------------------------------------------*/
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
 }
+
+@mixin transform($transformation) {
+    -webkit-transform: $transformation;
+    -ms-transform: $transformation; // IE9+
+    transform: $transformation;
+}
+
+/*---------------------------------------------*\
+    Icons
+\*---------------------------------------------*/
+
+@mixin icon-center() {font-size: $gap-lg;position: absolute;top: 50%;left: 50%;margin-top: -$gap-md;margin-left:-$gap-md;width: $gap-lg;height: $gap-lg;line-height: $gap-lg;text-align: center;}
+
+/*---------------------------------------------*\
+    Theme Specific
+\*---------------------------------------------*/
 
 @mixin absolute-arrow() {
     &:after{content: "";display: block;position: absolute;bottom: -1px;top: auto;left: 25px;height: 0;width: 0;border-top: none;border-bottom: 11px solid #fff;border-left: 11px solid transparent;border-right: 11px solid transparent;}
 }
-
-@mixin icon-center() {font-size: $gap-lg;position: absolute;top: 50%;left: 50%;margin-top: -$gap-md;margin-left:-$gap-md;width: $gap-lg;height: $gap-lg;line-height: $gap-lg;text-align: center;}

@@ -27,15 +27,3 @@ $gap-lg: 40px !default;
 $gap-md: 20px !default;
 $gap-sm: 10px !default;
 $gap-xs: 5px !default;
-
-/*======================================================================*\
-    Functions
-\*======================================================================*/
-
-@function add($e, $f){
-  @return $e + $f
-}
-
-@function subtract($e, $f){
-  @return $e - $f
-}
