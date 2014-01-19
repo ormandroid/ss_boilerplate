@@ -16,7 +16,7 @@
         <% else %>
             <link rel="shortcut icon" href="$ThemeDirfavicon.ico" />
         <% end_if %>
-        <% require themedCSS('main') %>
+        <% require themedCSS('main.min') %>
         <!--[if lt IE 9]>
             <script src="$themeDir/js/html5.js"></script>
         <![endif]-->
