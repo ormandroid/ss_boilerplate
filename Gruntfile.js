@@ -7,7 +7,8 @@ module.exports = function(grunt) {
                     style: 'nested'
                 },
                 files: {
-                    'themes/boilerplate/css/main.css': 'themes/boilerplate/sass/main.scss'
+                    'themes/boilerplate/css/main.css': 'themes/boilerplate/sass/main.scss',
+                    'mysite/Boilerplate/css/cms/css/cms.css': 'mysite/Boilerplate/css/cms/sass/cms.scss'
                 }
             },
             dist: {
@@ -15,16 +16,17 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'themes/boilerplate/css/main.min.css': 'themes/boilerplate/sass/main.scss'
+                    'themes/boilerplate/css/main.min.css': 'themes/boilerplate/sass/main.scss',
+                    'mysite/Boilerplate/css/cms/css/cms.min.css': 'mysite/Boilerplate/css/cms/sass/cms.scss'
                 }
             }
         },
 		watch: {
             css: {
-                files: ['themes/boilerplate/sass/*.scss'],
+                files: ['themes/boilerplate/sass/*.scss', 'mysite/Boilerplate/css/cms/sass/*.scss'],
                 tasks: ['sass:prod', 'sass:dist'],
                 options: {
-                    spawn: false,
+                    spawn: false
                 }
             }
 		}

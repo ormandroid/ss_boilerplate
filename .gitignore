@@ -1,6 +1,5 @@
 .htaccess
 assets/
-cms/
 CONTRIBUTING.md
 favicon.ico
 framework/
@@ -20,3 +19,4 @@ composer.phar
 SortableGridField/
 node_modules/
 .idea/
+/cms/

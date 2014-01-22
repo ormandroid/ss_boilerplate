@@ -1,0 +1,42 @@
+/*======================================================================*\
+    Colors
+\*======================================================================*/
+
+$gray-darkest: #000000;
+$gray-darker: #222222;
+$gray-dark: #333333;
+$gray: #555555;
+$gray-light: #e1e1e1;
+$gray-lighter: #eeeeee;
+
+/*======================================================================*\
+    Brands
+\*======================================================================*/
+
+$brand-inverse: #222222;
+
+$brand-default-color: $gray;
+$brand-default: #ffffff;
+$brand-default-border: darken($brand-default, 20%);
+
+$brand-primary-color: #ffffff;
+$brand-primary: #2C343B;
+$brand-primary-border: darken($brand-primary, 10%);
+
+$brand-secondary-color: #ffffff;
+$brand-secondary: #00ccd2;
+$brand-secondary-border: darken($brand-secondary, 10%);
+
+/*======================================================================*\
+    UI
+\*======================================================================*/
+
+$accordion-text: $gray;
+$accordion-bg: #ffffff;
+$accordion-border: darken($accordion-bg, 10%);
+
+/*======================================================================*\
+    Sizifng
+\*======================================================================*/
+
+$border-radius-base: 0px;
