@@ -16,9 +16,9 @@ A rapid development theme based on Bootstrap 3.x
 
 ## Installation ##
 
-####Requires: [Sortable Grid Field](https://github.com/UndefinedOffset/SortableGridField)####
-
 Install [Silverstripe](http://www.silverstripe.org/stable-download/).
+
+Download [Sortable Grid Field](https://github.com/UndefinedOffset/SortableGridField) and place it in the root of your application.
 
 Copy across all of the files to your root directory.
 
