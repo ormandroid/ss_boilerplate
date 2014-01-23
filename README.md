@@ -33,7 +33,7 @@ Run `dev/build` and `?flush=all` in your url i.e http://mydomain.com/dev/build a
 
 ### CMS theme ###
 
-If you would like to activate the CMS theme, go to mysite/Boilerplate/_config/config.yml and uncomment the extension then run a `?flush=all`
+If you would like to activate the CMS theme, go to Boilerplate/_config/config.yml and uncomment the extension then run a `?flush=all`
 
 ### Grunt ###
 
