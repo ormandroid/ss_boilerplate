@@ -25,6 +25,10 @@ Run a `dev/build` and `?flush=all`
 
 Set Boilerplate as your site's theme.
 
+### CMS theme ###
+
+If you would lik to activate the CMS theme, go to mysite/Boilerplate/_config/config.yml and uncomment the extension then run a `?flush=all`
+
 * Note: The screenshots folder is not neccessary for your website
 
 ## Screenshots ##
