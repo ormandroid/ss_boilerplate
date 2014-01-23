@@ -26,10 +26,9 @@ Run a `dev/build` and `?flush=all`
 
 Set Boilerplate as your site's theme either in the admin area of your site: Settings > theme, or adding the following code to your mysite/_config/config.yml file:
 
-`
-SSViewer:
-  theme: 'boilerplate'
-`
+`SSViewer:`
+`  theme: 'boilerplate'`
+
 
 ### CMS theme ###
 
