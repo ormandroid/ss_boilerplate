@@ -16,13 +16,9 @@ themes/boilerplate/.sass-cache
 .sass-cache/
 composer.phar
 SortableGridField/
-node_modules/
 .idea/
 /cms/
 mysite/_config/config.yml
-
 mysite/code/Page.php
-
 mysite/_config/config.yml
-
 mysite/code/Page.php
