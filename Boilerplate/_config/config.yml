@@ -1,0 +1,14 @@
+GDBackend:
+  default_quality: 100
+
+SiteConfig:
+  extensions:
+    - BoilerplateConfig
+
+ContentController:
+  extensions:
+    - BoilerplatePageExtension
+
+#LeftAndMain:
+#  extra_requirements_css:
+#    - mysite/Boilerplate/css/cms/css/cms.min.css

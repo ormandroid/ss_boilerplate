@@ -1,0 +1,62 @@
+/*======================================================================*\
+    Mixins
+\*======================================================================*/
+
+/*---------------------------------------------*\
+    Box Shadow
+\*---------------------------------------------*/
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+    box-shadow: $shadow;
+}
+
+/*---------------------------------------------*\
+    Border Radii
+\*---------------------------------------------*/
+
+@mixin border-top-radius($radius: $border-radius-base) {
+    border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius: $border-radius-base) {
+    border-bottom-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+    border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius: $border-radius-base) {
+    border-bottom-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin border-top-left-radius($radius: $border-radius-base) {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-radius-topleft: $radius;
+    border-top-left-radius: $radius;
+}
+
+@mixin border-top-right-radius($radius: $border-radius-base) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-radius-topright: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-left-radius($radius: $border-radius-base) {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-radius-bottomleft: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+@mixin border-bottom-right-radius($radius: $border-radius-base) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-radius-bottomright: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius($radius: $border-radius-base) {
+    @include border-top-radius($radius);
+    @include border-bottom-radius($radius);
+}

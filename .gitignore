@@ -7,8 +7,7 @@ index.php
 install-frameworkmissing.html
 install.php
 Makefile
-mysite/_config.php
-mysite/.htaccess
+mysite/
 nbproject
 themes/.DS_Store
 vendor/
@@ -20,3 +19,10 @@ SortableGridField/
 node_modules/
 .idea/
 /cms/
+mysite/_config/config.yml
+
+mysite/code/Page.php
+
+mysite/_config/config.yml
+
+mysite/code/Page.php
