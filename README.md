@@ -16,13 +16,11 @@ A rapid development theme based on Bootstrap 3.x
 
 ## Installation ##
 
-* Requires: [Sortable Grid Field](https://github.com/UndefinedOffset/SortableGridField)
+####Requires: [Sortable Grid Field](https://github.com/UndefinedOffset/SortableGridField)####
 
-Install SS.
+Install [Silverstripe](http://www.silverstripe.org/stable-download/).
 
-Copy across all of the files.
-
-Run a `dev/build` and `?flush=all`
+Copy across all of the files to your root directory.
 
 Set Boilerplate as your site's theme either in the admin area of your site: Settings > theme, or adding the following code to your mysite/_config/config.yml file:
 
@@ -31,6 +29,7 @@ SSViewer:
   theme: 'boilerplate'
 ```
 
+Run `dev/build` and `?flush=all` in your url i.e http://mydomain.com/dev/build and http://mydomain.com?flush=all
 
 ### CMS theme ###
 
