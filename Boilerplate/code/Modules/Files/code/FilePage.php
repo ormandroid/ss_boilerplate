@@ -1,7 +1,7 @@
 <?php
 class FilePage extends Page {
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/Files/images/blue-documents-stack.png';
+    private static $icon = 'Boilerplate/code/Modules/Files/images/blue-documents-stack.png';
 
     private static $db = array(
         'Columns' => 'Int'

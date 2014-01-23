@@ -2,7 +2,7 @@
 
 class RegistrationPage extends Page {
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/Registration/images/user--plus.png';
+    private static $icon = 'Boilerplate/code/Modules/Registration/images/user--plus.png';
 
     private static $description = 'Registration content page';
 

@@ -2,7 +2,7 @@
 
 class ContactPage extends Page {
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/ContactForm/images/envelope-at-sign.png';
+    private static $icon = 'Boilerplate/code/Modules/ContactForm/images/envelope-at-sign.png';
 
     public static $db = array(
         'Mailto' => 'Varchar(100)',

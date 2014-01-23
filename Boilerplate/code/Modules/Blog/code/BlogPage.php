@@ -1,7 +1,7 @@
 <?php
 class BlogPage extends Page {
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/Blog/images/blog.png';
+    private static $icon = 'Boilerplate/code/Modules/Blog/images/blog.png';
 
     private static $db = array(
         'Date' => 'Date',

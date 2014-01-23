@@ -1,7 +1,7 @@
 <?php
 class PortfolioPage extends Page {
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/Portfolio/images/blog.png';
+    private static $icon = 'Boilerplate/code/Modules/Portfolio/images/blog.png';
 
     private static $db = array(
         'SubTitle' => 'Varchar(255)'

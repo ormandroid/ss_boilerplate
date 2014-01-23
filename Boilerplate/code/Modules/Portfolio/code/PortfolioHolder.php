@@ -1,13 +1,13 @@
 <?php
 class PortfolioHolder extends Page {
 
+    private static $icon = 'Boilerplate/code/Modules/Portfolio/images/blogs-stack.png';
+
     private static $db = array(
         'Columns' => 'Int'
     );
 
     private static $allowed_children = array('PortfolioPage');
-
-    private static $icon = 'mysite/Boilerplate/code/Modules/Portfolio/images/blogs-stack.png';
 
     private static $defaults = array(
         'Columns' => 2

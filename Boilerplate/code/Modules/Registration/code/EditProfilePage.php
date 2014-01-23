@@ -2,7 +2,7 @@
 
 class EditProfilePage extends Page {
 
-    private static $icon = 'mysite/Boilerplate/code/Modules/Registration/images/user--pencil.png';
+    private static $icon = 'Boilerplate/code/Modules/Registration/images/user--pencil.png';
 
     private static $description = 'Edit profile content page';
 
