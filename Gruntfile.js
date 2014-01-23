@@ -7,8 +7,7 @@ module.exports = function(grunt) {
                     style: 'nested'
                 },
                 files: {
-                    'themes/boilerplate/css/main.css': 'themes/boilerplate/sass/main.scss',
-                    'mysite/Boilerplate/css/cms/css/cms.css': 'mysite/Boilerplate/css/cms/sass/cms.scss'
+                    'themes/boilerplate/css/main.css': 'themes/boilerplate/sass/main.scss'
                 }
             },
             dist: {
@@ -16,15 +15,37 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'themes/boilerplate/css/main.min.css': 'themes/boilerplate/sass/main.scss',
-                    'mysite/Boilerplate/css/cms/css/cms.min.css': 'mysite/Boilerplate/css/cms/sass/cms.scss'
+                    'themes/boilerplate/css/main.min.css': 'themes/boilerplate/sass/main.scss'
+                }
+            },
+            cmsProd: {
+                options: {
+                    style: 'nested'
+                },
+                files: {
+                    'Boilerplate/css/cms/css/cms.css': 'Boilerplate/css/cms/sass/cms.scss'
+                }
+            },
+            cmsDist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    'Boilerplate/css/cms/css/cms.min.css': 'Boilerplate/css/cms/sass/cms.scss'
                 }
             }
         },
 		watch: {
-            css: {
-                files: ['themes/boilerplate/sass/*.scss', 'mysite/Boilerplate/css/cms/sass/*.scss'],
+            theme: {
+                files: ['themes/boilerplate/sass/*.scss'],
                 tasks: ['sass:prod', 'sass:dist'],
+                options: {
+                    spawn: false
+                }
+            },
+            cms: {
+                files: ['Boilerplate/css/cms/sass/*.scss'],
+                tasks: ['sass:cmsProd', 'sass:cmsDist'],
                 options: {
                     spawn: false
                 }
@@ -33,5 +54,5 @@ module.exports = function(grunt) {
 	});
     grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.registerTask('default',['watch']);
+	grunt.registerTask('default',['watch:theme']);
 }
