@@ -228,8 +228,10 @@ a{
                 -webkit-backface-visibility: hidden;
                 @include transition(.1s linear opacity);
             }
-            .hover-icon{display: none;color: $btn-primary-color;
+            .hover-icon{color: $btn-primary-color;
                 @include icon-center();
+                @include opacity(0);
+                @include transition(.1s linear opacity);
             }
         }
         .portfolio-meta{border: 1px solid $gray-lighter;border-top-width: 0;padding: $gap-md;
@@ -239,7 +241,9 @@ a{
         }
         &:hover{text-decoration: none;
             img{opacity: 0.9}
-            .hover-icon{display: block;}
+            .hover-icon{
+                @include opacity(1);
+            }
         }
     }
 }
@@ -259,6 +263,55 @@ a{
         .portfolio-image-item{margin-bottom: add($gap-md, $gap-sm);
             &.last{margin-bottom: 0;}
         }
+    }
+}
+
+/*---------------------------------------------*\
+    Gallery
+\*---------------------------------------------*/
+
+.gallery-container{margin-bottom: -$gap-md;
+    .gallery-item{margin-bottom: $gap-md;
+        .gallery-modal{background: $gray-darker;display: block;
+            img{
+                -webkit-backface-visibility: hidden;
+                @include transition(.1s linear opacity);
+            }
+        }
+        .hover-icon{color: $btn-primary-color;
+            @include icon-center();
+            @include opacity(0);
+            @include transition(.1s linear opacity);
+            i{font-size: 0.5em;}
+        }
+        &:hover{text-decoration: none;
+            img{opacity: 0.9}
+            .hover-icon{
+                @include opacity(1);
+            }
+        }
+    }
+}
+
+#galleryModal{
+    .modal-content{background: transparent none;border-width: 0;
+        @include box-shadow(none);
+        @include border-radius(0);
+        .modal-body{padding: 0;
+            #galleryImage{
+                @include border-radius();
+                @include box-shadow(0 5px 15px rgba(0,0,0,0.5));
+            }
+        }
+        .close{position: absolute;right: $gap-md;bottom:  $gap-md;color: $btn-primary-color;font-size: 2em;
+            @include opacity(1);
+        }
+    }
+}
+
+@media (min-width: $screen-sm){
+    .gallery-container{margin-bottom: -$gap-lg;
+        .gallery-item{margin-bottom: $gap-lg;}
     }
 }
 
