@@ -25,8 +25,8 @@ class ContactPage extends Page {
 
         $fields = parent::getCMSFields();
 
-        Requirements::javascript('mysite/Boilerplate/javascript/colorpicker.min.js');
-		Requirements::css('mysite/Boilerplate/css/colorpicker.css');
+        Requirements::javascript('Boilerplate/javascript/colorpicker.min.js');
+		Requirements::css('Boilerplate/css/colorpicker.css');
 
         $fields->addFieldToTab('Root.Main', new LiteralField('js',
 		'<script type="text/javascript">
@@ -103,7 +103,7 @@ class ContactPage_Controller extends Page_Controller {
                 $waterColor = 'false';
             }
             Requirements::javascript('https://maps.googleapis.com/maps/api/js?key='.$this->GoogleAPI.'&sensor=false');
-            Requirements::javascript('mysite/Boilerplate/code/Modules/ContactForm/js/mapScript.js');
+            Requirements::javascript('Boilerplate/code/Modules/ContactForm/js/mapScript.js');
             Requirements::customScript(<<<JS
 (function($) {
     $(document).ready(function(){

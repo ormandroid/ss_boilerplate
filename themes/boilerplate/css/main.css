@@ -7933,6 +7933,8 @@ a:active {
   width: 100%;
   display: block;
   height: 300px; }
+  #map-canvas img {
+    max-width: none; }
 
 /*======================================================================*\
     Classes

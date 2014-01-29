@@ -11,4 +11,4 @@ ContentController:
 
 #LeftAndMain:
 #  extra_requirements_css:
-#    - mysite/Boilerplate/css/cms/css/cms.min.css
+#    - Boilerplate/css/cms/css/cms.min.css

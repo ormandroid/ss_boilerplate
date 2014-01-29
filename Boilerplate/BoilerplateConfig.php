@@ -26,8 +26,8 @@ class BoilerplateConfig extends DataExtension {
          * Color Picker
         ------------------------------------------*/
 
-		Requirements::javascript('mysite/Boilerplate/javascript/colorpicker.min.js');
-		Requirements::css('mysite/Boilerplate/css/colorpicker.css');
+		Requirements::javascript('Boilerplate/javascript/colorpicker.min.js');
+		Requirements::css('Boilerplate/css/colorpicker.css');
 
         $fields->addFieldToTab('Root.Main', new LiteralField('js',
 		'<script type="text/javascript">
