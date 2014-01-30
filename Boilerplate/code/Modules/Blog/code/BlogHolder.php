@@ -39,6 +39,12 @@ class BlogHolder extends Page {
 
     }
 
+    public function AllBlogChildren() {
+        $pagination = new PaginatedList(Hierarchy::AllChildren(), Controller::curr()->request);
+        $pagination->setPageLength(1);
+        return $pagination;
+    }
+
 }
 class BlogHolder_Controller extends Page_Controller {
 

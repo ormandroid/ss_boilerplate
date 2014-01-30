@@ -9,8 +9,6 @@ class PageItem extends DataObject{
         'ColumnTwo' => 'HTMLText',
         'ColumnThree' => 'HTMLText',
         'ColumnFour' => 'HTMLText',
-        'AlertContent' => 'HTMLText',
-        'AlertClass' => 'Varchar',
         'SortOrder' => 'Int'
     );
 
@@ -36,23 +34,6 @@ class PageItem extends DataObject{
                     new TextField('Title', 'Widget title'),
                     new LiteralField('WidgetTitleDescription', '<p>Name your widget to be easily recognisable in the widget list e.g "Pricing columns"</p>'),
                     new HtmlEditorField('Content', 'Content')
-                ),
-                /* ========================================
-                * Alerts
-                =========================================*/
-                new Tab(
-                    $title = 'Alerts',
-                    new HeaderField('Alert'),
-                    new LiteralField('ColumnDescription', '<p>Alert Description</p>'),
-                    new DropdownField('AlertClass','Alert Type',
-                        array(
-                            'alert-info' => 'Info',
-                            'alert-success' => 'Success',
-                            'alert-warning' => 'Warning',
-                            'alert-danger' => 'Danger'
-                        )
-                    ),
-                    new HtmlEditorField('AlertContent', 'Content')
                 ),
                 /* ========================================
                 * Columns
