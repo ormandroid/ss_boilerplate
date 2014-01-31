@@ -11,7 +11,7 @@ class PageExtension extends Extension {
          * Combine JS
          =========================================*/
 
-        $theme = SSViewer.theme;
+        $theme = SSViewer::current_theme();
 
         Requirements::combine_files(
             'combined.js',

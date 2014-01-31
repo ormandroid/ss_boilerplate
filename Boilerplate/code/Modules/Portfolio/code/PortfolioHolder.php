@@ -45,7 +45,7 @@ class PortfolioHolder extends Page {
     }
 
     public function PaginatedPages() {
-        $pagination = new PaginatedList(Hierarchy::AllChildren(), Controller::curr()->request);
+        $pagination = new PaginatedList($this->AllChildren(), Controller::curr()->request);
         $pagination->setPageLength($this->Items);
         return $pagination;
     }
