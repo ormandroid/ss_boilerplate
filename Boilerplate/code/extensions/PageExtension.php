@@ -1,6 +1,6 @@
 <?php
 
-class BoilerplatePageExtension extends Extension {
+class PageExtension extends Extension {
 
     /*
      * Combine and add JS files to the Page Class
@@ -11,7 +11,7 @@ class BoilerplatePageExtension extends Extension {
          * Combine JS
          =========================================*/
 
-        $theme = SSViewer::current_theme();
+        $theme = SSViewer.theme;
 
         Requirements::combine_files(
             'combined.js',

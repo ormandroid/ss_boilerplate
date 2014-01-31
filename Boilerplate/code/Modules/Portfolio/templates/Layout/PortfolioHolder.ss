@@ -11,7 +11,7 @@
         </div><!-- /.content typography -->
     </article>
     <div class="row">
-        <% loop $AllChildren %>
+        <% loop $PaginatedPages %>
             <article class="portfolio-item $Top.ColumnClass<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
                 <a href="$Link">
                     <figure class="portfolio-image">
@@ -31,5 +31,6 @@
             <% end_if %>
         <% end_loop %>
     </div><!-- /.row -->
+    <% include Pagination %>
 
 </div><!-- /.container -->

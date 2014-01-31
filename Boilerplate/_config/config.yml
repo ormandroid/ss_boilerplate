@@ -7,7 +7,11 @@ SiteConfig:
 
 ContentController:
   extensions:
-    - BoilerplatePageExtension
+    - PageExtension
+
+PaginatedList:
+  extensions:
+    - PaginatedListExtension
 
 #LeftAndMain:
 #  extra_requirements_css:

@@ -4,13 +4,15 @@ class PortfolioHolder extends Page {
     private static $icon = 'Boilerplate/code/Modules/Portfolio/images/blogs-stack.png';
 
     private static $db = array(
-        'Columns' => 'Int'
+        'Columns' => 'Int',
+        'Items' => 'Int'
     );
 
     private static $allowed_children = array('PortfolioPage');
 
     private static $defaults = array(
-        'Columns' => 2
+        'Columns' => 2,
+        'Int' => 10
     );
 
     private static $description = 'Displays all portfolio child pages';
@@ -19,15 +21,33 @@ class PortfolioHolder extends Page {
 
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab('Root.Main', new DropdownField('Columns','How many items to display on each row', array(
-            'One Item (Full Width)',
-            'Two Items',
-            'Three Items',
-            'Four Items'
-        )), 'Content');
+        /* -----------------------------------------
+         * Advanced
+        ------------------------------------------*/
+
+        $toggleFields = ToggleCompositeField::create(
+            'Advanced',
+            'Advanced',
+            array(
+                new DropdownField('Columns','How many items to display on each row', array(
+                    'One Item (Full Width)',
+                    'Two Items',
+                    'Three Items',
+                    'Four Items'
+                )),
+                new TextField('Items','How many items to display on each page')
+            )
+        )->setHeadingLevel(4)->setStartClosed(true);
+        $fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
 
         return $fields;
 
+    }
+
+    public function PaginatedPages() {
+        $pagination = new PaginatedList(Hierarchy::AllChildren(), Controller::curr()->request);
+        $pagination->setPageLength($this->Items);
+        return $pagination;
     }
 
 }

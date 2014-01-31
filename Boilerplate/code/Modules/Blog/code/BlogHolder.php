@@ -5,13 +5,15 @@ class BlogHolder extends Page {
 
     private static $db = array(
         'Columns' => 'Int',
+        'Items' => 'Int',
         'BlogSidebarContent' => 'HTMLText'
     );
 
     private static $allowed_children = array('BlogPage');
 
     private static $defaults = array(
-        'Columns' => 0
+        'Columns' => 0,
+        'Items' => 10
     );
 
     private static $description = 'Displays all blog child pages';
@@ -20,14 +22,24 @@ class BlogHolder extends Page {
 
         $fields = parent::getCMSFields();
 
-        $fields->removeByName('Widgets');
+        /* -----------------------------------------
+         * Advanced
+        ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.Main', new DropdownField('Columns','How many items to display on each row', array(
-            'One Item (Full Width)',
-            'Two Items',
-            'Three Items',
-            'Four Items'
-        )), 'Content');
+        $toggleFields = ToggleCompositeField::create(
+            'Advanced',
+            'Advanced',
+            array(
+                new DropdownField('Columns','How many items to display on each row', array(
+                    'One Item (Full Width)',
+                    'Two Items',
+                    'Three Items',
+                    'Four Items'
+                )),
+                new TextField('Items','How many items to display on each page')
+            )
+        )->setHeadingLevel(4)->setStartClosed(true);
+        $fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
 
         /* =========================================
          * Blog Sidebar
@@ -39,9 +51,9 @@ class BlogHolder extends Page {
 
     }
 
-    public function AllBlogChildren() {
+    public function PaginatedPages() {
         $pagination = new PaginatedList(Hierarchy::AllChildren(), Controller::curr()->request);
-        $pagination->setPageLength(1);
+        $pagination->setPageLength($this->Items);
         return $pagination;
     }
 

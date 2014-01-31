@@ -13,7 +13,7 @@
                 </div><!-- /.content typography -->
             </article>
             <div class="row">
-                <% loop $AllBlogChildren %>
+                <% loop $PaginatedPages %>
                     <article class="blog-item $Top.ColumnClass<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
                         <div class="blog-content">
                             <% if $BlogImage %>
@@ -35,27 +35,7 @@
                     <% end_if %>
                 <% end_loop %>
             </div><!-- /.row -->
-
-            <% if $AllBlogChildren.MoreThanOnePage %>
-                <% if $AllBlogChildren.NotFirstPage %>
-                    <a class="prev" href="$AllBlogChildren.PrevLink">Prev</a>
-                <% end_if %>
-                <% loop $AllBlogChildren.Pages %>
-                    <% if $CurrentBool %>
-                        $PageNum
-                    <% else %>
-                        <% if $Link %>
-                            <a href="$Link">$PageNum</a>
-                        <% else %>
-                            ...
-                        <% end_if %>
-                    <% end_if %>
-                <% end_loop %>
-                <% if $AllBlogChildren.NotLastPage %>
-                    <a class="next" href="$AllBlogChildren.NextLink">Next</a>
-                <% end_if %>
-            <% end_if %>
-
+            <% include Pagination %>
             $Form
             $PageComments
         </div><!-- /.col-xs-12 col-sm-9 -->
