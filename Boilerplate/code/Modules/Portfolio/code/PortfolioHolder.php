@@ -12,7 +12,7 @@ class PortfolioHolder extends Page {
 
     private static $defaults = array(
         'Columns' => 2,
-        'Int' => 10
+        'Items' => 10
     );
 
     private static $description = 'Displays all portfolio child pages';
