@@ -11,10 +11,10 @@
         <aside class="content typography">
             $Content
             <% include PageItems %>
-            <% if $Images %>
+            <% if $PaginatedPages %>
                 <div class="gallery-container">
                     <div class="row">
-                        <% loop $Images %>
+                        <% loop $PaginatedPages %>
                             <figure class="gallery-item $Top.ColumnClass $FirstLast">
                                 <a href="#" data-img="$setWidth($Width).Link" data-width="$Width" class="gallery-modal">
                                     <img src="$croppedImage($Top.ThumbnailWidth, $Top.ThumbnailHeight).Link" />
@@ -32,6 +32,9 @@
             $PageComments
         </aside><!-- /.content typography -->
     </article>
+
+    <% include Pagination %>
+
     <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 --><% end_if %>
 
     <div class="visible-xs"><% include SideBar %></div><!-- /.hidden-xs -->

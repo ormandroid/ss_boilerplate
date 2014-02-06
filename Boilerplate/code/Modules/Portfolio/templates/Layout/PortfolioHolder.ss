@@ -31,6 +31,7 @@
             <% end_if %>
         <% end_loop %>
     </div><!-- /.row -->
+
     <% include Pagination %>
 
 </div><!-- /.container -->

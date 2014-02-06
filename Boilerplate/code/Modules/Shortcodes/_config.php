@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Styles examples can be found at http://getbootstrap.com/
+ * */
+
 $formats = array(
     array(
         'title' => 'Heading - Page Heading',
@@ -112,6 +116,37 @@ $formats = array(
         'selector' => 'ul',
         'classes' => 'deletelist',
         'wrapper' => false
+    ),
+    array(
+        'title' => 'Table',
+        'selector' => 'table',
+        'classes' => 'table',
+        'wrapper' => false
+    ),
+    array(
+        'title' => 'Table - Striped',
+        'selector' => 'table',
+        'classes' => 'table table-striped',
+        'wrapper' => false
+    ),
+    array(
+        'title' => 'Table - Bordered',
+        'selector' => 'table',
+        'classes' => 'table table-bordered',
+        'wrapper' => false
+    ),
+    array(
+        'title' => 'Table - Condensed',
+        'selector' => 'table',
+        'classes' => 'table table-condensed',
+        'wrapper' => false
+    ),
+    array(
+        'title' => 'Table - Responsive',
+        'block' => 'div',
+        'classes' => 'table-responsive',
+        'wrapper' => true,
+        'merge_siblings' => false
     )
 );
 

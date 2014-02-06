@@ -4,7 +4,8 @@ class GalleryPage extends Page {
     private static $icon = 'Boilerplate/code/Modules/Gallery/images/folder-open-image.png';
 
     private static $db = array(
-        'Columns' => 'Int'
+        'Columns' => 'Int',
+        'Items' => 'Int'
     );
 
     public static $many_many = array(
@@ -12,10 +13,11 @@ class GalleryPage extends Page {
     );
 
     private static $defaults = array(
-        'Columns' => 2
+        'Columns' => 2,
+        'Items' => 10
     );
 
-    private static $description = 'Displays a gallery of images';
+    private static $description = 'Displays a lightbox gallery of images';
 
     public function getCMSFields() {
 
@@ -37,6 +39,7 @@ class GalleryPage extends Page {
                     'Six Items',
                     'Twelve Items'
                 )),
+                new TextField('Items','How many items to display on each page'),
                 new UploadField('Images', 'Images',$this->owner->Images())
             )
         )->setHeadingLevel(4)->setStartClosed(true);
@@ -45,6 +48,17 @@ class GalleryPage extends Page {
 
         return $fields;
 
+    }
+
+    /*
+     * Technically this should be called PaginatedImages, but I want to use the same pagination include template.
+     * */
+    public function PaginatedPages() {
+        // Protect against "Division by 0" error
+        if($this->Items == null || $this->Items == 0) $this->Items = 1;
+        $pagination = new PaginatedList($this->Images(), Controller::curr()->request);
+        $pagination->setPageLength($this->Items);
+        return $pagination;
     }
 
 }
