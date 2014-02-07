@@ -6,7 +6,7 @@
 
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-sm-8 col-lg-9">
             <article class="blog-single">
                 <% if $BlogImage %>
                     <p>$BlogImage.setWidth(850)</p>

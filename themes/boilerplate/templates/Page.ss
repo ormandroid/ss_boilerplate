@@ -10,6 +10,7 @@
         <% base_tag %>
         <meta property="og:site_name" content="$SiteConfig.Title<% if SiteConfig.Tagline %> - $SiteConfig.Tagline<% end_if %>"/>
         <meta property="og:title" content="<% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>"/>
+        <meta property="og:url" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <% if $Siteconfig.Favicon %>
             <link rel="shortcut icon" href="$SiteConfig.Favicon.Link" />
