@@ -2,6 +2,8 @@
 
 A rapid development theme based on Bootstrap 3.x
 
+###[DEMO](http://webdough.co.nz/~boilerpl/)###
+
 ## Features ##
 
 * [Sass Bootstrap](https://github.com/thomas-mcdonald/bootstrap-sass)
