@@ -8,7 +8,6 @@ class BoilerplateConfig extends DataExtension {
 		'PanelNavigation' => 'Boolean(1)',
 		'Phone' => 'Varchar(255)',
 		'Email' => 'Varchar(255)',
-		'ShowCompanyDetails' => 'Boolean(1)',
         'PhysicalAddress' => 'HTMLText',
         'TrackingCode' => 'Text'
 	);

@@ -2,30 +2,40 @@
     Colors
 \*======================================================================*/
 
-$brand-primary: #00ccd2;
-$brand-secondary: #ff6890;
+$brand-primary: #3bc492;
+$brand-secondary: #00addc;
 $brand-inverse: #444;
 
-$btn-secondary-color: #fff !default;
-$btn-secondary-bg: $brand-secondary !default;
-$btn-secondary-border: darken($btn-secondary-bg, 5%) !default;
+$btn-primary-color: #fff;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: darken($btn-primary-bg, 5%);
 
-$btn-inverse-color: #fff !default;
-$btn-inverse-bg: $brand-inverse !default;
-$btn-inverse-border: darken($btn-inverse-bg, 5%) !default;
+$btn-secondary-color: #fff;
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-border: darken($btn-secondary-bg, 5%);
 
-$panel-secondary-text: #fff !default;
-$panel-secondary-border: $brand-secondary !default;
-$panel-secondary-heading-bg: $brand-secondary !default;
+$btn-inverse-color: #fff;
+$btn-inverse-bg: $brand-inverse;
+$btn-inverse-border: darken($btn-inverse-bg, 5%);
+
+$panel-secondary-text: #fff;
+$panel-secondary-border: $brand-secondary;
+$panel-secondary-heading-bg: $brand-secondary;
 
 /*======================================================================*\
     Gaps
 \*======================================================================*/
 
-$gutter: 30px !default;
+$gutter: 30px;
 
-$gap-xl: 80px !default;
-$gap-lg: 40px !default;
-$gap-md: 20px !default;
-$gap-sm: 10px !default;
-$gap-xs: 5px !default;
+$gap-xl: 80px;
+$gap-lg: 40px;
+$gap-md: 20px;
+$gap-sm: 10px;
+$gap-xs: 5px;
+
+/*======================================================================*\
+    Border Radii
+\*======================================================================*/
+
+$border-radius-base: 3px;

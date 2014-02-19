@@ -11,7 +11,7 @@ textarea:focus,
 .form-control:focus{
     @include box-shadow(none);
 }
-.form-control {height:auto;padding: $gap-sm;
+.form-control {height:auto;padding: $gap-sm;background-color: transparent;
     &:focus {border-color: $gray;}
 }
 

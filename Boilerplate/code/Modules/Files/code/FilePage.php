@@ -17,9 +17,6 @@ class FilePage extends Page {
 
         $fields = parent::getCMSFields();
 
-        $fields->removeByName('Slider');
-        $fields->removeByName('Widgets');
-
         $fields->addFieldToTab('Root.Main', new DropdownField('Columns','How many groups to display on each row', array(
             'One Item (Full Width)',
             'Two Items',

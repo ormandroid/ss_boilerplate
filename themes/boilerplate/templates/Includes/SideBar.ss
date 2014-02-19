@@ -3,7 +3,7 @@
         <aside class="sidebar-nav widget">
             <ul>
                 <% loop $Menu(1) %>
-                    <% if Children %>
+                    <% if $Children %>
                         <li><h4>$MenuTitle.XML</h4></li>
                     <% end_if %>
                     <% include SidebarMenu %>

@@ -2,8 +2,8 @@
     <section class="container">
         <p>
             $SiteConfig.Title | &copy; Copyright $Now.Year |
-            <% if CurrentMember %>
-                <% loop CurrentMember %>
+            <% if $CurrentMember %>
+                <% loop $CurrentMember %>
                     <a href="Security/logout">Logout</a>
                 <% end_loop %>
             <% else %>

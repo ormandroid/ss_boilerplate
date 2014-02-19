@@ -18,48 +18,23 @@
 
                 <% loop $SliderItems %>
                     <div class="item<%if First %> active<% end_if %>"<% if $Top.FullWidth %> style="max-height: {$Top.Height}px"<% end_if %>>
-                        <% if $Link || $CustomLink %>
-                            <% if $CustomLink %>
-                                <a href="$CustomLink">
-                                    <% if $Top.FullWidth %>
-                                        $Image
-                                    <% else %>
-                                        <% if $Top.Height %>
-                                            $Image.croppedImage(1140, $Top.Height)
-                                        <% else %>
-                                            $Image.croppedImage(1140, 500)
-                                        <% end_if %>
-                                    <% end_if %>
-                                </a>
-                            <% else %>
-                                <a href="$Link.Link">
-                                    <% if $Top.FullWidth %>
-                                        $Image
-                                    <% else %>
-                                        <% if $Top.Height %>
-                                            $Image.croppedImage(1140, $Top.Height)
-                                        <% else %>
-                                            $Image.croppedImage(1140, 500)
-                                        <% end_if %>
-                                    <% end_if %>
-                                </a>
-                            <%  end_if %>
+                        <% if $Top.FullWidth %>
+                            $Image
                         <% else %>
-                            <% if $Top.FullWidth %>
-                                $Image
+                            <% if $Top.Height %>
+                                $Image.croppedImage(1140, $Top.Height)
                             <% else %>
-                                <% if $Top.Height %>
-                                    $Image.croppedImage(1140, $Top.Height)
-                                <% else %>
-                                    $Image.croppedImage(1140, 500)
-                                <% end_if %>
+                                $Image.croppedImage(1140, 500)
                             <% end_if %>
                         <% end_if %>
                         <% if $Caption %>
                             <% if $FullWidth %>
                                 <div class="container">
                             <% end_if %>
-                            <div class="carousel-caption">$Caption</div><!-- /.carousel-caption -->
+                            <div class="carousel-caption hidden-xs">
+                                <h1>$Heading</h1>
+                                <h5>$Caption</h5>
+                            </div><!-- /.carousel-caption hidden-xs -->
                             <% if $FullWidth %>
                                 </div><!-- /.container -->
                             <% end_if %>

@@ -3,11 +3,11 @@
     <div class="navbar-collapse hidden-sm hidden-xs">
         <ul class="nav navbar-nav pull-right">
             <% loop $Menu(1) %>
-                <% if Children %>
+                <% if $Children %>
                     <li class="$LinkingMode dropdown">
                         <a href="$Link" title="$Title.XML">$MenuTitle.XML <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <% loop Children %>
+                            <% loop $Children %>
                                 <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                             <% end_loop %>
                         </ul><!-- /.dropdown-menu -->
@@ -25,13 +25,13 @@
     <div class="navbar-collapse visible-sm">
         <ul class="nav navbar-nav pull-right">
             <% loop $Menu(1) %>
-                <% if Children %>
+                <% if $Children %>
                     <li class="$LinkingMode dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                             <li class="divider"></li>
-                            <% loop Children %>
+                            <% loop $Children %>
                                 <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                             <% end_loop %>
                         </ul><!-- /.dropdown-menu -->
@@ -53,21 +53,21 @@
         <% end_if %>
         <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
             <% loop $Menu(1) %>
-                <% if Children %>
-                    <% if LinkOrCurrent = current %>
+                <% if $Children %>
+                    <% if $LinkOrCurrent = current %>
                         <option selected value="$Link">$MenuTitle</option>
                     <% else %>
                         <option value="$Link">$MenuTitle</option>
                     <% end_if %>
-                    <% loop Children %>
-                        <% if LinkOrCurrent = current %>
+                    <% loop $Children %>
+                        <% if $LinkOrCurrent = current %>
                             <option selected value="$Link">- $MenuTitle</option>
                         <% else %>
                             <option value="$Link">- $MenuTitle</option>
                         <% end_if %>
                     <% end_loop %>
                 <% else %>
-                    <% if LinkOrCurrent = current %>
+                    <% if $LinkOrCurrent = current %>
                         <option selected value="$Link">$MenuTitle</option>
                     <% else %>
                         <option value="$Link">$MenuTitle</option>

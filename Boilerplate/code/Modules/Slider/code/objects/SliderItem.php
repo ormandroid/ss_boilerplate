@@ -4,7 +4,8 @@ class SliderItem extends DataObject{
 
     static $db = array (
         'CustomLink' => 'Varchar(255)',
-        'Caption' => 'HTMLText',
+        'Heading' => 'Text',
+        'Caption' => 'Text',
         'SortOrder' => 'Int'
     );
 
@@ -32,14 +33,14 @@ class SliderItem extends DataObject{
 
         $fields = FieldList::create(TabSet::create('Root'));
 
-        //TODO: add empty field to dropdown
         $fields->addFieldToTab('Root.Main', new TreeDropdownField('LinkID', 'Link to page', 'SiteTree'));
         $customLink = new TextField('CustomLink', 'Custom link (Will override "Link to page")');
         $customLink->setAttribute('placeholder', 'Http://');
         $fields->addFieldToTab('Root.Main', $customLink);
 
         $fields->addFieldToTab("Root.Main", new UploadField('Image'));
-        $fields->addFieldToTab("Root.Main", new HtmlEditorField('Caption'));
+        $fields->addFieldToTab("Root.Main", new TextField('Heading'));
+        $fields->addFieldToTab("Root.Main", new TextareaField('Caption'));
 
         return $fields;
 

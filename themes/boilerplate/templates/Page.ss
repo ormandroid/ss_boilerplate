@@ -5,24 +5,21 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="$ContentLocale"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title<% if SiteConfig.Tagline %> - $SiteConfig.Tagline<% end_if %></title>
+        <title><% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> | $SiteConfig.Title<% if SiteConfig.Tagline %> - $SiteConfig.Tagline<% end_if %></title>
         $MetaTags(false)
         <% base_tag %>
-        <meta property="og:site_name" content="$SiteConfig.Title<% if SiteConfig.Tagline %> - $SiteConfig.Tagline<% end_if %>"/>
-        <meta property="og:title" content="<% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>"/>
-        <meta property="og:url" content="" />
+        <meta property="og:site_name" content="$SiteConfig.Title<% if $SiteConfig.Tagline %> - $SiteConfig.Tagline<% end_if %>"/>
+        <meta property="og:title" content="<% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>"/>
+        <meta property="og:url" content="$AbsoluteLink" />
+        <% if $Siteconfig.LogoImage %><meta property="og:image" content="$SiteConfig.LogoImage.Link" /><% end_if %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <% if $Siteconfig.Favicon %>
-            <link rel="shortcut icon" href="$SiteConfig.Favicon.Link" />
-        <% else %>
-            <link rel="shortcut icon" href="$ThemeDirfavicon.ico" />
-        <% end_if %>
+        <% if $Siteconfig.Favicon %><link rel="shortcut icon" href="$SiteConfig.Favicon.Link" /><% else %><link rel="shortcut icon" href="{$ThemeDir}/favicon.ico" /><% end_if %>
         <% require themedCSS('main.min') %>
         <!--[if lt IE 9]>
-            <script src="$themeDir/js/html5.js"></script>
+            <script type="text/javascript" src="{$themeDir}/js/html5.js"></script>
         <![endif]-->
     </head>
-    <body class="$ClassName" id="$URLSegment">
+    <body class="$ClassName $SliderClass $SliderLuminance" id="$URLSegment">
         <div id="wrapper">
             <div class="inner">
                 <!--[if lt IE 9]>
