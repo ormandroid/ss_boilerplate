@@ -15,6 +15,8 @@ A rapid development theme based on Bootstrap 3.x
 * User Registration
 * Disqus Comments
 * Contact Form
+* Mailchimp Newsletter
+* Google Fonts API
 
 ## Installation ##
 
