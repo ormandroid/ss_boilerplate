@@ -12,6 +12,13 @@ $formats = array(
         'wrapper' => false,
     ),
     array(
+        'title' => 'Text - Light',
+        'block' => 'div',
+        'classes' => 'content-light',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
         'title' => 'Button - Default',
         'selector' => 'a, button',
         'classes' => 'btn btn-default',

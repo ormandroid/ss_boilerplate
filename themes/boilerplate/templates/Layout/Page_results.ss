@@ -3,8 +3,9 @@
 <div class="container">
 
     <div id="Content" class="searchResults">
+        <h1><i class="fa fa-search"></i> Search</h1>
         <% if $Query %>
-            <p class="searchQuery"><% sprintf(_t('PageResults.SearchHeading', 'You searched for "%s"'), $Query) %></p>
+            <p class="alert alert-info"><% sprintf(_t('PageResults.SearchHeading', 'You searched for "%s"'), $Query) %></p>
         <% end_if %>
         <% if $Results %>
             <div id="SearchResults">
@@ -27,7 +28,7 @@
                 <% end_loop %>
             </div><!-- /#searchResults -->
         <% else %>
-            <p><% _t('PageResulkts.NoResultsText', 'Sorry, your search query did not return any results.') %></p>
+            <p class="alert alert-warning"><% _t('PageResulkts.NoResultsText', 'Sorry, your search query did not return any results.') %></p>
         <% end_if %>
         <% if $Results.MoreThanOnePage %>
         <div id="PageNumbers">

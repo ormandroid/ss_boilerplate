@@ -79,6 +79,9 @@ a{
                 > a{margin-left: 2px;padding: 8px $gap-sm;font-weight: bold;margin-bottom: $gap-xs;
                     @include border-radius();
                     @include transition(.1s linear background);
+                    &.btn-primary{color: $btn-primary-color;}
+                    &.btn-secondary{color: $btn-secondary-color;}
+                    &.btn-inverse{color: $btn-inverse-color;}
                 }
                 .dropdown-menu{padding: 0;border-width: 0;background: transparent none;padding-top: $gap-sm;display: block;
                     @include opacity(0);
@@ -122,7 +125,7 @@ a{
     .menu-icon{position: absolute;font-size: 1.3em;right: 0;top: 50%;margin-top: -$gap-md;height: $gap-lg;width: $gap-lg;text-align: center;line-height: $gap-lg;
         @include border-radius();
         i{line-height: $gap-lg;}
-        &.search{right: add($gap-lg, $gap-sm);border-style: solid;border-width: 1px;}
+        &.search{right: add($gap-lg, $gap-sm);}
     }
 }
 

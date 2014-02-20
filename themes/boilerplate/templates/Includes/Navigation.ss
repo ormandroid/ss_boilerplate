@@ -16,10 +16,10 @@
                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
+            <% if $SearchForm %>
+                <li><a data-toggle="modal" href="#searchModal" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
+            <% end_if %>
         </ul><!-- /.nav navbar-nav pull-right -->
-        <% if $SearchForm %>
-            <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
-        <% end_if %>
     </div><!-- /.collapse navbar-collapse -->
 
     <div class="navbar-collapse visible-sm">
@@ -40,16 +40,16 @@
                     <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
                 <% end_if %>
             <% end_loop %>
+            <% if $SearchForm %>
+                <li><a data-toggle="modal" href="#searchModal" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
+            <% end_if %>
         </ul><!-- /.nav navbar-nav pull-right -->
-        <% if $SearchForm %>
-            <a data-toggle="modal" href="#searchModal" class="btn btn-default navbar-btn pull-right"><i class="fa fa-search"></i></a>
-        <% end_if %>
     </div><!-- /.collapse navbar-collapse -->
 
     <div id="select-navigation" class="visible-xs">
         <div class="menu-icon btn-primary"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
         <% if $SearchForm %>
-            <a data-toggle="modal" href="#searchModal" class="btn-default navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
+            <a data-toggle="modal" href="#searchModal" class="btn-secondary navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
         <% end_if %>
         <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
             <% loop $Menu(1) %>
@@ -79,7 +79,3 @@
     </div><!-- /.select-navigation -->
 
 </nav><!-- /#main-nav .navbar navbar-default -->
-
-<% if $SearchForm %>
-    $SearchForm
-<% end_if %>

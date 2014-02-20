@@ -13,6 +13,9 @@ PaginatedList:
   extensions:
     - PaginatedListExtension
 
+SSViewer:
+  theme: 'boilerplate'
+
 #LeftAndMain:
 #  extra_requirements_css:
 #    - Boilerplate/css/cms/css/cms.min.css

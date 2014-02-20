@@ -1,14 +1,15 @@
 <% include PageHeader %>
 
 <div class="container">
+
     <article>
         <div class="content typography">
             $Content
-            <% include PageItems %>
             $Form
             $PageComments
         </div><!-- /.content typography -->
     </article>
+
     <div class="row">
         <% loop $FileGroups %>
             <article class="file-group $Top.ColumnClass">
@@ -31,4 +32,7 @@
             <% end_if %>
         <% end_loop %>
     </div><!-- /.row -->
+
 </div><!-- /.container -->
+
+<% include PageItems %>

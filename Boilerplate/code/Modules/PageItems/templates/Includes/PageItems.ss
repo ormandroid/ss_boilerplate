@@ -1,35 +1,47 @@
-<% loop $PageItems %>
+<% if $PageItems %>
 
-    <% if $Content %>
-        $Content
-    <% else_if $AlertContent %>
-        <div class="alert $AlertClass">
-            $AlertContent
-        </div><!-- /.alert -->
-    <% else_if $ColumnOne %>
-        <div class="row">
+    <section id="pageItemsContainer">
+        <% loop $PageItems %>
+            <div class="page-item<% if $BackgroundType %> $BackgroundType<% end_if %>"<% if $BackgroundColor || $BackgroundImage %> style="<% if $BackgroundImage %>background-image: url({$BackgroundImage.setWidth(1170).Link});<% end_if %><% if $BackgroundColor %>background-color: $BackgroundColor;<% end_if %>"<% end_if %>>
+                <article class="container">
 
-            <div class="$ColumnClass">
-                $ColumnOne
-            </div><!-- /.$ColumnClass -->
+                    <% if $Content %>
+                        <aside class="content typography">
+                            $Content
+                        </aside><!-- /.content typography -->
+                    <% end_if %>
 
-            <div class="$ColumnClass">
-                $ColumnTwo
-            </div><!-- /.$ColumnClass -->
+                    <% if $ColumnOne %>
+                        <aside class="content typography">
+                            <div class="row">
 
-            <% if $ColumnThree %>
-                <div class="$ColumnClass">
-                    $ColumnThree
-                </div><!-- /.$ColumnClass -->
-            <% end_if %>
+                                <div class="$ColumnClass">
+                                    $ColumnOne
+                                </div><!-- /.$ColumnClass -->
 
-            <% if $ColumnFour %>
-                <div class="$ColumnClass">
-                    $ColumnFour
-                </div><!-- /.$ColumnClass -->
-            <% end_if %>
+                                <div class="$ColumnClass">
+                                    $ColumnTwo
+                                </div><!-- /.$ColumnClass -->
 
-        </div><!-- /.row -->
-    <% end_if %>
+                                <% if $ColumnThree %>
+                                    <div class="$ColumnClass">
+                                        $ColumnThree
+                                    </div><!-- /.$ColumnClass -->
+                                <% end_if %>
 
-<% end_loop %>
+                                <% if $ColumnFour %>
+                                    <div class="$ColumnClass">
+                                        $ColumnFour
+                                    </div><!-- /.$ColumnClass -->
+                                <% end_if %>
+
+                            </div><!-- /.row -->
+                        </aside><!-- /.content typography -->
+                    <% end_if %>
+
+                </article><!-- /.container -->
+            </div><!-- /.page-item -->
+        <% end_loop %>
+    </section><!-- /.pageItemsContainer -->
+
+<% end_if %>

@@ -76,7 +76,12 @@ h6,
 .h3,
 .h4,
 .h5,
-.h6{font-family: "open_bold","Helvetica Neue",Helvetica,Arial,sans-serif;}
+.h6{font-family: "open_bold","Helvetica Neue",Helvetica,Arial,sans-serif;
+    a{text-decoration: none;
+        &:hover,
+        &:active{text-decoration: none;}
+    }
+}
 
 /*======================================================================*\
     Fonts - Typography
@@ -142,6 +147,19 @@ h5{font-size: 14px;}
 
 .typography{
     .page-heading{margin-top: 0;}
+    .content-light{
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p,
+        li,
+        strong,
+        td,
+        i,
+        blockquote{color: $btn-primary-color;}
+    }
 }
 
 %customList{padding-left: 0;

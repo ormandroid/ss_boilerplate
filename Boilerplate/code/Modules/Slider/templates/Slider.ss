@@ -17,7 +17,8 @@
             <div class="carousel-inner">
 
                 <% loop $SliderItems %>
-                    <div class="item<%if First %> active<% end_if %>"<% if $Top.FullWidth %> style="max-height: {$Top.Height}px"<% end_if %>>
+                    <div class="item $FirstLast<%if $First %> active<% end_if %>"<% if $Top.FullWidth %> style="max-height: {$Top.Height}px"<% end_if %>>
+
                         <% if $Top.FullWidth %>
                             $Image
                         <% else %>
@@ -32,8 +33,14 @@
                                 <div class="container">
                             <% end_if %>
                             <div class="carousel-caption hidden-xs">
-                                <h1>$Heading</h1>
-                                <h5>$Caption</h5>
+                                <% if $CustomLink || $Link %>
+                                    <a href="<% if $CustomLink %>$CustomLink<% else %>$Link.Link<% end_if %>">
+                                <% end_if %>
+                                    <h1>$Heading</h1>
+                                    <h5>$Caption</h5>
+                                <% if $CustomLink || $Link %>
+                                    </a>
+                                <% end_if %>
                             </div><!-- /.carousel-caption hidden-xs -->
                             <% if $FullWidth %>
                                 </div><!-- /.container -->

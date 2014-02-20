@@ -3,6 +3,7 @@
 <div class="container">
 
     <div class="row">
+
         <section class="sidebar col-xs-12 col-sm-3">
             <aside class="sidebar-nav widget">
                 <h4>$Title</h4>
@@ -18,8 +19,7 @@
 
             <div class="content typography">
                 $Content
-                <% include PageItems %>
-                <% if Success %>
+                <% if $Success %>
                 <% else %>
                     <% if $Mailto %>
                         $ContactForm
@@ -40,3 +40,5 @@
     </div><!-- /.row -->
 
 </div><!-- /.container -->
+
+<% include PageItems %>

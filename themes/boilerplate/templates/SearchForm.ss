@@ -1,4 +1,4 @@
-<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="searchModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <form $FormAttributes role="form">

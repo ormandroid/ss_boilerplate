@@ -5,7 +5,8 @@ class SliderConfig extends DataExtension {
     private static $db = array(
         'Height' => 'Varchar(255)',
         'FullWidth' => 'Boolean(0)',
-        'SliderExtend' => 'Boolean(0)'
+        'SliderExtend' => 'Boolean(0)',
+        'SliderLuminanceOverride' => 'Int'
     );
 
     private static $has_many = array(
@@ -37,6 +38,11 @@ class SliderConfig extends DataExtension {
 			array(
                 new CheckboxField('FullWidth', 'Full width'),
                 new CheckboxField('SliderExtend', 'Extend the slider'),
+                new DropdownField('SliderLuminanceOverride', 'Override the automatic light/dark setting for the slider', array(
+                    '' => 'Default',
+                    0 => 'Light',
+                    1 => 'Dark'
+                )),
                 new TextField('Height', 'Height of slider')
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
@@ -44,6 +50,10 @@ class SliderConfig extends DataExtension {
 
     }
 
+    /*
+     * Get settings set in the page, and if has a slider return a class.
+     * @returns string
+     * */
     public function getSliderClass() {
         if($this->owner->SliderExtend){
             ($this->owner->SliderItems()->First() ? $out = 'has-slider slider-extend' : $out = 'no-slider');
@@ -53,6 +63,10 @@ class SliderConfig extends DataExtension {
         return $out;
     }
 
+    /*
+     * Get the first slider item of a page, and run the getAvgLuminance function.
+     * @returns string
+     * */
     public function getSliderLuminance() {
 
         if (!$this->owner->SliderItems()->First() || !$this->owner->SliderExtend) {
@@ -63,10 +77,26 @@ class SliderConfig extends DataExtension {
         $image = File::get()->byID($imageID);
         $image = Director::baseFolder()."/" . $image->Filename;
 
-        return self::get_avg_luminance($image);
+        return self::getAvgLuminance($image);
     }
 
-    public function get_avg_luminance($filename, $num_samples=10) {
+
+    /*
+     * function to take a sample of pixels in an image and determain whether it's light, or dark
+     * @returns string
+     * */
+    public function getAvgLuminance($filename, $num_samples=10) {
+
+        if($this->owner->SliderLuminanceOverride){
+            switch($this->owner->SliderLuminanceOverride) {
+                case 0:
+                    return 'slider-dark';
+                    break;
+                case 1:
+                    return 'slider-light';
+                    break;
+            }
+        }
 
         if (!file_exists($filename)) return false;
         $size = getimagesize($filename);

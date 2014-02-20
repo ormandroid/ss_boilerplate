@@ -97,6 +97,22 @@
 }
 
 /*---------------------------------------------*\
+    Page Builder
+\*---------------------------------------------*/
+
+#pageItemsContainer{margin-top: $gap-md;
+    .page-item{padding: $gap-md;background: no-repeat center center;background-size: cover;
+        &.fixed{background-attachment: fixed;}
+    }
+}
+
+@media (min-width: $screen-sm){
+    #pageItemsContainer{margin-top: $gap-lg;
+        .page-item{padding: $gap-lg;}
+    }
+}
+
+/*---------------------------------------------*\
     Gallery
 \*---------------------------------------------*/
 

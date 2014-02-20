@@ -30,7 +30,6 @@
             <article class="col-xs-12 col-sm-9">
                 <aside class="content typography">
                     $Content
-                    <% include PageItems %>
                     <% if $PaginatedPages %>
                         <div class="gallery-full-container">
                             <% loop $PaginatedPages %>
@@ -53,7 +52,6 @@
         <article>
             <aside class="content typography">
                 $Content
-                <% include PageItems %>
                 <% if $PaginatedPages %>
                     <div class="gallery-lightbox-container">
                         <div class="row">
@@ -92,3 +90,5 @@
     <% include Pagination %>
 
 </div><!-- /.container -->
+
+<% include PageItems %>

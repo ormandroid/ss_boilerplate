@@ -15,9 +15,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <% if $Siteconfig.Favicon %><link rel="shortcut icon" href="$SiteConfig.Favicon.Link" /><% else %><link rel="shortcut icon" href="{$ThemeDir}/favicon.ico" /><% end_if %>
         <% require themedCSS('main.min') %>
-        <!--[if lt IE 9]>
-            <script type="text/javascript" src="{$themeDir}/js/html5.js"></script>
-        <![endif]-->
     </head>
     <body class="$ClassName $SliderClass $SliderLuminance" id="$URLSegment">
         <div id="wrapper">
@@ -36,6 +33,9 @@
                 <% include Footer %>
             </div><!-- /.inner -->
         </div><!-- /#wrapper -->
+        <% if $SearchForm %>
+            $SearchForm
+        <% end_if %>
         $SiteConfig.TrackingCode
     </body>
 </html>
