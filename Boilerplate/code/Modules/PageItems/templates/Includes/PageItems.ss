@@ -2,7 +2,7 @@
 
     <section id="pageItemsContainer">
         <% loop $PageItems %>
-            <div class="page-item<% if $BackgroundType %> $BackgroundType<% end_if %>"<% if $BackgroundColor || $BackgroundImage %> style="<% if $BackgroundImage %>background-image: url({$BackgroundImage.setWidth(1170).Link});<% end_if %><% if $BackgroundColor %>background-color: $BackgroundColor;<% end_if %>"<% end_if %>>
+            <div class="page-item<% if $BackgroundType %> $BackgroundType<% end_if %><% if $Padding %> no-padding<% end_if %>"<% if $BackgroundColor || $BackgroundImage %> style="<% if $BackgroundImage %>background-image: url({$BackgroundImage.setWidth(1170).Link});<% end_if %><% if $BackgroundColor %>background-color: $BackgroundColor;<% end_if %>"<% end_if %>>
                 <article class="container">
 
                     <% if $Content %>

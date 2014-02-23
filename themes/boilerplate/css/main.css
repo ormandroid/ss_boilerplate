@@ -7049,16 +7049,10 @@ textarea:focus,
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.form-control, #MemberLoginForm_LoginForm .text,
-#Form_EditProfileForm .text,
-#Form_RegistrationForm .text {
-  height: auto;
-  padding: 10px;
-  background-color: transparent; }
-  .form-control:focus, #MemberLoginForm_LoginForm .text:focus,
-  #Form_EditProfileForm .text:focus,
-  #Form_RegistrationForm .text:focus {
-    border-color: #555555; }
+.form-control:focus, #MemberLoginForm_LoginForm .text:focus,
+#Form_EditProfileForm .text:focus,
+#Form_RegistrationForm .text:focus {
+  border-color: #555555; }
 
 .holder-required input,
 .holder-required input:focus,
@@ -7073,6 +7067,14 @@ textarea:focus,
   margin-bottom: 0; }
 .message > p + p {
   margin-top: 5px; }
+
+/*---------------------------------------------*\
+    Search
+\*---------------------------------------------*/
+#SearchForm_SearchForm .form-group {
+  margin: 0; }
+#SearchForm_SearchForm .modal-footer {
+  margin: 0; }
 
 /*======================================================================*\
     Global
@@ -7452,6 +7454,8 @@ a:active {
   border-color: #d43f3a; }
   .well.well-danger a {
     color: white; }
+.well p:last-child {
+  margin-bottom: 0; }
 
 /*---------------------------------------------*\
     Alerts
@@ -7696,6 +7700,8 @@ a:active {
     background-size: cover; }
     #pageItemsContainer .page-item.fixed {
       background-attachment: fixed; }
+    #pageItemsContainer .page-item.no-padding {
+      padding: 0; }
 
 @media (min-width: 768px) {
   #pageItemsContainer {
@@ -7825,19 +7831,19 @@ a:active {
 /*---------------------------------------------*\
     Slider
 \*---------------------------------------------*/
-#pageSlider {
+#sliderContainer #pageSlider {
   margin-bottom: 20px; }
-  #pageSlider.full-width > .carousel-inner > .item a img,
-  #pageSlider.full-width > .carousel-inner > .item img {
+  #sliderContainer #pageSlider.full-width > .carousel-inner > .item a img,
+  #sliderContainer #pageSlider.full-width > .carousel-inner > .item img {
     width: 100%; }
-  #pageSlider .carousel-indicators .active {
+  #sliderContainer #pageSlider .carousel-indicators .active {
     background: #3bc492;
     border-color: #3bc492; }
-  #pageSlider .carousel-control.right, #pageSlider .carousel-control.left {
+  #sliderContainer #pageSlider .carousel-control.right, #sliderContainer #pageSlider .carousel-control.left {
     background: 0 none;
     filter: none; }
-  #pageSlider .carousel-control .fa-angle-left,
-  #pageSlider .carousel-control .fa-angle-right {
+  #sliderContainer #pageSlider .carousel-control .fa-angle-left,
+  #sliderContainer #pageSlider .carousel-control .fa-angle-right {
     position: absolute;
     top: 50%;
     z-index: 5;
@@ -7848,7 +7854,7 @@ a:active {
     margin-left: -5px; }
 
 @media (min-width: 768px) {
-  #pageSlider {
+  #sliderContainer #pageSlider {
     margin-bottom: 40px; } }
 /*---------------------------------------------*\
     Files

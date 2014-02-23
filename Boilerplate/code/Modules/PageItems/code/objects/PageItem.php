@@ -11,6 +11,7 @@ class PageItem extends DataObject{
         'ColumnFour' => 'HTMLText',
         'BackgroundType' => 'Varchar',
         'BackgroundColor' => 'Varchar',
+        'Padding' => 'Boolean(0)',
         'SortOrder' => 'Int'
     );
 
@@ -81,6 +82,7 @@ class PageItem extends DataObject{
                 new Tab(
                     $title = 'Settings',
                     new HeaderField('Settings (Optional)'),
+                    new CheckboxField('Padding', 'Remove Padding'),
                     new UploadField('BackgroundImage', 'Background Image'),
                     new DropdownField('BackgroundType', 'Background Type', array(
                         '' => 'Default',

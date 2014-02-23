@@ -19,6 +19,20 @@ $formats = array(
         'merge_siblings' => false
     ),
     array(
+        'title' => 'Well',
+        'block' => 'div',
+        'classes' => 'well',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Small',
+        'block' => 'div',
+        'classes' => 'well well-sm',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
         'title' => 'Button - Default',
         'selector' => 'a, button',
         'classes' => 'btn btn-default',

@@ -11,7 +11,7 @@ textarea:focus,
 .form-control:focus{
     @include box-shadow(none);
 }
-.form-control {height:auto;padding: $gap-sm;background-color: transparent;
+.form-control {
     &:focus {border-color: $gray;}
 }
 
@@ -35,4 +35,13 @@ textarea:focus,
     &.validation{
         @extend .alert-danger;
     }
+}
+
+/*---------------------------------------------*\
+    Search
+\*---------------------------------------------*/
+
+#SearchForm_SearchForm{
+    .form-group{margin: 0;}
+    .modal-footer{margin: 0;}
 }

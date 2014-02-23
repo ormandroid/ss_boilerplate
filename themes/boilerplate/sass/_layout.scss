@@ -252,6 +252,7 @@ a{
     &.well-danger{
         @include well-variant($btn-danger-color, $brand-danger);
     }
+    p:last-child{margin-bottom: 0;}
 }
 
 /*---------------------------------------------*\
