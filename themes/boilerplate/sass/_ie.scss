@@ -2,18 +2,22 @@
     IE less than 9 Fixes (Because it's crap')
 \*======================================================================*/
 
-.lt-ie9{
-    .chromeframe{margin-bottom: 0;}
+.lt-ie9 {
+    .chromeframe {
+        margin-bottom: 0;
+    }
 }
 
 /*---------------------------------------------*\
     Page Builder
 \*---------------------------------------------*/
 
-.lt-ie9{
-    #pageItemsContainer{
-        .page-item{
-            &.fixed{background-attachment: scroll;}
+.lt-ie9 {
+    #pageItemsContainer {
+        .page-item {
+            &.fixed {
+                background-attachment: scroll;
+            }
         }
     }
 }

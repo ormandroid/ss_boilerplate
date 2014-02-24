@@ -6,20 +6,18 @@
     Inputs
 \*---------------------------------------------*/
 
-input:focus,
-textarea:focus,
-.form-control:focus{
+input:focus, textarea:focus, .form-control:focus {
     @include box-shadow(none);
 }
 .form-control {
-    &:focus {border-color: $gray;}
+    &:focus {
+        border-color: $gray;
+    }
 }
-
-.holder-required{
-    input,
-    input:focus,
-    textarea,
-    textarea:focus{border-color: $btn-danger-border;}
+.holder-required {
+    input, input:focus, textarea, textarea:focus {
+        border-color: $btn-danger-border;
+    }
 }
 
 /*---------------------------------------------*\
@@ -29,10 +27,13 @@ textarea:focus,
 .message {
     @extend .alert;
     @extend .alert-info;
-    > p {margin-bottom: 0;}
-    > p + p {margin-top: $gap-xs;}
-    &.required,
-    &.validation{
+    > p {
+        margin-bottom: 0;
+    }
+    > p + p {
+        margin-top: $gap-xs;
+    }
+    &.required, &.validation {
         @extend .alert-danger;
     }
 }
@@ -41,7 +42,11 @@ textarea:focus,
     Search
 \*---------------------------------------------*/
 
-#SearchForm_SearchForm{
-    .form-group{margin: 0;}
-    .modal-footer{margin: 0;}
+#SearchForm_SearchForm {
+    .form-group {
+        margin: 0;
+    }
+    .modal-footer {
+        margin: 0;
+    }
 }

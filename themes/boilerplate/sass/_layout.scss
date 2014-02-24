@@ -2,18 +2,24 @@
     Global
 \*======================================================================*/
 
-html,
-body{width: 100%;height: 100%;color: $gray;
+html, body {
+    width: 100%;
+    height: 100%;
+    color: $gray;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust:none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-overflow-scrolling: touch;
 }
-
-img{width: auto;height: auto;max-width:100%;}
-
-a{
-    &:active{outline: none;}
+img {
+    width: auto;
+    height: auto;
+    max-width:100%;
+}
+a {
+    &:active {
+        outline: none;
+    }
 }
 
 /*======================================================================*\
@@ -24,31 +30,38 @@ a{
     Header
 \*---------------------------------------------*/
 
-#navigationHolder{background: $gray-lighter;}
-
-#header{padding: $gap-sm 0;position: relative;z-index: 2;
-    #logoContainer{
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6{margin: 0;}
-        a{display: block;}
+#navigationHolder {
+    background: $gray-lighter;
+}
+#header {
+    padding: $gap-sm 0;
+    position: relative;
+    z-index: 2;
+    #logoContainer {
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+        a {
+            display: block;
+        }
     }
 }
-
-@media (min-width: $screen-sm){
-    #header{padding: $gap-md 0;}
+@media (min-width: $screen-sm) {
+    #header {
+        padding: $gap-md 0;
+    }
 }
-
-.has-slider.slider-extend{
-    #header{position: absolute;width: 100%;}
+.has-slider.slider-extend {
+    #header {
+        position: absolute;
+        width: 100%;
+    }
 }
-
-.slider-dark.slider-extend{
-    #header{
-        .tagline{color: $btn-primary-color;}
+.slider-dark.slider-extend {
+    #header {
+        .tagline {
+            color: $btn-primary-color;
+        }
     }
 }
 
@@ -56,53 +69,88 @@ a{
     Navigation
 \*---------------------------------------------*/
 
-#main-nav{margin-bottom: -$gap-xs;background: transparent none;border-width: 0;padding: 0;display: block;width: 100%;min-height: $gap-lg;
-    .navbar-collapse{padding: 0;vertical-align : middle;width: 100%;
-        .nav{
-            > li{
-                &:hover,
-                &.section,
-                &.current{
-                    > a{
-                        background: $btn-primary-bg;color: $btn-primary-color
+#main-nav {
+    margin-bottom: -$gap-xs;
+    background: transparent none;
+    border-width: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    min-height: $gap-lg;
+    .navbar-collapse {
+        padding: 0;
+        vertical-align : middle;
+        width: 100%;
+        .nav {
+            > li {
+                &:hover, &.section, &.current {
+                    > a {
+                        background: $btn-primary-bg;
+                        color: $btn-primary-color
                     }
                 }
-                &.open{
-                    > a,
-                    > a:hover,
-                    > a:focus{background: $btn-primary-bg;color: $btn-primary-color;}
-                    > .dropdown-menu{
+                &.open {
+                    > a, > a:hover, > a:focus {
+                        background: $btn-primary-bg;
+                        color: $btn-primary-color;
+                    }
+                    > .dropdown-menu {
                         @include opacity(1);
                         @include transform(translate(0, 0) scale(1));
                     }
                 }
-                > a{margin-left: 2px;padding: 8px $gap-sm;font-weight: bold;margin-bottom: $gap-xs;
+                > a {
+                    margin-left: 2px;
+                    padding: 8px $gap-sm;
+                    font-weight: bold;
+                    margin-bottom: $gap-xs;
                     @include border-radius();
                     @include transition(.1s linear background);
-                    &.btn-primary{color: $btn-primary-color;}
-                    &.btn-secondary{color: $btn-secondary-color;}
-                    &.btn-inverse{color: $btn-inverse-color;}
+                    &.btn-primary {
+                        color: $btn-primary-color;
+                    }
+                    &.btn-secondary {
+                        color: $btn-secondary-color;
+                    }
+                    &.btn-inverse {
+                        color: $btn-inverse-color;
+                    }
                 }
-                .dropdown-menu{padding: 0;border-width: 0;background: transparent none;padding-top: $gap-sm;display: block;
+                .dropdown-menu {
+                    padding: 0;
+                    border-width: 0;
+                    background: transparent none;
+                    padding-top: $gap-sm;
+                    display: block;
                     @include opacity(0);
                     @include border-radius(0);
                     @include box-shadow(none);
                     @include backface-visibility(hidden);
                     @include transition(all 0.2s ease-in-out);
                     @include transform(translate(0, -50%) scale(0));
-                    > li{
-                        &.divider{margin: 0;}
-                        > a{padding: $gap-sm;background: $btn-default-bg;color: $btn-default-color;@include box-shadow(0 2px 4px rgba(0,0,0,0.2));
-                            &:hover{background: darken($btn-default-bg, 3%)}
-                            &:first-child{border-top-width: 0;}
+                    > li {
+                        &.divider {
+                            margin: 0;
                         }
-                        &:first-child{
-                            a{
+                        > a {
+                            padding: $gap-sm;
+                            background: $btn-default-bg;
+                            color: $btn-default-color;
+                            @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+                            &:hover {
+                                background: darken($btn-default-bg, 3%)
+                            }
+                            &:first-child {
+                                border-top-width: 0;
+                            }
+                        }
+                        &:first-child {
+                            a {
                                 @include border-top-radius($border-radius-base);
                             }
                         }
-                        &:last-child{
-                            a{
+                        &:last-child {
+                            a {
                                 @include border-bottom-radius($border-radius-base);
                             }
                         }
@@ -112,38 +160,75 @@ a{
         }
     }
 }
-
-.slider-dark.slider-extend{
-    #main-nav{
-        a{color: $btn-primary-color;}
+.slider-dark.slider-extend {
+    #main-nav {
+        a {
+            color: $btn-primary-color;
+        }
     }
 }
-
-#select-navigation{border-top-width: 0;min-height: $gap-lg;position: relative;
-    &.collapse{border-top-width: 0;padding: 0 $gap-lg;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
-    select{width: $gap-lg;height: $gap-lg;z-index: 2;border: 0;position: absolute;top: 50%;right:0;margin-top: -$gap-md;background: none transparent;-webkit-appearance: none;opacity: 0;padding:0;}
-    .menu-icon{position: absolute;font-size: 1.3em;right: 0;top: 50%;margin-top: -$gap-md;height: $gap-lg;width: $gap-lg;text-align: center;line-height: $gap-lg;
+#select-navigation {
+    border-top-width: 0;
+    min-height: $gap-lg;
+    position: relative;
+    &.collapse {
+        border-top-width: 0;
+        padding: 0 $gap-lg;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    select {
+        width: $gap-lg;
+        height: $gap-lg;
+        z-index: 2;
+        border: 0;
+        position: absolute;
+        top: 50%;
+        right:0;
+        margin-top: -$gap-md;
+        background: none transparent;
+        -webkit-appearance: none;
+        opacity: 0;
+        padding:0;
+    }
+    .menu-icon {
+        position: absolute;
+        font-size: 1.3em;
+        right: 0;
+        top: 50%;
+        margin-top: -$gap-md;
+        height: $gap-lg;
+        width: $gap-lg;
+        text-align: center;
+        line-height: $gap-lg;
         @include border-radius();
-        i{line-height: $gap-lg;}
-        &.search{right: add($gap-lg, $gap-sm);}
-    }
-}
-
-@media (min-width: $screen-sm){
-    #main-nav{padding: 0;
-        .navbar-collapse{
-
+        i {
+            line-height: $gap-lg;
+        }
+        &.search {
+            right: add($gap-lg, $gap-sm);
         }
     }
 }
-
-@media (min-width: $screen-md){
-    #main-nav{
-        .navbar-collapse{
-            &.visible-sm{display: none !important;}
+@media (min-width: $screen-sm) {
+    #main-nav {
+        padding: 0;
+        .navbar-collapse {
         }
     }
-    #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu{
+}
+@media (min-width: $screen-md) {
+    #main-nav {
+        .navbar-collapse {
+            &.visible-sm {
+                display: none !important;
+            }
+        }
+    }
+    #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu {
         @include opacity(1);
         @include transform(translate(0, 0) scale(1));
     }
@@ -153,17 +238,33 @@ a{
     Sidebar
 \*---------------------------------------------*/
 
-.sidebar{
-    .sidebar-nav{}
-    .sidebar-nav ul{margin: 0;padding:0;
-        li{list-style: none;
-            h4{margin-top: 0;}
-            a{color: $link-color;display: block;padding: $gap-xs 0;}
-            a:hover{color: $link-hover-color;text-decoration: none;}
-            .current,
-            .current:hover{color: $gray-dark;}
+.sidebar {
+    .sidebar-nav {
+    }
+    .sidebar-nav ul {
+        margin: 0;
+        padding:0;
+        li {
+            list-style: none;
+            h4 {
+                margin-top: 0;
+            }
+            a {
+                color: $link-color;
+                display: block;
+                padding: $gap-xs 0;
+            }
+            a:hover {
+                color: $link-hover-color;
+                text-decoration: none;
+            }
+            .current, .current:hover {
+                color: $gray-dark;
+            }
         }
-        ul{margin-left: $gap-sm;}
+        ul {
+            margin-left: $gap-sm;
+        }
     }
 }
 
@@ -171,25 +272,35 @@ a{
     Page
 \*---------------------------------------------*/
 
-#mainContent{margin-bottom: $gap-lg;}
-
-.page-header{margin: 0 0 $gap-md 0;border-width: 0;padding: $gap-md 0;
-    h1{margin: 0;}
+#mainContent {
+    margin-bottom: $gap-lg;
 }
-
-
-@media (min-width: $screen-sm){
-    .page-header{margin: 0 0 $gap-lg 0;padding: $gap-lg 0;}
+.page-header {
+    margin: 0 0 $gap-md 0;
+    border-width: 0;
+    padding: $gap-md 0;
+    h1 {
+        margin: 0;
+    }
+}
+@media (min-width: $screen-sm) {
+    .page-header {
+        margin: 0 0 $gap-lg 0;
+        padding: $gap-lg 0;
+    }
 }
 
 /*---------------------------------------------*\
     Footer
 \*---------------------------------------------*/
 
-#footer{padding: add($gap-sm, $gap-xs) 0;}
-
-@media (min-width: $screen-sm){
-    #footer{padding: $gap-lg 0;}
+#footer {
+    padding: add($gap-sm, $gap-xs) 0;
+}
+@media (min-width: $screen-sm) {
+    #footer {
+        padding: $gap-lg 0;
+    }
 }
 
 /*======================================================================*\
@@ -204,7 +315,7 @@ a{
     Carousel
 \*---------------------------------------------*/
 
-.carousel-inner{
+.carousel-inner {
     > .item {
         @include transition(0.6s ease left);
     }
@@ -214,14 +325,21 @@ a{
     Buttons
 \*---------------------------------------------*/
 
-.btn{border-width: 0;font-weight: bold;
+.btn {
+    border-width: 0;
+    font-weight: bold;
     @include border-radius();
-    &:focus{outline: 0;}
-    &.btn-shadow{margin-bottom:4px;
-        &:active{margin-bottom: 0;margin-top: 4px;}
+    &:focus {
+        outline: 0;
+    }
+    &.btn-shadow {
+        margin-bottom:4px;
+        &:active {
+            margin-bottom: 0;
+            margin-top: 4px;
+        }
     }
 }
-
 .btn-secondary {
     @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
@@ -233,50 +351,64 @@ a{
     Wells
 \*---------------------------------------------*/
 
-.well{
-    &.well-primary{
+.well {
+    &.well-primary {
         @include well-variant($btn-primary-color, $brand-primary);
     }
-    &.well-secondary{
+    &.well-secondary {
         @include well-variant($btn-secondary-color, $brand-secondary);
     }
-    &.well-inverse{
+    &.well-inverse {
         @include well-variant($btn-inverse-color, $brand-inverse);
     }
-    &.well-info{
+    &.well-info {
         @include well-variant($btn-info-color, $brand-info);
     }
-    &.well-warning{
+    &.well-warning {
         @include well-variant($btn-warning-color, $brand-warning);
     }
-    &.well-danger{
+    &.well-danger {
         @include well-variant($btn-danger-color, $brand-danger);
     }
-    p:last-child{margin-bottom: 0;}
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /*---------------------------------------------*\
     Alerts
 \*---------------------------------------------*/
 
-.alert{border-width: 0;border-left-width: $gap-xs;
+.alert {
+    border-width: 0;
+    border-left-width: $gap-xs;
     @include border-radius(0);
-    a{text-decoration: underline}
-    &.alert-success{
+    a {
+        text-decoration: underline
+    }
+    &.alert-success {
         @include alert-variant($alert-success-bg, darken($alert-success-border, 15%), $alert-success-text);
-        a{color: $alert-success-text}
+        a {
+            color: $alert-success-text
+        }
     }
-    &.alert-info{
+    &.alert-info {
         @include alert-variant($alert-info-bg, darken($alert-info-border, 15%), $alert-info-text);
-        a{color: $alert-info-text}
+        a {
+            color: $alert-info-text
+        }
     }
-    &.alert-warning{
+    &.alert-warning {
         @include alert-variant($alert-warning-bg, darken($alert-warning-border, 15%), $alert-warning-text);
-        a{color: $alert-warning-text}
+        a {
+            color: $alert-warning-text
+        }
     }
-    &.alert-danger{
+    &.alert-danger {
         @include alert-variant($alert-danger-bg, darken($alert-danger-border, 15%), $alert-danger-text);
-        a{color: $alert-danger-text}
+        a {
+            color: $alert-danger-text
+        }
     }
 }
 
@@ -284,12 +416,14 @@ a{
     Panels
 \*---------------------------------------------*/
 
-.panel{
-    table{
-        &.table{
-            tr{
-                &:first-child{
-                    td{border-top-width: 0;}
+.panel {
+    table {
+        &.table {
+            tr {
+                &:first-child {
+                    td {
+                        border-top-width: 0;
+                    }
                 }
             }
         }
@@ -303,7 +437,10 @@ a{
     Breadcrumbs
 \*---------------------------------------------*/
 
-.breadcrumb{background: none;padding: 0;}
+.breadcrumb {
+    background: none;
+    padding: 0;
+}
 
 /*======================================================================*\
     Vendors
