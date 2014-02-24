@@ -287,8 +287,11 @@
 \*---------------------------------------------*/
 
 #sliderContainer {
+    margin-bottom: $gap-md;
+    .container{
+        padding: 0;
+    }
     #pageSlider {
-        margin-bottom: $gap-md;
         &.full-width {
             > .carousel-inner {
                 > .item {
@@ -321,14 +324,23 @@
             }
         }
     }
+    .mobile-slider-controls{
+        background: $gray-lighter;
+        text-align: right;
+        a{
+            color: $gray;
+            display: inline-block;
+            font-size: 1.3em;
+            padding: $gap-sm;
+        }
+    }
 }
 
 @media (min-width: $screen-sm) {
     #sliderContainer {
-        #pageSlider {
-            margin-bottom: $gap-lg;
-            &.full-width {
-            }
+        margin-bottom: $gap-lg;
+        .container{
+            padding: 0 ($gutter / 2);
         }
     }
 }

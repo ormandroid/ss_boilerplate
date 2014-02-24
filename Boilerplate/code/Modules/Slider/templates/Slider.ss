@@ -6,16 +6,6 @@
 
             <div id="pageSlider" class="carousel slide<% if $FullWidth %> full-width<% end_if %> " data-ride="carousel">
 
-                $SliderItems.TotalCount
-
-                <% if $SliderItems.Count > 1 %>
-                    <ol class="carousel-indicators">
-                        <% loop $SliderItems %>
-                            <li data-target="#pageSlider" data-slide-to="$Pos(0)" class="<%if First %> active<% end_if %>"></li>
-                        <% end_loop %>
-                    </ol>
-                <% end_if %>
-
                 <div class="carousel-inner">
 
                     <% loop $SliderItems %>
@@ -53,17 +43,37 @@
                 </div><!-- /.carousel-inner -->
 
                 <% if $SliderItems.Count > 1 %>
-                    <a class="left carousel-control" href="#pageSlider" data-slide="prev">
-                        <span class="fa fa-angle-left"></span>
-                    </a><!-- /.left carousel-control -->
-                    <a class="right carousel-control icon-prev" href="#pageSlider" data-slide="next">
-                        <span class="fa fa-angle-right"></span>
-                    </a><!-- /.right carousel-control icon-prev -->
+                    <div class="hidden-xs">
+                        <ol class="carousel-indicators">
+                            <% loop $SliderItems %>
+                                <li data-target="#pageSlider" data-slide-to="$Pos(0)" class="<%if First %> active<% end_if %>"></li>
+                            <% end_loop %>
+                        </ol>
+                        <a class="left carousel-control" href="#pageSlider" data-slide="prev">
+                            <span class="fa fa-angle-left"></span>
+                        </a><!-- /.left carousel-control -->
+                        <a class="right carousel-control icon-prev" href="#pageSlider" data-slide="next">
+                            <span class="fa fa-angle-right"></span>
+                        </a><!-- /.right carousel-control icon-prev -->
+                    </div><!-- /.hidden-xs -->
                 <% end_if %>
 
             </div><!-- /#pageSlider .carousel slide -->
 
         <% if $FullWidth %><% else %></div><!-- /.container --><% end_if %>
+
+        <% if $SliderItems.Count > 1 %>
+            <section class="mobile-slider-controls visible-xs">
+                <div class="container">
+                    <a href="#pageSlider" data-slide="prev">
+                        <span class="fa fa-angle-left"></span>
+                    </a>
+                    <a href="#pageSlider" data-slide="next">
+                        <span class="fa fa-angle-right"></span>
+                    </a>
+                </div><!-- /.container -->
+            </section><!-- /.mobile-slider-controls visible-xs -->
+        <% end_if %>
 
     </div><!-- /#sliderContainer -->
 

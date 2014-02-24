@@ -32,22 +32,22 @@ class BoilerplateConfig extends DataExtension {
 		Requirements::css('Boilerplate/css/colorpicker.css');
 
         $fields->addFieldToTab('Root.Main', new LiteralField('js',
-		'<script type="text/javascript">
-			(function($) {
-				$(document).ready(function() {
-					$(\'.color-picker\').on(\'click\', function(){
-						$(this).iris({
-							hide: false,
-							change: function(event, ui) {
-								var $c, $r, $g, $b, $mid;
-								$(this).css(\'backgroundColor\', ui.color.toString());
-							}
-						});
-					});
-				});
-			})(jQuery);
-		</script>'
-		));
+            '<script type="text/javascript">
+                (function($) {
+                    $(document).ready(function() {
+                        $(\'.color-picker\').on(\'click\', function(){
+                            $(this).iris({
+                                hide: false,
+                                change: function(event, ui) {
+                                    var $c, $r, $g, $b, $mid;
+                                    $(this).css(\'backgroundColor\', ui.color.toString());
+                                }
+                            });
+                        });
+                    });
+                })(jQuery);
+            </script>'
+        ));
 
         /* =========================================
          * Settings

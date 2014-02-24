@@ -7384,8 +7384,10 @@ a:active {
 /*---------------------------------------------*\
     Slider
 \*---------------------------------------------*/
-#sliderContainer #pageSlider {
+#sliderContainer {
   margin-bottom: 20px; }
+  #sliderContainer .container {
+    padding: 0; }
   #sliderContainer #pageSlider.full-width > .carousel-inner > .item a img, #sliderContainer #pageSlider.full-width > .carousel-inner > .item img {
     width: 100%; }
   #sliderContainer #pageSlider .carousel-indicators .active {
@@ -7403,10 +7405,20 @@ a:active {
     font-size: 40px;
     margin-top: -20px;
     margin-left: -5px; }
+  #sliderContainer .mobile-slider-controls {
+    background: #eeeeee;
+    text-align: right; }
+    #sliderContainer .mobile-slider-controls a {
+      color: #555555;
+      display: inline-block;
+      font-size: 1.3em;
+      padding: 10px; }
 
 @media (min-width: 768px) {
-  #sliderContainer #pageSlider {
-    margin-bottom: 40px; } }
+  #sliderContainer {
+    margin-bottom: 40px; }
+    #sliderContainer .container {
+      padding: 0 15px; } }
 /*---------------------------------------------*\
     Files
 \*---------------------------------------------*/
