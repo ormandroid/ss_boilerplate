@@ -6700,9 +6700,6 @@ a:active {
 /*---------------------------------------------*\
     Header
 \*---------------------------------------------*/
-#navigationHolder {
-  background: #eeeeee; }
-
 #header {
   padding: 10px 0;
   position: relative;
@@ -6735,7 +6732,6 @@ a:active {
   min-height: 40px; }
   #main-nav .navbar-collapse {
     padding: 0;
-    vertical-align: middle;
     width: 100%; }
     #main-nav .navbar-collapse .nav > li:hover > a, #main-nav .navbar-collapse .nav > li.section > a, #main-nav .navbar-collapse .nav > li.current > a {
       background: #3bc492;
@@ -6883,24 +6879,21 @@ a:active {
       text-decoration: none; }
     .sidebar .sidebar-nav ul li .current, .sidebar .sidebar-nav ul li .current:hover {
       color: #333333; }
-  .sidebar .sidebar-nav ul ul {
-    margin-left: 10px; }
 
 /*---------------------------------------------*\
     Page
 \*---------------------------------------------*/
 #mainContent {
   margin-bottom: 40px; }
-
-.page-header {
-  margin: 0 0 20px 0;
-  border-width: 0;
-  padding: 20px 0; }
-  .page-header h1 {
-    margin: 0; }
+  #mainContent .page-header {
+    margin: 0 0 20px 0;
+    border-width: 0;
+    padding: 20px 0; }
+    #mainContent .page-header h1 {
+      margin: 0; }
 
 @media (min-width: 768px) {
-  .page-header {
+  #mainContent .page-header {
     margin: 0 0 40px 0;
     padding: 40px 0; } }
 /*---------------------------------------------*\
@@ -7107,9 +7100,6 @@ a:active {
   background: none;
   padding: 0; }
 
-/*======================================================================*\
-    Vendors
-\*======================================================================*/
 /*======================================================================*\
     Modules
 \*======================================================================*/

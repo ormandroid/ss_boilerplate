@@ -30,9 +30,6 @@ a {
     Header
 \*---------------------------------------------*/
 
-#navigationHolder {
-    background: $gray-lighter;
-}
 #header {
     padding: $gap-sm 0;
     position: relative;
@@ -79,7 +76,6 @@ a {
     min-height: $gap-lg;
     .navbar-collapse {
         padding: 0;
-        vertical-align : middle;
         width: 100%;
         .nav {
             > li {
@@ -216,8 +212,6 @@ a {
 @media (min-width: $screen-sm) {
     #main-nav {
         padding: 0;
-        .navbar-collapse {
-        }
     }
 }
 @media (min-width: $screen-md) {
@@ -240,33 +234,31 @@ a {
 
 .sidebar {
     .sidebar-nav {
-    }
-    .sidebar-nav ul {
-        margin: 0;
-        padding:0;
-        li {
-            list-style: none;
-            h4 {
-                margin-top: 0;
-            }
-            a {
-                color: $link-color;
-                display: block;
-                padding: $gap-xs 0;
-            }
-            a:hover {
-                color: $link-hover-color;
-                text-decoration: none;
-            }
-            .current, .current:hover {
-                color: $gray-dark;
-            }
-        }
         ul {
-            margin-left: $gap-sm;
+            margin: 0;
+            padding:0;
+            li {
+                list-style: none;
+                h4 {
+                    margin-top: 0;
+                }
+                a {
+                    color: $link-color;
+                    display: block;
+                    padding: $gap-xs 0;
+                }
+                a:hover {
+                    color: $link-hover-color;
+                    text-decoration: none;
+                }
+                .current, .current:hover {
+                    color: $gray-dark;
+                }
+            }
         }
     }
 }
+
 
 /*---------------------------------------------*\
     Page
@@ -274,19 +266,21 @@ a {
 
 #mainContent {
     margin-bottom: $gap-lg;
-}
-.page-header {
-    margin: 0 0 $gap-md 0;
-    border-width: 0;
-    padding: $gap-md 0;
-    h1 {
-        margin: 0;
+    .page-header {
+        margin: 0 0 $gap-md 0;
+        border-width: 0;
+        padding: $gap-md 0;
+        h1 {
+            margin: 0;
+        }
     }
 }
 @media (min-width: $screen-sm) {
-    .page-header {
-        margin: 0 0 $gap-lg 0;
-        padding: $gap-lg 0;
+    #mainContent {
+        .page-header {
+            margin: 0 0 $gap-lg 0;
+            padding: $gap-lg 0;
+        }
     }
 }
 
@@ -340,6 +334,8 @@ a {
         }
     }
 }
+
+// Outside of the .btn class so the styling can be used on other elements
 .btn-secondary {
     @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }
@@ -441,7 +437,3 @@ a {
     background: none;
     padding: 0;
 }
-
-/*======================================================================*\
-    Vendors
-\*======================================================================*/
