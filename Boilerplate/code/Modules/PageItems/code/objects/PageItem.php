@@ -71,10 +71,10 @@ class PageItem extends DataObject{
                     $title = 'Columns',
                     new HeaderField('Columns'),
                     new LiteralField('ColumnDescription', '<p>Column Description</p>'),
-                    new HtmlEditorField('ColumnOne', 'Column One'),
-                    new HtmlEditorField('ColumnTwo', 'Column Two'),
-                    new HtmlEditorField('ColumnThree', 'Column Three'),
-                    new HtmlEditorField('ColumnFour', 'Column Four')
+                    $columnOne = new HtmlEditorField('ColumnOne', 'Column One'),
+                    $columnTwo = new HtmlEditorField('ColumnTwo', 'Column Two'),
+                    $columnThree = new HtmlEditorField('ColumnThree', 'Column Three'),
+                    $columnFour = new HtmlEditorField('ColumnFour', 'Column Four')
                 ),
                 /* ========================================
                 * Settings
@@ -92,6 +92,13 @@ class PageItem extends DataObject{
                 )
             )
         );
+
+        $rowHeight = 20;
+
+        $columnOne->setRows($rowHeight);
+        $columnTwo->setRows($rowHeight);
+        $columnThree->setRows($rowHeight);
+        $columnFour->setRows($rowHeight);
 
         return $fields;
 

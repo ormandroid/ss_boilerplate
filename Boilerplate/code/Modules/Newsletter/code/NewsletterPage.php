@@ -21,15 +21,8 @@ class NewsletterPage extends Page {
          * MailChimp
         ------------------------------------------*/
 
-        $toggleFields = ToggleCompositeField::create(
-            'MailChimp',
-            'Settings',
-            array(
-                new DropdownField('ListID','Mailchimp Lists', $this->ListSelect()),
-                new TextField('MailChimpAPI','MailChimp API Key')
-            )
-        )->setHeadingLevel(4)->setStartClosed(true);
-        $fields->addFieldToTab('Root.Newsletter', $toggleFields);
+        $fields->addFieldToTab('Root.Newsletter', new DropdownField('ListID','Mailchimp Lists', $this->ListSelect()));
+        $fields->addFieldToTab('Root.Newsletter', new TextField('MailChimpAPI','MailChimp API Key'));
 
         //$fields->addFieldToTab('Root.Newsletter', new LiteralField('Lists', $this->ViewLists()));
 

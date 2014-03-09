@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 /*======================================================================*\
-    Fonts - Typography
+    Fonts / Images - Typography
 \*======================================================================*/
 
 h1 {
@@ -101,6 +101,81 @@ h5 {
     h1, h2 {
         margin-bottom: $gap-md;
     }
+    em{
+        font-style: italic;
+    }
+    img{
+        &.left{
+            float: left;
+            max-width: 50%;
+            margin: $gap-xs $gap-lg $gap-lg 0;
+        }
+        &.right{
+            float: right;
+            max-width: 50%;
+            margin: $gap-xs 0 $gap-lg $gap-lg;
+        }
+        &.leftAlone{
+            float: left;
+            margin-right: 100%;
+            margin-bottom: $gap-sm;
+            clear: both;
+        }
+        &.center {
+            float: none;
+            margin: 0 auto $gap-sm auto;
+            display: block;
+            clear: both;
+        }
+    }
+    .captionImage{
+        width: 100%;
+        margin-top: $gap-xs;
+        img{
+            margin: 0;
+        }
+        &.left{
+            float: left;
+            margin: $gap-xs $gap-lg $gap-md 0;
+            img{
+                float: none;
+                max-width: none;
+                width: 100%;
+                margin-right: -$gap-sm;
+            }
+        }
+        &.right{
+            float: right;
+            margin: $gap-xs 0 $gap-md $gap-lg;
+            img{
+                float: none;
+                max-width: none;
+                width: 100%;
+                margin-left: -$gap-sm;
+            }
+            p{
+                margin-left: -$gap-sm;
+                text-align: left;
+            }
+        }
+        &.left[style],
+        &.right[style]{
+            max-width: 50%;
+        }
+        &.leftAlone{
+            float: none;
+            margin: 0 $gap-md $gap-md 0px;
+        }
+        &.center{
+            margin: 0 auto $gap-md;
+        }
+        p{
+            clear: both;
+            margin: $gap-sm 0;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+    }
 }
 @media (min-width: $screen-sm) {
     .typography {
@@ -137,10 +212,6 @@ h5 {
         }
     }
 }
-
-/*======================================================================*\
-    Elements
-\*======================================================================*/
 
 /*======================================================================*\
     Classes

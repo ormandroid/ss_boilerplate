@@ -21,7 +21,7 @@
                                 <% end_if %>
                             <% end_if %>
                             <% if $Caption %>
-                                <% if $FullWidth %>
+                                <% if $Top.FullWidth %>
                                     <div class="container">
                                 <% end_if %>
                                 <div class="carousel-caption hidden-xs">
@@ -34,7 +34,7 @@
                                         </a>
                                     <% end_if %>
                                 </div><!-- /.carousel-caption hidden-xs -->
-                                <% if $FullWidth %>
+                                <% if $Top.FullWidth %>
                                     </div><!-- /.container -->
                                 <% end_if %>
                             <% end_if %>

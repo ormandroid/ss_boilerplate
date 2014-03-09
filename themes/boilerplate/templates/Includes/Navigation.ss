@@ -5,15 +5,15 @@
             <% loop $Menu(1) %>
                 <% if $Children %>
                     <li class="$LinkingMode dropdown">
-                        <a href="$Link" title="$Title.XML">$MenuTitle.XML <i class="fa fa-angle-down"></i></a>
+                        <a href="$Link" title="$Title">$MenuTitle <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <% loop $Children %>
-                                <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                                <li class="$LinkingMode"><a href="$Link" title="$Title">$MenuTitle</a></li>
                             <% end_loop %>
                         </ul><!-- /.dropdown-menu -->
                     </li><!-- /.dropdown -->
                 <% else %>
-                    <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                    <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
                 <% end_if %>
             <% end_loop %>
             <% if $SearchForm %>
@@ -27,17 +27,17 @@
             <% loop $Menu(1) %>
                 <% if $Children %>
                     <li class="$LinkingMode dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-angle-down"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">$MenuTitle <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                            <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
                             <li class="divider"></li>
                             <% loop $Children %>
-                                <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                                <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
                             <% end_loop %>
                         </ul><!-- /.dropdown-menu -->
                     </li><!-- /.dropdown -->
                 <% else %>
-                    <li class="$LinkingMode"><a href="$Link" title="$Title.XML">$MenuTitle.XML</a></li>
+                    <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
                 <% end_if %>
             <% end_loop %>
             <% if $SearchForm %>

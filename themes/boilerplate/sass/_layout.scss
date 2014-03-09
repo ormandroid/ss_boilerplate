@@ -195,17 +195,17 @@ a {
         font-size: 1.3em;
         right: 0;
         top: 50%;
-        margin-top: -$gap-md;
-        height: $gap-lg;
-        width: $gap-lg;
+        margin-top: -(($gap-lg + $gap-sm) / 2);
+        height: ($gap-lg + $gap-sm);
+        width: ($gap-lg + $gap-sm);
         text-align: center;
-        line-height: $gap-lg;
+        line-height: ($gap-lg + $gap-sm);
         @include border-radius();
         i {
-            line-height: $gap-lg;
+            line-height: ($gap-lg + $gap-sm);
         }
         &.search {
-            right: add($gap-lg, $gap-sm);
+            right: add(($gap-lg + $gap-sm), $gap-sm);
         }
     }
 }
@@ -382,6 +382,11 @@ a {
     a {
         text-decoration: underline
     }
+    p{
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
     &.alert-success {
         @include alert-variant($alert-success-bg, darken($alert-success-border, 15%), $alert-success-text);
         a {
@@ -413,6 +418,7 @@ a {
 \*---------------------------------------------*/
 
 .panel {
+    margin-bottom: $gap-lg;
     table {
         &.table {
             tr {
