@@ -73,22 +73,22 @@ class GalleryPage_Controller extends Page_Controller {
     public function ColumnClass(){
         switch($this->Columns){
             case 1:
-                return 'col-xs-6 col-sm-6';
+                return 'col-xs-12 col-sm-6';
                 break;
             case 2:
-                return 'col-xs-6 col-sm-4';
+                return 'col-xs-12 col-sm-4';
                 break;
             case 3:
-                return 'col-xs-6 col-sm-3';
+                return 'col-xs-12 col-sm-3';
                 break;
             case 4:
-                return 'col-xs-6 col-sm-2';
+                return 'col-xs-12 col-sm-2';
                 break;
             case 5:
-                return 'col-xs-6 col-sm-1';
+                return 'col-xs-12 col-sm-1';
                 break;
             default:
-                return 'col-xs-6 col-sm-12';
+                return 'col-xs-12 col-sm-12';
         }
     }
 

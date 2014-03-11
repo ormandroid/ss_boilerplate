@@ -27,7 +27,7 @@
                                 <% if $Date && $Author %>
                                     <p class="blog-meta">Posted on $Date.Nice by $Author</p><!-- /.blog-meta -->
                                 <% end_if %>
-                                <p class="blog-summary">$Content.Summary</p><!-- /.blog-summary -->
+                                <p class="blog-summary">$Content.LimitWordCountXML(40)</p><!-- /.blog-summary -->
                                 <a href="$Link" class="btn btn-primary" title="Read more on &quot;{$Title}&quot;">Read more</a>
                             </div><!-- /.blog-content -->
                         </article><!-- /.blog-item -->

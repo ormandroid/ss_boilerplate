@@ -183,7 +183,7 @@
 .gallery-lightbox-container, .gallery-full-container {
     margin-bottom: -$gap-md;
     .gallery-item {
-        margin-bottom: $gap-md;
+        margin-bottom: $gutter;
         .gallery-modal {
             background: $gray-darker;
             display: block;
@@ -214,7 +214,7 @@
 }
 .gallery-full-container {
     .gallery-item {
-        margin-bottom: $gap-md;
+        margin-bottom: $gutter;
         &:hover {
             text-decoration: none;
             img {
@@ -248,10 +248,7 @@
 }
 @media (min-width: $screen-sm) {
     .gallery-lightbox-container, .gallery-full-container {
-        margin-bottom: -$gap-lg;
-        .gallery-item {
-            margin-bottom: $gap-lg;
-        }
+        margin-bottom: -$gutter;
     }
 }
 .gallery-thumbs-container {
@@ -412,5 +409,47 @@
     height: 300px;
     img {
         max-width: none;
+    }
+}
+
+/*---------------------------------------------*\
+    Testimonials
+\*---------------------------------------------*/
+
+.testimonial-container{
+    .testimonial-item{
+        padding: $gap-md;
+        margin: 0;
+        .media{
+            > .pull-left{
+                margin-right: $gutter;
+            }
+            .media-image{
+                img{
+                    @include border-radius(100%)
+                }
+            }
+            .fallback{
+                background: $gray-lighter;
+                width: $gap-xl;
+                height: $gap-xl;
+                line-height: $gap-xl;
+                text-align: center;
+                color: $gray-light;
+                display: block;
+                @include border-radius(100%)
+            }
+        }
+        &.even{
+            background: $gray-lightest;
+        }
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .testimonial-container{
+        .testimonial-item{
+            padding: $gap-lg $gap-md;
+        }
     }
 }

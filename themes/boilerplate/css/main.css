@@ -6870,14 +6870,14 @@ a:active {
     right: 0;
     bottom: 0; }
   #select-navigation select {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     z-index: 2;
     border: 0;
     position: absolute;
     top: 50%;
     right: 0;
-    margin-top: -15px;
+    margin-top: -20px;
     background: none transparent;
     -webkit-appearance: none;
     opacity: 0;
@@ -7335,7 +7335,7 @@ a:active {
 .gallery-lightbox-container, .gallery-full-container {
   margin-bottom: -15px; }
   .gallery-lightbox-container .gallery-item, .gallery-full-container .gallery-item {
-    margin-bottom: 15px; }
+    margin-bottom: 30px; }
     .gallery-lightbox-container .gallery-item .gallery-modal, .gallery-full-container .gallery-item .gallery-modal {
       background: #222222;
       display: block; }
@@ -7370,7 +7370,7 @@ a:active {
         filter: alpha(opacity=100); }
 
 .gallery-full-container .gallery-item {
-  margin-bottom: 15px; }
+  margin-bottom: 30px; }
   .gallery-full-container .gallery-item:hover {
     text-decoration: none; }
     .gallery-full-container .gallery-item:hover img {
@@ -7405,9 +7405,7 @@ a:active {
 
 @media (min-width: 768px) {
   .gallery-lightbox-container, .gallery-full-container {
-    margin-bottom: -30px; }
-    .gallery-lightbox-container .gallery-item, .gallery-full-container .gallery-item {
-      margin-bottom: 30px; } }
+    margin-bottom: -30px; } }
 .gallery-thumbs-container .gallery-thumb a {
   display: block;
   margin-bottom: 30px;
@@ -7509,3 +7507,35 @@ a:active {
   height: 300px; }
   #map-canvas img {
     max-width: none; }
+
+/*---------------------------------------------*\
+    Testimonials
+\*---------------------------------------------*/
+.testimonial-container .testimonial-item {
+  padding: 15px;
+  margin: 0; }
+  .testimonial-container .testimonial-item .media > .pull-left {
+    margin-right: 30px; }
+  .testimonial-container .testimonial-item .media .media-image img {
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%; }
+  .testimonial-container .testimonial-item .media .fallback {
+    background: #eeeeee;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #999999;
+    display: block;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%; }
+  .testimonial-container .testimonial-item.even {
+    background: #f7f7f7; }
+
+@media (min-width: 768px) {
+  .testimonial-container .testimonial-item {
+    padding: 30px 15px; } }

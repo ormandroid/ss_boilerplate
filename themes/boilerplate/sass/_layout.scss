@@ -177,14 +177,14 @@ a {
         bottom: 0;
     }
     select {
-        width: $gap-lg;
-        height: $gap-lg;
+        width: ($gap-lg + $gap-sm);
+        height: ($gap-lg + $gap-sm);
         z-index: 2;
         border: 0;
         position: absolute;
         top: 50%;
         right:0;
-        margin-top: -$gap-md;
+        margin-top: -(($gap-lg + $gap-sm) / 2);
         background: none transparent;
         -webkit-appearance: none;
         opacity: 0;

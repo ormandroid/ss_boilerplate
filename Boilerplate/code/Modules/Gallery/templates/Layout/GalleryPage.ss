@@ -17,7 +17,7 @@
                                         $croppedImage(115, 115)
                                         <span class="hover-icon"><i class="fa fa-link"></i></span><!-- /.hover-icon -->
                                     </a>
-                                </figure><!-- /.gallery-item col-xs-6 col-sm-3 -->
+                                </figure><!-- /.gallery-item col-xs-12 col-sm-3 -->
                                 <% if $MultipleOf(2) %>
                                     <div class="clearfix"></div><!-- /.clearfix -->
                                 <% end_if %>
