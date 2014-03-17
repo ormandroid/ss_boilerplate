@@ -214,14 +214,7 @@ a {
         padding: 0;
     }
 }
-@media (min-width: $screen-md) {
-    #main-nav {
-        .navbar-collapse {
-            &.visible-sm {
-                display: none !important;
-            }
-        }
-    }
+@media (min-width: $screen-lg) {
     #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu {
         @include opacity(1);
         @include transform(translate(0, 0) scale(1));

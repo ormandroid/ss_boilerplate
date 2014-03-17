@@ -6904,10 +6904,7 @@ a:active {
 @media (min-width: 768px) {
   #main-nav {
     padding: 0; } }
-@media (min-width: 992px) {
-  #main-nav .navbar-collapse.visible-sm {
-    display: none !important; }
-
+@media (min-width: 1200px) {
   #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu {
     opacity: 1;
     filter: alpha(opacity=100);
