@@ -373,20 +373,17 @@
         max-width: 50%;
     }
 }
-#MemberLoginForm_LoginForm, #Form_EditProfileForm, #Form_RegistrationForm {
+.form-group {
     .text {
         @extend .form-control;
     }
+}
+
+// Login Form
+#MemberLoginForm_LoginForm {
     .action {
         @extend .btn;
         @extend .btn-primary;
-    }
-    #MemberLoginForm_LoginForm_action_dologin {
-        @extend .btn-lg;
-    }
-}
-#Form_EditProfileForm {
-    .action {
         @extend .btn-lg;
     }
 }

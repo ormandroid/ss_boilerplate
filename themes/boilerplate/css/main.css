@@ -247,11 +247,9 @@ th {
   .table th {
     background-color: #fff !important; }
 
-  .btn > .caret, #MemberLoginForm_LoginForm .action > .caret, #Form_EditProfileForm .action > .caret, #Form_RegistrationForm .action > .caret,
+  .btn > .caret, #MemberLoginForm_LoginForm .action > .caret,
   .dropup > .btn > .caret,
-  #MemberLoginForm_LoginForm .dropup > .action > .caret,
-  #Form_EditProfileForm .dropup > .action > .caret,
-  #Form_RegistrationForm .dropup > .action > .caret {
+  #MemberLoginForm_LoginForm .dropup > .action > .caret {
     border-top-color: #000 !important; }
 
   .label {
@@ -1594,7 +1592,7 @@ output {
   line-height: 1.42857;
   color: #555555; }
 
-.form-control, #MemberLoginForm_LoginForm .text, #Form_EditProfileForm .text, #Form_RegistrationForm .text {
+.form-control, .form-group .text {
   display: block;
   width: 100%;
   height: 34px;
@@ -1610,26 +1608,26 @@ output {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
-  .form-control:focus, #MemberLoginForm_LoginForm .text:focus, #Form_EditProfileForm .text:focus, #Form_RegistrationForm .text:focus {
+  .form-control:focus, .form-group .text:focus {
     border-color: #66afe9;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
-  .form-control:-moz-placeholder, #MemberLoginForm_LoginForm .text:-moz-placeholder, #Form_EditProfileForm .text:-moz-placeholder, #Form_RegistrationForm .text:-moz-placeholder {
+  .form-control:-moz-placeholder, .form-group .text:-moz-placeholder {
     color: #999999; }
-  .form-control::-moz-placeholder, #MemberLoginForm_LoginForm .text::-moz-placeholder, #Form_EditProfileForm .text::-moz-placeholder, #Form_RegistrationForm .text::-moz-placeholder {
+  .form-control::-moz-placeholder, .form-group .text::-moz-placeholder {
     color: #999999;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, #MemberLoginForm_LoginForm .text:-ms-input-placeholder, #Form_EditProfileForm .text:-ms-input-placeholder, #Form_RegistrationForm .text:-ms-input-placeholder {
+  .form-control:-ms-input-placeholder, .form-group .text:-ms-input-placeholder {
     color: #999999; }
-  .form-control::-webkit-input-placeholder, #MemberLoginForm_LoginForm .text::-webkit-input-placeholder, #Form_EditProfileForm .text::-webkit-input-placeholder, #Form_RegistrationForm .text::-webkit-input-placeholder {
+  .form-control::-webkit-input-placeholder, .form-group .text::-webkit-input-placeholder {
     color: #999999; }
-  .form-control[disabled], #MemberLoginForm_LoginForm [disabled].text, #Form_EditProfileForm [disabled].text, #Form_RegistrationForm [disabled].text, .form-control[readonly], #MemberLoginForm_LoginForm [readonly].text, #Form_EditProfileForm [readonly].text, #Form_RegistrationForm [readonly].text, fieldset[disabled] .form-control, fieldset[disabled] #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm fieldset[disabled] .text, fieldset[disabled] #Form_EditProfileForm .text, #Form_EditProfileForm fieldset[disabled] .text, fieldset[disabled] #Form_RegistrationForm .text, #Form_RegistrationForm fieldset[disabled] .text {
+  .form-control[disabled], .form-group [disabled].text, .form-control[readonly], .form-group [readonly].text, fieldset[disabled] .form-control, fieldset[disabled] .form-group .text, .form-group fieldset[disabled] .text {
     cursor: not-allowed;
     background-color: #eeeeee;
     opacity: 1; }
 
-textarea.form-control, #MemberLoginForm_LoginForm textarea.text, #Form_EditProfileForm textarea.text, #Form_RegistrationForm textarea.text {
+textarea.form-control, .form-group textarea.text {
   height: auto; }
 
 input[type="date"] {
@@ -1689,87 +1687,67 @@ input[type="checkbox"],
 .checkbox-inline {
   cursor: not-allowed; }
 
-.input-sm, .input-group-sm > .form-control, #MemberLoginForm_LoginForm .input-group-sm > .text, #Form_EditProfileForm .input-group-sm > .text, #Form_RegistrationForm .input-group-sm > .text,
+.input-sm, .input-group-sm > .form-control, .form-group .input-group-sm > .text,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
-#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .action,
-#Form_EditProfileForm .input-group-sm > .input-group-btn > .action,
-#Form_RegistrationForm .input-group-sm > .input-group-btn > .action {
+#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .action {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-select.input-sm, .input-group-sm > select.form-control, #MemberLoginForm_LoginForm .input-group-sm > select.text, #Form_EditProfileForm .input-group-sm > select.text, #Form_RegistrationForm .input-group-sm > select.text,
+select.input-sm, .input-group-sm > select.form-control, .form-group .input-group-sm > select.text,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
-#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select.action,
-#Form_EditProfileForm .input-group-sm > .input-group-btn > select.action,
-#Form_RegistrationForm .input-group-sm > .input-group-btn > select.action {
+#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select.action {
   height: 30px;
   line-height: 30px; }
 
-textarea.input-sm, .input-group-sm > textarea.form-control, #MemberLoginForm_LoginForm .input-group-sm > textarea.text, #Form_EditProfileForm .input-group-sm > textarea.text, #Form_RegistrationForm .input-group-sm > textarea.text,
+textarea.input-sm, .input-group-sm > textarea.form-control, .form-group .input-group-sm > textarea.text,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 #MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > textarea.action,
-#Form_EditProfileForm .input-group-sm > .input-group-btn > textarea.action,
-#Form_RegistrationForm .input-group-sm > .input-group-btn > textarea.action,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
-#MemberLoginForm_LoginForm .input-group-sm > select[multiple].text,
-#Form_EditProfileForm .input-group-sm > select[multiple].text,
-#Form_RegistrationForm .input-group-sm > select[multiple].text,
+.form-group .input-group-sm > select[multiple].text,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
-#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select[multiple].action,
-#Form_EditProfileForm .input-group-sm > .input-group-btn > select[multiple].action,
-#Form_RegistrationForm .input-group-sm > .input-group-btn > select[multiple].action {
+#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select[multiple].action {
   height: auto; }
 
-.input-lg, .input-group-lg > .form-control, #MemberLoginForm_LoginForm .input-group-lg > .text, #Form_EditProfileForm .input-group-lg > .text, #Form_RegistrationForm .input-group-lg > .text,
+.input-lg, .input-group-lg > .form-control, .form-group .input-group-lg > .text,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
-#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .action,
-#Form_EditProfileForm .input-group-lg > .input-group-btn > .action,
-#Form_RegistrationForm .input-group-lg > .input-group-btn > .action {
+#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .action {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px; }
 
-select.input-lg, .input-group-lg > select.form-control, #MemberLoginForm_LoginForm .input-group-lg > select.text, #Form_EditProfileForm .input-group-lg > select.text, #Form_RegistrationForm .input-group-lg > select.text,
+select.input-lg, .input-group-lg > select.form-control, .form-group .input-group-lg > select.text,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
-#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select.action,
-#Form_EditProfileForm .input-group-lg > .input-group-btn > select.action,
-#Form_RegistrationForm .input-group-lg > .input-group-btn > select.action {
+#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select.action {
   height: 46px;
   line-height: 46px; }
 
-textarea.input-lg, .input-group-lg > textarea.form-control, #MemberLoginForm_LoginForm .input-group-lg > textarea.text, #Form_EditProfileForm .input-group-lg > textarea.text, #Form_RegistrationForm .input-group-lg > textarea.text,
+textarea.input-lg, .input-group-lg > textarea.form-control, .form-group .input-group-lg > textarea.text,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 #MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > textarea.action,
-#Form_EditProfileForm .input-group-lg > .input-group-btn > textarea.action,
-#Form_RegistrationForm .input-group-lg > .input-group-btn > textarea.action,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
-#MemberLoginForm_LoginForm .input-group-lg > select[multiple].text,
-#Form_EditProfileForm .input-group-lg > select[multiple].text,
-#Form_RegistrationForm .input-group-lg > select[multiple].text,
+.form-group .input-group-lg > select[multiple].text,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
-#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select[multiple].action,
-#Form_EditProfileForm .input-group-lg > .input-group-btn > select[multiple].action,
-#Form_RegistrationForm .input-group-lg > .input-group-btn > select[multiple].action {
+#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select[multiple].action {
   height: auto; }
 
 .has-feedback {
   position: relative; }
-  .has-feedback .form-control, .has-feedback #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .has-feedback .text, .has-feedback #Form_EditProfileForm .text, #Form_EditProfileForm .has-feedback .text, .has-feedback #Form_RegistrationForm .text, #Form_RegistrationForm .has-feedback .text {
+  .has-feedback .form-control, .has-feedback .form-group .text, .form-group .has-feedback .text {
     padding-right: 42.5px; }
   .has-feedback .form-control-feedback {
     position: absolute;
@@ -1788,11 +1766,11 @@ select[multiple].input-lg,
 .has-success .radio-inline,
 .has-success .checkbox-inline {
   color: #3c763d; }
-.has-success .form-control, .has-success #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .has-success .text, .has-success #Form_EditProfileForm .text, #Form_EditProfileForm .has-success .text, .has-success #Form_RegistrationForm .text, #Form_RegistrationForm .has-success .text {
+.has-success .form-control, .has-success .form-group .text, .form-group .has-success .text {
   border-color: #3c763d;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-success .form-control:focus, .has-success #MemberLoginForm_LoginForm .text:focus, #MemberLoginForm_LoginForm .has-success .text:focus, .has-success #Form_EditProfileForm .text:focus, #Form_EditProfileForm .has-success .text:focus, .has-success #Form_RegistrationForm .text:focus, #Form_RegistrationForm .has-success .text:focus {
+  .has-success .form-control:focus, .has-success .form-group .text:focus, .form-group .has-success .text:focus {
     border-color: #2b542c;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168; }
@@ -1810,11 +1788,11 @@ select[multiple].input-lg,
 .has-warning .radio-inline,
 .has-warning .checkbox-inline {
   color: #8a6d3b; }
-.has-warning .form-control, .has-warning #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .has-warning .text, .has-warning #Form_EditProfileForm .text, #Form_EditProfileForm .has-warning .text, .has-warning #Form_RegistrationForm .text, #Form_RegistrationForm .has-warning .text {
+.has-warning .form-control, .has-warning .form-group .text, .form-group .has-warning .text {
   border-color: #8a6d3b;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-warning .form-control:focus, .has-warning #MemberLoginForm_LoginForm .text:focus, #MemberLoginForm_LoginForm .has-warning .text:focus, .has-warning #Form_EditProfileForm .text:focus, #Form_EditProfileForm .has-warning .text:focus, .has-warning #Form_RegistrationForm .text:focus, #Form_RegistrationForm .has-warning .text:focus {
+  .has-warning .form-control:focus, .has-warning .form-group .text:focus, .form-group .has-warning .text:focus {
     border-color: #66512c;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b; }
@@ -1832,11 +1810,11 @@ select[multiple].input-lg,
 .has-error .radio-inline,
 .has-error .checkbox-inline {
   color: #a94442; }
-.has-error .form-control, .has-error #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .has-error .text, .has-error #Form_EditProfileForm .text, #Form_EditProfileForm .has-error .text, .has-error #Form_RegistrationForm .text, #Form_RegistrationForm .has-error .text {
+.has-error .form-control, .has-error .form-group .text, .form-group .has-error .text {
   border-color: #a94442;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .has-error .form-control:focus, .has-error #MemberLoginForm_LoginForm .text:focus, #MemberLoginForm_LoginForm .has-error .text:focus, .has-error #Form_EditProfileForm .text:focus, #Form_EditProfileForm .has-error .text:focus, .has-error #Form_RegistrationForm .text:focus, #Form_RegistrationForm .has-error .text:focus {
+  .has-error .form-control:focus, .has-error .form-group .text:focus, .form-group .has-error .text:focus {
     border-color: #843534;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483; }
@@ -1861,7 +1839,7 @@ select[multiple].input-lg,
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
-  .form-inline .form-control, .navbar-form .form-control, .form-inline #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .form-inline .text, .navbar-form #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .navbar-form .text, .form-inline #Form_EditProfileForm .text, #Form_EditProfileForm .form-inline .text, .navbar-form #Form_EditProfileForm .text, #Form_EditProfileForm .navbar-form .text, .form-inline #Form_RegistrationForm .text, #Form_RegistrationForm .form-inline .text, .navbar-form #Form_RegistrationForm .text, #Form_RegistrationForm .navbar-form .text {
+  .form-inline .form-control, .navbar-form .form-control, .form-inline .form-group .text, .form-group .form-inline .text, .navbar-form .form-group .text, .form-group .navbar-form .text {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
@@ -1912,7 +1890,7 @@ select[multiple].input-lg,
   top: 0;
   right: 15px; }
 
-.btn, #MemberLoginForm_LoginForm .action, #Form_EditProfileForm .action, #Form_RegistrationForm .action {
+.btn, #MemberLoginForm_LoginForm .action {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -1931,19 +1909,19 @@ select[multiple].input-lg,
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none; }
-  .btn:focus, #MemberLoginForm_LoginForm .action:focus, #Form_EditProfileForm .action:focus, #Form_RegistrationForm .action:focus {
+  .btn:focus, #MemberLoginForm_LoginForm .action:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, #MemberLoginForm_LoginForm .action:hover, #Form_EditProfileForm .action:hover, #Form_RegistrationForm .action:hover, .btn:focus, #MemberLoginForm_LoginForm .action:focus, #Form_EditProfileForm .action:focus, #Form_RegistrationForm .action:focus {
+  .btn:hover, #MemberLoginForm_LoginForm .action:hover, .btn:focus, #MemberLoginForm_LoginForm .action:focus {
     color: #333333;
     text-decoration: none; }
-  .btn:active, #MemberLoginForm_LoginForm .action:active, #Form_EditProfileForm .action:active, #Form_RegistrationForm .action:active, .btn.active, #MemberLoginForm_LoginForm .active.action, #Form_EditProfileForm .active.action, #Form_RegistrationForm .active.action {
+  .btn:active, #MemberLoginForm_LoginForm .action:active, .btn.active, #MemberLoginForm_LoginForm .active.action {
     outline: 0;
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, #MemberLoginForm_LoginForm .disabled.action, #Form_EditProfileForm .disabled.action, #Form_RegistrationForm .disabled.action, .btn[disabled], #MemberLoginForm_LoginForm [disabled].action, #Form_EditProfileForm [disabled].action, #Form_RegistrationForm [disabled].action, fieldset[disabled] .btn, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action, fieldset[disabled] #Form_EditProfileForm .action, #Form_EditProfileForm fieldset[disabled] .action, fieldset[disabled] #Form_RegistrationForm .action, #Form_RegistrationForm fieldset[disabled] .action {
+  .btn.disabled, #MemberLoginForm_LoginForm .disabled.action, .btn[disabled], #MemberLoginForm_LoginForm [disabled].action, fieldset[disabled] .btn, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.65;
@@ -1974,26 +1952,26 @@ select[multiple].input-lg,
     color: white;
     background-color: #333333; }
 
-.btn-primary, #MemberLoginForm_LoginForm .action, #Form_EditProfileForm .action, #Form_RegistrationForm .action {
+.btn-primary, #MemberLoginForm_LoginForm .action {
   color: white;
   background-color: #3bc492;
   border-color: #35b083; }
-  .btn-primary:hover, #MemberLoginForm_LoginForm .action:hover, #Form_EditProfileForm .action:hover, #Form_RegistrationForm .action:hover, .btn-primary:focus, #MemberLoginForm_LoginForm .action:focus, #Form_EditProfileForm .action:focus, #Form_RegistrationForm .action:focus, .btn-primary:active, #MemberLoginForm_LoginForm .action:active, #Form_EditProfileForm .action:active, #Form_RegistrationForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action, #Form_EditProfileForm .active.action, #Form_RegistrationForm .active.action {
+  .btn-primary:hover, #MemberLoginForm_LoginForm .action:hover, .btn-primary:focus, #MemberLoginForm_LoginForm .action:focus, .btn-primary:active, #MemberLoginForm_LoginForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action {
     color: white;
     background-color: #32a57b;
     border-color: #278160; }
-  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action, .open #Form_EditProfileForm .dropdown-toggle.action, #Form_EditProfileForm .open .dropdown-toggle.action, .open #Form_RegistrationForm .dropdown-toggle.action, #Form_RegistrationForm .open .dropdown-toggle.action {
+  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action {
     color: white;
     background-color: #32a57b;
     border-color: #278160; }
-  .btn-primary:active, #MemberLoginForm_LoginForm .action:active, #Form_EditProfileForm .action:active, #Form_RegistrationForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action, #Form_EditProfileForm .active.action, #Form_RegistrationForm .active.action {
+  .btn-primary:active, #MemberLoginForm_LoginForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action {
     background-image: none; }
-  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action, .open #Form_EditProfileForm .dropdown-toggle.action, #Form_EditProfileForm .open .dropdown-toggle.action, .open #Form_RegistrationForm .dropdown-toggle.action, #Form_RegistrationForm .open .dropdown-toggle.action {
+  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action {
     background-image: none; }
-  .btn-primary.disabled, #MemberLoginForm_LoginForm .disabled.action, #Form_EditProfileForm .disabled.action, #Form_RegistrationForm .disabled.action, .btn-primary.disabled:hover, #MemberLoginForm_LoginForm .disabled.action:hover, #Form_EditProfileForm .disabled.action:hover, #Form_RegistrationForm .disabled.action:hover, .btn-primary.disabled:focus, #MemberLoginForm_LoginForm .disabled.action:focus, #Form_EditProfileForm .disabled.action:focus, #Form_RegistrationForm .disabled.action:focus, .btn-primary.disabled:active, #MemberLoginForm_LoginForm .disabled.action:active, #Form_EditProfileForm .disabled.action:active, #Form_RegistrationForm .disabled.action:active, .btn-primary.disabled.active, #MemberLoginForm_LoginForm .disabled.active.action, #Form_EditProfileForm .disabled.active.action, #Form_RegistrationForm .disabled.active.action, .btn-primary[disabled], #MemberLoginForm_LoginForm [disabled].action, #Form_EditProfileForm [disabled].action, #Form_RegistrationForm [disabled].action, .btn-primary[disabled]:hover, #MemberLoginForm_LoginForm [disabled].action:hover, #Form_EditProfileForm [disabled].action:hover, #Form_RegistrationForm [disabled].action:hover, .btn-primary[disabled]:focus, #MemberLoginForm_LoginForm [disabled].action:focus, #Form_EditProfileForm [disabled].action:focus, #Form_RegistrationForm [disabled].action:focus, .btn-primary[disabled]:active, #MemberLoginForm_LoginForm [disabled].action:active, #Form_EditProfileForm [disabled].action:active, #Form_RegistrationForm [disabled].action:active, .btn-primary[disabled].active, #MemberLoginForm_LoginForm [disabled].active.action, #Form_EditProfileForm [disabled].active.action, #Form_RegistrationForm [disabled].active.action, fieldset[disabled] .btn-primary, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action, fieldset[disabled] #Form_EditProfileForm .action, #Form_EditProfileForm fieldset[disabled] .action, fieldset[disabled] #Form_RegistrationForm .action, #Form_RegistrationForm fieldset[disabled] .action, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #MemberLoginForm_LoginForm .action:hover, #MemberLoginForm_LoginForm fieldset[disabled] .action:hover, fieldset[disabled] #Form_EditProfileForm .action:hover, #Form_EditProfileForm fieldset[disabled] .action:hover, fieldset[disabled] #Form_RegistrationForm .action:hover, #Form_RegistrationForm fieldset[disabled] .action:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #MemberLoginForm_LoginForm .action:focus, #MemberLoginForm_LoginForm fieldset[disabled] .action:focus, fieldset[disabled] #Form_EditProfileForm .action:focus, #Form_EditProfileForm fieldset[disabled] .action:focus, fieldset[disabled] #Form_RegistrationForm .action:focus, #Form_RegistrationForm fieldset[disabled] .action:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] #MemberLoginForm_LoginForm .action:active, #MemberLoginForm_LoginForm fieldset[disabled] .action:active, fieldset[disabled] #Form_EditProfileForm .action:active, #Form_EditProfileForm fieldset[disabled] .action:active, fieldset[disabled] #Form_RegistrationForm .action:active, #Form_RegistrationForm fieldset[disabled] .action:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #MemberLoginForm_LoginForm .active.action, #MemberLoginForm_LoginForm fieldset[disabled] .active.action, fieldset[disabled] #Form_EditProfileForm .active.action, #Form_EditProfileForm fieldset[disabled] .active.action, fieldset[disabled] #Form_RegistrationForm .active.action, #Form_RegistrationForm fieldset[disabled] .active.action {
+  .btn-primary.disabled, #MemberLoginForm_LoginForm .disabled.action, .btn-primary.disabled:hover, #MemberLoginForm_LoginForm .disabled.action:hover, .btn-primary.disabled:focus, #MemberLoginForm_LoginForm .disabled.action:focus, .btn-primary.disabled:active, #MemberLoginForm_LoginForm .disabled.action:active, .btn-primary.disabled.active, #MemberLoginForm_LoginForm .disabled.active.action, .btn-primary[disabled], #MemberLoginForm_LoginForm [disabled].action, .btn-primary[disabled]:hover, #MemberLoginForm_LoginForm [disabled].action:hover, .btn-primary[disabled]:focus, #MemberLoginForm_LoginForm [disabled].action:focus, .btn-primary[disabled]:active, #MemberLoginForm_LoginForm [disabled].action:active, .btn-primary[disabled].active, #MemberLoginForm_LoginForm [disabled].active.action, fieldset[disabled] .btn-primary, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #MemberLoginForm_LoginForm .action:hover, #MemberLoginForm_LoginForm fieldset[disabled] .action:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #MemberLoginForm_LoginForm .action:focus, #MemberLoginForm_LoginForm fieldset[disabled] .action:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] #MemberLoginForm_LoginForm .action:active, #MemberLoginForm_LoginForm fieldset[disabled] .action:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #MemberLoginForm_LoginForm .active.action, #MemberLoginForm_LoginForm fieldset[disabled] .active.action {
     background-color: #3bc492;
     border-color: #35b083; }
-  .btn-primary .badge, #MemberLoginForm_LoginForm .action .badge, #Form_EditProfileForm .action .badge, #Form_RegistrationForm .action .badge {
+  .btn-primary .badge, #MemberLoginForm_LoginForm .action .badge {
     color: #3bc492;
     background-color: white; }
 
@@ -2108,19 +2086,19 @@ select[multiple].input-lg,
     color: #999999;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, #MemberLoginForm_LoginForm .btn-group-lg > .action, #Form_RegistrationForm .btn-group-lg > .action, #MemberLoginForm_LoginForm #MemberLoginForm_LoginForm_action_dologin, #Form_EditProfileForm #MemberLoginForm_LoginForm_action_dologin, #Form_RegistrationForm #MemberLoginForm_LoginForm_action_dologin, #Form_EditProfileForm .action {
+.btn-lg, .btn-group-lg > .btn, #MemberLoginForm_LoginForm .action {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px; }
 
-.btn-sm, .btn-group-sm > .btn, #MemberLoginForm_LoginForm .btn-group-sm > .action, #Form_EditProfileForm .btn-group-sm > .action, #Form_RegistrationForm .btn-group-sm > .action {
+.btn-sm, .btn-group-sm > .btn, #MemberLoginForm_LoginForm .btn-group-sm > .action {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-xs, .btn-group-xs > .btn, #MemberLoginForm_LoginForm .btn-group-xs > .action, #Form_EditProfileForm .btn-group-xs > .action, #Form_RegistrationForm .btn-group-xs > .action {
+.btn-xs, .btn-group-xs > .btn, #MemberLoginForm_LoginForm .btn-group-xs > .action {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -2903,53 +2881,33 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group > .action, #Form_EditProfileForm .btn-group > .action, #Form_RegistrationForm .btn-group > .action,
+  .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group > .action,
   .btn-group-vertical > .btn,
-  #MemberLoginForm_LoginForm .btn-group-vertical > .action,
-  #Form_EditProfileForm .btn-group-vertical > .action,
-  #Form_RegistrationForm .btn-group-vertical > .action {
+  #MemberLoginForm_LoginForm .btn-group-vertical > .action {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, #MemberLoginForm_LoginForm .btn-group > .action:hover, #Form_EditProfileForm .btn-group > .action:hover, #Form_RegistrationForm .btn-group > .action:hover, .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus, #Form_EditProfileForm .btn-group > .action:focus, #Form_RegistrationForm .btn-group > .action:focus, .btn-group > .btn:active, #MemberLoginForm_LoginForm .btn-group > .action:active, #Form_EditProfileForm .btn-group > .action:active, #Form_RegistrationForm .btn-group > .action:active, .btn-group > .btn.active, #MemberLoginForm_LoginForm .btn-group > .active.action, #Form_EditProfileForm .btn-group > .active.action, #Form_RegistrationForm .btn-group > .active.action,
+    .btn-group > .btn:hover, #MemberLoginForm_LoginForm .btn-group > .action:hover, .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus, .btn-group > .btn:active, #MemberLoginForm_LoginForm .btn-group > .action:active, .btn-group > .btn.active, #MemberLoginForm_LoginForm .btn-group > .active.action,
     .btn-group-vertical > .btn:hover,
     #MemberLoginForm_LoginForm .btn-group-vertical > .action:hover,
-    #Form_EditProfileForm .btn-group-vertical > .action:hover,
-    #Form_RegistrationForm .btn-group-vertical > .action:hover,
     .btn-group-vertical > .btn:focus,
     #MemberLoginForm_LoginForm .btn-group-vertical > .action:focus,
-    #Form_EditProfileForm .btn-group-vertical > .action:focus,
-    #Form_RegistrationForm .btn-group-vertical > .action:focus,
     .btn-group-vertical > .btn:active,
     #MemberLoginForm_LoginForm .btn-group-vertical > .action:active,
-    #Form_EditProfileForm .btn-group-vertical > .action:active,
-    #Form_RegistrationForm .btn-group-vertical > .action:active,
     .btn-group-vertical > .btn.active,
-    #MemberLoginForm_LoginForm .btn-group-vertical > .active.action,
-    #Form_EditProfileForm .btn-group-vertical > .active.action,
-    #Form_RegistrationForm .btn-group-vertical > .active.action {
+    #MemberLoginForm_LoginForm .btn-group-vertical > .active.action {
       z-index: 2; }
-    .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus, #Form_EditProfileForm .btn-group > .action:focus, #Form_RegistrationForm .btn-group > .action:focus,
+    .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus,
     .btn-group-vertical > .btn:focus,
-    #MemberLoginForm_LoginForm .btn-group-vertical > .action:focus,
-    #Form_EditProfileForm .btn-group-vertical > .action:focus,
-    #Form_RegistrationForm .btn-group-vertical > .action:focus {
+    #MemberLoginForm_LoginForm .btn-group-vertical > .action:focus {
       outline: none; }
 
-.btn-group .btn + .btn, .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .btn-group .action + .btn, .btn-group #Form_EditProfileForm .action + .btn, #Form_EditProfileForm .btn-group .action + .btn, .btn-group #Form_RegistrationForm .action + .btn, #Form_RegistrationForm .btn-group .action + .btn, .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .btn-group .btn + .action, .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .btn-group .action + .action, .btn-group #Form_EditProfileForm .btn + .action, #Form_EditProfileForm .btn-group .btn + .action, .btn-group #Form_EditProfileForm .action + .action, #Form_EditProfileForm .btn-group .action + .action, .btn-group #Form_RegistrationForm .btn + .action, #Form_RegistrationForm .btn-group .btn + .action, .btn-group #Form_RegistrationForm .action + .action, #Form_RegistrationForm .btn-group .action + .action,
+.btn-group .btn + .btn, .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .btn-group .action + .btn, .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .btn-group .btn + .action, .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .btn-group .action + .action,
 .btn-group .btn + .btn-group,
 .btn-group #MemberLoginForm_LoginForm .action + .btn-group,
 #MemberLoginForm_LoginForm .btn-group .action + .btn-group,
-.btn-group #Form_EditProfileForm .action + .btn-group,
-#Form_EditProfileForm .btn-group .action + .btn-group,
-.btn-group #Form_RegistrationForm .action + .btn-group,
-#Form_RegistrationForm .btn-group .action + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group #MemberLoginForm_LoginForm .btn-group + .action,
 #MemberLoginForm_LoginForm .btn-group .btn-group + .action,
-.btn-group #Form_EditProfileForm .btn-group + .action,
-#Form_EditProfileForm .btn-group .btn-group + .action,
-.btn-group #Form_RegistrationForm .btn-group + .action,
-#Form_RegistrationForm .btn-group .btn-group + .action,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
@@ -2963,21 +2921,21 @@ input[type="button"].btn-block {
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, #MemberLoginForm_LoginForm .btn-toolbar > .action, #Form_EditProfileForm .btn-toolbar > .action, #Form_RegistrationForm .btn-toolbar > .action,
+  .btn-toolbar > .btn, #MemberLoginForm_LoginForm .btn-toolbar > .action,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle), #Form_EditProfileForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle), #Form_RegistrationForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .action:first-child, #Form_EditProfileForm .btn-group > .action:first-child, #Form_RegistrationForm .btn-group > .action:first-child {
+.btn-group > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .action:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle), #Form_EditProfileForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle), #Form_RegistrationForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group > .action:last-child:not(:first-child), #Form_EditProfileForm .btn-group > .action:last-child:not(:first-child), #Form_RegistrationForm .btn-group > .action:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group > .action:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2985,15 +2943,15 @@ input[type="button"].btn-block {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action, #Form_EditProfileForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action, #Form_RegistrationForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child > .btn:last-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:first-child > .action:last-child, #Form_EditProfileForm .btn-group > .btn-group:first-child > .action:last-child, #Form_RegistrationForm .btn-group > .btn-group:first-child > .action:last-child,
+.btn-group > .btn-group:first-child > .btn:last-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:first-child > .action:last-child,
 .btn-group > .btn-group:first-child > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:last-child > .action:first-child, #Form_EditProfileForm .btn-group > .btn-group:last-child > .action:first-child, #Form_RegistrationForm .btn-group > .btn-group:last-child > .action:first-child {
+.btn-group > .btn-group:last-child > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:last-child > .action:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3001,11 +2959,11 @@ input[type="button"].btn-block {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle, #Form_EditProfileForm .btn-group > .action + .dropdown-toggle, #Form_RegistrationForm .btn-group > .action + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group-lg.btn-group > .action + .dropdown-toggle, #Form_RegistrationForm .btn-group-lg.btn-group > .action + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > #MemberLoginForm_LoginForm_action_dologin + .dropdown-toggle, #Form_EditProfileForm .btn-group > #MemberLoginForm_LoginForm_action_dologin + .dropdown-toggle, #Form_RegistrationForm .btn-group > #MemberLoginForm_LoginForm_action_dologin + .dropdown-toggle, #Form_EditProfileForm .btn-group > .action + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -3016,22 +2974,20 @@ input[type="button"].btn-block {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.btn .caret, #MemberLoginForm_LoginForm .action .caret, #Form_EditProfileForm .action .caret, #Form_RegistrationForm .action .caret {
+.btn .caret, #MemberLoginForm_LoginForm .action .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, #MemberLoginForm_LoginForm .btn-group-lg > .action .caret, #Form_RegistrationForm .btn-group-lg > .action .caret, #MemberLoginForm_LoginForm #MemberLoginForm_LoginForm_action_dologin .caret, #Form_EditProfileForm #MemberLoginForm_LoginForm_action_dologin .caret, #Form_RegistrationForm #MemberLoginForm_LoginForm_action_dologin .caret, #Form_EditProfileForm .action .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, #MemberLoginForm_LoginForm .action .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup #MemberLoginForm_LoginForm .btn-group-lg > .action .caret, #MemberLoginForm_LoginForm .dropup .btn-group-lg > .action .caret, .dropup #Form_RegistrationForm .btn-group-lg > .action .caret, #Form_RegistrationForm .dropup .btn-group-lg > .action .caret, .dropup #MemberLoginForm_LoginForm #MemberLoginForm_LoginForm_action_dologin .caret, #MemberLoginForm_LoginForm .dropup #MemberLoginForm_LoginForm_action_dologin .caret, .dropup #Form_EditProfileForm #MemberLoginForm_LoginForm_action_dologin .caret, #Form_EditProfileForm .dropup #MemberLoginForm_LoginForm_action_dologin .caret, .dropup #Form_RegistrationForm #MemberLoginForm_LoginForm_action_dologin .caret, #Form_RegistrationForm .dropup #MemberLoginForm_LoginForm_action_dologin .caret, .dropup #Form_EditProfileForm .action .caret, #Form_EditProfileForm .dropup .action .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup #MemberLoginForm_LoginForm .action .caret, #MemberLoginForm_LoginForm .dropup .action .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action, #Form_EditProfileForm .btn-group-vertical > .action, #Form_RegistrationForm .btn-group-vertical > .action,
+.btn-group-vertical > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
-#MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action,
-#Form_EditProfileForm .btn-group-vertical > .btn-group > .action,
-#Form_RegistrationForm .btn-group-vertical > .btn-group > .action {
+#MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action {
   display: block;
   float: none;
   width: 100%;
@@ -3041,41 +2997,37 @@ input[type="button"].btn-block {
   display: table; }
 .btn-group-vertical > .btn-group:after {
   clear: both; }
-.btn-group-vertical > .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action, #Form_EditProfileForm .btn-group-vertical > .btn-group > .action, #Form_RegistrationForm .btn-group-vertical > .btn-group > .action {
+.btn-group-vertical > .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action {
   float: none; }
-.btn-group-vertical > .btn + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .btn, #Form_EditProfileForm .btn-group-vertical > .action + .btn, #Form_RegistrationForm .btn-group-vertical > .action + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn + .action, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .action, #Form_EditProfileForm .btn-group-vertical > .btn + .action, #Form_EditProfileForm .btn-group-vertical > .action + .action, #Form_RegistrationForm .btn-group-vertical > .btn + .action, #Form_RegistrationForm .btn-group-vertical > .action + .action,
+.btn-group-vertical > .btn + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn + .action, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .action,
 .btn-group-vertical > .btn + .btn-group,
 #MemberLoginForm_LoginForm .btn-group-vertical > .action + .btn-group,
-#Form_EditProfileForm .btn-group-vertical > .action + .btn-group,
-#Form_RegistrationForm .btn-group-vertical > .action + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group + .action,
-#Form_EditProfileForm .btn-group-vertical > .btn-group + .action,
-#Form_RegistrationForm .btn-group-vertical > .btn-group + .action,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:not(:first-child):not(:last-child), #Form_EditProfileForm .btn-group-vertical > .action:not(:first-child):not(:last-child), #Form_RegistrationForm .btn-group-vertical > .action:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:not(:first-child):not(:last-child) {
   border-radius: 0; }
-.btn-group-vertical > .btn:first-child:not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:first-child:not(:last-child), #Form_EditProfileForm .btn-group-vertical > .action:first-child:not(:last-child), #Form_RegistrationForm .btn-group-vertical > .action:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:first-child:not(:last-child) {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
-.btn-group-vertical > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:last-child:not(:first-child), #Form_EditProfileForm .btn-group-vertical > .action:last-child:not(:first-child), #Form_RegistrationForm .btn-group-vertical > .action:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:last-child:not(:first-child) {
   border-bottom-left-radius: 3px;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action, #Form_EditProfileForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action, #Form_RegistrationForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:first-child:not(:last-child) > .action:last-child, #Form_EditProfileForm .btn-group-vertical > .btn-group:first-child:not(:last-child) > .action:last-child, #Form_RegistrationForm .btn-group-vertical > .btn-group:first-child:not(:last-child) > .action:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:first-child:not(:last-child) > .action:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child, #Form_EditProfileForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child, #Form_RegistrationForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3084,19 +3036,17 @@ input[type="button"].btn-block {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; }
-  .btn-group-justified > .btn, #MemberLoginForm_LoginForm .btn-group-justified > .action, #Form_EditProfileForm .btn-group-justified > .action, #Form_RegistrationForm .btn-group-justified > .action,
+  .btn-group-justified > .btn, #MemberLoginForm_LoginForm .btn-group-justified > .action,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .btn-group-justified > .btn-group .action, .btn-group-justified > .btn-group #Form_EditProfileForm .action, #Form_EditProfileForm .btn-group-justified > .btn-group .action, .btn-group-justified > .btn-group #Form_RegistrationForm .action, #Form_RegistrationForm .btn-group-justified > .btn-group .action {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .btn-group-justified > .btn-group .action {
     width: 100%; }
 
-[data-toggle="buttons"] > .btn > input[type="radio"], #MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="radio"], #Form_EditProfileForm [data-toggle="buttons"] > .action > input[type="radio"], #Form_RegistrationForm [data-toggle="buttons"] > .action > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="radio"], #MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="radio"],
 [data-toggle="buttons"] > .btn > input[type="checkbox"],
-#MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="checkbox"],
-#Form_EditProfileForm [data-toggle="buttons"] > .action > input[type="checkbox"],
-#Form_RegistrationForm [data-toggle="buttons"] > .action > input[type="checkbox"] {
+#MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="checkbox"] {
   display: none; }
 
 .input-group {
@@ -3107,7 +3057,7 @@ input[type="button"].btn-block {
     float: none;
     padding-left: 0;
     padding-right: 0; }
-  .input-group .form-control, .input-group #MemberLoginForm_LoginForm .text, #MemberLoginForm_LoginForm .input-group .text, .input-group #Form_EditProfileForm .text, #Form_EditProfileForm .input-group .text, .input-group #Form_RegistrationForm .text, #Form_RegistrationForm .input-group .text {
+  .input-group .form-control, .input-group .form-group .text, .form-group .input-group .text {
     float: left;
     width: 100%;
     margin-bottom: 0; }
@@ -3115,22 +3065,14 @@ input[type="button"].btn-block {
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control,
-.input-group #MemberLoginForm_LoginForm .text,
-#MemberLoginForm_LoginForm .input-group .text,
-.input-group #Form_EditProfileForm .text,
-#Form_EditProfileForm .input-group .text,
-.input-group #Form_RegistrationForm .text,
-#Form_RegistrationForm .input-group .text {
+.input-group .form-group .text,
+.form-group .input-group .text {
   display: table-cell; }
   .input-group-addon:not(:first-child):not(:last-child),
   .input-group-btn:not(:first-child):not(:last-child),
   .input-group .form-control:not(:first-child):not(:last-child),
-  .input-group #MemberLoginForm_LoginForm .text:not(:first-child):not(:last-child),
-  #MemberLoginForm_LoginForm .input-group .text:not(:first-child):not(:last-child),
-  .input-group #Form_EditProfileForm .text:not(:first-child):not(:last-child),
-  #Form_EditProfileForm .input-group .text:not(:first-child):not(:last-child),
-  .input-group #Form_RegistrationForm .text:not(:first-child):not(:last-child),
-  #Form_RegistrationForm .input-group .text:not(:first-child):not(:last-child) {
+  .input-group .form-group .text:not(:first-child):not(:last-child),
+  .form-group .input-group .text:not(:first-child):not(:last-child) {
     border-radius: 0; }
 
 .input-group-addon,
@@ -3149,21 +3091,17 @@ input[type="button"].btn-block {
   background-color: #eeeeee;
   border: 1px solid #cccccc;
   border-radius: 3px; }
-  .input-group-addon.input-sm, #MemberLoginForm_LoginForm .input-group-sm > .input-group-addon.text, #Form_EditProfileForm .input-group-sm > .input-group-addon.text, #Form_RegistrationForm .input-group-sm > .input-group-addon.text,
+  .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn,
-  #MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .input-group-addon.action,
-  #Form_EditProfileForm .input-group-sm > .input-group-btn > .input-group-addon.action,
-  #Form_RegistrationForm .input-group-sm > .input-group-btn > .input-group-addon.action {
+  #MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .input-group-addon.action {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 3px; }
-  .input-group-addon.input-lg, #MemberLoginForm_LoginForm .input-group-lg > .input-group-addon.text, #Form_EditProfileForm .input-group-lg > .input-group-addon.text, #Form_RegistrationForm .input-group-lg > .input-group-addon.text,
+  .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn,
-  #MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .input-group-addon.action,
-  #Form_EditProfileForm .input-group-lg > .input-group-btn > .input-group-addon.action,
-  #Form_RegistrationForm .input-group-lg > .input-group-btn > .input-group-addon.action {
+  #MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .input-group-addon.action {
     padding: 10px 16px;
     font-size: 18px;
     border-radius: 6px; }
@@ -3171,50 +3109,34 @@ input[type="button"].btn-block {
   .input-group-addon input[type="checkbox"] {
     margin-top: 0; }
 
-.input-group .form-control:first-child, .input-group #MemberLoginForm_LoginForm .text:first-child, #MemberLoginForm_LoginForm .input-group .text:first-child, .input-group #Form_EditProfileForm .text:first-child, #Form_EditProfileForm .input-group .text:first-child, .input-group #Form_RegistrationForm .text:first-child, #Form_RegistrationForm .input-group .text:first-child,
+.input-group .form-control:first-child, .input-group .form-group .text:first-child, .form-group .input-group .text:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:first-child > .action,
-#Form_EditProfileForm .input-group-btn:first-child > .action,
-#Form_RegistrationForm .input-group-btn:first-child > .action,
 .input-group-btn:first-child > .btn-group > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:first-child > .btn-group > .action,
-#Form_EditProfileForm .input-group-btn:first-child > .btn-group > .action,
-#Form_RegistrationForm .input-group-btn:first-child > .btn-group > .action,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 #MemberLoginForm_LoginForm .input-group-btn:last-child > .action:not(:last-child):not(.dropdown-toggle),
-#Form_EditProfileForm .input-group-btn:last-child > .action:not(:last-child):not(.dropdown-toggle),
-#Form_RegistrationForm .input-group-btn:last-child > .action:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
-#MemberLoginForm_LoginForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action,
-#Form_EditProfileForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action,
-#Form_RegistrationForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action {
+#MemberLoginForm_LoginForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
 .input-group-addon:first-child {
   border-right: 0; }
 
-.input-group .form-control:last-child, .input-group #MemberLoginForm_LoginForm .text:last-child, #MemberLoginForm_LoginForm .input-group .text:last-child, .input-group #Form_EditProfileForm .text:last-child, #Form_EditProfileForm .input-group .text:last-child, .input-group #Form_RegistrationForm .text:last-child, #Form_RegistrationForm .input-group .text:last-child,
+.input-group .form-control:last-child, .input-group .form-group .text:last-child, .form-group .input-group .text:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:last-child > .action,
-#Form_EditProfileForm .input-group-btn:last-child > .action,
-#Form_RegistrationForm .input-group-btn:last-child > .action,
 .input-group-btn:last-child > .btn-group > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:last-child > .btn-group > .action,
-#Form_EditProfileForm .input-group-btn:last-child > .btn-group > .action,
-#Form_RegistrationForm .input-group-btn:last-child > .btn-group > .action,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 #MemberLoginForm_LoginForm .input-group-btn:first-child > .action:not(:first-child),
-#Form_EditProfileForm .input-group-btn:first-child > .action:not(:first-child),
-#Form_RegistrationForm .input-group-btn:first-child > .action:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
-#MemberLoginForm_LoginForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action,
-#Form_EditProfileForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action,
-#Form_RegistrationForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action {
+#MemberLoginForm_LoginForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3225,16 +3147,16 @@ input[type="button"].btn-block {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, #MemberLoginForm_LoginForm .input-group-btn > .action, #Form_EditProfileForm .input-group-btn > .action, #Form_RegistrationForm .input-group-btn > .action {
+  .input-group-btn > .btn, #MemberLoginForm_LoginForm .input-group-btn > .action {
     position: relative; }
-    .input-group-btn > .btn + .btn, #MemberLoginForm_LoginForm .input-group-btn > .action + .btn, #Form_EditProfileForm .input-group-btn > .action + .btn, #Form_RegistrationForm .input-group-btn > .action + .btn, #MemberLoginForm_LoginForm .input-group-btn > .btn + .action, #MemberLoginForm_LoginForm .input-group-btn > .action + .action, #Form_EditProfileForm .input-group-btn > .btn + .action, #Form_EditProfileForm .input-group-btn > .action + .action, #Form_RegistrationForm .input-group-btn > .btn + .action, #Form_RegistrationForm .input-group-btn > .action + .action {
+    .input-group-btn > .btn + .btn, #MemberLoginForm_LoginForm .input-group-btn > .action + .btn, #MemberLoginForm_LoginForm .input-group-btn > .btn + .action, #MemberLoginForm_LoginForm .input-group-btn > .action + .action {
       margin-left: -1px; }
-    .input-group-btn > .btn:hover, #MemberLoginForm_LoginForm .input-group-btn > .action:hover, #Form_EditProfileForm .input-group-btn > .action:hover, #Form_RegistrationForm .input-group-btn > .action:hover, .input-group-btn > .btn:focus, #MemberLoginForm_LoginForm .input-group-btn > .action:focus, #Form_EditProfileForm .input-group-btn > .action:focus, #Form_RegistrationForm .input-group-btn > .action:focus, .input-group-btn > .btn:active, #MemberLoginForm_LoginForm .input-group-btn > .action:active, #Form_EditProfileForm .input-group-btn > .action:active, #Form_RegistrationForm .input-group-btn > .action:active {
+    .input-group-btn > .btn:hover, #MemberLoginForm_LoginForm .input-group-btn > .action:hover, .input-group-btn > .btn:focus, #MemberLoginForm_LoginForm .input-group-btn > .action:focus, .input-group-btn > .btn:active, #MemberLoginForm_LoginForm .input-group-btn > .action:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, #MemberLoginForm_LoginForm .input-group-btn:first-child > .action, #Form_EditProfileForm .input-group-btn:first-child > .action, #Form_RegistrationForm .input-group-btn:first-child > .action,
+  .input-group-btn:first-child > .btn, #MemberLoginForm_LoginForm .input-group-btn:first-child > .action,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, #MemberLoginForm_LoginForm .input-group-btn:last-child > .action, #Form_EditProfileForm .input-group-btn:last-child > .action, #Form_RegistrationForm .input-group-btn:last-child > .action,
+  .input-group-btn:last-child > .btn, #MemberLoginForm_LoginForm .input-group-btn:last-child > .action,
   .input-group-btn:last-child > .btn-group {
     margin-left: -1px; }
 
@@ -3568,10 +3490,10 @@ input[type="button"].btn-block {
 .navbar-btn {
   margin-top: 8px;
   margin-bottom: 8px; }
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-sm > .navbar-btn.action, #Form_EditProfileForm .btn-group-sm > .navbar-btn.action, #Form_RegistrationForm .btn-group-sm > .navbar-btn.action {
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-sm > .navbar-btn.action {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-xs > .navbar-btn.action, #Form_EditProfileForm .btn-group-xs > .navbar-btn.action, #Form_RegistrationForm .btn-group-xs > .navbar-btn.action {
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-xs > .navbar-btn.action {
     margin-top: 14px;
     margin-bottom: 14px; }
 
@@ -3838,7 +3760,7 @@ input[type="button"].btn-block {
     cursor: pointer; }
   .label:empty {
     display: none; }
-  .btn .label, #MemberLoginForm_LoginForm .action .label, #Form_EditProfileForm .action .label, #Form_RegistrationForm .action .label {
+  .btn .label, #MemberLoginForm_LoginForm .action .label {
     position: relative;
     top: -1px; }
 
@@ -3887,10 +3809,10 @@ input[type="button"].btn-block {
   border-radius: 10px; }
   .badge:empty {
     display: none; }
-  .btn .badge, #MemberLoginForm_LoginForm .action .badge, #Form_EditProfileForm .action .badge, #Form_RegistrationForm .action .badge {
+  .btn .badge, #MemberLoginForm_LoginForm .action .badge {
     position: relative;
     top: -1px; }
-  .btn-xs .badge, .btn-group-xs > .btn .badge, #MemberLoginForm_LoginForm .btn-group-xs > .action .badge, #Form_EditProfileForm .btn-group-xs > .action .badge, #Form_RegistrationForm .btn-group-xs > .action .badge {
+  .btn-xs .badge, .btn-group-xs > .btn .badge, #MemberLoginForm_LoginForm .btn-group-xs > .action .badge {
     top: 0;
     padding: 1px 5px; }
 
@@ -4602,10 +4524,10 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .action + .btn, .modal-footer #Form_EditProfileForm .action + .btn, #Form_EditProfileForm .modal-footer .action + .btn, .modal-footer #Form_RegistrationForm .action + .btn, #Form_RegistrationForm .modal-footer .action + .btn, .modal-footer #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn + .action, .modal-footer #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .action + .action, .modal-footer #Form_EditProfileForm .btn + .action, #Form_EditProfileForm .modal-footer .btn + .action, .modal-footer #Form_EditProfileForm .action + .action, #Form_EditProfileForm .modal-footer .action + .action, .modal-footer #Form_RegistrationForm .btn + .action, #Form_RegistrationForm .modal-footer .btn + .action, .modal-footer #Form_RegistrationForm .action + .action, #Form_RegistrationForm .modal-footer .action + .action {
+  .modal-footer .btn + .btn, .modal-footer #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .action + .btn, .modal-footer #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn + .action, .modal-footer #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .action + .action {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .btn, .modal-footer .btn-group #Form_EditProfileForm .action + .btn, #Form_EditProfileForm .modal-footer .btn-group .action + .btn, .modal-footer .btn-group #Form_RegistrationForm .action + .btn, #Form_RegistrationForm .modal-footer .btn-group .action + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .btn + .action, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .action, .modal-footer .btn-group #Form_EditProfileForm .btn + .action, #Form_EditProfileForm .modal-footer .btn-group .btn + .action, .modal-footer .btn-group #Form_EditProfileForm .action + .action, #Form_EditProfileForm .modal-footer .btn-group .action + .action, .modal-footer .btn-group #Form_RegistrationForm .btn + .action, #Form_RegistrationForm .modal-footer .btn-group .btn + .action, .modal-footer .btn-group #Form_RegistrationForm .action + .action, #Form_RegistrationForm .modal-footer .btn-group .action + .action {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .btn + .action, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .action {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -4952,7 +4874,7 @@ button.close {
   color: white;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .carousel-caption .action, .carousel-caption #Form_EditProfileForm .action, #Form_EditProfileForm .carousel-caption .action, .carousel-caption #Form_RegistrationForm .action, #Form_RegistrationForm .carousel-caption .action {
+  .carousel-caption .btn, .carousel-caption #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .carousel-caption .action {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -6543,7 +6465,7 @@ body {
 /*---------------------------------------------*\
     Semi-Bold
 \*---------------------------------------------*/
-strong, #main-nav .nav li a, .btn, #MemberLoginForm_LoginForm .action, #Form_EditProfileForm .action, #Form_RegistrationForm .action {
+strong, #main-nav .nav li a, .btn, #MemberLoginForm_LoginForm .action {
   font-family: "open_semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*---------------------------------------------*\
@@ -6701,11 +6623,11 @@ ul.deletelist li:before {
 /*---------------------------------------------*\
     Inputs
 \*---------------------------------------------*/
-input:focus, textarea:focus, .form-control:focus, #MemberLoginForm_LoginForm .text:focus, #Form_EditProfileForm .text:focus, #Form_RegistrationForm .text:focus {
+input:focus, textarea:focus, .form-control:focus, .form-group .text:focus {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-.form-control:focus, #MemberLoginForm_LoginForm .text:focus, #Form_EditProfileForm .text:focus, #Form_RegistrationForm .text:focus {
+.form-control:focus, .form-group .text:focus {
   border-color: #555555; }
 
 .holder-required input, .holder-required input:focus, .holder-required textarea, .holder-required textarea:focus {
@@ -6789,76 +6711,73 @@ a:active {
   display: block;
   width: 100%;
   min-height: 30px; }
-  #main-nav .navbar-collapse {
+  #main-nav .nav > li:hover > a, #main-nav .nav > li.section > a, #main-nav .nav > li.current > a {
+    background: #3bc492;
+    color: white; }
+  #main-nav .nav > li.open > a, #main-nav .nav > li.open > a:hover, #main-nav .nav > li.open > a:focus {
+    background: #3bc492;
+    color: white; }
+  #main-nav .nav > li.open > .dropdown-menu {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate(0, 0) scale(1);
+    -ms-transform: translate(0, 0) scale(1); }
+  #main-nav .nav > li > a {
+    margin-left: 2px;
+    padding: 8px 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-transition: 0.1s linear background;
+    transition: 0.1s linear background; }
+    #main-nav .nav > li > a.btn-primary, #main-nav #MemberLoginForm_LoginForm .nav > li > a.action, #MemberLoginForm_LoginForm #main-nav .nav > li > a.action {
+      color: white; }
+    #main-nav .nav > li > a.btn-secondary {
+      color: white; }
+    #main-nav .nav > li > a.btn-inverse {
+      color: white; }
+  #main-nav .nav > li .dropdown-menu {
     padding: 0;
-    width: 100%; }
-    #main-nav .navbar-collapse .nav > li:hover > a, #main-nav .navbar-collapse .nav > li.section > a, #main-nav .navbar-collapse .nav > li.current > a {
-      background: #3bc492;
-      color: white; }
-    #main-nav .navbar-collapse .nav > li.open > a, #main-nav .navbar-collapse .nav > li.open > a:hover, #main-nav .navbar-collapse .nav > li.open > a:focus {
-      background: #3bc492;
-      color: white; }
-    #main-nav .navbar-collapse .nav > li.open > .dropdown-menu {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      -webkit-transform: translate(0, 0) scale(1);
-      -ms-transform: translate(0, 0) scale(1); }
-    #main-nav .navbar-collapse .nav > li > a {
-      margin-left: 2px;
-      padding: 8px 10px;
-      font-weight: bold;
-      margin-bottom: 5px;
+    border-width: 0;
+    background: transparent none;
+    padding-top: 10px;
+    display: block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: translate(0, -50%) scale(0);
+    -ms-transform: translate(0, -50%) scale(0); }
+    #main-nav .nav > li .dropdown-menu > li.divider {
+      margin: 0; }
+    #main-nav .nav > li .dropdown-menu > li > a {
+      padding: 10px;
+      background: white;
+      color: #333333;
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+      #main-nav .nav > li .dropdown-menu > li > a:hover {
+        background: #f7f7f7; }
+      #main-nav .nav > li .dropdown-menu > li > a:first-child {
+        border-top-width: 0; }
+    #main-nav .nav > li .dropdown-menu > li:first-child a {
       border-top-right-radius: 3px;
-      border-top-left-radius: 3px;
+      border-top-left-radius: 3px; }
+    #main-nav .nav > li .dropdown-menu > li:last-child a {
       border-bottom-right-radius: 3px;
-      border-bottom-left-radius: 3px;
-      -webkit-transition: 0.1s linear background;
-      transition: 0.1s linear background; }
-      #main-nav .navbar-collapse .nav > li > a.btn-primary, #main-nav .navbar-collapse #MemberLoginForm_LoginForm .nav > li > a.action, #MemberLoginForm_LoginForm #main-nav .navbar-collapse .nav > li > a.action, #main-nav .navbar-collapse #Form_EditProfileForm .nav > li > a.action, #Form_EditProfileForm #main-nav .navbar-collapse .nav > li > a.action, #main-nav .navbar-collapse #Form_RegistrationForm .nav > li > a.action, #Form_RegistrationForm #main-nav .navbar-collapse .nav > li > a.action {
-        color: white; }
-      #main-nav .navbar-collapse .nav > li > a.btn-secondary {
-        color: white; }
-      #main-nav .navbar-collapse .nav > li > a.btn-inverse {
-        color: white; }
-    #main-nav .navbar-collapse .nav > li .dropdown-menu {
-      padding: 0;
-      border-width: 0;
-      background: transparent none;
-      padding-top: 10px;
-      display: block;
-      opacity: 0;
-      filter: alpha(opacity=0);
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-      -webkit-transform: translate(0, -50%) scale(0);
-      -ms-transform: translate(0, -50%) scale(0); }
-      #main-nav .navbar-collapse .nav > li .dropdown-menu > li.divider {
-        margin: 0; }
-      #main-nav .navbar-collapse .nav > li .dropdown-menu > li > a {
-        padding: 10px;
-        background: white;
-        color: #333333;
-        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
-        #main-nav .navbar-collapse .nav > li .dropdown-menu > li > a:hover {
-          background: #f7f7f7; }
-        #main-nav .navbar-collapse .nav > li .dropdown-menu > li > a:first-child {
-          border-top-width: 0; }
-      #main-nav .navbar-collapse .nav > li .dropdown-menu > li:first-child a {
-        border-top-right-radius: 3px;
-        border-top-left-radius: 3px; }
-      #main-nav .navbar-collapse .nav > li .dropdown-menu > li:last-child a {
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px; }
+      border-bottom-left-radius: 3px; }
 
 .slider-dark.slider-extend #main-nav a {
   color: white; }
@@ -6911,7 +6830,7 @@ a:active {
   #main-nav {
     padding: 0; } }
 @media (min-width: 1200px) {
-  #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu {
+  #main-nav > .nav > li:hover > .dropdown-menu {
     opacity: 1;
     filter: alpha(opacity=100);
     -webkit-transform: translate(0, 0) scale(1);
@@ -6977,18 +6896,18 @@ a:active {
 /*---------------------------------------------*\
     Buttons
 \*---------------------------------------------*/
-.btn, #MemberLoginForm_LoginForm .action, #Form_EditProfileForm .action, #Form_RegistrationForm .action {
+.btn, #MemberLoginForm_LoginForm .action {
   border-width: 0;
   font-weight: bold;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px; }
-  .btn:focus, #MemberLoginForm_LoginForm .action:focus, #Form_EditProfileForm .action:focus, #Form_RegistrationForm .action:focus {
+  .btn:focus, #MemberLoginForm_LoginForm .action:focus {
     outline: 0; }
-  .btn.btn-shadow, #MemberLoginForm_LoginForm .btn-shadow.action, #Form_EditProfileForm .btn-shadow.action, #Form_RegistrationForm .btn-shadow.action {
+  .btn.btn-shadow, #MemberLoginForm_LoginForm .btn-shadow.action {
     margin-bottom: 4px; }
-    .btn.btn-shadow:active, #MemberLoginForm_LoginForm .btn-shadow.action:active, #Form_EditProfileForm .btn-shadow.action:active, #Form_RegistrationForm .btn-shadow.action:active {
+    .btn.btn-shadow:active, #MemberLoginForm_LoginForm .btn-shadow.action:active {
       margin-bottom: 0;
       margin-top: 4px; }
 

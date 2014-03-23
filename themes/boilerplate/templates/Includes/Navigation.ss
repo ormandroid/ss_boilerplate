@@ -1,27 +1,25 @@
 <nav id="main-nav" class="navbar navbar-default" role="navigation">
 
-    <div class="navbar-collapse hidden-xs">
-        <ul class="nav navbar-nav pull-right">
-            <% loop $Menu(1) %>
-                <% if $Children %>
-                    <li class="$LinkingMode dropdown">
-                        <a href="$Link" title="$Title" class="visible-lg">$MenuTitle <i class="fa fa-angle-down"></i></a>
-                        <a href="#" class="dropdown-toggle hidden-lg" data-toggle="dropdown">$MenuTitle <i class="fa fa-angle-down"></i></a>
-                        <ul class="dropdown-menu">
-                            <% loop $Children %>
-                                <li class="$LinkingMode"><a href="$Link" title="$Title">$MenuTitle</a></li>
-                            <% end_loop %>
-                        </ul><!-- /.dropdown-menu -->
-                    </li><!-- /.dropdown -->
-                <% else %>
-                    <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
-                <% end_if %>
-            <% end_loop %>
-            <% if $SearchForm %>
-                <li><a data-toggle="modal" href="#searchModal" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
+    <ul class="nav navbar-nav pull-right hidden-xs">
+        <% loop $Menu(1) %>
+            <% if $Children %>
+                <li class="$LinkingMode dropdown">
+                    <a href="$Link" title="$Title" class="visible-lg">$MenuTitle <i class="fa fa-angle-down"></i></a>
+                    <a href="#" class="dropdown-toggle hidden-lg" data-toggle="dropdown">$MenuTitle <i class="fa fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <% loop $Children %>
+                            <li class="$LinkingMode"><a href="$Link" title="$Title">$MenuTitle</a></li>
+                        <% end_loop %>
+                    </ul><!-- /.dropdown-menu -->
+                </li><!-- /.dropdown -->
+            <% else %>
+                <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
             <% end_if %>
-        </ul><!-- /.nav navbar-nav pull-right -->
-    </div><!-- /.collapse navbar-collapse -->
+        <% end_loop %>
+        <% if $SearchForm %>
+            <li><a data-toggle="modal" href="#searchModal" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
+        <% end_if %>
+    </ul><!-- /.nav navbar-nav pull-right hidden-xs -->
 
     <div id="select-navigation" class="visible-xs">
         <div class="menu-icon btn-primary"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->

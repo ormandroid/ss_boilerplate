@@ -21,19 +21,24 @@ class EditProfilePage_Controller extends Page_Controller {
             return $this->redirect(Director::absoluteBaseURL());
         }
 
-        $name = new TextField('FirstName');
-        $name->setAttribute('placeholder', 'Enter your name');
-        $name->setAttribute('required', 'required');
-        $name->addExtraClass('form-control');
+        $firstName = new TextField('FirstName');
+        $firstName->setAttribute('placeholder', 'Enter your first name');
+        $firstName->setAttribute('required', 'required');
+        $firstName->addExtraClass('form-control');
+
+        $surname = new TextField('Surname');
+        $surname->setAttribute('placeholder', 'Enter your surname');
+        $surname->setAttribute('required', 'required');
+        $surname->addExtraClass('form-control');
 
         $email = new EmailField('Email');
         $email->setAttribute('placeholder', 'Enter your email address');
         $email->setAttribute('required', 'required');
         $email->addExtraClass('form-control');
 
-        $jobtitle = new TextField('JobTitle');
-        $jobtitle->setAttribute('placeholder', 'Enter your job title');
-        $jobtitle->addExtraClass('form-control');
+        $jobTitle = new TextField('JobTitle');
+        $jobTitle->setAttribute('placeholder', 'Enter your job title');
+        $jobTitle->addExtraClass('form-control');
 
         $website = new TextField('Website');
         $website->setAttribute('placeholder', 'Enter your website');
@@ -43,17 +48,18 @@ class EditProfilePage_Controller extends Page_Controller {
         $blurb->setAttribute('placeholder', 'Enter your blurb');
         $blurb->addExtraClass('form-control');
 
-        $confirmpassword = new ConfirmedPasswordField('Password', 'New Password');
-        $confirmpassword->setAttribute('placeholder', 'Enter your password');
-        $confirmpassword->addExtraClass('form-control');
+        $confirmPassword = new ConfirmedPasswordField('Password', 'New Password');
+        $confirmPassword->setAttribute('placeholder', 'Enter your password');
+        $confirmPassword->addExtraClass('form-control');
 
         $fields = new FieldList(
-            $name,
+            $firstName,
+            $surname,
             $email,
-            $jobtitle,
+            $jobTitle,
             $website,
             $blurb,
-            $confirmpassword
+            $confirmPassword
         );
 
         $action = new FormAction('SaveProfile', 'Update');

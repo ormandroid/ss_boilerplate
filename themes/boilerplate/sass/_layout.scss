@@ -74,9 +74,7 @@ a {
     display: block;
     width: 100%;
     min-height: $gap-lg;
-    .navbar-collapse {
-        padding: 0;
-        width: 100%;
+
         .nav {
             > li {
                 &:hover, &.section, &.current {
@@ -154,7 +152,7 @@ a {
                 }
             }
         }
-    }
+
 }
 .slider-dark.slider-extend {
     #main-nav {
@@ -215,9 +213,17 @@ a {
     }
 }
 @media (min-width: $screen-lg) {
-    #main-nav > .navbar-collapse > .nav > li:hover > .dropdown-menu {
-        @include opacity(1);
-        @include transform(translate(0, 0) scale(1));
+    #main-nav{
+        > .nav {
+            > li{
+                &:hover {
+                    > .dropdown-menu {
+                        @include opacity(1);
+                        @include transform(translate(0, 0) scale(1));
+                    }
+                }
+            }
+        }
     }
 }
 

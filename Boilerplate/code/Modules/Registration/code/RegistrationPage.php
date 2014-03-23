@@ -11,31 +11,47 @@ class RegistrationPage_Controller extends Page_Controller {
 
     private static $allowed_actions = array('RegistrationForm');
 
+    /*
+     * Create the registration form
+     * Returns @Form
+     * */
     function RegistrationForm(){
 
-        $name = new TextField('FirstName');
-        $name->setAttribute('placeholder', 'Enter your name');
-        $name->setAttribute('required', 'required');
-        $name->addExtraClass('form-control');
+        // First Name
+        $firstName = new TextField('FirstName');
+        $firstName->setAttribute('placeholder', 'Enter your first name');
+        $firstName->setAttribute('required', 'required');
+        $firstName->addExtraClass('form-control');
 
+        // Surname
+        $surname = new TextField('Surname');
+        $surname->setAttribute('placeholder', 'Enter your surname');
+        $surname->setAttribute('required', 'required');
+        $surname->addExtraClass('form-control');
+
+        // Email
         $email = new EmailField('Email');
         $email->setAttribute('placeholder', 'Enter your email address');
         $email->setAttribute('required', 'required');
         $email->addExtraClass('form-control');
 
+        // Password Conformation
         $password = new ConfirmedPasswordField('Password', 'Password');
         $password->setAttribute('placeholder', 'Enter your password');
         $password->setAttribute('required', 'required');
         $password->addExtraClass('form-control');
 
+        // Generate the fields
         $fields = new FieldList(
-            $name,
+            $firstName,
+            $surname,
             $email,
             $password
         );
 
-        $action = new FormAction('doRegister', 'Register');
-        $action->addExtraClass('btn btn-primary');
+        // Submit Button
+        $action = new FormAction('Register', 'Register');
+        $action->addExtraClass('btn btn-primary btn-lg');
 
         $actions = new FieldList($action);
 
@@ -45,8 +61,11 @@ class RegistrationPage_Controller extends Page_Controller {
 
     }
 
-    //Submit the registration form
-    function doRegister($data,$form){
+    /*
+     * Submit the registration form
+     * Returns @Redirection
+     * */
+    function Register($data,$form){
 
         //Check for existing member email address
         if($member = DataObject::get_one("Member", "`Email` = '". Convert::raw2sql($data['Email']) . "'")){
