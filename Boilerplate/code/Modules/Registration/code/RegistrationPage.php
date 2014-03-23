@@ -3,7 +3,6 @@
 class RegistrationPage extends Page {
 
     private static $icon = 'Boilerplate/code/Modules/Registration/images/user--plus.png';
-
     private static $description = 'Registration content page';
 
 }
@@ -73,8 +72,6 @@ class RegistrationPage_Controller extends Page_Controller {
         }
         //Add member to user group
         $userGroup->Members()->add($Member);
-
-        $ProfilePage = DataObject::get_one('EditProfilePage');
 
         //Get profile page
         if($ProfilePage = DataObject::get_one('EditProfilePage')){

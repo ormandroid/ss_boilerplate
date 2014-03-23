@@ -5,7 +5,7 @@ class ContactPage extends Page {
     private static $icon = 'Boilerplate/code/Modules/ContactForm/images/envelope-at-sign.png';
 
     public static $db = array(
-        'Mailto' => 'Varchar(100)',
+        'MailTo' => 'Varchar(100)',
         'SubmitText' => 'Text',
         'GoogleAPI' => 'Varchar(255)',
         'Latitude' => 'Varchar(255)',
@@ -55,7 +55,7 @@ class ContactPage extends Page {
         ------------------------------------------*/
 
         $fields->addFieldToTab("Root.Main", new HeaderField("Contact Form"), 'Content');
-        $fields->addFieldToTab("Root.Main", new TextField("Mailto", "Choose an email address for the contact page to send to"), 'Content');
+        $fields->addFieldToTab("Root.Main", new TextField("MailTo", "Choose an email address for the contact page to send to"), 'Content');
         $fields->addFieldToTab("Root.Main", new TextareaField("SubmitText", "Text for contact form submission"), 'Content');
 
         /* -----------------------------------------
@@ -135,10 +135,16 @@ JS
         $message->setAttribute('required', 'required');
         $message->addExtraClass('form-control');
 
+        $question = new TextField('Question');
+        $question->setTitle('3 &plus; 7 &equals; ?');
+        $question->setAttribute('required', 'required');
+        $question->addExtraClass('form-control');
+
         $fields = new FieldList(
             $name,
             $email,
-            $message
+            $message,
+            $question
         );
 
         $action = new FormAction('SendContactForm', 'Submit Form');
@@ -159,8 +165,15 @@ JS
 
     function SendContactForm($data, $form) {
 
+
+
+        if((int)$data['Question']!=10){
+            $form->AddErrorMessage('Question', 'Sorry, the question was answered incorrectly', 'validation');
+            return $this->redirectBack();
+        }
+
         $From = $data['Email'];
-        $To = $this->Mailto;
+        $To = $this->MailTo;
         $Subject = "Website Contact message";
         $email = new Email($From, $To, $Subject);
         $email->setTemplate('ContactEmail');

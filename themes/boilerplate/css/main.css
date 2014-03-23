@@ -6714,11 +6714,17 @@ input:focus, textarea:focus, .form-control:focus, #MemberLoginForm_LoginForm .te
 /*---------------------------------------------*\
     Messages
 \*---------------------------------------------*/
-.message > p {
-  margin-bottom: 0; }
-.message > p + p {
-  margin-top: 5px; }
+.message {
+  margin: 5px 0;
+  display: block; }
+  .message > p {
+    margin-bottom: 0; }
+  .message > p + p {
+    margin-top: 5px; }
 
+@media (min-width: 768px) {
+  .message {
+    margin: 10px 0; } }
 /*---------------------------------------------*\
     Search
 \*---------------------------------------------*/

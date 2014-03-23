@@ -21,7 +21,7 @@
                 $Content
                 <% if $Success %>
                 <% else %>
-                    <% if $Mailto %>
+                    <% if $MailTo %>
                         $ContactForm
                     <% else %>
                         <div class="alert alert-warning">

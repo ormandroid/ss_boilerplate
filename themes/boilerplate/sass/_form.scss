@@ -25,6 +25,8 @@ input:focus, textarea:focus, .form-control:focus {
 \*---------------------------------------------*/
 
 .message {
+    margin: $gap-xs 0;
+    display: block;
     @extend .alert;
     @extend .alert-info;
     > p {
@@ -35,6 +37,12 @@ input:focus, textarea:focus, .form-control:focus {
     }
     &.required, &.validation {
         @extend .alert-danger;
+    }
+}
+
+@media (min-width: $screen-sm) {
+    .message {
+        margin: $gap-sm 0;
     }
 }
 
