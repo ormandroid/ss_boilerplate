@@ -31,13 +31,13 @@ class GalleryPage extends Page {
 
         $toggleFields = ToggleCompositeField::create(
             'GalleryImages',
-            'Gallery Images',
+            _t('GalleryPage.GalleryImagesLabel', 'Gallery Images'),
             array(
-                new DropdownField('GalleryDisplay','Type of Gallery', array(
+                new DropdownField('GalleryDisplay', _t('GalleryPage.GalleryDisplayLabel', 'Type of Gallery'), array(
                     'Full Page',
                     'Lightbox'
                 )),
-                new DropdownField('Columns','How many items to display on each row', array(
+                new DropdownField('Columns', _t('GalleryPage.ColumnsLabel', 'How many items to display on each row'), array(
                     'One Item (Full Width)',
                     'Two Items',
                     'Three Items',
@@ -45,8 +45,8 @@ class GalleryPage extends Page {
                     'Six Items',
                     'Twelve Items'
                 )),
-                new TextField('Items','How many items to display on each page'),
-                new UploadField('Images', 'Images',$this->owner->Images())
+                new TextField('Items', _t('GalleryPage.ItemsLabel', 'How many items to display on each page')),
+                new UploadField('Images', _t('GalleryPage.ImagesLabel', 'Images'), $this->owner->Images())
             )
         )->setHeadingLevel(4)->setStartClosed(true);
         $fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
