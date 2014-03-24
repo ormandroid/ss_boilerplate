@@ -19,14 +19,14 @@ class RegistrationPage_Controller extends Page_Controller {
 
         // Email
         $email = new EmailField('Email');
-        $email->setAttribute('placeholder', 'Enter your email address')
+        $email->setAttribute('placeholder', _t('RegistrationPage.EmailPlaceholder', 'Enter your email address'))
             ->setAttribute('required', 'required')
             ->addExtraClass('form-control');
 
         // Password Conformation
-        $password = new PasswordField('Password', 'Password');
-        $password->setAttribute('placeholder', 'Enter your password')
-            ->setCustomValidationMessage('Your passwords do not match', 'validation')
+        $password = new PasswordField('Password');
+        $password->setAttribute('placeholder', _t('RegistrationPage.PasswordPlaceholder', 'Enter your password'))
+            ->setCustomValidationMessage(_t('RegistrationPage.PasswordValidationText', 'Your passwords do not match'), 'validation')
             ->setAttribute('required', 'required')
             ->addExtraClass('form-control');
 
@@ -66,7 +66,7 @@ class RegistrationPage_Controller extends Page_Controller {
 
         // Check for existing member email address
         if($existingUser = DataObject::get_one('Member', "Email = '".Convert::raw2sql($data['Email'])."'")) {
-            $form->AddErrorMessage('Email', 'Sorry, that email address already exists. Please choose another.', 'validation');
+            $form->AddErrorMessage('Email', _t('RegistrationPage.EmailValidationText', 'Sorry, that email address already exists. Please choose another.'), 'validation');
             Session::set('FormInfo.Form_RegistrationForm.data', $sessionArray);
             return $this->redirectBack();
         }
@@ -91,10 +91,10 @@ class RegistrationPage_Controller extends Page_Controller {
         // Get profile page otherwise display warning.
         if($ProfilePage = DataObject::get_one('EditProfilePage')){
             ($name = $data['FirstName'] ?: $name = $data['Email']);
-            $this->setFlash('Welcome ' .$name.', your account has been created!', 'success');
+            $this->setFlash(_t('RegistrationPage.RegisteredSuccessText', 'Welcome ' .$name.', your account has been created!'), 'success');
             return $this->redirect($ProfilePage->Link());
         }else{
-            $this->setFlash('Please add a "Edit Profile Page" in your SiteTree to enable profile editing', 'warning');
+            $this->setFlash(_t('RegistrationPage.RegisteredWarningText', 'Please add a "Edit Profile Page" in your SiteTree to enable profile editing'), 'warning');
             return $this->redirect(Director::absoluteBaseURL());
         }
 

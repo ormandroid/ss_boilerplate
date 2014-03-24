@@ -18,10 +18,10 @@
             <div class="memberLinks">
                 <% if $CurrentMember %>
                     <% loop $CurrentMember %>
-                        <a id="editProfile" class="btn btn-secondary" href="$Link">Edit Profile</a>
+                        <a id="editProfile" class="btn btn-secondary" href="$Link"><%t SecurityLogin.EditLink 'Edit Profile' %></a>
                     <% end_loop %>
                 <% else %>
-                    <a href="$Page(register).Link">Register</a>
+                    <a href="$Page(register).Link"><%t SecurityLogin.RegisterLink 'Register' %></a>
                 <% end_if %>
             </div><!-- /.memberLinks -->
 
