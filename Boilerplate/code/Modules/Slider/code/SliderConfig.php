@@ -22,7 +22,7 @@ class SliderConfig extends DataExtension {
         ));
         $gridField = new GridField(
             'SliderItems',
-            'Slider Items',
+            _t('SliderConfig.SliderItemsLabel', 'Slider Items'),
             $this->owner->SliderItems(),
             $config
         );
@@ -34,16 +34,16 @@ class SliderConfig extends DataExtension {
 
         $toggleFields = ToggleCompositeField::create(
 			'Advanced',
-			'Advanced',
+            _t('SliderConfig.AdvancedLabel', 'Advanced'),
 			array(
-                new CheckboxField('FullWidth', 'Full width'),
-                new CheckboxField('SliderExtend', 'Extend the slider'),
-                new DropdownField('SliderLuminanceOverride', 'Override the automatic light/dark setting for the slider', array(
+                new CheckboxField('FullWidth', _t('SliderConfig.FullWidthLabel', 'Full width')),
+                new CheckboxField('SliderExtend', _t('SliderConfig.SliderExtendLabel', 'Extend the slider')),
+                new DropdownField('SliderLuminanceOverride', _t('SliderConfig.SliderLuminanceOverrideLabel', 'Override the automatic light/dark setting for the slider'), array(
                     '' => 'Default',
                     0 => 'Light',
                     1 => 'Dark'
                 )),
-                new TextField('Height', 'Height of slider')
+                new TextField('Height', _t('SliderConfig.HeightLabel', 'Height of slider'))
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
 		$fields->addFieldToTab('Root.Slider', $toggleFields);
