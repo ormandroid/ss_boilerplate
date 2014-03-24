@@ -16,9 +16,9 @@ class GoogleFontConfig extends DataExtension {
 
         $toggleFields = ToggleCompositeField::create(
             'GoogleFontToggle',
-            'Google Fonts',
+            _t('GoogleFontConfig.GoogleFontToggleLabel', 'Google Fonts'),
             array(
-                new TextField('FontAPI', 'Google Fonts API Key')
+                new TextField('FontAPI', _t('GoogleFontConfig.FontAPILabel', 'Google Fonts API Key'))
             )
         )->setHeadingLevel(4)->setStartClosed(true);
         $fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
@@ -29,8 +29,8 @@ class GoogleFontConfig extends DataExtension {
             foreach($googleFontsArray as $item) {
                 $googleFontsDropdownArray[$item->family] = $item->family;
             }
-            $fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', new DropdownField('FontHeadings', 'Headings', $googleFontsDropdownArray));
-            $fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', new DropdownField('FontBody', 'Body', $googleFontsDropdownArray));
+            $fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', new DropdownField('FontHeadings', _t('GoogleFontConfig.FontHeadingsLabel', 'Headings'), $googleFontsDropdownArray));
+            $fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', new DropdownField('FontBody', _t('GoogleFontConfig.FontBodyLabel', 'Body'), $googleFontsDropdownArray));
         }
 
     }
