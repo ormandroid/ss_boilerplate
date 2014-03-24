@@ -27,15 +27,15 @@ class PortfolioHolder extends Page {
 
         $toggleFields = ToggleCompositeField::create(
             'Advanced',
-            'Advanced',
+            _t('PortfolioHolder.AdvancedLabel', 'Advanced'),
             array(
-                new DropdownField('Columns','How many items to display on each row', array(
+                new DropdownField('Columns', _t('PortfolioHolder.ColumnsLabel', 'How many items to display on each row'), array(
                     'One Item (Full Width)',
                     'Two Items',
                     'Three Items',
                     'Four Items'
                 )),
-                new TextField('Items','How many items to display on each page')
+                new TextField('Items', _t('PortfolioHolder.ItemsLabel', 'How many items to display on each page'))
             )
         )->setHeadingLevel(4)->setStartClosed(true);
         $fields->addFieldToTab('Root.Main', $toggleFields, 'Content');

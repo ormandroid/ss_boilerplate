@@ -24,7 +24,7 @@ class PortfolioPage extends Page {
         $fields->removeByName('Slider');
         $fields->removeByName('Widgets');
 
-        $fields->addFieldToTab('Root.Main', new TextField('SubTitle', 'Sub Title'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextField('SubTitle', _t('PortfolioPage.SubTitleLabel', 'Sub Title')), 'Content');
 
         /* -----------------------------------------
          * Images
@@ -37,7 +37,7 @@ class PortfolioPage extends Page {
         ));
         $gridField = new GridField(
             'PortfolioImages',
-            'Images',
+            _t('PortfolioPage.PortfolioImagesLabel', 'Images'),
             $this->owner->PortfolioImages(),
             $config
         );
