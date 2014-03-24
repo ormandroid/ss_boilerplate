@@ -30,13 +30,13 @@ class BlogHolder extends Page {
             'Advanced',
             'Advanced',
             array(
-                new DropdownField('Columns','How many items to display on each row', array(
+                new DropdownField('Columns', _t('BlogHolder.ColumnsLabel', 'How many items to display on each row'), array(
                     'One Item (Full Width)',
                     'Two Items',
                     'Three Items',
                     'Four Items'
                 )),
-                new TextField('Items','How many items to display on each page')
+                new TextField('Items', _t('BlogHolder.ItemsLabel', 'How many items to display on each page'))
             )
         )->setHeadingLevel(4)->setStartClosed(true);
         $fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
@@ -45,7 +45,7 @@ class BlogHolder extends Page {
          * Blog Sidebar
          =========================================*/
 
-        $fields->addFieldToTab('Root.BlogSidebar', new HtmlEditorField('BlogSidebarContent','Content For the Sidebar'));
+        $fields->addFieldToTab('Root.BlogSidebar', new HtmlEditorField('BlogSidebarContent', _t('BlogHolder.BlogSidebarLabel', 'Content For the Sidebar')));
 
         return $fields;
 

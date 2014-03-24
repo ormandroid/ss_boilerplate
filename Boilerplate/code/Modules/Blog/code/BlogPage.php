@@ -29,11 +29,11 @@ class BlogPage extends Page {
         $fields->removeByName('Slider');
         $fields->removeByName('Widgets');
 
-        $fields->addFieldToTab('Root.Main', new UploadField('BlogImage','Featured blog image'), 'Content');
-        $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date','Article Date (for example: 20/12/2013)'), 'Content');
+        $fields->addFieldToTab('Root.Main', new UploadField('BlogImage', _t('BlogPage.BlogImageLabel', 'Featured blog image')), 'Content');
+        $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date', _t('BlogPage.DateLabel', 'Article Date')), 'Content');
         $dateField->setConfig('showcalendar', true);
         $fields->addFieldToTab('Root.Main', $dateField, 'Content');
-        $fields->addFieldToTab('Root.Main', new TextField('Author'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextField('Author', _t('BlogPage.AuthorLabel', 'Author')), 'Content');
 
         /* =========================================
          * Tags

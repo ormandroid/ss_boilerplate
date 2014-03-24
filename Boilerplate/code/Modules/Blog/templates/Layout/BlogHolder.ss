@@ -18,17 +18,17 @@
                         <article class="blog-item $Top.ColumnClass<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
                             <div class="blog-content">
                                 <% if $BlogImage %>
-                                    <a href="$Link" class="blog-image" title="Read more on &quot;{$Title}&quot;">
+                                    <a href="$Link" class="blog-image" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">
                                         $BlogImage.CroppedImage(848, 340)
                                         <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
                                     </a><!-- /.blog-image -->
                                 <% end_if %>
-                                <h3 class="blog-title"><a href="$Link" title="Read more on &quot;{$Title}&quot;">$Title</a></h3><!-- /.blog-title -->
+                                <h3 class="blog-title"><a href="$Link" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$Title</a></h3><!-- /.blog-title -->
                                 <% if $Date && $Author %>
-                                    <p class="blog-meta">Posted on $Date.Nice by $Author</p><!-- /.blog-meta -->
+                                    <p class="blog-meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.blog-meta -->
                                 <% end_if %>
                                 <p class="blog-summary">$Content.LimitWordCountXML(40)</p><!-- /.blog-summary -->
-                                <a href="$Link" class="btn btn-primary" title="Read more on &quot;{$Title}&quot;">Read more</a>
+                                <a href="$Link" class="btn btn-primary" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">Read more</a>
                             </div><!-- /.blog-content -->
                         </article><!-- /.blog-item -->
                         <% if $MultipleOf($Top.ColumnMultiple) %>

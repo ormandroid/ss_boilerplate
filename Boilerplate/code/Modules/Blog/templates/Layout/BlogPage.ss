@@ -12,7 +12,7 @@
                     <p>$BlogImage.setWidth(850)</p>
                 <% end_if %>
                 <% if $Date && $Author %>
-                    <p class="blog-meta">Posted on $Date.Nice by $Author</p><!-- /.blog-meta -->
+                    <p class="blog-meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.blog-meta -->
                 <% end_if %>
                 <div class="content typography">
                     $Content

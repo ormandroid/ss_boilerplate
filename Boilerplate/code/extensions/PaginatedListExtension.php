@@ -18,9 +18,9 @@ class PaginatedListExtension extends Extension {
         }
         $x = ($currentPage - 1) * $pageLength + 1;;
         if($x == $y){
-            $out = 'Showing record '.$x.' out of '.$total;
+            $out = _t('PaginatedListExtension.ShowingRecord', 'Showing record '.$x.' out of '.$total);
         }else{
-            $out = 'Showing records '.$x.'-'.$y.' out of '.$total;
+            $out = _t('PaginatedListExtension.ShowingRecords', 'Showing records '.$x.'-'.$y.' out of '.$total);
         }
         return $out;
     }
