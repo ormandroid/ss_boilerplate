@@ -26,13 +26,13 @@ class FileGroup extends DataObject{
 
         $fields = FieldList::create(TabSet::create('Root'));
 
-        $fields->addFieldToTab('Root.Main', new TextField('Title', 'Group Title'));
+        $fields->addFieldToTab('Root.Main', new TextField('Title', _t('FileGroup.TitleLabel', 'Group Title')));
 
         /* -----------------------------------------
          * Files
         ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.Main', new UploadField('File', 'Files for upload'));
+        $fields->addFieldToTab('Root.Main', new UploadField('File', _t('FileGroup.FileLabel', 'Files for upload')));
 
         /* -----------------------------------------
          * Advanced
@@ -40,9 +40,9 @@ class FileGroup extends DataObject{
 
         $toggleFields = ToggleCompositeField::create(
 			'Advanced',
-			'Advanced',
+            _t('FileGroup.AdvancedLabel', 'Advanced'),
 			array(
-                new DropdownField('PanelClass','Panel Type',
+                new DropdownField('PanelClass', _t('FileGroup.PanelClassLabel', 'Panel Type'),
                     array(
                         'panel-default' => 'Default',
                         'panel-primary' => 'Primary',
