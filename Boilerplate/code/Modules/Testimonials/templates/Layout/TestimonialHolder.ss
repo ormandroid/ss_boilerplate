@@ -27,8 +27,8 @@
                                 </a><!-- /.pull-left media-image -->
                                 <div class="media-body">
                                     <h4 class="media-heading">$Title</h4>
-                                    $Content.LimitWordCountXML()
-                                    <a href="$Link">Read More</a>
+                                    <p>$Content.LimitWordCountXML()</p>
+                                    <a href="$Link"><%t TestimonialPage.ReadMore 'Read More' %></a>
                                 </div>
                             </div>
                         </div><!-- /.col-xs-12 testimonial-item -->
