@@ -55,11 +55,11 @@ class BoilerplateConfig extends DataExtension {
         ------------------------------------------*/
 
         $toggleFields = ToggleCompositeField::create(
-			'Logo',
-			'Logo',
+			'LogoToggle',
+            _t('BoilerplateConfig.LogoToggleLabel', 'Logo'),
 			array(
-                new UploadField('LogoImage', 'Choose an Image For Your Logo'),
-                new UploadField('Favicon', 'Choose an Image For Your Favicon')
+                new UploadField('LogoImage', _t('BoilerplateConfig.LogoImageLabel', 'Choose an Image For Your Logo')),
+                new UploadField('Favicon', _t('BoilerplateConfig.FaviconLabel', 'Choose an Image For Your Favicon'))
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
 		$fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
@@ -72,9 +72,9 @@ class BoilerplateConfig extends DataExtension {
 			'CompanyDetails',
 			'Company Details',
 			array(
-                new Textfield('Phone', 'Phone Number'),
-                new Textfield('Email', 'Public Email Address'),
-                $PhysicalAddress = new HtmlEditorField('PhysicalAddress', 'Physical Address')
+                new Textfield('Phone', _t('BoilerplateConfig.PhoneLabel', 'Phone Number')),
+                new Textfield('Email', _t('BoilerplateConfig.EmailLabel', 'Public Email Address')),
+                $PhysicalAddress = new HtmlEditorField('PhysicalAddress', _t('BoilerplateConfig.PhysicalAddressLabel', 'Physical Address'))
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
         $PhysicalAddress->setRows(3);
@@ -86,9 +86,9 @@ class BoilerplateConfig extends DataExtension {
 
         $toggleFields = ToggleCompositeField::create(
 			'TrackingCodeToggle',
-			'Tracking Code',
+            _t('BoilerplateConfig.TrackingCodeToggleLabel', 'Tracking Code'),
 			array(
-                new TextareaField('TrackingCode', 'Tracking Code'),
+                new TextareaField('TrackingCode', _t('BoilerplateConfig.TrackingCodeLabel', 'Tracking Code')),
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
 		$fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
