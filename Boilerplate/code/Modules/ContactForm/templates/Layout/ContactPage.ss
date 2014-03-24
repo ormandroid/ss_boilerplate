@@ -25,7 +25,7 @@
                         $ContactForm
                     <% else %>
                         <div class="alert alert-warning">
-                            Please choose an email address for the contact page to send to.
+                            <%t ContactPage.NoEmailAlert "Please choose an email address for the contact page to send to." %>
                         </div><!-- /.alert alert-warning -->
                     <% end_if %>
                 <% end_if %>

@@ -55,8 +55,8 @@ class ContactPage extends Page {
         ------------------------------------------*/
 
         $fields->addFieldToTab('Root.Main', new HeaderField('Contact Form'), 'Content');
-        $fields->addFieldToTab('Root.Main', new TextField('MailTo', 'Choose an email address for the contact page to send to'), 'Content');
-        $fields->addFieldToTab('Root.Main', new TextareaField('SubmitText', 'Text for contact form submission'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextField('MailTo', _t('ContactPage.MailToLabel', 'Choose an email address for the contact page to send to')), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextareaField('SubmitText', _t('ContactPage.SubmitTextLabel', 'Text for contact form submission')), 'Content');
 
         /* -----------------------------------------
          * Google Map
@@ -66,12 +66,12 @@ class ContactPage extends Page {
 			'GoogleMap',
 			'Google Map',
 			array(
-                new Textfield('GoogleAPI', 'Maps API (Optional)'),
-                new Textfield('Latitude', 'Latitude'),
-                new Textfield('Longitude', 'Longitude'),
-                new ColorField('MapColor', 'Map Colour (Optional)'),
-                new ColorField('WaterColor', 'Water Colour (Optional)'),
-                new CheckboxField('MapMarker', 'Map Marker (Optional)'),
+                new Textfield('GoogleAPI', _t('ContactPage.GoogleAPILabel', 'Maps API (Optional)')),
+                new Textfield('Latitude', _t('ContactPage.LatitudeLabel', 'Latitude')),
+                new Textfield('Longitude', _t('ContactPage.LongitudeLabel', 'Longitude')),
+                new ColorField('MapColor', _t('ContactPage.MapColorLabel', 'Map Colour (Optional)')),
+                new ColorField('WaterColor', _t('ContactPage.WaterColorLabel', 'Water Colour (Optional)')),
+                new CheckboxField('MapMarker', _t('ContactPage.MapMarkerLabel', 'Map Marker')),
 			)
 		)->setHeadingLevel(4)->setStartClosed(true);
 		$fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
@@ -125,24 +125,24 @@ JS
     public function ContactForm() {
 
         $name = new TextField('Name');
-        $name->setAttribute('placeholder', 'Enter your name')
+        $name->setAttribute('placeholder', _t('ContactPage.NamePlaceholder', 'Enter your name')
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control');
+            ->addExtraClass('form-control'));
 
         $email = new EmailField('Email');
-        $email->setAttribute('placeholder', 'Enter your email address')
+        $email->setAttribute('placeholder', _t('ContactPage.EmailPlaceholder', 'Enter your email address')
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control');
+            ->addExtraClass('form-control'));
 
         $message = new TextareaField('Message');
-        $message->setAttribute('placeholder', 'Enter your message')
+        $message->setAttribute('placeholder', _t('ContactPage.MessagePlaceholder', 'Enter your message')
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control');
+            ->addExtraClass('form-control'));
 
         $question = new TextField('Question');
-        $question->setTitle('3 &plus; 7 &equals; ?')
+        $question->setTitle(_t('ContactPage.QuestionLabel', '3 &plus; 7 &equals; ?')
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control');
+            ->addExtraClass('form-control'));
 
         $fields = new FieldList(
             $name,
@@ -151,7 +151,7 @@ JS
             $question
         );
 
-        $action = new FormAction('SendContactForm', 'Submit Form');
+        $action = new FormAction('SendContactForm', _t('ContactPage.SubmitText', 'Submit Form'));
         $action->addExtraClass('btn btn-primary btn-lg');
 
         $actions = new FieldList(
@@ -182,13 +182,13 @@ JS
 
         // If captcha was incorrect
         if((int)$data['Question']!=10){
-            $form->AddErrorMessage('Question', 'Sorry, the question was answered incorrectly', 'validation');
+            $form->AddErrorMessage('Question', _t('ContactPage.QuestionErrorText', 'Sorry, the question was answered incorrectly', 'validation'));
             return $this->redirectBack();
         }
 
         $From = $data['Email'];
         $To = $this->MailTo;
-        $Subject = "Website Contact message";
+        $Subject = _t('ContactPage.EmailSubject', 'Website Contact message');
         $email = new Email($From, $To, $Subject);
         $email->setTemplate('ContactEmail')
             ->populateTemplate($data)
@@ -196,7 +196,7 @@ JS
         if($this->SubmitText){
             $submitText = $this->SubmitText;
         }else{
-            $submitText = 'Thank you for contacting us, we will get back to you as soon as possible.';
+            $submitText = _t('ContactPage.SubmitText', 'Thank you for contacting us, we will get back to you as soon as possible.');
         }
         $this->setFlash($submitText, 'success');
 
