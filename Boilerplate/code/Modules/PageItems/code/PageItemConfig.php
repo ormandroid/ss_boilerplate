@@ -19,7 +19,7 @@ class PageItemConfig extends DataExtension {
         ));
         $gridField = new GridField(
             'PageItemItems',
-            'Items',
+            _t('PageItemConfig.PageImageItemsLabel', 'Items'),
             $this->owner->PageItems(),
             $config
         );

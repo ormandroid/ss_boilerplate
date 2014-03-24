@@ -59,36 +59,35 @@ class PageItem extends DataObject{
                 =========================================*/
                 new Tab(
                     $title = 'Page Item',
-                    new HeaderField('Title'),
-                    new TextField('Title', 'Page Item Title'),
-                    new LiteralField('WidgetTitleDescription', '<p>Name your page item to be easily recognisable in the page item list e.g "Pricing columns"</p>'),
-                    new HtmlEditorField('Content', 'Content')
+                    new HeaderField(_t('PageItem.PageItemTabText', 'Title')),
+                    new TextField('Title', _t('PageItem.TitleLabel', 'Page Item Title')),
+                    new LiteralField('WidgetTitleDescription', '<p>'._t('PageItem.WidgetTitleDescriptionText', 'Name your page item to be easily recognisable in the page item list e.g "Pricing columns"').'</p>'),
+                    new HtmlEditorField('Content', _t('PageItem.ContentLabel', 'Content'))
                 ),
                 /* ========================================
                 * Columns
                 =========================================*/
                 new Tab(
                     $title = 'Columns',
-                    new HeaderField('Columns'),
-                    new LiteralField('ColumnDescription', '<p>Column Description</p>'),
-                    $columnOne = new HtmlEditorField('ColumnOne', 'Column One'),
-                    $columnTwo = new HtmlEditorField('ColumnTwo', 'Column Two'),
-                    $columnThree = new HtmlEditorField('ColumnThree', 'Column Three'),
-                    $columnFour = new HtmlEditorField('ColumnFour', 'Column Four')
+                    new HeaderField(_t('PageItem.ColumnsTabText', 'Columns')),
+                    $columnOne = new HtmlEditorField('ColumnOne', _t('PageItem.ColumnOneLabel', 'Column One')),
+                    $columnTwo = new HtmlEditorField('ColumnTwo', _t('PageItem.ColumnTwoLabel', 'Column Two')),
+                    $columnThree = new HtmlEditorField('ColumnThree', _t('PageItem.ColumnThreeLabel', 'Column Three')),
+                    $columnFour = new HtmlEditorField('ColumnFour', _t('PageItem.ColumnFourLabel', 'Column Four'))
                 ),
                 /* ========================================
                 * Settings
                 =========================================*/
                 new Tab(
                     $title = 'Settings',
-                    new HeaderField('Settings (Optional)'),
-                    new CheckboxField('Padding', 'Remove Padding'),
-                    new UploadField('BackgroundImage', 'Background Image'),
-                    new DropdownField('BackgroundType', 'Background Type', array(
+                    new HeaderField(_t('PageItem.SettingsTabText', 'Settings (Optional)')),
+                    new CheckboxField('Padding', _t('PageItem.PaddingLabel', 'Remove Padding')),
+                    new UploadField('BackgroundImage', _t('PageItem.BackgroundImageLabel', 'Background Image')),
+                    new DropdownField('BackgroundType', _t('PageItem.BackgroundTypeLabel', 'Background Type'), array(
                         '' => 'Default',
                         'fixed' => 'Fixed'
                     )),
-                    new ColorField('BackgroundColor', 'Background Color')
+                    new ColorField('BackgroundColor', _t('PageItem.BackgroundColorLabel', 'Background Color'))
                 )
             )
         );
