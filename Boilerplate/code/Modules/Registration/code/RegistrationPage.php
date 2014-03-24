@@ -17,34 +17,21 @@ class RegistrationPage_Controller extends Page_Controller {
      * */
     function RegistrationForm(){
 
-        // First Name
-        $firstName = new TextField('FirstName');
-        $firstName->setAttribute('placeholder', 'Enter your first name');
-        $firstName->setAttribute('required', 'required');
-        $firstName->addExtraClass('form-control');
-
-        // Surname
-        $surname = new TextField('Surname');
-        $surname->setAttribute('placeholder', 'Enter your surname');
-        $surname->setAttribute('required', 'required');
-        $surname->addExtraClass('form-control');
-
         // Email
         $email = new EmailField('Email');
-        $email->setAttribute('placeholder', 'Enter your email address');
-        $email->setAttribute('required', 'required');
-        $email->addExtraClass('form-control');
+        $email->setAttribute('placeholder', 'Enter your email address')
+            ->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
 
         // Password Conformation
-        $password = new ConfirmedPasswordField('Password', 'Password');
-        $password->setAttribute('placeholder', 'Enter your password');
-        $password->setAttribute('required', 'required');
-        $password->addExtraClass('form-control');
+        $password = new PasswordField('Password', 'Password');
+        $password->setAttribute('placeholder', 'Enter your password')
+            ->setCustomValidationMessage('Your passwords do not match', 'validation')
+            ->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
 
         // Generate the fields
         $fields = new FieldList(
-            $firstName,
-            $surname,
             $email,
             $password
         );
@@ -55,9 +42,14 @@ class RegistrationPage_Controller extends Page_Controller {
 
         $actions = new FieldList($action);
 
-        $validator = new RequiredFields('FirstName', 'Email', 'Password');
+        $validator = new RequiredFields('Email', 'Password');
 
-        return new Form($this, 'RegistrationForm', $fields, $actions, $validator);
+        $form = Form::create($this, 'RegistrationForm', $fields, $actions, $validator);
+        if($formData = Session::get('FormInfo.Form_RegistrationForm.data')) {
+            $form->loadDataFrom($formData);
+        }
+
+        return $form;
 
     }
 
@@ -65,23 +57,27 @@ class RegistrationPage_Controller extends Page_Controller {
      * Submit the registration form
      * Returns @Redirection
      * */
-    function Register($data,$form){
+    function Register($data, $form){
 
-        //Check for existing member email address
-        if($member = DataObject::get_one("Member", "`Email` = '". Convert::raw2sql($data['Email']) . "'")){
+        // Set session array individually as setting the password breaks the form.
+        $sessionArray = array(
+            'Email' => $data['Email']
+        );
+
+        // Check for existing member email address
+        if($existingUser = DataObject::get_one('Member', "Email = '".Convert::raw2sql($data['Email'])."'")) {
             $form->AddErrorMessage('Email', 'Sorry, that email address already exists. Please choose another.', 'validation');
-            //TODO: Make this work
-            //Session::set("FormInfo.Form_RegistrationForm.data", $data);
+            Session::set('FormInfo.Form_RegistrationForm.data', $sessionArray);
             return $this->redirectBack();
         }
 
-        //Otherwise create new member and log them in
+        // Otherwise create new member and log them in
         $Member = new Member();
         $form->saveInto($Member);
         $Member->write();
         $Member->login();
 
-        //Find or create the 'user' group
+        // Find or create the 'user' group
         if(!$userGroup = DataObject::get_one('Group', "Code = 'users'")){
             $userGroup = new Group();
             $userGroup->Code = 'users';
@@ -89,12 +85,13 @@ class RegistrationPage_Controller extends Page_Controller {
             $userGroup->Write();
             $userGroup->Members()->add($Member);
         }
-        //Add member to user group
+        // Add member to user group
         $userGroup->Members()->add($Member);
 
-        //Get profile page
+        // Get profile page otherwise display warning.
         if($ProfilePage = DataObject::get_one('EditProfilePage')){
-            $this->setFlash('Welcome ' .$data['FirstName'].', your account has been created!', 'success');
+            ($name = $data['FirstName'] ?: $name = $data['Email']);
+            $this->setFlash('Welcome ' .$name.', your account has been created!', 'success');
             return $this->redirect($ProfilePage->Link());
         }else{
             $this->setFlash('Please add a "Edit Profile Page" in your SiteTree to enable profile editing', 'warning');

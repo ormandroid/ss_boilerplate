@@ -369,7 +369,9 @@
     margin-top :$gap-md;
 }
 @media (min-width: $screen-sm) {
-    #MemberLoginForm_LoginForm, #Form_EditProfileForm, #Form_RegistrationForm {
+    #MemberLoginForm_LoginForm,
+    #Form_RegistrationForm,
+    #MemberLoginForm_LostPasswordForm {
         max-width: 50%;
     }
 }
@@ -380,7 +382,8 @@
 }
 
 // Login Form
-#MemberLoginForm_LoginForm {
+#MemberLoginForm_LoginForm,
+#MemberLoginForm_LostPasswordForm {
     .action {
         @extend .btn;
         @extend .btn-primary;

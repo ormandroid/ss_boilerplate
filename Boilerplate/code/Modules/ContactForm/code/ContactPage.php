@@ -54,9 +54,9 @@ class ContactPage extends Page {
          * Contact Page
         ------------------------------------------*/
 
-        $fields->addFieldToTab("Root.Main", new HeaderField("Contact Form"), 'Content');
-        $fields->addFieldToTab("Root.Main", new TextField("MailTo", "Choose an email address for the contact page to send to"), 'Content');
-        $fields->addFieldToTab("Root.Main", new TextareaField("SubmitText", "Text for contact form submission"), 'Content');
+        $fields->addFieldToTab('Root.Main', new HeaderField('Contact Form'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextField('MailTo', 'Choose an email address for the contact page to send to'), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextareaField('SubmitText', 'Text for contact form submission'), 'Content');
 
         /* -----------------------------------------
          * Google Map
@@ -118,27 +118,31 @@ JS
 
 	}
 
+    /*
+     * Create Contact Form
+     * @returns Form
+     * */
     public function ContactForm() {
 
         $name = new TextField('Name');
-        $name->setAttribute('placeholder', 'Enter your name');
-        $name->setAttribute('required', 'required');
-        $name->addExtraClass('form-control');
+        $name->setAttribute('placeholder', 'Enter your name')
+            ->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
 
         $email = new EmailField('Email');
-        $email->setAttribute('placeholder', 'Enter your email address');
-        $email->setAttribute('required', 'required');
-        $email->addExtraClass('form-control');
+        $email->setAttribute('placeholder', 'Enter your email address')
+            ->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
 
         $message = new TextareaField('Message');
-        $message->setAttribute('placeholder', 'Enter your message');
-        $message->setAttribute('required', 'required');
-        $message->addExtraClass('form-control');
+        $message->setAttribute('placeholder', 'Enter your message')
+            ->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
 
         $question = new TextField('Question');
-        $question->setTitle('3 &plus; 7 &equals; ?');
-        $question->setAttribute('required', 'required');
-        $question->addExtraClass('form-control');
+        $question->setTitle('3 &plus; 7 &equals; ?')
+            ->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
 
         $fields = new FieldList(
             $name,
@@ -160,13 +164,23 @@ JS
             'Message'
         );
 
-        return new Form($this, 'ContactForm', $fields, $actions, $validator);
+        $form = Form::create($this, 'ContactForm', $fields, $actions, $validator);
+        if($formData = Session::get('FormInfo.Form_ContactForm.data')) {
+            $form->loadDataFrom($formData);
+        }
+
+        return $form;
     }
 
+    /*
+     * Function to send contact form email
+     * @returns Redirection
+     * */
     function SendContactForm($data, $form) {
 
+        Session::set('FormInfo.Form_ContactForm.data', $data);
 
-
+        // If captcha was incorrect
         if((int)$data['Question']!=10){
             $form->AddErrorMessage('Question', 'Sorry, the question was answered incorrectly', 'validation');
             return $this->redirectBack();
@@ -176,15 +190,19 @@ JS
         $To = $this->MailTo;
         $Subject = "Website Contact message";
         $email = new Email($From, $To, $Subject);
-        $email->setTemplate('ContactEmail');
-        $email->populateTemplate($data);
-        $email->send();
+        $email->setTemplate('ContactEmail')
+            ->populateTemplate($data)
+            ->send();
         if($this->SubmitText){
             $submitText = $this->SubmitText;
         }else{
             $submitText = 'Thank you for contacting us, we will get back to you as soon as possible.';
         }
         $this->setFlash($submitText, 'success');
+
+        // Clear the form state
+        Session::clear('FormInfo.Form_ContactForm.data');
+
         return $this->redirect($this->Link("?success=1"));
 
     }

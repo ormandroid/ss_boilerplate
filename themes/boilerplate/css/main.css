@@ -248,8 +248,10 @@ th {
     background-color: #fff !important; }
 
   .btn > .caret, #MemberLoginForm_LoginForm .action > .caret,
+  #MemberLoginForm_LostPasswordForm .action > .caret,
   .dropup > .btn > .caret,
-  #MemberLoginForm_LoginForm .dropup > .action > .caret {
+  #MemberLoginForm_LoginForm .dropup > .action > .caret,
+  #MemberLoginForm_LostPasswordForm .dropup > .action > .caret {
     border-top-color: #000 !important; }
 
   .label {
@@ -1690,7 +1692,8 @@ input[type="checkbox"],
 .input-sm, .input-group-sm > .form-control, .form-group .input-group-sm > .text,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
-#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .action {
+#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .action,
+#MemberLoginForm_LostPasswordForm .input-group-sm > .input-group-btn > .action {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -1700,7 +1703,8 @@ input[type="checkbox"],
 select.input-sm, .input-group-sm > select.form-control, .form-group .input-group-sm > select.text,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
-#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select.action {
+#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select.action,
+#MemberLoginForm_LostPasswordForm .input-group-sm > .input-group-btn > select.action {
   height: 30px;
   line-height: 30px; }
 
@@ -1708,18 +1712,21 @@ textarea.input-sm, .input-group-sm > textarea.form-control, .form-group .input-g
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 #MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > textarea.action,
+#MemberLoginForm_LostPasswordForm .input-group-sm > .input-group-btn > textarea.action,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .form-group .input-group-sm > select[multiple].text,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
-#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select[multiple].action {
+#MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > select[multiple].action,
+#MemberLoginForm_LostPasswordForm .input-group-sm > .input-group-btn > select[multiple].action {
   height: auto; }
 
 .input-lg, .input-group-lg > .form-control, .form-group .input-group-lg > .text,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
-#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .action {
+#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .action,
+#MemberLoginForm_LostPasswordForm .input-group-lg > .input-group-btn > .action {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -1729,7 +1736,8 @@ select[multiple].input-sm,
 select.input-lg, .input-group-lg > select.form-control, .form-group .input-group-lg > select.text,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
-#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select.action {
+#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select.action,
+#MemberLoginForm_LostPasswordForm .input-group-lg > .input-group-btn > select.action {
   height: 46px;
   line-height: 46px; }
 
@@ -1737,12 +1745,14 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .form-group .input-g
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 #MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > textarea.action,
+#MemberLoginForm_LostPasswordForm .input-group-lg > .input-group-btn > textarea.action,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .form-group .input-group-lg > select[multiple].text,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
-#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select[multiple].action {
+#MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > select[multiple].action,
+#MemberLoginForm_LostPasswordForm .input-group-lg > .input-group-btn > select[multiple].action {
   height: auto; }
 
 .has-feedback {
@@ -1890,7 +1900,8 @@ select[multiple].input-lg,
   top: 0;
   right: 15px; }
 
-.btn, #MemberLoginForm_LoginForm .action {
+.btn, #MemberLoginForm_LoginForm .action,
+#MemberLoginForm_LostPasswordForm .action {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -1909,19 +1920,28 @@ select[multiple].input-lg,
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none; }
-  .btn:focus, #MemberLoginForm_LoginForm .action:focus {
+  .btn:focus, #MemberLoginForm_LoginForm .action:focus,
+  #MemberLoginForm_LostPasswordForm .action:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, #MemberLoginForm_LoginForm .action:hover, .btn:focus, #MemberLoginForm_LoginForm .action:focus {
+  .btn:hover, #MemberLoginForm_LoginForm .action:hover,
+  #MemberLoginForm_LostPasswordForm .action:hover, .btn:focus, #MemberLoginForm_LoginForm .action:focus,
+  #MemberLoginForm_LostPasswordForm .action:focus {
     color: #333333;
     text-decoration: none; }
-  .btn:active, #MemberLoginForm_LoginForm .action:active, .btn.active, #MemberLoginForm_LoginForm .active.action {
+  .btn:active, #MemberLoginForm_LoginForm .action:active,
+  #MemberLoginForm_LostPasswordForm .action:active, .btn.active, #MemberLoginForm_LoginForm .active.action,
+  #MemberLoginForm_LostPasswordForm .active.action {
     outline: 0;
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, #MemberLoginForm_LoginForm .disabled.action, .btn[disabled], #MemberLoginForm_LoginForm [disabled].action, fieldset[disabled] .btn, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action {
+  .btn.disabled, #MemberLoginForm_LoginForm .disabled.action,
+  #MemberLoginForm_LostPasswordForm .disabled.action, .btn[disabled], #MemberLoginForm_LoginForm [disabled].action,
+  #MemberLoginForm_LostPasswordForm [disabled].action, fieldset[disabled] .btn, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action,
+  fieldset[disabled] #MemberLoginForm_LostPasswordForm .action,
+  #MemberLoginForm_LostPasswordForm fieldset[disabled] .action {
     cursor: not-allowed;
     pointer-events: none;
     opacity: 0.65;
@@ -1952,26 +1972,58 @@ select[multiple].input-lg,
     color: white;
     background-color: #333333; }
 
-.btn-primary, #MemberLoginForm_LoginForm .action {
+.btn-primary, #MemberLoginForm_LoginForm .action,
+#MemberLoginForm_LostPasswordForm .action {
   color: white;
   background-color: #3bc492;
   border-color: #35b083; }
-  .btn-primary:hover, #MemberLoginForm_LoginForm .action:hover, .btn-primary:focus, #MemberLoginForm_LoginForm .action:focus, .btn-primary:active, #MemberLoginForm_LoginForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action {
+  .btn-primary:hover, #MemberLoginForm_LoginForm .action:hover,
+  #MemberLoginForm_LostPasswordForm .action:hover, .btn-primary:focus, #MemberLoginForm_LoginForm .action:focus,
+  #MemberLoginForm_LostPasswordForm .action:focus, .btn-primary:active, #MemberLoginForm_LoginForm .action:active,
+  #MemberLoginForm_LostPasswordForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action,
+  #MemberLoginForm_LostPasswordForm .active.action {
     color: white;
     background-color: #32a57b;
     border-color: #278160; }
-  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action {
+  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action,
+  .open #MemberLoginForm_LostPasswordForm .dropdown-toggle.action,
+  #MemberLoginForm_LostPasswordForm .open .dropdown-toggle.action {
     color: white;
     background-color: #32a57b;
     border-color: #278160; }
-  .btn-primary:active, #MemberLoginForm_LoginForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action {
+  .btn-primary:active, #MemberLoginForm_LoginForm .action:active,
+  #MemberLoginForm_LostPasswordForm .action:active, .btn-primary.active, #MemberLoginForm_LoginForm .active.action,
+  #MemberLoginForm_LostPasswordForm .active.action {
     background-image: none; }
-  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action {
+  .open .btn-primary.dropdown-toggle, .open #MemberLoginForm_LoginForm .dropdown-toggle.action, #MemberLoginForm_LoginForm .open .dropdown-toggle.action,
+  .open #MemberLoginForm_LostPasswordForm .dropdown-toggle.action,
+  #MemberLoginForm_LostPasswordForm .open .dropdown-toggle.action {
     background-image: none; }
-  .btn-primary.disabled, #MemberLoginForm_LoginForm .disabled.action, .btn-primary.disabled:hover, #MemberLoginForm_LoginForm .disabled.action:hover, .btn-primary.disabled:focus, #MemberLoginForm_LoginForm .disabled.action:focus, .btn-primary.disabled:active, #MemberLoginForm_LoginForm .disabled.action:active, .btn-primary.disabled.active, #MemberLoginForm_LoginForm .disabled.active.action, .btn-primary[disabled], #MemberLoginForm_LoginForm [disabled].action, .btn-primary[disabled]:hover, #MemberLoginForm_LoginForm [disabled].action:hover, .btn-primary[disabled]:focus, #MemberLoginForm_LoginForm [disabled].action:focus, .btn-primary[disabled]:active, #MemberLoginForm_LoginForm [disabled].action:active, .btn-primary[disabled].active, #MemberLoginForm_LoginForm [disabled].active.action, fieldset[disabled] .btn-primary, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #MemberLoginForm_LoginForm .action:hover, #MemberLoginForm_LoginForm fieldset[disabled] .action:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #MemberLoginForm_LoginForm .action:focus, #MemberLoginForm_LoginForm fieldset[disabled] .action:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] #MemberLoginForm_LoginForm .action:active, #MemberLoginForm_LoginForm fieldset[disabled] .action:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #MemberLoginForm_LoginForm .active.action, #MemberLoginForm_LoginForm fieldset[disabled] .active.action {
+  .btn-primary.disabled, #MemberLoginForm_LoginForm .disabled.action,
+  #MemberLoginForm_LostPasswordForm .disabled.action, .btn-primary.disabled:hover, #MemberLoginForm_LoginForm .disabled.action:hover,
+  #MemberLoginForm_LostPasswordForm .disabled.action:hover, .btn-primary.disabled:focus, #MemberLoginForm_LoginForm .disabled.action:focus,
+  #MemberLoginForm_LostPasswordForm .disabled.action:focus, .btn-primary.disabled:active, #MemberLoginForm_LoginForm .disabled.action:active,
+  #MemberLoginForm_LostPasswordForm .disabled.action:active, .btn-primary.disabled.active, #MemberLoginForm_LoginForm .disabled.active.action,
+  #MemberLoginForm_LostPasswordForm .disabled.active.action, .btn-primary[disabled], #MemberLoginForm_LoginForm [disabled].action,
+  #MemberLoginForm_LostPasswordForm [disabled].action, .btn-primary[disabled]:hover, #MemberLoginForm_LoginForm [disabled].action:hover,
+  #MemberLoginForm_LostPasswordForm [disabled].action:hover, .btn-primary[disabled]:focus, #MemberLoginForm_LoginForm [disabled].action:focus,
+  #MemberLoginForm_LostPasswordForm [disabled].action:focus, .btn-primary[disabled]:active, #MemberLoginForm_LoginForm [disabled].action:active,
+  #MemberLoginForm_LostPasswordForm [disabled].action:active, .btn-primary[disabled].active, #MemberLoginForm_LoginForm [disabled].active.action,
+  #MemberLoginForm_LostPasswordForm [disabled].active.action, fieldset[disabled] .btn-primary, fieldset[disabled] #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm fieldset[disabled] .action,
+  fieldset[disabled] #MemberLoginForm_LostPasswordForm .action,
+  #MemberLoginForm_LostPasswordForm fieldset[disabled] .action, fieldset[disabled] .btn-primary:hover, fieldset[disabled] #MemberLoginForm_LoginForm .action:hover, #MemberLoginForm_LoginForm fieldset[disabled] .action:hover,
+  fieldset[disabled] #MemberLoginForm_LostPasswordForm .action:hover,
+  #MemberLoginForm_LostPasswordForm fieldset[disabled] .action:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] #MemberLoginForm_LoginForm .action:focus, #MemberLoginForm_LoginForm fieldset[disabled] .action:focus,
+  fieldset[disabled] #MemberLoginForm_LostPasswordForm .action:focus,
+  #MemberLoginForm_LostPasswordForm fieldset[disabled] .action:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] #MemberLoginForm_LoginForm .action:active, #MemberLoginForm_LoginForm fieldset[disabled] .action:active,
+  fieldset[disabled] #MemberLoginForm_LostPasswordForm .action:active,
+  #MemberLoginForm_LostPasswordForm fieldset[disabled] .action:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] #MemberLoginForm_LoginForm .active.action, #MemberLoginForm_LoginForm fieldset[disabled] .active.action,
+  fieldset[disabled] #MemberLoginForm_LostPasswordForm .active.action,
+  #MemberLoginForm_LostPasswordForm fieldset[disabled] .active.action {
     background-color: #3bc492;
     border-color: #35b083; }
-  .btn-primary .badge, #MemberLoginForm_LoginForm .action .badge {
+  .btn-primary .badge, #MemberLoginForm_LoginForm .action .badge,
+  #MemberLoginForm_LostPasswordForm .action .badge {
     color: #3bc492;
     background-color: white; }
 
@@ -2086,19 +2138,22 @@ select[multiple].input-lg,
     color: #999999;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, #MemberLoginForm_LoginForm .action {
+.btn-lg, .btn-group-lg > .btn, #MemberLoginForm_LoginForm .action,
+#MemberLoginForm_LostPasswordForm .action {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px; }
 
-.btn-sm, .btn-group-sm > .btn, #MemberLoginForm_LoginForm .btn-group-sm > .action {
+.btn-sm, .btn-group-sm > .btn, #MemberLoginForm_LoginForm .btn-group-sm > .action,
+#MemberLoginForm_LostPasswordForm .btn-group-sm > .action {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-xs, .btn-group-xs > .btn, #MemberLoginForm_LoginForm .btn-group-xs > .action {
+.btn-xs, .btn-group-xs > .btn, #MemberLoginForm_LoginForm .btn-group-xs > .action,
+#MemberLoginForm_LostPasswordForm .btn-group-xs > .action {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -2882,32 +2937,54 @@ input[type="button"].btn-block {
   display: inline-block;
   vertical-align: middle; }
   .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group > .action,
+  #MemberLoginForm_LostPasswordForm .btn-group > .action,
   .btn-group-vertical > .btn,
-  #MemberLoginForm_LoginForm .btn-group-vertical > .action {
+  #MemberLoginForm_LoginForm .btn-group-vertical > .action,
+  #MemberLoginForm_LostPasswordForm .btn-group-vertical > .action {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, #MemberLoginForm_LoginForm .btn-group > .action:hover, .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus, .btn-group > .btn:active, #MemberLoginForm_LoginForm .btn-group > .action:active, .btn-group > .btn.active, #MemberLoginForm_LoginForm .btn-group > .active.action,
+    .btn-group > .btn:hover, #MemberLoginForm_LoginForm .btn-group > .action:hover,
+    #MemberLoginForm_LostPasswordForm .btn-group > .action:hover, .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus,
+    #MemberLoginForm_LostPasswordForm .btn-group > .action:focus, .btn-group > .btn:active, #MemberLoginForm_LoginForm .btn-group > .action:active,
+    #MemberLoginForm_LostPasswordForm .btn-group > .action:active, .btn-group > .btn.active, #MemberLoginForm_LoginForm .btn-group > .active.action,
+    #MemberLoginForm_LostPasswordForm .btn-group > .active.action,
     .btn-group-vertical > .btn:hover,
     #MemberLoginForm_LoginForm .btn-group-vertical > .action:hover,
+    #MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:hover,
     .btn-group-vertical > .btn:focus,
     #MemberLoginForm_LoginForm .btn-group-vertical > .action:focus,
+    #MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:focus,
     .btn-group-vertical > .btn:active,
     #MemberLoginForm_LoginForm .btn-group-vertical > .action:active,
+    #MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:active,
     .btn-group-vertical > .btn.active,
-    #MemberLoginForm_LoginForm .btn-group-vertical > .active.action {
+    #MemberLoginForm_LoginForm .btn-group-vertical > .active.action,
+    #MemberLoginForm_LostPasswordForm .btn-group-vertical > .active.action {
       z-index: 2; }
     .btn-group > .btn:focus, #MemberLoginForm_LoginForm .btn-group > .action:focus,
+    #MemberLoginForm_LostPasswordForm .btn-group > .action:focus,
     .btn-group-vertical > .btn:focus,
-    #MemberLoginForm_LoginForm .btn-group-vertical > .action:focus {
+    #MemberLoginForm_LoginForm .btn-group-vertical > .action:focus,
+    #MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:focus {
       outline: none; }
 
-.btn-group .btn + .btn, .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .btn-group .action + .btn, .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .btn-group .btn + .action, .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .btn-group .action + .action,
+.btn-group .btn + .btn, .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .btn-group .action + .btn,
+.btn-group #MemberLoginForm_LostPasswordForm .action + .btn,
+#MemberLoginForm_LostPasswordForm .btn-group .action + .btn, .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .btn-group .btn + .action, .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .btn-group .action + .action,
+.btn-group #MemberLoginForm_LostPasswordForm .btn + .action,
+#MemberLoginForm_LostPasswordForm .btn-group .btn + .action,
+.btn-group #MemberLoginForm_LostPasswordForm .action + .action,
+#MemberLoginForm_LostPasswordForm .btn-group .action + .action,
 .btn-group .btn + .btn-group,
 .btn-group #MemberLoginForm_LoginForm .action + .btn-group,
 #MemberLoginForm_LoginForm .btn-group .action + .btn-group,
+.btn-group #MemberLoginForm_LostPasswordForm .action + .btn-group,
+#MemberLoginForm_LostPasswordForm .btn-group .action + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group #MemberLoginForm_LoginForm .btn-group + .action,
 #MemberLoginForm_LoginForm .btn-group .btn-group + .action,
+.btn-group #MemberLoginForm_LostPasswordForm .btn-group + .action,
+#MemberLoginForm_LostPasswordForm .btn-group .btn-group + .action,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
@@ -2922,20 +2999,25 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     float: left; }
   .btn-toolbar > .btn, #MemberLoginForm_LoginForm .btn-toolbar > .action,
+  #MemberLoginForm_LostPasswordForm .btn-toolbar > .action,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle),
+#MemberLoginForm_LostPasswordForm .btn-group > .action:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .action:first-child {
+.btn-group > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .action:first-child,
+#MemberLoginForm_LostPasswordForm .btn-group > .action:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), #MemberLoginForm_LoginForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle),
+  #MemberLoginForm_LostPasswordForm .btn-group > .action:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
 .btn-group > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group > .action:last-child:not(:first-child),
+#MemberLoginForm_LostPasswordForm .btn-group > .action:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -2943,15 +3025,18 @@ input[type="button"].btn-block {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action,
+#MemberLoginForm_LostPasswordForm .btn-group > .btn-group:not(:first-child):not(:last-child) > .action {
   border-radius: 0; }
 
 .btn-group > .btn-group:first-child > .btn:last-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:first-child > .action:last-child,
+#MemberLoginForm_LostPasswordForm .btn-group > .btn-group:first-child > .action:last-child,
 .btn-group > .btn-group:first-child > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:last-child > .action:first-child {
+.btn-group > .btn-group:last-child > .btn:first-child, #MemberLoginForm_LoginForm .btn-group > .btn-group:last-child > .action:first-child,
+#MemberLoginForm_LostPasswordForm .btn-group > .btn-group:last-child > .action:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -2959,11 +3044,13 @@ input[type="button"].btn-block {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle,
+#MemberLoginForm_LostPasswordForm .btn-group > .action + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, #MemberLoginForm_LoginForm .btn-group > .action + .dropdown-toggle,
+#MemberLoginForm_LostPasswordForm .btn-group > .action + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -2974,20 +3061,26 @@ input[type="button"].btn-block {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.btn .caret, #MemberLoginForm_LoginForm .action .caret {
+.btn .caret, #MemberLoginForm_LoginForm .action .caret,
+#MemberLoginForm_LostPasswordForm .action .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, #MemberLoginForm_LoginForm .action .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, #MemberLoginForm_LoginForm .action .caret,
+#MemberLoginForm_LostPasswordForm .action .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup #MemberLoginForm_LoginForm .action .caret, #MemberLoginForm_LoginForm .dropup .action .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup #MemberLoginForm_LoginForm .action .caret, #MemberLoginForm_LoginForm .dropup .action .caret,
+.dropup #MemberLoginForm_LostPasswordForm .action .caret,
+#MemberLoginForm_LostPasswordForm .dropup .action .caret {
   border-width: 0 5px 5px; }
 
 .btn-group-vertical > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
-#MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action {
+#MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn-group > .action {
   display: block;
   float: none;
   width: 100%;
@@ -2997,37 +3090,49 @@ input[type="button"].btn-block {
   display: table; }
 .btn-group-vertical > .btn-group:after {
   clear: both; }
-.btn-group-vertical > .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action {
+.btn-group-vertical > .btn-group > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group > .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn-group > .action {
   float: none; }
-.btn-group-vertical > .btn + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn + .action, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .action,
+.btn-group-vertical > .btn + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .btn,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action + .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn + .action, #MemberLoginForm_LoginForm .btn-group-vertical > .action + .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn + .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action + .action,
 .btn-group-vertical > .btn + .btn-group,
 #MemberLoginForm_LoginForm .btn-group-vertical > .action + .btn-group,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group + .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn-group + .action,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:not(:first-child):not(:last-child),
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:not(:first-child):not(:last-child) {
   border-radius: 0; }
-.btn-group-vertical > .btn:first-child:not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:first-child:not(:last-child),
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:first-child:not(:last-child) {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
-.btn-group-vertical > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), #MemberLoginForm_LoginForm .btn-group-vertical > .action:last-child:not(:first-child),
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .action:last-child:not(:first-child) {
   border-bottom-left-radius: 3px;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .action {
   border-radius: 0; }
 
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:first-child:not(:last-child) > .action:last-child,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn-group:first-child:not(:last-child) > .action:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, #MemberLoginForm_LoginForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child,
+#MemberLoginForm_LostPasswordForm .btn-group-vertical > .btn-group:last-child:not(:first-child) > .action:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3037,16 +3142,21 @@ input[type="button"].btn-block {
   table-layout: fixed;
   border-collapse: separate; }
   .btn-group-justified > .btn, #MemberLoginForm_LoginForm .btn-group-justified > .action,
+  #MemberLoginForm_LostPasswordForm .btn-group-justified > .action,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .btn-group-justified > .btn-group .action {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .btn-group-justified > .btn-group .action,
+  .btn-group-justified > .btn-group #MemberLoginForm_LostPasswordForm .action,
+  #MemberLoginForm_LostPasswordForm .btn-group-justified > .btn-group .action {
     width: 100%; }
 
 [data-toggle="buttons"] > .btn > input[type="radio"], #MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="radio"],
+#MemberLoginForm_LostPasswordForm [data-toggle="buttons"] > .action > input[type="radio"],
 [data-toggle="buttons"] > .btn > input[type="checkbox"],
-#MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="checkbox"] {
+#MemberLoginForm_LoginForm [data-toggle="buttons"] > .action > input[type="checkbox"],
+#MemberLoginForm_LostPasswordForm [data-toggle="buttons"] > .action > input[type="checkbox"] {
   display: none; }
 
 .input-group {
@@ -3094,14 +3204,16 @@ input[type="button"].btn-block {
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn,
-  #MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .input-group-addon.action {
+  #MemberLoginForm_LoginForm .input-group-sm > .input-group-btn > .input-group-addon.action,
+  #MemberLoginForm_LostPasswordForm .input-group-sm > .input-group-btn > .input-group-addon.action {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 3px; }
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn,
-  #MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .input-group-addon.action {
+  #MemberLoginForm_LoginForm .input-group-lg > .input-group-btn > .input-group-addon.action,
+  #MemberLoginForm_LostPasswordForm .input-group-lg > .input-group-btn > .input-group-addon.action {
     padding: 10px 16px;
     font-size: 18px;
     border-radius: 6px; }
@@ -3113,13 +3225,17 @@ input[type="button"].btn-block {
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:first-child > .action,
+#MemberLoginForm_LostPasswordForm .input-group-btn:first-child > .action,
 .input-group-btn:first-child > .btn-group > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:first-child > .btn-group > .action,
+#MemberLoginForm_LostPasswordForm .input-group-btn:first-child > .btn-group > .action,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 #MemberLoginForm_LoginForm .input-group-btn:last-child > .action:not(:last-child):not(.dropdown-toggle),
+#MemberLoginForm_LostPasswordForm .input-group-btn:last-child > .action:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
-#MemberLoginForm_LoginForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action {
+#MemberLoginForm_LoginForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action,
+#MemberLoginForm_LostPasswordForm .input-group-btn:last-child > .btn-group:not(:last-child) > .action {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
@@ -3130,13 +3246,17 @@ input[type="button"].btn-block {
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:last-child > .action,
+#MemberLoginForm_LostPasswordForm .input-group-btn:last-child > .action,
 .input-group-btn:last-child > .btn-group > .btn,
 #MemberLoginForm_LoginForm .input-group-btn:last-child > .btn-group > .action,
+#MemberLoginForm_LostPasswordForm .input-group-btn:last-child > .btn-group > .action,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 #MemberLoginForm_LoginForm .input-group-btn:first-child > .action:not(:first-child),
+#MemberLoginForm_LostPasswordForm .input-group-btn:first-child > .action:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
-#MemberLoginForm_LoginForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action {
+#MemberLoginForm_LoginForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action,
+#MemberLoginForm_LostPasswordForm .input-group-btn:first-child > .btn-group:not(:first-child) > .action {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3147,16 +3267,25 @@ input[type="button"].btn-block {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, #MemberLoginForm_LoginForm .input-group-btn > .action {
+  .input-group-btn > .btn, #MemberLoginForm_LoginForm .input-group-btn > .action,
+  #MemberLoginForm_LostPasswordForm .input-group-btn > .action {
     position: relative; }
-    .input-group-btn > .btn + .btn, #MemberLoginForm_LoginForm .input-group-btn > .action + .btn, #MemberLoginForm_LoginForm .input-group-btn > .btn + .action, #MemberLoginForm_LoginForm .input-group-btn > .action + .action {
+    .input-group-btn > .btn + .btn, #MemberLoginForm_LoginForm .input-group-btn > .action + .btn,
+    #MemberLoginForm_LostPasswordForm .input-group-btn > .action + .btn, #MemberLoginForm_LoginForm .input-group-btn > .btn + .action, #MemberLoginForm_LoginForm .input-group-btn > .action + .action,
+    #MemberLoginForm_LostPasswordForm .input-group-btn > .btn + .action,
+    #MemberLoginForm_LostPasswordForm .input-group-btn > .action + .action {
       margin-left: -1px; }
-    .input-group-btn > .btn:hover, #MemberLoginForm_LoginForm .input-group-btn > .action:hover, .input-group-btn > .btn:focus, #MemberLoginForm_LoginForm .input-group-btn > .action:focus, .input-group-btn > .btn:active, #MemberLoginForm_LoginForm .input-group-btn > .action:active {
+    .input-group-btn > .btn:hover, #MemberLoginForm_LoginForm .input-group-btn > .action:hover,
+    #MemberLoginForm_LostPasswordForm .input-group-btn > .action:hover, .input-group-btn > .btn:focus, #MemberLoginForm_LoginForm .input-group-btn > .action:focus,
+    #MemberLoginForm_LostPasswordForm .input-group-btn > .action:focus, .input-group-btn > .btn:active, #MemberLoginForm_LoginForm .input-group-btn > .action:active,
+    #MemberLoginForm_LostPasswordForm .input-group-btn > .action:active {
       z-index: 2; }
   .input-group-btn:first-child > .btn, #MemberLoginForm_LoginForm .input-group-btn:first-child > .action,
+  #MemberLoginForm_LostPasswordForm .input-group-btn:first-child > .action,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
   .input-group-btn:last-child > .btn, #MemberLoginForm_LoginForm .input-group-btn:last-child > .action,
+  #MemberLoginForm_LostPasswordForm .input-group-btn:last-child > .action,
   .input-group-btn:last-child > .btn-group {
     margin-left: -1px; }
 
@@ -3490,10 +3619,12 @@ input[type="button"].btn-block {
 .navbar-btn {
   margin-top: 8px;
   margin-bottom: 8px; }
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-sm > .navbar-btn.action {
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-sm > .navbar-btn.action,
+  #MemberLoginForm_LostPasswordForm .btn-group-sm > .navbar-btn.action {
     margin-top: 10px;
     margin-bottom: 10px; }
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-xs > .navbar-btn.action {
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, #MemberLoginForm_LoginForm .btn-group-xs > .navbar-btn.action,
+  #MemberLoginForm_LostPasswordForm .btn-group-xs > .navbar-btn.action {
     margin-top: 14px;
     margin-bottom: 14px; }
 
@@ -3760,7 +3891,8 @@ input[type="button"].btn-block {
     cursor: pointer; }
   .label:empty {
     display: none; }
-  .btn .label, #MemberLoginForm_LoginForm .action .label {
+  .btn .label, #MemberLoginForm_LoginForm .action .label,
+  #MemberLoginForm_LostPasswordForm .action .label {
     position: relative;
     top: -1px; }
 
@@ -3809,10 +3941,12 @@ input[type="button"].btn-block {
   border-radius: 10px; }
   .badge:empty {
     display: none; }
-  .btn .badge, #MemberLoginForm_LoginForm .action .badge {
+  .btn .badge, #MemberLoginForm_LoginForm .action .badge,
+  #MemberLoginForm_LostPasswordForm .action .badge {
     position: relative;
     top: -1px; }
-  .btn-xs .badge, .btn-group-xs > .btn .badge, #MemberLoginForm_LoginForm .btn-group-xs > .action .badge {
+  .btn-xs .badge, .btn-group-xs > .btn .badge, #MemberLoginForm_LoginForm .btn-group-xs > .action .badge,
+  #MemberLoginForm_LostPasswordForm .btn-group-xs > .action .badge {
     top: 0;
     padding: 1px 5px; }
 
@@ -4524,10 +4658,22 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .action + .btn, .modal-footer #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn + .action, .modal-footer #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .action + .action {
+  .modal-footer .btn + .btn, .modal-footer #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .action + .btn,
+  .modal-footer #MemberLoginForm_LostPasswordForm .action + .btn,
+  #MemberLoginForm_LostPasswordForm .modal-footer .action + .btn, .modal-footer #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn + .action, .modal-footer #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .action + .action,
+  .modal-footer #MemberLoginForm_LostPasswordForm .btn + .action,
+  #MemberLoginForm_LostPasswordForm .modal-footer .btn + .action,
+  .modal-footer #MemberLoginForm_LostPasswordForm .action + .action,
+  #MemberLoginForm_LostPasswordForm .modal-footer .action + .action {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .btn + .action, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .action {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .btn, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .btn,
+  .modal-footer .btn-group #MemberLoginForm_LostPasswordForm .action + .btn,
+  #MemberLoginForm_LostPasswordForm .modal-footer .btn-group .action + .btn, .modal-footer .btn-group #MemberLoginForm_LoginForm .btn + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .btn + .action, .modal-footer .btn-group #MemberLoginForm_LoginForm .action + .action, #MemberLoginForm_LoginForm .modal-footer .btn-group .action + .action,
+  .modal-footer .btn-group #MemberLoginForm_LostPasswordForm .btn + .action,
+  #MemberLoginForm_LostPasswordForm .modal-footer .btn-group .btn + .action,
+  .modal-footer .btn-group #MemberLoginForm_LostPasswordForm .action + .action,
+  #MemberLoginForm_LostPasswordForm .modal-footer .btn-group .action + .action {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -4874,7 +5020,9 @@ button.close {
   color: white;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .carousel-caption .action {
+  .carousel-caption .btn, .carousel-caption #MemberLoginForm_LoginForm .action, #MemberLoginForm_LoginForm .carousel-caption .action,
+  .carousel-caption #MemberLoginForm_LostPasswordForm .action,
+  #MemberLoginForm_LostPasswordForm .carousel-caption .action {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -6465,7 +6613,8 @@ body {
 /*---------------------------------------------*\
     Semi-Bold
 \*---------------------------------------------*/
-strong, #main-nav .nav li a, .btn, #MemberLoginForm_LoginForm .action {
+strong, #main-nav .nav li a, .btn, #MemberLoginForm_LoginForm .action,
+#MemberLoginForm_LostPasswordForm .action {
   font-family: "open_semibold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*---------------------------------------------*\
@@ -6733,7 +6882,9 @@ a:active {
     border-bottom-left-radius: 3px;
     -webkit-transition: 0.1s linear background;
     transition: 0.1s linear background; }
-    #main-nav .nav > li > a.btn-primary, #main-nav #MemberLoginForm_LoginForm .nav > li > a.action, #MemberLoginForm_LoginForm #main-nav .nav > li > a.action {
+    #main-nav .nav > li > a.btn-primary, #main-nav #MemberLoginForm_LoginForm .nav > li > a.action, #MemberLoginForm_LoginForm #main-nav .nav > li > a.action,
+    #main-nav #MemberLoginForm_LostPasswordForm .nav > li > a.action,
+    #MemberLoginForm_LostPasswordForm #main-nav .nav > li > a.action {
       color: white; }
     #main-nav .nav > li > a.btn-secondary {
       color: white; }
@@ -6896,18 +7047,22 @@ a:active {
 /*---------------------------------------------*\
     Buttons
 \*---------------------------------------------*/
-.btn, #MemberLoginForm_LoginForm .action {
+.btn, #MemberLoginForm_LoginForm .action,
+#MemberLoginForm_LostPasswordForm .action {
   border-width: 0;
   font-weight: bold;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px; }
-  .btn:focus, #MemberLoginForm_LoginForm .action:focus {
+  .btn:focus, #MemberLoginForm_LoginForm .action:focus,
+  #MemberLoginForm_LostPasswordForm .action:focus {
     outline: 0; }
-  .btn.btn-shadow, #MemberLoginForm_LoginForm .btn-shadow.action {
+  .btn.btn-shadow, #MemberLoginForm_LoginForm .btn-shadow.action,
+  #MemberLoginForm_LostPasswordForm .btn-shadow.action {
     margin-bottom: 4px; }
-    .btn.btn-shadow:active, #MemberLoginForm_LoginForm .btn-shadow.action:active {
+    .btn.btn-shadow:active, #MemberLoginForm_LoginForm .btn-shadow.action:active,
+    #MemberLoginForm_LostPasswordForm .btn-shadow.action:active {
       margin-bottom: 0;
       margin-top: 4px; }
 
@@ -7412,7 +7567,9 @@ a:active {
   margin-top: 15px; }
 
 @media (min-width: 768px) {
-  #MemberLoginForm_LoginForm, #Form_EditProfileForm, #Form_RegistrationForm {
+  #MemberLoginForm_LoginForm,
+  #Form_RegistrationForm,
+  #MemberLoginForm_LostPasswordForm {
     max-width: 50%; } }
 /*---------------------------------------------*\
     Contact Form
