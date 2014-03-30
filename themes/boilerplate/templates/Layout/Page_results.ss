@@ -5,7 +5,7 @@
     <div id="Content" class="searchResults">
         <h1><i class="fa fa-search"></i> Search</h1>
         <% if $Query %>
-            <p class="alert alert-info"><% sprintf(_t('PageResults.SearchHeading', 'You searched for "%s"'), $Query) %></p>
+            <p class="alert alert-info"><%t PageResults.SearchHeading 'You searched for "{Title}"' Title=$Query %></p>
         <% end_if %>
         <% if $Results %>
             <div id="SearchResults">
@@ -14,21 +14,21 @@
                     <h4>
                         <a href="$Link">
                             <% if $MenuTitle %>
-                            $MenuTitle
+                                $MenuTitle
                             <% else %>
-                            $Title
+                                $Title
                             <% end_if %>
                         </a>
                     </h4>
                     <% if $Content %>
                     <p>$Content.LimitWordCountXML</p>
                     <% end_if %>
-                    <a class="readMoreLink" href="$Link"><% sprintf(_t('PageResults.ReadMoreText', 'Read more about "%s"...'), $Title) %></a>
+                    <a class="readMoreLink" href="$Link"><%t PageResults.ReadMoreText 'Read more about "{Title}"' Title=$Title %></a>
                 </div><!-- /.well -->
                 <% end_loop %>
             </div><!-- /#searchResults -->
         <% else %>
-            <p class="alert alert-warning"><% _t('PageResulkts.NoResultsText', 'Sorry, your search query did not return any results.') %></p>
+            <p class="alert alert-warning"><%t PageResults.NoResultsText 'Sorry, your search query did not return any results.' %></p>
         <% end_if %>
         <% if $Results.MoreThanOnePage %>
         <div id="PageNumbers">

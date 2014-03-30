@@ -125,24 +125,24 @@ JS
     public function ContactForm() {
 
         $name = new TextField('Name');
-        $name->setAttribute('placeholder', _t('ContactPage.NamePlaceholder', 'Enter your name')
+        $name->setAttribute('placeholder', _t('ContactPage.NamePlaceholder', 'Enter your name'))
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control'));
+            ->addExtraClass('form-control');
 
         $email = new EmailField('Email');
-        $email->setAttribute('placeholder', _t('ContactPage.EmailPlaceholder', 'Enter your email address')
+        $email->setAttribute('placeholder', _t('ContactPage.EmailPlaceholder', 'Enter your email address'))
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control'));
+            ->addExtraClass('form-control');
 
         $message = new TextareaField('Message');
-        $message->setAttribute('placeholder', _t('ContactPage.MessagePlaceholder', 'Enter your message')
+        $message->setAttribute('placeholder', _t('ContactPage.MessagePlaceholder', 'Enter your message'))
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control'));
+            ->addExtraClass('form-control');
 
         $question = new TextField('Question');
-        $question->setTitle(_t('ContactPage.QuestionLabel', '3 &plus; 7 &equals; ?')
+        $question->setTitle(_t('ContactPage.QuestionLabel', '3 &plus; 7 &equals; ?'))
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control'));
+            ->addExtraClass('form-control');
 
         $fields = new FieldList(
             $name,
