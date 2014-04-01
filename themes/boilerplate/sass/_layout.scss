@@ -31,7 +31,8 @@ a {
 \*---------------------------------------------*/
 
 #header {
-    padding: $gap-sm 0;
+    padding: $gap-md 0;
+    margin-bottom: $gap-md;
     position: relative;
     z-index: 2;
     #logoContainer {
@@ -45,7 +46,18 @@ a {
 }
 @media (min-width: $screen-sm) {
     #header {
-        padding: $gap-md 0;
+        margin-bottom: $gap-lg;
+        padding: $gap-lg 0;
+        // Remove space between elements.
+        font-size: 0;
+        #logoContainer,
+        #navigationContainer{
+            // Set font size after removing space between inline-block elements.
+            font-size: 14px;
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
+        }
     }
 }
 .has-slider.slider-extend {
@@ -265,22 +277,6 @@ a {
 
 #mainContent {
     margin-bottom: $gap-lg;
-    .page-header {
-        margin: 0 0 $gap-md 0;
-        border-width: 0;
-        padding: $gap-md 0;
-        h1 {
-            margin: 0;
-        }
-    }
-}
-@media (min-width: $screen-sm) {
-    #mainContent {
-        .page-header {
-            margin: 0 0 $gap-lg 0;
-            padding: $gap-lg 0;
-        }
-    }
 }
 
 /*---------------------------------------------*\

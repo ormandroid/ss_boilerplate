@@ -5,8 +5,7 @@ class GalleryPage extends Page {
 
     private static $db = array(
         'Columns' => 'Int',
-        'Items' => 'Int',
-        'GalleryDisplay' => 'Int'
+        'Items' => 'Int'
     );
 
     public static $many_many = array(
@@ -15,8 +14,7 @@ class GalleryPage extends Page {
 
     private static $defaults = array(
         'Columns' => 2,
-        'Items' => 10,
-        'GalleryDisplay' => 1
+        'Items' => 10
     );
 
     private static $description = 'Displays a lightbox gallery of images';
@@ -33,10 +31,6 @@ class GalleryPage extends Page {
             'GalleryImages',
             _t('GalleryPage.GalleryImagesLabel', 'Gallery Images'),
             array(
-                new DropdownField('GalleryDisplay', _t('GalleryPage.GalleryDisplayLabel', 'Type of Gallery'), array(
-                    'Full Page',
-                    'Lightbox'
-                )),
                 new DropdownField('Columns', _t('GalleryPage.ColumnsLabel', 'How many items to display on each row'), array(
                     'One Item (Full Width)',
                     'Two Items',
