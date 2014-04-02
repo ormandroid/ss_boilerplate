@@ -1,6 +1,6 @@
 # SS Boilerplate #
 
-A rapid development theme based on Bootstrap 3.x
+A rapid development theme based on Bootstrap 3.1.x
 
 ###[DEMO](http://webdough.co.nz/~boilerpl/)###
 
