@@ -7,14 +7,10 @@
         <% include SideBar %>
 
         <% if $Menu(2) %><div class="col-xs-12 col-sm-9"><% end_if %>
-        <article>
-            <aside class="content typography">
-                $Content
-                $Subscribe
-                $Form
-                $PageComments
-            </aside><!-- /.content typography -->
-        </article>
+
+        <% include Content %>
+
+        $Subscribe
 
         <% if $Menu(2) %></div><!-- /.col-xs-12 col-sm-9 --><% end_if %>
 

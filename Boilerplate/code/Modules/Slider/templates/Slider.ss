@@ -1,6 +1,6 @@
 <% if $SliderItems %>
 
-    <div id="sliderContainer">
+    <section id="sliderContainer">
 
         <% if $FullWidth %><% else %><div class="container"><% end_if %>
 
@@ -75,6 +75,6 @@
             </section><!-- /.mobile-slider-controls visible-xs -->
         <% end_if %>
 
-    </div><!-- /#sliderContainer -->
+    </section><!-- /#sliderContainer -->
 
 <% end_if %>

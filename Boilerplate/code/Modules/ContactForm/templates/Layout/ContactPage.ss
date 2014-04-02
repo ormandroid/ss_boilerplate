@@ -17,24 +17,21 @@
 
         <div class="col-xs-12 col-sm-9">
 
-            <div class="content typography">
-                $Content
-                <% if $Success %>
+            <% include Content %>
+
+            <% if $Success %>
+            <% else %>
+                <% if $MailTo %>
+                    $ContactForm
                 <% else %>
-                    <% if $MailTo %>
-                        $ContactForm
-                    <% else %>
-                        <div class="alert alert-warning">
-                            <%t ContactPage.NoEmailAlert "Please choose an email address for the contact page to send to." %>
-                        </div><!-- /.alert alert-warning -->
-                    <% end_if %>
+                    <div class="alert alert-warning">
+                        <%t ContactPage.NoEmailAlert "Please choose an email address for the contact page to send to." %>
+                    </div><!-- /.alert alert-warning -->
                 <% end_if %>
-                <% if $Latitude && $Longitude %>
-                    <div id="map-canvas"></div><!-- /#map-canvas -->
-                <% end_if %>
-                $Form
-                $PageComments
-            </div><!-- /.content typography -->
+            <% end_if %>
+            <% if $Latitude && $Longitude %>
+                <div id="map-canvas"></div><!-- /#map-canvas -->
+            <% end_if %>
 
         </div><!-- /.col-xs-12 col-sm-6 -->
     </div><!-- /.row -->

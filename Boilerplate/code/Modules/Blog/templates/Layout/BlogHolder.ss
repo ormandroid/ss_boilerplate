@@ -7,42 +7,42 @@
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
         <div class="col-xs-12 col-sm-8 col-lg-9">
-            <article>
-                <div class="content typography">
-                    $Content
-                </div><!-- /.content typography -->
-            </article>
-            <div class="row">
-                <% loop $PaginatedPages %>
-                    <% if $ClassName = BlogPage %>
-                        <article class="blog-item $Top.ColumnClass<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
-                            <div class="blog-content">
-                                <% if $BlogImage %>
-                                    <a href="$Link" class="blog-image" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">
-                                        $BlogImage.CroppedImage(848, 340)
-                                        <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
-                                    </a><!-- /.blog-image -->
-                                <% end_if %>
-                                <h3 class="blog-title"><a href="$Link" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$Title</a></h3><!-- /.blog-title -->
-                                <% if $Date && $Author %>
-                                    <p class="blog-meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.blog-meta -->
-                                <% end_if %>
-                                <p class="blog-summary">$Content.LimitWordCountXML(40)</p><!-- /.blog-summary -->
-                                <a href="$Link" class="btn btn-primary" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">Read more</a>
-                            </div><!-- /.blog-content -->
-                        </article><!-- /.blog-item -->
-                        <% if $MultipleOf($Top.ColumnMultiple) %>
-                            <div class="clearfix"></div><!-- /.clearfix -->
-                        <% end_if %>
-                    <% end_if %>
-                <% end_loop %>
-            </div><!-- /.row -->
-            <% include Pagination %>
-            $Form
-            $PageComments
-        </div><!-- /.col-xs-12 col-sm-9 -->
 
-        <div class="visible-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
+            <% include Content %>
+
+            <% if $PaginatedPages %>
+                <section class="blog-loop">
+                    <div class="row">
+                        <% loop $PaginatedPages %>
+                            <article class="item $Top.ColumnClass $FirstLast $EvenOdd">
+                                <div class="content">
+                                    <% if $BlogImage %>
+                                        <a href="$Link" class="image" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">
+                                            $BlogImage.CroppedImage(848, 340)
+                                            <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
+                                        </a><!-- /.image -->
+                                    <% end_if %>
+                                    <h3 class="title">
+                                        <a href="$Link" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$Title</a>
+                                    </h3><!-- /.title -->
+                                    <% if $Date && $Author %>
+                                        <p class="meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.meta -->
+                                    <% end_if %>
+                                    <p class="summary">$Content.LimitWordCountXML(40)</p><!-- /.summary -->
+                                    <a href="$Link" class="btn btn-primary" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">Read more</a>
+                                </div><!-- /.content -->
+                            </article><!-- /.item -->
+                            <% if $MultipleOf($Top.ColumnMultiple) %>
+                                <div class="clearfix"></div><!-- /.clearfix -->
+                            <% end_if %>
+                        <% end_loop %>
+                    </div><!-- /.row -->
+                </section><!-- /.blog-loop -->
+            <% end_if %>
+
+            <% include Pagination %>
+
+        </div><!-- /.col-xs-12 col-sm-9 -->
 
     </div><!-- /.row -->
 

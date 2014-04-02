@@ -2,13 +2,15 @@
 
 <div class="container">
 
-    <div id="Content" class="searchResults">
-        <h1><i class="fa fa-search"></i> Search</h1>
-        <% if $Query %>
-            <p class="alert alert-info"><%t PageResults.SearchHeading 'You searched for "{Title}"' Title=$Query %></p>
-        <% end_if %>
+    <section class="search-results">
+        <article class="content typography">
+            <h1><i class="fa fa-search"></i> Search</h1>
+            <% if $Query %>
+                <p class="alert alert-info"><%t PageResults.SearchHeading 'You searched for "{Title}"' Title=$Query %></p>
+            <% end_if %>
+        </article><!-- /.content typography -->
         <% if $Results %>
-            <div id="SearchResults">
+            <div class="results-loop">
                 <% loop $Results %>
                 <div class="well">
                     <h4>
@@ -26,30 +28,36 @@
                     <a class="readMoreLink" href="$Link"><%t PageResults.ReadMoreText 'Read more about "{Title}"' Title=$Title %></a>
                 </div><!-- /.well -->
                 <% end_loop %>
-            </div><!-- /#searchResults -->
+            </div><!-- /.results-loop -->
         <% else %>
             <p class="alert alert-warning"><%t PageResults.NoResultsText 'Sorry, your search query did not return any results.' %></p>
         <% end_if %>
+
         <% if $Results.MoreThanOnePage %>
-        <div id="PageNumbers">
             <ul class="pagination">
                 <% if $Results.NotFirstPage %>
-                    <li><a href="$Results.PrevLink" title="Previous">&larr;</a></li>
+                    <li><a class="prev" href="$Results.PrevLink"><%t Pagination.PrevText 'Prev' %></a></li>
                 <% end_if %>
                 <% loop $Results.Pages %>
                     <% if $CurrentBool %>
-                        <li class="active"><span>$PageNum</span></li>
+                        <li class="active"><span>$PageNum</span></li><!-- /.active -->
                     <% else %>
-                        <li><a href="$Link" title="Page $PageNum">$PageNum</a></li>
+                        <% if $Link %>
+                            <li><a href="$Link">$PageNum</a></li>
+                        <% else %>
+                            <li><%t Pagination.Ellipsis '...' %></li>
+                        <% end_if %>
                     <% end_if %>
                 <% end_loop %>
                 <% if $Results.NotLastPage %>
-                    <li><a href="$Results.NextLink" title="Next">&rarr;</a></li>
+                    <li><a class="next" href="$Results.NextLink"><%t Pagination.NextText 'Next' %></a></li>
                 <% end_if %>
+
+                <%--<li class="disabled"><span>$PaginatedPages.CurrentPosition</span></li>--%>
+
             </ul><!-- /.pagination -->
-            <p>Page $Results.CurrentPage of $Results.TotalPages</p>
-        </div><!-- /#pageNumbers -->
         <% end_if %>
-    </div><!-- /#content .searchResults -->
+
+    </section><!-- /.search-results -->
 
 </div><!-- /.container -->

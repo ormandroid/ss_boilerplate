@@ -6,68 +6,68 @@
     Blog
 \*---------------------------------------------*/
 
-.blog-sidebar-content {
-    color: $gray-light
-}
-.blog-item {
-    .blog-content {
-        margin-bottom: $gap-md;
-        padding-bottom: $gap-md;
-        border-bottom: 3px solid $gray-lighter;
-        .blog-image {
+.blog-loop{
+    .item {
+        .content {
             margin-bottom: $gap-md;
-            display: block;
-            background: $gray-darker;
-            position: relative;
-            img {
-                -webkit-backface-visibility: hidden;
-                @include transition(.1s linear opacity);
-            }
-            @include absolute-arrow();
-            .hover-icon {
-                display: none;
-                color: $btn-primary-color;
-                @include icon-center();
-            }
-            &:hover {
+            padding-bottom: $gap-md;
+            border-bottom: 3px solid $gray-lighter;
+            .image {
+                margin-bottom: $gap-md;
+                display: block;
+                background: $gray-darker;
+                position: relative;
                 img {
-                    opacity: 0.9
+                    -webkit-backface-visibility: hidden;
+                    @include transition(.1s linear opacity);
                 }
+                @include absolute-arrow();
                 .hover-icon {
-                    display: block;
+                    display: none;
+                    color: $btn-primary-color;
+                    @include icon-center();
                 }
-            }
-        }
-        .blog-title {
-            a {
-                color: $btn-default-color;
-                @include transition(.1s linear color);
                 &:hover {
-                    color: $brand-primary;
-                    text-decoration: none;
+                    img {
+                        opacity: 0.9
+                    }
+                    .hover-icon {
+                        display: block;
+                    }
                 }
             }
-        }
-        .blog-meta {
-            color: $gray-light;
-            margin-bottom: $gap-md;
-        }
-        .blog-summary {
-            margin-bottom: $gap-md;
+            .title {
+                a {
+                    color: $btn-default-color;
+                    @include transition(.1s linear color);
+                    &:hover {
+                        color: $brand-primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .meta {
+                margin-bottom: $gap-md;
+            }
+            .summary {
+                margin-bottom: $gap-md;
+            }
         }
     }
 }
 @media (min-width: $screen-sm) {
-    .blog-item {
-        .blog-content {
-            margin-bottom: $gap-lg;
-            padding-bottom: $gap-lg;
+    .blog-loop{
+        .item {
+            .content {
+                margin-bottom: $gap-lg;
+                padding-bottom: $gap-lg;
+            }
         }
     }
 }
-.blog-single {
-    .blog-meta {
-        color: $gray-light;
+
+.blog-page {
+    .meta {
         margin-bottom: $gap-md;
     }
 }
@@ -75,72 +75,70 @@
     Portfolio
 \*---------------------------------------------*/
 
-.portfolio-item {
-    margin-bottom: $gap-md;
-    a {
-        .portfolio-image {
-            position: relative;
-            display: block;
-            background: $gray-darker;
-            @include absolute-arrow();
-            img {
-                -webkit-backface-visibility: hidden;
-                @include transition(.1s linear opacity);
-            }
-            .hover-icon {
-                color: $btn-primary-color;
-                @include icon-center();
-                @include opacity(0);
-                @include transition(.1s linear opacity);
-            }
-        }
-        .portfolio-meta {
-            border: 1px solid $gray-lighter;
-            border-top-width: 0;
-            padding: $gap-md;
-            background: $btn-default-bg;
-            @include border-bottom-radius($border-radius-base);
-            h5 {
-                margin-top: 0;
-                font-weight: bold;
-                color: $gray;
-            }
-            .portfolio-subtitle {
-                color: $gray-light;
-            }
-        }
-        &:hover {
-            text-decoration: none;
-            img {
-                opacity: 0.9
-            }
-            .hover-icon {
-                @include opacity(1);
-            }
-        }
-    }
-}
-@media (min-width: $screen-sm) {
-    .portfolio-item {
-        margin-bottom: $gap-lg;
-    }
-}
-.portfolio-page-item {
-    .portfolio-title {
-        margin-top: 0;
+.portfolio-loop{
+    .item {
         margin-bottom: $gap-md;
-        color: $gray;
+        a {
+            .image {
+                position: relative;
+                display: block;
+                background: $gray-darker;
+                @include absolute-arrow();
+                img {
+                    -webkit-backface-visibility: hidden;
+                    @include transition(.1s linear opacity);
+                }
+                .hover-icon {
+                    color: $btn-primary-color;
+                    @include icon-center();
+                    @include opacity(0);
+                    @include transition(.1s linear opacity);
+                }
+            }
+            .meta {
+                border: 1px solid $gray-lighter;
+                border-top-width: 0;
+                padding: $gap-md;
+                background: $btn-default-bg;
+                @include border-bottom-radius($border-radius-base);
+                h5 {
+                    margin-top: 0;
+                    font-weight: bold;
+                    color: $gray;
+                }
+                .portfolio-subtitle {
+                    color: $gray-light;
+                }
+            }
+            &:hover {
+                text-decoration: none;
+                img {
+                    opacity: 0.9
+                }
+                .hover-icon {
+                    @include opacity(1);
+                }
+            }
+        }
     }
-    .portfolio-image-item {
+}
+
+@media (min-width: $screen-sm) {
+    .portfolio-loop{
+        .item {
+            margin-bottom: $gap-lg;
+        }
+    }
+}
+.portfolio-page {
+    .item {
         margin-bottom: $gap-md
     }
-    .content {
-        color: $gray-light;
-    }
 }
+
 @media (min-width: $screen-sm) {
-    .portfolio-page-item {
-        .portfolio-image-item {
+    .portfolio-page {
+        .item {
             margin-bottom: add($gap-md, $gap-sm);
             &.last {
                 margin-bottom: 0;
@@ -153,9 +151,9 @@
     Page Builder
 \*---------------------------------------------*/
 
-#pageItemsContainer {
+.page-item-loop {
     margin-top: $gap-md;
-    .page-item {
+    .item {
         padding: $gap-md;
         background: no-repeat center center;
         background-size: cover;
@@ -168,9 +166,9 @@
     }
 }
 @media (min-width: $screen-sm) {
-    #pageItemsContainer {
+    .page-item-loop {
         margin-top: $gap-lg;
-        .page-item {
+        .item {
             padding: $gap-lg;
         }
     }
@@ -180,10 +178,12 @@
     Gallery
 \*---------------------------------------------*/
 
-.gallery-container {
-    margin-bottom: -$gap-md;
-    .gallery-item {
-        margin-bottom: $gutter;
+.gallery-loop {
+    .item {
+        margin-bottom: $gap-md;
+        &.last{
+            margin-bottom: 0;
+        }
         .hover-icon {
             color: $btn-primary-color;
             @include icon-center();
@@ -206,8 +206,14 @@
 }
 
 @media (min-width: $screen-sm) {
-    .gallery-container {
-        margin-bottom: -$gutter;
+    .gallery-loop {
+        margin-bottom: -$gap-lg;
+        .item{
+            margin-bottom: $gap-lg;
+            &.last{
+                margin-bottom: $gap-lg;
+            }
+        }
     }
 }
 
@@ -278,11 +284,13 @@
     Files
 \*---------------------------------------------*/
 
-.file-group {
-    .panel-body {
-        ul {
-            &.list-unstyled {
-                margin: 0;
+.file-group-loop {
+    .item {
+        .panel-body {
+            ul {
+                &.list-unstyled {
+                    margin: 0;
+                }
             }
         }
     }
@@ -348,10 +356,9 @@
     Testimonials
 \*---------------------------------------------*/
 
-.testimonial-container{
-    .testimonial-item{
-        padding: $gap-md;
-        margin: 0;
+.testimonial-loop{
+    .item{
+        margin: 0 0 $gap-lg 0;
         .media{
             > .pull-left{
                 margin-right: $gutter;
@@ -372,16 +379,13 @@
                 @include border-radius(100%)
             }
         }
-        &.even{
-            background: $gray-lightest;
-        }
     }
 }
 
 @media (min-width: $screen-sm) {
-    .testimonial-container{
-        .testimonial-item{
-            padding: $gap-lg $gap-md;
+    .testimonial-loop{
+        .item{
+            margin-bottom: $gap-md;
         }
     }
 }

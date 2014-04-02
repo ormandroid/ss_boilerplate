@@ -2,30 +2,42 @@
 
 <div class="container">
 
-    <article class="portfolio-page-item">
+    <% include Content %>
 
-        <div class="row">
+    <% if $PortfolioImages %>
+        <section class="portfolio-page">
+            <% loop $PortfolioImages %>
+                <div class="item">
+                    <% if $Content %>
+                        <div class="row">
+                            <% if $TextRight %>
+                                <div class="col-xs-12 col-sm-9">
+                                    $Image.setWidth(848)
+                                </div><!-- /.col-xs-12 col-sm-9 -->
+                                <div class="col-xs-12 col-sm-3">
+                                    <aside class="typography">
+                                        $Content
+                                    </aside><!-- /.typography -->
+                                </div><!-- /.col-xs-12 col-sm-3 -->
+                            <% else %>
+                                <div class="col-xs-12 col-sm-3">
+                                    <aside class="typography">
+                                        $Content
+                                    </aside><!-- /.typography -->
+                                </div><!-- /.col-xs-12 col-sm-3 -->
+                                <div class="col-xs-12 col-sm-9">
+                                    $Image.setWidth(848)
+                                </div><!-- /.col-xs-12 col-sm-9 -->
+                            <% end_if %>
+                        </div><!-- /.row -->
+                    <% else %>
+                        $Image.setWidth(1140)
+                    <% end_if %>
 
-            <div class="col-xs-12 col-sm-9">
-                <% loop $PortfolioImages %>
-                    <figure class="portfolio-image-item<% if $First %> first<% end_if %><% if $Last %> last<% end_if %>">
-                        $Image.setWidth(878)
-                    </figure><!-- /.portfolio-image-item -->
-                <% end_loop %>
-            </div><!-- /.col-xs-12 col-sm-9 -->
-
-            <div class="col-xs-12 col-sm-3">
-                <aside class="content typography">
-                    <h3 class="portfolio-title">$SubTitle</h3><!-- /.portfolio-title -->
-                    $Content
-                    $Form
-                    $PageComments
-                </aside><!-- /.content -->
-            </div><!-- /.col-xs-12 col-sm-3 -->
-
-        </div><!-- /.row -->
-
-    </article><!-- /.portfolio-page-item -->
+                </div><!-- /.item -->
+            <% end_loop %>
+        </section><!-- /.portfolio-page -->
+    <% end_if %>
 
 </div><!-- /.container -->
 

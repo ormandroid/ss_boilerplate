@@ -1,7 +1,7 @@
 <% if $SiteConfig.DisqusForumShortName %>
     <section id="disqusComments">
-        <h2>Join the conversation</h2>
-        <div id="disqus_thread"></div>
+        <h2><%t Disqus.Title "Join the conversation" %></h2>
+        <div id="disqus_thread"></div><!-- #disqus_thread -->
         <script type="text/javascript">
             var disqus_shortname = '{$SiteConfig.DisqusForumShortName}'; // required: replace example with your forum shortname
             (function() {

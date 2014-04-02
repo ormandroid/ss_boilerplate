@@ -98,8 +98,15 @@ h5 {
     }
 }
 .typography {
-    h1, h2 {
-        margin-bottom: $gap-md;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+        &:first-child{
+            margin-top: 0;
+        }
     }
     em{
         font-style: italic;
@@ -193,9 +200,6 @@ h5 {
         }
         h5 {
             font-size: 16px;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            margin-top: 0;
         }
         h1, h2 {
             margin-bottom: $gap-md;

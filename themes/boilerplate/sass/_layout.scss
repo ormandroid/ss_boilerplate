@@ -270,14 +270,9 @@ a {
     }
 }
 
-
 /*---------------------------------------------*\
     Page
 \*---------------------------------------------*/
-
-#mainContent {
-    margin-bottom: $gap-lg;
-}
 
 /*---------------------------------------------*\
     Footer
@@ -299,6 +294,15 @@ a {
 /*======================================================================*\
     Classes
 \*======================================================================*/
+
+.content{
+    margin-bottom: $gap-md;
+}
+@media (min-width: $screen-sm) {
+    .content{
+        margin-bottom: $gap-lg;
+    }
+}
 
 /*---------------------------------------------*\
     Carousel
@@ -343,6 +347,12 @@ a {
 \*---------------------------------------------*/
 
 .well {
+    border-width: 0;
+    @include border-radius();
+    @include box-shadow(none);
+    &.well-default {
+        @include well-variant($btn-default-color, $brand-default);
+    }
     &.well-primary {
         @include well-variant($btn-primary-color, $brand-primary);
     }

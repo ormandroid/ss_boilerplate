@@ -22,7 +22,7 @@ class PortfolioPage extends Page {
         $fields = parent::getCMSFields();
 
         $fields->removeByName('Slider');
-        $fields->removeByName('Widgets');
+        $fields->removeByName('PageBuilder');
 
         $fields->addFieldToTab('Root.Main', new TextField('SubTitle', _t('PortfolioPage.SubTitleLabel', 'Sub Title')), 'Content');
 
@@ -41,7 +41,7 @@ class PortfolioPage extends Page {
             $this->owner->PortfolioImages(),
             $config
         );
-        $fields->addFieldToTab('Root.Main', $gridField, 'Content');
+        $fields->addFieldToTab('Root.PortfolioImages', $gridField);
 
         return $fields;
 

@@ -22,4 +22,4 @@
             <i class="fa fa-google-plus"></i>
         </a>
     </li>
-</ul><!-- /.sharer -->
+</ul><!-- /.sharer list-inline list-unstyled -->
