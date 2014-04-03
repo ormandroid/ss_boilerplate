@@ -27,7 +27,7 @@ class BlogPage extends Page {
         $fields = parent::getCMSFields();
 
         $fields->removeByName('Slider');
-        $fields->removeByName('Widgets');
+        $fields->removeByName('PageBuilder');
 
         $fields->addFieldToTab('Root.Main', new UploadField('BlogImage', _t('BlogPage.BlogImageLabel', 'Featured blog image')), 'Content');
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date', _t('BlogPage.DateLabel', 'Article Date')), 'Content');

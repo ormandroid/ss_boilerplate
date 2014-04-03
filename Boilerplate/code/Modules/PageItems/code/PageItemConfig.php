@@ -9,7 +9,7 @@ class PageItemConfig extends DataExtension {
     public function updateCMSFields(FieldList $fields) {
 
         /* -----------------------------------------
-         * Page Widgets
+         * Page Items
         ------------------------------------------*/
 
         $config = GridFieldConfig_RelationEditor::create(10);
