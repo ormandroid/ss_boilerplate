@@ -279,7 +279,7 @@ a {
 \*---------------------------------------------*/
 
 #footer {
-    padding: add($gap-sm, $gap-xs) 0;
+    padding: $gap-md 0;
 }
 @media (min-width: $screen-sm) {
     #footer {
@@ -319,6 +319,7 @@ a {
 \*---------------------------------------------*/
 
 .btn {
+    white-space: normal;
     border-width: 0;
     font-weight: bold;
     @include border-radius();
