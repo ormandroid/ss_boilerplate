@@ -182,7 +182,7 @@ JS
 
         // If captcha was incorrect
         if((int)$data['Question']!=10){
-            $form->AddErrorMessage('Question', _t('ContactPage.QuestionErrorText', 'Sorry, the question was answered incorrectly', 'validation'));
+            $form->AddErrorMessage('Question', _t('ContactPage.QuestionErrorText', 'Sorry, the question was answered incorrectly'), 'validation');
             return $this->redirectBack();
         }
 

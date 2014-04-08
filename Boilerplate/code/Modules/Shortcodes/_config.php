@@ -26,6 +26,55 @@ $formats = array(
         'merge_siblings' => false
     ),
     array(
+        'title' => 'Well - Default',
+        'block' => 'div',
+        'classes' => 'well well-default',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Primary',
+        'block' => 'div',
+        'classes' => 'well well-secondary',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Secondary',
+        'block' => 'div',
+        'classes' => 'well well-secondary',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Inverse',
+        'block' => 'div',
+        'classes' => 'well well-inverse',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Info',
+        'block' => 'div',
+        'classes' => 'well well-info',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Warning',
+        'block' => 'div',
+        'classes' => 'well well-warning',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
+        'title' => 'Well - Danger',
+        'block' => 'div',
+        'classes' => 'well well-danger',
+        'wrapper' => true,
+        'merge_siblings' => false
+    ),
+    array(
         'title' => 'Well - Small',
         'block' => 'div',
         'classes' => 'well well-sm',

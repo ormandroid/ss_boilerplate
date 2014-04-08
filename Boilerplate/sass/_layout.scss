@@ -60,19 +60,6 @@ a {
         }
     }
 }
-.has-slider.slider-extend {
-    #header {
-        position: absolute;
-        width: 100%;
-    }
-}
-.slider-dark.slider-extend {
-    #header {
-        .tagline {
-            color: $btn-primary-color;
-        }
-    }
-}
 
 /*---------------------------------------------*\
     Navigation
@@ -108,7 +95,7 @@ a {
                 > a {
                     margin-left: 2px;
                     padding: 8px $gap-sm;
-                    font-weight: bold;
+                    font-weight: 600;
                     margin-bottom: $gap-xs;
                     @include border-radius();
                     @include transition(.1s linear background);
@@ -165,13 +152,6 @@ a {
             }
         }
 
-}
-.slider-dark.slider-extend {
-    #main-nav {
-        a {
-            color: $btn-primary-color;
-        }
-    }
 }
 #select-navigation {
     border-top-width: 0;
@@ -321,7 +301,7 @@ a {
 .btn {
     white-space: normal;
     border-width: 0;
-    font-weight: bold;
+    font-weight: 600;
     @include border-radius();
     &:focus {
         outline: 0;
@@ -352,25 +332,25 @@ a {
     @include border-radius();
     @include box-shadow(none);
     &.well-default {
-        @include well-variant($btn-default-color, $brand-default);
+        @include well($btn-default-color, $brand-default);
     }
     &.well-primary {
-        @include well-variant($btn-primary-color, $brand-primary);
+        @include well($btn-primary-color, $brand-primary);
     }
     &.well-secondary {
-        @include well-variant($btn-secondary-color, $brand-secondary);
+        @include well($btn-secondary-color, $brand-secondary);
     }
     &.well-inverse {
-        @include well-variant($btn-inverse-color, $brand-inverse);
+        @include well($btn-inverse-color, $brand-inverse);
     }
     &.well-info {
-        @include well-variant($btn-info-color, $brand-info);
+        @include well($btn-info-color, $brand-info);
     }
     &.well-warning {
-        @include well-variant($btn-warning-color, $brand-warning);
+        @include well($btn-warning-color, $brand-warning);
     }
     &.well-danger {
-        @include well-variant($btn-danger-color, $brand-danger);
+        @include well($btn-danger-color, $brand-danger);
     }
     p:last-child {
         margin-bottom: 0;

@@ -6,12 +6,33 @@
     Inputs
 \*---------------------------------------------*/
 
+.field{
+    &.form-control{
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        line-height: inherit;
+        background: transparent none;
+        border-width: 0;
+        @include border-radius(0);
+        @include box-shadow(none);
+        @include transition(none);
+    }
+}
+
 input:focus, textarea:focus, .form-control:focus {
     @include box-shadow(none);
 }
 .form-control {
+    margin-bottom: $gap-md;
     &:focus {
         border-color: $gray;
+    }
+}
+.text{
+    .password{
+        @extend .form-control;
     }
 }
 .holder-required {
@@ -27,7 +48,7 @@ input:focus, textarea:focus, .form-control:focus {
 .message {
     margin: $gap-xs 0;
     display: block;
-    @extend .alert;
+    padding: $gap-sm;
     @extend .alert-info;
     > p {
         margin-bottom: 0;

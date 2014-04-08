@@ -17,14 +17,14 @@
             <% end_if %>
         <% end_loop %>
         <% if $SearchForm %>
-            <li><a data-toggle="modal" href="#searchModal" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
+            <li><a href="{$Link}SearchForm?Search" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
         <% end_if %>
     </ul><!-- /.nav navbar-nav pull-right hidden-xs -->
 
     <div id="select-navigation" class="visible-xs">
         <div class="menu-icon btn-primary"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
         <% if $SearchForm %>
-            <a data-toggle="modal" href="#searchModal" class="btn-secondary navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
+            <a href="{$Link}SearchForm?Search" class="btn-secondary navbar-btn menu-icon search"><i class="fa fa-search"></i></a>
         <% end_if %>
         <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
             <% loop $Menu(1) %>

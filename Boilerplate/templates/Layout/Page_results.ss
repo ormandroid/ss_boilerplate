@@ -1,14 +1,25 @@
-<% include PageHeader %>
-
 <div class="container">
 
+    <form $FormAttributes role="form">
+        <fieldset>
+            <div class="well">
+                <h4><% sprintf(_t('SearchForm.SearchHeading',"Search %s"), $SiteConfig.Title) %></h4>
+                <div class="form-group">
+                    <input type="text" name="Search" placeholder="<% _t('SearchForm.SearchPlaceholder', 'Enter your search keywords...') %>" class="form-control" id="SearchForm_SearchForm_Search">
+                </div><!-- /.form-group -->
+                <div class="form-group">
+                    <input type="submit" name="action_results" value="Search" class="action btn btn-primary" id="SearchForm_SearchForm_action_results">
+                </div><!-- /.form-group -->
+            </div><!-- /.well -->
+        </fieldset>
+    </form><!-- /[role="form"] -->
+
     <section class="search-results">
-        <article class="content typography">
-            <h1><i class="fa fa-search"></i> Search</h1>
-            <% if $Query %>
-                <p class="alert alert-info"><%t PageResults.SearchHeading 'You searched for "{Title}"' Title=$Query %></p>
-            <% end_if %>
-        </article><!-- /.content typography -->
+        <% if $Query %>
+            <article class="content typography">
+                <h1><i class="fa fa-search"></i> "{$Title}"</h1>
+            </article><!-- /.content typography -->
+        <% end_if %>
         <% if $Results %>
             <div class="results-loop">
                 <% loop $Results %>

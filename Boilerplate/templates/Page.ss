@@ -14,7 +14,6 @@
         <% if $Siteconfig.LogoImage %><meta property="og:image" content="$SiteConfig.LogoImage.Link" /><% end_if %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <% if $Siteconfig.Favicon %><link rel="shortcut icon" href="$SiteConfig.Favicon.Link" /><% else %><link rel="shortcut icon" href="{$ThemeDir}/favicon.ico" /><% end_if %>
-        <% require themedCSS('main.min') %>
     </head>
     <body class="$ClassName $SliderClass $SliderLuminance" id="$URLSegment">
         <div id="wrapper">
@@ -33,9 +32,6 @@
                 <% include Footer %>
             </div><!-- /.inner -->
         </div><!-- /#wrapper -->
-        <% if $SearchForm %>
-            $SearchForm
-        <% end_if %>
         $SiteConfig.TrackingCode
     </body>
 </html>
