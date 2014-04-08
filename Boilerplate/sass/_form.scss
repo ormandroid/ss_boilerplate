@@ -31,9 +31,7 @@ input:focus, textarea:focus, .form-control:focus {
     }
 }
 .text{
-    .password{
-        @extend .form-control;
-    }
+    @extend .form-control;
 }
 .holder-required {
     input, input:focus, textarea, textarea:focus {

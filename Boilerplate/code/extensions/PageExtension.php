@@ -7,8 +7,6 @@ class PageExtension extends Extension {
      * */
 	public function onAfterInit() {
 
-        $theme = Config::inst()->get('SSViewer', 'theme');
-
         /* =========================================
          * Combine JS
          =========================================*/

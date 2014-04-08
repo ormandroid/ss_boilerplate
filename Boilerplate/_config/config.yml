@@ -13,8 +13,9 @@ PaginatedList:
   extensions:
     - PaginatedListExtension
 
-SSViewer:
-  theme: 'boilerplate'
+Security:
+  extensions:
+    - SecurityExtension
 
 #LeftAndMain:
 #  extra_requirements_css:

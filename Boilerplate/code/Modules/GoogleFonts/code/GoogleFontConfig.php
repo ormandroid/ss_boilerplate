@@ -43,7 +43,7 @@ class GoogleFontConfig extends DataExtension {
 
         $theme = Config::inst()->get('SSViewer', 'theme');
 
-        $fontFile = Director::baseFolder().'/themes/'.$theme.'/fonts/google-web-fonts.txt';
+        $fontFile = Director::baseFolder().'/Boilerplate/fonts/google-web-fonts.txt';
 
         //Total time the file will be cached in seconds, set to a week
         $cachetime = 86400 * 7;
