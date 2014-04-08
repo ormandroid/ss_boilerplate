@@ -17,7 +17,8 @@ class TestimonialPage extends Page {
 
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab('Root.Main', new UploadField('Image', _t('TestimonialPage.ImageLabel', 'Image')), 'Content');
+        $fields->addFieldToTab('Root.Main', $image = new UploadField('Image', _t('TestimonialPage.ImageLabel', 'Image')), 'Content');
+        $image->setFolderName('Uploads/testimonials');
 
         return $fields;
 

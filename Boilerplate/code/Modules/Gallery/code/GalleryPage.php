@@ -27,7 +27,8 @@ class GalleryPage extends Page {
          * Gallery Images
          =========================================*/
 
-        $fields->addFieldToTab('Root.GalleryImages', new UploadField('Images', _t('GalleryPage.ImagesLabel', 'Images'), $this->owner->Images()));
+        $fields->addFieldToTab('Root.GalleryImages', $images = new UploadField('Images', _t('GalleryPage.ImagesLabel', 'Images'), $this->owner->Images()));
+        $images->setFolderName('Uploads/gallery');
         $toggleFields = ToggleCompositeField::create(
             'GalleryImages',
             _t('GalleryPage.GalleryImagesLabel', 'Settings'),

@@ -29,7 +29,8 @@ class BlogPage extends Page {
         $fields->removeByName('Slider');
         $fields->removeByName('PageBuilder');
 
-        $fields->addFieldToTab('Root.Main', new UploadField('BlogImage', _t('BlogPage.BlogImageLabel', 'Featured blog image')), 'Content');
+        $fields->addFieldToTab('Root.Main', $blogImage = new UploadField('BlogImage', _t('BlogPage.BlogImageLabel', 'Featured blog image')), 'Content');
+        $blogImage->setFolderName('Uploads/blog');
         $fields->addFieldToTab('Root.Main', $dateField = new DateField('Date', _t('BlogPage.DateLabel', 'Article Date')), 'Content');
         $dateField->setConfig('showcalendar', true);
         $fields->addFieldToTab('Root.Main', $dateField, 'Content');

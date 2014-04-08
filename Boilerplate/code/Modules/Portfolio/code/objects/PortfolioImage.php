@@ -31,7 +31,8 @@ class PortfolioImage extends DataObject{
 
         $fields = FieldList::create(TabSet::create('Root'));
 
-        $fields->addFieldToTab('Root.Main', new UploadField('Image'));
+        $fields->addFieldToTab('Root.Main', $image = new UploadField('Image'));
+        $image->setFolderName('Uploads/portfolio');
         $fields->addFieldToTab('Root.Main', new CheckboxField('TextRight', 'Display the content on the right hand side'));
         $fields->addFieldToTab('Root.Main', new HtmlEditorField('Content'));
 

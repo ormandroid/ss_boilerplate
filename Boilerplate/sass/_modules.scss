@@ -163,6 +163,9 @@
         &.no-padding {
             padding: 0;
         }
+        .content{
+            margin-bottom: 0;
+        }
     }
 }
 @media (min-width: $screen-sm) {

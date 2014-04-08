@@ -196,7 +196,8 @@ h5 {
         margin-top: 0;
     }
     .content-light {
-        h1, h2, h3, h4, h5, p, li, strong, td, i, blockquote {
+        color: $btn-primary-color;
+        h1, h2, h3, h4, h5, p, ul, ol, li, strong, td, i, blockquote {
             color: $btn-primary-color;
         }
     }

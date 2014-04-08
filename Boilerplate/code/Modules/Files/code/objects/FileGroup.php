@@ -32,7 +32,8 @@ class FileGroup extends DataObject{
          * Files
         ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.Main', new UploadField('File', _t('FileGroup.FileLabel', 'Files for upload')));
+        $fields->addFieldToTab('Root.Main', $file = new UploadField('File', _t('FileGroup.FileLabel', 'Files for upload')));
+        $file->setFolderName('Uploads/files');
 
         /* -----------------------------------------
          * Advanced
