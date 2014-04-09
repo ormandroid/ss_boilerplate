@@ -6,36 +6,38 @@
     Inputs
 \*---------------------------------------------*/
 
-.field{
-    &.form-control{
-        display: block;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        line-height: inherit;
-        background: transparent none;
-        border-width: 0;
-        @include border-radius(0);
-        @include box-shadow(none);
-        @include transition(none);
+form{
+    .field{
+        &.form-control{
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 0;
+            line-height: inherit;
+            background: transparent none;
+            border-width: 0;
+            @include border-radius(0);
+            @include box-shadow(none);
+            @include transition(none);
+        }
     }
-}
 
-input:focus, textarea:focus, .form-control:focus {
-    @include box-shadow(none);
-}
-.form-control {
-    margin-bottom: $gap-md;
-    &:focus {
-        border-color: $gray;
+    input:focus, textarea:focus, .form-control:focus {
+        @include box-shadow(none);
     }
-}
-.text{
-    @extend .form-control;
-}
-.holder-required {
-    input, input:focus, textarea, textarea:focus {
-        border-color: $btn-danger-border;
+    .form-control {
+        margin-bottom: $gap-md;
+        &:focus {
+            border-color: $gray;
+        }
+    }
+    .text{
+        @extend .form-control;
+    }
+    .holder-required {
+        input, input:focus, textarea, textarea:focus {
+            border-color: $btn-danger-border;
+        }
     }
 }
 
