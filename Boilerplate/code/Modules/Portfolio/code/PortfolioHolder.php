@@ -44,6 +44,9 @@ class PortfolioHolder extends Page {
 
     }
 
+    /**
+     * @return PaginatedList
+     */
     public function PaginatedPages() {
         // Protect against "Division by 0" error
         if($this->Items == null || $this->Items == 0) $this->Items = 1;
@@ -55,6 +58,9 @@ class PortfolioHolder extends Page {
 }
 class PortfolioHolder_Controller extends Page_Controller {
 
+    /**
+     * @return string
+     */
     public function ColumnClass(){
         switch($this->Columns){
             case 1:
@@ -71,6 +77,9 @@ class PortfolioHolder_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return int
+     */
     public function ColumnMultiple(){
         switch($this->Columns){
             case 1:
@@ -87,6 +96,9 @@ class PortfolioHolder_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return string
+     */
     public function PortfolioThumbnailWidth(){
         switch($this->Columns){
             case 0:
@@ -97,6 +109,9 @@ class PortfolioHolder_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return string
+     */
     public function PortfolioThumbnailHeight(){
         switch($this->Columns){
             case 0:

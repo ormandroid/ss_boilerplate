@@ -5,7 +5,7 @@
     <% include Content %>
 
     <% if $PaginatedPages %>
-        <section class="portfolio-loop">
+        <section class="portfolio loop">
             <div class="row">
                 <% loop $PaginatedPages %>
                     <article class="item $Top.ColumnClass $FirstLast $EvenOdd">
@@ -29,7 +29,7 @@
                     <% end_if %>
                 <% end_loop %>
             </div><!-- /.row -->
-        </section><!-- /.portfolio-loop -->
+        </section><!-- /.portfolio loop -->
     <% end_if %>
 
     <% include Pagination %>

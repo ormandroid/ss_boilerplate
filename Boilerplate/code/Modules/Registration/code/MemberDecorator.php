@@ -16,7 +16,9 @@ class MemberDecorator extends DataExtension {
 
     }
 
-    //Link to the edit profile page
+    /**
+     * @return SS_HTTPResponse
+     */
     function Link(){
         if($ProfilePage = DataObject::get_one('EditProfilePage')){
             return $ProfilePage->Link();

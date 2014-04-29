@@ -21,7 +21,7 @@ class NewsletterPage extends Page {
          * MailChimp
         ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.Newsletter', new DropdownField('ListID','Mailchimp Lists', $this->ListSelect()));
+        $fields->addFieldToTab('Root.Newsletter', new DropdownField('ListID','Mailchimp Lists', array('' => 'Please select a list') + $this->ListSelect()));
         $fields->addFieldToTab('Root.Newsletter', new TextField('MailChimpAPI','MailChimp API Key'));
 
         //$fields->addFieldToTab('Root.Newsletter', new LiteralField('Lists', $this->ViewLists()));
@@ -30,6 +30,9 @@ class NewsletterPage extends Page {
 
     }
 
+    /**
+     * @return Mailchimp
+     */
     public function Connect(){
         if(!$this->MailChimpAPI) return;
 
@@ -90,9 +93,13 @@ class NewsletterPage extends Page {
 //
 //    }
 
+    /**
+     * @return array
+     */
     public function ListSelect(){
 
         $this->Connect();
+        $out = array();
 
         try {
             $lists = $this->mc->lists->getList();
@@ -105,7 +112,6 @@ class NewsletterPage extends Page {
             }
         }
 
-        $out = array('' => '-- Please select a list --');
         foreach($mcLists as $list) {
             $out[$list['id']] = $list['name'];
         }
@@ -124,6 +130,9 @@ class NewsletterPage_Controller extends Page_Controller {
         parent::init();
     }
 
+    /**
+     * @return Form
+     */
     public function Subscribe() {
 
         if(!$this->ListID){
@@ -153,6 +162,11 @@ class NewsletterPage_Controller extends Page_Controller {
         return new Form($this, 'Subscribe', $fields, $actions, $validator);
     }
 
+    /**
+     * @param $data
+     * @param $form
+     * @return SS_HTTPResponse
+     */
     function SendSubscribe($data, $form) {
 
         $this->Connect();

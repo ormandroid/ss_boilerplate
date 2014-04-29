@@ -17,6 +17,7 @@ img {
     max-width:100%;
 }
 a {
+    outline: none;
     &:active {
         outline: none;
     }
@@ -73,85 +74,83 @@ a {
     display: block;
     width: 100%;
     min-height: $gap-lg;
-
-        .nav {
-            > li {
-                &:hover, &.section, &.current {
-                    > a {
-                        background: $btn-primary-bg;
-                        color: $btn-primary-color
-                    }
-                }
-                &.open {
-                    > a, > a:hover, > a:focus {
-                        background: $btn-primary-bg;
-                        color: $btn-primary-color;
-                    }
-                    > .dropdown-menu {
-                        @include opacity(1);
-                        @include transform(translate(0, 0) scale(1));
-                    }
-                }
+    .nav {
+        > li {
+            &:hover, &.section, &.current {
                 > a {
-                    margin-left: 2px;
-                    padding: 8px $gap-sm;
-                    font-weight: 600;
-                    margin-bottom: $gap-xs;
-                    @include border-radius();
-                    @include transition(.1s linear background);
-                    &.btn-primary {
-                        color: $btn-primary-color;
-                    }
-                    &.btn-secondary {
-                        color: $btn-secondary-color;
-                    }
-                    &.btn-inverse {
-                        color: $btn-inverse-color;
-                    }
+                    background: $btn-primary-bg;
+                    color: $btn-primary-color
                 }
-                .dropdown-menu {
-                    padding: 0;
-                    border-width: 0;
-                    background: transparent none;
-                    padding-top: $gap-sm;
-                    display: block;
-                    @include opacity(0);
-                    @include border-radius(0);
-                    @include box-shadow(none);
-                    @include backface-visibility(hidden);
-                    @include transition(all 0.2s ease-in-out);
-                    @include transform(translate(0, -50%) scale(0));
-                    > li {
-                        &.divider {
-                            margin: 0;
-                        }
-                        > a {
-                            padding: $gap-sm;
-                            background: $btn-default-bg;
-                            color: $btn-default-color;
-                            @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-                            &:hover {
-                                background: darken($btn-default-bg, 3%)
-                            }
-                            &:first-child {
-                                border-top-width: 0;
-                            }
+            }
+            &.open {
+                > a, > a:hover, > a:focus {
+                    background: $btn-primary-bg;
+                    color: $btn-primary-color;
+                }
+                > .dropdown-menu {
+                    @include opacity(1);
+                    @include transform(translate(0, 0) scale(1));
+                }
+            }
+            > a {
+                margin-left: 2px;
+                padding: 8px $gap-sm;
+                font-weight: 600;
+                margin-bottom: $gap-xs;
+                @include border-radius();
+                @include transition(.1s linear background);
+                &.btn-primary {
+                    color: $btn-primary-color;
+                }
+                &.btn-secondary {
+                    color: $btn-secondary-color;
+                }
+                &.btn-inverse {
+                    color: $btn-inverse-color;
+                }
+            }
+            .dropdown-menu {
+                padding: 0;
+                border-width: 0;
+                background: transparent none;
+                padding-top: $gap-sm;
+                display: block;
+                @include opacity(0);
+                @include border-radius(0);
+                @include box-shadow(none);
+                @include backface-visibility(hidden);
+                @include transition(all 0.2s ease-in-out);
+                @include transform(translate(0, -50%) scale(0));
+                > li {
+                    &.divider {
+                        margin: 0;
+                    }
+                    > a {
+                        padding: $gap-sm;
+                        background: $btn-default-bg;
+                        color: $btn-default-color;
+                        @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+                        &:hover {
+                            background: darken($btn-default-bg, 3%)
                         }
                         &:first-child {
-                            a {
-                                @include border-top-radius($border-radius-base);
-                            }
+                            border-top-width: 0;
                         }
-                        &:last-child {
-                            a {
-                                @include border-bottom-radius($border-radius-base);
-                            }
+                    }
+                    &:first-child {
+                        a {
+                            @include border-top-radius($border-radius-base);
+                        }
+                    }
+                    &:last-child {
+                        a {
+                            @include border-bottom-radius($border-radius-base);
                         }
                     }
                 }
             }
         }
-
+    }
 }
 #select-navigation {
     border-top-width: 0;
@@ -283,6 +282,25 @@ a {
         margin-bottom: $gap-lg;
     }
 }
+.loop{
+    .item {
+        position: relative;
+        margin-bottom: $gap-md;
+        &.last{
+            margin-bottom: 0;
+        }
+    }
+}
+@media (min-width: $screen-sm) {
+    .loop{
+        .item {
+            margin-bottom: $gap-lg;
+            &.last{
+                margin-bottom: $gap-lg;
+            }
+        }
+    }
+}
 
 /*---------------------------------------------*\
     Carousel
@@ -299,6 +317,7 @@ a {
 \*---------------------------------------------*/
 
 .btn {
+    padding: $gap-xs $gap-sm;
     white-space: normal;
     border-width: 0;
     font-weight: 600;
@@ -306,16 +325,13 @@ a {
     &:focus {
         outline: 0;
     }
-    &.btn-shadow {
-        margin-bottom:4px;
-        &:active {
-            margin-bottom: 0;
-            margin-top: 4px;
-        }
-    }
 }
-
-// Outside of the .btn class so the styling can be used on other elements
+.btn-sm{
+    padding: ($gap-xs / 2) ($gap-sm / 2);
+}
+.btn-lg{
+    padding: $gap-sm $gap-md;
+}
 .btn-secondary {
     @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
 }

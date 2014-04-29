@@ -50,9 +50,9 @@ class GalleryPage extends Page {
 
     }
 
-    /*
-     * Technically this should be called PaginatedImages, but I want to use the same pagination include template.
-     * */
+    /**
+     * @return PaginatedList
+     */
     public function PaginatedPages() {
         // Protect against "Division by 0" error
         if($this->Items == null || $this->Items == 0) $this->Items = 1;
@@ -64,6 +64,9 @@ class GalleryPage extends Page {
 }
 class GalleryPage_Controller extends Page_Controller {
 
+    /**
+     * @return string
+     */
     public function ColumnClass(){
         switch($this->Columns){
             case 1:
@@ -86,6 +89,9 @@ class GalleryPage_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return int
+     */
     public function ColumnMultiple(){
         switch($this->Columns){
             case 1:
@@ -108,6 +114,9 @@ class GalleryPage_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return string
+     */
     public function ThumbnailWidth(){
         switch($this->Columns){
             case 0:
@@ -118,6 +127,9 @@ class GalleryPage_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return string
+     */
     public function ThumbnailHeight(){
         switch($this->Columns){
             case 0:

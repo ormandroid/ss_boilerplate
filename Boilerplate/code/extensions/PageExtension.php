@@ -32,10 +32,12 @@ class PageExtension extends Extension {
          * IE Shivs
          =========================================*/
 
-        Requirements::insertHeadTags("<!--[if lt IE 9]>
-            <script type=\"text/javascript\" src=\"Boilerplate/javascript/html5.js\"></script>
-            <script type=\"text/javascript\" src=\"Boilerplate/javascript/respond.min.js\"></script>
-        <![endif]-->");
+        $baseHref = Director::BaseURL();
+
+        Requirements::insertHeadTags('<!--[if lt IE 9]>
+            <script type="text/javascript" src="'.$baseHref.'Boilerplate/javascript/html5.js"></script>
+            <script type="text/javascript" src="'.$baseHref.'Boilerplate/javascript/respond.min.js"></script>
+        <![endif]-->');
 
     }
 

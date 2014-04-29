@@ -103,6 +103,9 @@ class PageItem extends DataObject{
 
     }
 
+    /**
+     * @return string
+     */
     public function ColumnClass() {
         $count = 1;
         $xsClass = 'col-xs-12';

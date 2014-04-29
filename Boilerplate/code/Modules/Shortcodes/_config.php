@@ -1,9 +1,5 @@
 <?php
 
-/*
- * Styles examples can be found at http://getbootstrap.com/
- * */
-
 $formats = array(
     array(
         'title' => 'Heading - Page Heading',

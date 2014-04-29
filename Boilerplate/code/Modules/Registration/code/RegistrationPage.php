@@ -11,10 +11,9 @@ class RegistrationPage_Controller extends Page_Controller {
 
     private static $allowed_actions = array('RegistrationForm');
 
-    /*
-     * Create the registration form
-     * Returns @Form
-     * */
+    /**
+     * @return static
+     */
     function RegistrationForm(){
 
         // Email
@@ -53,10 +52,11 @@ class RegistrationPage_Controller extends Page_Controller {
 
     }
 
-    /*
-     * Submit the registration form
-     * Returns @Redirection
-     * */
+    /**
+     * @param $data
+     * @param $form
+     * @return bool|SS_HTTPResponse
+     */
     function Register($data, $form){
 
         // Set session array individually as setting the password breaks the form.

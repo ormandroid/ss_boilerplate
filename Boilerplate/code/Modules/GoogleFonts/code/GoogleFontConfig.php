@@ -35,10 +35,10 @@ class GoogleFontConfig extends DataExtension {
 
     }
 
-    /*
-     * Call the Google Fonts AI service, and cache the results into a file, then return the file contents.
-     * @returns Array()
-     * */
+    /**
+     * @param int $amount
+     * @return array
+     */
     function getGoogleFonts( $amount = 30 ) {
 
         $theme = Config::inst()->get('SSViewer', 'theme');

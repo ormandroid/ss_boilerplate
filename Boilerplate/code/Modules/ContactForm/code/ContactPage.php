@@ -115,13 +115,11 @@ JS
 
         }
 
-
 	}
 
-    /*
-     * Create Contact Form
-     * @returns Form
-     * */
+    /**
+     * @return static
+     */
     public function ContactForm() {
 
         $name = new TextField('Name');
@@ -172,10 +170,11 @@ JS
         return $form;
     }
 
-    /*
-     * Function to send contact form email
-     * @returns Redirection
-     * */
+    /**
+     * @param $data
+     * @param $form
+     * @return bool|SS_HTTPResponse
+     */
     function SendContactForm($data, $form) {
 
         Session::set('FormInfo.Form_ContactForm.data', $data);
@@ -207,6 +206,9 @@ JS
 
     }
 
+    /**
+     * @return bool
+     */
     public function Success() {
         return isset($_REQUEST['success']) && $_REQUEST['success'] == "1";
     }

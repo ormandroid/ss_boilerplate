@@ -2,8 +2,8 @@
 
 class FileConfig extends DataExtension {
 
-    /*
-     * @Return a class that relates to the extension of the file
+    /**
+     * @return string
      */
     public function ExtensionIcon(){
         $extension = $this->owner->getExtension();

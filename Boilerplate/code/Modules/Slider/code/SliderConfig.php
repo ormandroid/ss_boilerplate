@@ -43,10 +43,9 @@ class SliderConfig extends DataExtension {
 
     }
 
-    /*
-     * Get settings set in the page, and if has a slider return a class.
-     * @returns string
-     * */
+    /**
+     * @return string
+     */
     public function getSliderClass() {
         ($this->owner->SliderItems()->First() ? $out = 'has-slider' : $out = 'no-slider');
         return $out;

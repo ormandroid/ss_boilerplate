@@ -5,7 +5,7 @@
     <% include Content %>
 
     <% if $PaginatedPages %>
-        <section class="gallery-loop">
+        <section class="gallery loop">
             <div class="row">
                 <% loop $PaginatedPages %>
                     <figure class="item $Top.ColumnClass $FirstLast">
@@ -19,7 +19,7 @@
                     <% end_if %>
                 <% end_loop %>
             </div><!-- /.row -->
-        </section><!-- /.gallery-loop -->
+        </section><!-- /.gallery loop -->
     <% end_if %>
 
     <% include Pagination %>

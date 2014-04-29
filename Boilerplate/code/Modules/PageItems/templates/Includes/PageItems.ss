@@ -1,5 +1,5 @@
 <% if $PageItems %>
-    <section class="page-item-loop">
+    <section class="page-item loop">
         <% loop $PageItems %>
             <div class="item $FirstLast $EvenOdd<% if $BackgroundType %> $BackgroundType<% end_if %><% if $Padding %> no-padding<% end_if %>"<% if $BackgroundColor || $BackgroundImage %> style="<% if $BackgroundImage %>background-image: url({$BackgroundImage.setWidth(1170).Link});<% end_if %><% if $BackgroundColor %>background-color: $BackgroundColor;<% end_if %>"<% end_if %>>
                 <div class="container">
@@ -29,5 +29,5 @@
                 </div><!-- /.container -->
             </div><!-- /.item -->
         <% end_loop %>
-    </section><!-- /.page-item-loop -->
+    </section><!-- /.page-item loop -->
 <% end_if %>

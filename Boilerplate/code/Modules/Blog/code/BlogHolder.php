@@ -26,20 +26,13 @@ class BlogHolder extends Page {
          * Advanced
         ------------------------------------------*/
 
-        $toggleFields = ToggleCompositeField::create(
-            'Advanced',
-            'Advanced',
-            array(
-                new DropdownField('Columns', _t('BlogHolder.ColumnsLabel', 'How many items to display on each row'), array(
-                    'One Item (Full Width)',
-                    'Two Items',
-                    'Three Items',
-                    'Four Items'
-                )),
-                new TextField('Items', _t('BlogHolder.ItemsLabel', 'How many items to display on each page'))
-            )
-        )->setHeadingLevel(4)->setStartClosed(true);
-        $fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
+        $fields->addFieldToTab('Root.Main', new DropdownField('Columns', _t('BlogHolder.ColumnsLabel', 'Items per row'), array(
+            'One Item (Full Width)',
+            'Two Items',
+            'Three Items',
+            'Four Items'
+        )), 'Content');
+        $fields->addFieldToTab('Root.Main', new TextField('Items', _t('BlogHolder.ItemsLabel', 'Items displayed per page')), 'Content');
 
         /* =========================================
          * Blog Sidebar
@@ -51,6 +44,9 @@ class BlogHolder extends Page {
 
     }
 
+    /**
+     * @return PaginatedList
+     */
     public function PaginatedPages() {
         // Protect against "Division by 0" error
         if($this->Items == null || $this->Items == 0) $this->Items = 1;
@@ -62,6 +58,9 @@ class BlogHolder extends Page {
 }
 class BlogHolder_Controller extends Page_Controller {
 
+    /**
+     * @return string
+     */
     public function ColumnClass(){
         switch($this->Columns){
             case 1:
@@ -78,6 +77,9 @@ class BlogHolder_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return int
+     */
     public function ColumnMultiple(){
         switch($this->Columns){
             case 1:

@@ -7,17 +7,16 @@
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
 
         <div class="col-xs-12 col-sm-8 col-lg-9">
-            <section class="blog-page">
+            <section class="blog page">
                 <% if $BlogImage %>
                     <p>$BlogImage.setWidth(850)</p>
                 <% end_if %>
                 <% if $Date && $Author %>
                     <p class="meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.meta -->
                 <% end_if %>
-
                 <% include Content %>
                 <% include Disqus %>
-            </section><!-- /.blog-page -->
+            </section><!-- /.blog page -->
         </div><!-- /.col-xs-12 col-sm-9 -->
 
     </div><!-- /.row -->

@@ -11,7 +11,7 @@
             <% include Content %>
 
             <% if $PaginatedPages %>
-                <section class="blog-loop">
+                <section class="blog loop">
                     <div class="row">
                         <% loop $PaginatedPages %>
                             <article class="item $Top.ColumnClass $FirstLast $EvenOdd">
@@ -37,7 +37,7 @@
                             <% end_if %>
                         <% end_loop %>
                     </div><!-- /.row -->
-                </section><!-- /.blog-loop -->
+                </section><!-- /.blog loop -->
             <% end_if %>
 
             <% include Pagination %>

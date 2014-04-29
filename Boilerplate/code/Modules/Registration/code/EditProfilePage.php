@@ -13,6 +13,9 @@ class EditProfilePage_Controller extends Page_Controller {
         'EditProfileForm'
     );
 
+    /**
+     * @return Form|SS_HTTPResponse
+     */
     public function EditProfileForm(){
 
         if(!Member::currentUser()){
@@ -82,7 +85,11 @@ class EditProfilePage_Controller extends Page_Controller {
         return $form;
     }
 
-    //Save profile
+    /**
+     * @param $data
+     * @param $form
+     * @return bool|SS_HTTPResponse
+     */
     public function SaveProfile($data, $form){
 
         if($CurrentMember = Member::currentUser()){
@@ -105,12 +112,16 @@ class EditProfilePage_Controller extends Page_Controller {
 
     }
 
-    //Check for just saved
+    /**
+     * @return mixed
+     */
     public function Saved(){
         return $this->request->getVar('saved');
     }
 
-    //Check for success status
+    /**
+     * @return mixed
+     */
     public function Success(){
         return $this->request->getVar('success');
     }

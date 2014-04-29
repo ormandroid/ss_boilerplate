@@ -5,7 +5,7 @@
     <% include Content %>
 
     <% if $FileGroups %>
-        <section class="file-group-loop">
+        <section class="file-group loop">
             <div class="row">
                 <% loop $FileGroups %>
                     <article class="item $Top.ColumnClass">
@@ -28,7 +28,7 @@
                     <% end_if %>
                 <% end_loop %>
             </div><!-- /.row -->
-        </section><!-- /.file-group-loop -->
+        </section><!-- /.file-group loop -->
     <% end_if %>
 
 </div><!-- /.container -->

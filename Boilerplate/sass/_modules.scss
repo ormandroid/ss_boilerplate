@@ -6,110 +6,77 @@
     Blog
 \*---------------------------------------------*/
 
-.blog-loop{
+.blog.loop{
     .item {
+        margin: 0;
         .content {
-            margin-bottom: $gap-md;
             padding-bottom: $gap-md;
             border-bottom: 3px solid $gray-lighter;
-            .image {
-                margin-bottom: $gap-md;
-                display: block;
-                background: $gray-darker;
-                position: relative;
+        }
+        .image {
+            margin-bottom: $gap-md;
+            display: block;
+            background: $gray-darker;
+            position: relative;
+            img {
+                -webkit-backface-visibility: hidden;
+                @include transition(.1s linear opacity);
+            }
+            @include absolute-arrow();
+            .hover-icon {
+                display: none;
+                color: $btn-primary-color;
+                @include icon-center();
+            }
+            &:hover {
                 img {
-                    -webkit-backface-visibility: hidden;
-                    @include transition(.1s linear opacity);
+                    opacity: 0.9
                 }
-                @include absolute-arrow();
                 .hover-icon {
-                    display: none;
-                    color: $btn-primary-color;
-                    @include icon-center();
+                    display: block;
                 }
+            }
+        }
+        .title {
+            a {
+                color: $btn-default-color;
+                @include transition(.1s linear color);
                 &:hover {
-                    img {
-                        opacity: 0.9
-                    }
-                    .hover-icon {
-                        display: block;
-                    }
+                    color: $brand-primary;
+                    text-decoration: none;
                 }
             }
-            .title {
-                a {
-                    color: $btn-default-color;
-                    @include transition(.1s linear color);
-                    &:hover {
-                        color: $brand-primary;
-                        text-decoration: none;
-                    }
-                }
-            }
-            .meta {
-                margin-bottom: $gap-md;
-            }
-            .summary {
-                margin-bottom: $gap-md;
-            }
+        }
+        .meta {
+            margin-bottom: $gap-md;
+        }
+        .summary {
+            margin-bottom: $gap-md;
         }
     }
 }
 @media (min-width: $screen-sm) {
-    .blog-loop{
+    .blog.loop{
         .item {
             .content {
-                margin-bottom: $gap-lg;
                 padding-bottom: $gap-lg;
             }
         }
     }
 }
-
-.blog-page {
+.blog.page {
     .meta {
         margin-bottom: $gap-md;
     }
 }
+
 /*---------------------------------------------*\
     Portfolio
 \*---------------------------------------------*/
 
-.portfolio-loop{
+.portfolio.loop{
     .item {
-        margin-bottom: $gap-md;
         a {
-            .image {
-                position: relative;
-                display: block;
-                background: $gray-darker;
-                @include absolute-arrow();
-                img {
-                    -webkit-backface-visibility: hidden;
-                    @include transition(.1s linear opacity);
-                }
-                .hover-icon {
-                    color: $btn-primary-color;
-                    @include icon-center();
-                    @include opacity(0);
-                    @include transition(.1s linear opacity);
-                }
-            }
-            .meta {
-                border: 1px solid $gray-lighter;
-                border-top-width: 0;
-                padding: $gap-md;
-                background: $btn-default-bg;
-                @include border-bottom-radius($border-radius-base);
-                h5 {
-                    margin-top: 0;
-                    font-weight: bold;
-                    color: $gray;
-                }
-                .portfolio-subtitle {
-                    color: $gray-light;
-                }
-            }
             &:hover {
                 text-decoration: none;
                 img {
@@ -120,29 +87,58 @@
                 }
             }
         }
-    }
-}
-
-@media (min-width: $screen-sm) {
-    .portfolio-loop{
-        .item {
-            margin-bottom: $gap-lg;
+        .image {
+            position: relative;
+            display: block;
+            background: $gray-darker;
+            @include absolute-arrow();
+            img {
+                -webkit-backface-visibility: hidden;
+                @include transition(.1s linear opacity);
+            }
+            .hover-icon {
+                color: $btn-primary-color;
+                @include icon-center();
+                @include opacity(0);
+                @include transition(.1s linear opacity);
+            }
+        }
+        .meta {
+            border: 1px solid $gray-lighter;
+            border-top-width: 0;
+            padding: $gap-md;
+            background: $btn-default-bg;
+            @include border-bottom-radius($border-radius-base);
+            h5 {
+                margin-top: 0;
+                font-weight: bold;
+                color: $gray;
+            }
+            .portfolio-subtitle {
+                color: $gray-light;
+            }
         }
     }
 }
-.portfolio-page {
+.portfolio.page {
     .item {
         margin-bottom: $gap-md
+    }
+    .caption-right{
+        margin-top: $gap-md;
     }
 }
 
 @media (min-width: $screen-sm) {
-    .portfolio-page {
+    .portfolio.page {
         .item {
             margin-bottom: add($gap-md, $gap-sm);
             &.last {
                 margin-bottom: 0;
             }
+        }
+        .caption-right{
+            margin-top: 0;
         }
     }
 }
@@ -151,10 +147,11 @@
     Page Builder
 \*---------------------------------------------*/
 
-.page-item-loop {
+.page-item.loop {
     margin-top: $gap-md;
     .item {
-        padding: $gap-md;
+        margin: 0;
+        padding: $gap-md 0;
         background: no-repeat center center;
         background-size: cover;
         &.fixed {
@@ -163,16 +160,16 @@
         &.no-padding {
             padding: 0;
         }
-        .content{
-            margin-bottom: 0;
-        }
+    }
+    .content{
+        margin-bottom: 0;
     }
 }
 @media (min-width: $screen-sm) {
-    .page-item-loop {
+    .page-item.loop {
         margin-top: $gap-lg;
         .item {
-            padding: $gap-lg;
+            padding: $gap-lg 0;
         }
     }
 }
@@ -181,11 +178,10 @@
     Gallery
 \*---------------------------------------------*/
 
-.gallery-loop {
+.gallery.loop {
     .item {
-        margin-bottom: $gap-md;
-        &.last{
-            margin-bottom: 0;
+        a{
+            display: block;
         }
         .hover-icon {
             color: $btn-primary-color;
@@ -203,18 +199,6 @@
             }
             .hover-icon {
                 @include opacity(1);
-            }
-        }
-    }
-}
-
-@media (min-width: $screen-sm) {
-    .gallery-loop {
-        margin-bottom: -$gap-lg;
-        .item{
-            margin-bottom: $gap-lg;
-            &.last{
-                margin-bottom: $gap-lg;
             }
         }
     }
@@ -287,8 +271,11 @@
     Files
 \*---------------------------------------------*/
 
-.file-group-loop {
+.file-group.loop {
     .item {
+        .panel{
+            margin: 0;
+        }
         .panel-body {
             ul {
                 &.list-unstyled {
@@ -323,7 +310,6 @@
         @extend .form-control;
     }
 }
-
 // Login Form
 #MemberLoginForm_LoginForm,
 #MemberLoginForm_LostPasswordForm {
@@ -359,36 +345,27 @@
     Testimonials
 \*---------------------------------------------*/
 
-.testimonial-loop{
+.testimonials.loop{
     .item{
-        margin: 0 0 $gap-lg 0;
         .media{
             > .pull-left{
                 margin-right: $gutter;
             }
-            .media-image{
-                img{
-                    @include border-radius(100%)
-                }
-            }
-            .fallback{
-                background: $gray-lighter;
-                width: $gap-xl;
-                height: $gap-xl;
-                line-height: $gap-xl;
-                text-align: center;
-                color: $gray-light;
-                display: block;
+        }
+        .media-image{
+            img{
                 @include border-radius(100%)
             }
         }
-    }
-}
-
-@media (min-width: $screen-sm) {
-    .testimonial-loop{
-        .item{
-            margin-bottom: $gap-md;
+        .fallback{
+            background: $gray-lighter;
+            width: $gap-xl;
+            height: $gap-xl;
+            line-height: $gap-xl;
+            text-align: center;
+            color: $gray-light;
+            display: block;
+            @include border-radius(100%)
         }
     }
 }

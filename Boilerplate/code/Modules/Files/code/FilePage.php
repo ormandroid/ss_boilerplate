@@ -50,6 +50,9 @@ class FilePage extends Page {
 
 class FilePage_Controller extends Page_Controller {
 
+    /**
+     * @return string
+     */
     public function ColumnClass(){
         switch($this->Columns){
             case 1:
@@ -66,6 +69,9 @@ class FilePage_Controller extends Page_Controller {
         }
     }
 
+    /**
+     * @return int
+     */
     public function ColumnMultiple(){
         switch($this->Columns){
             case 1:
