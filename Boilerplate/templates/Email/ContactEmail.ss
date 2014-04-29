@@ -1,6 +1,7 @@
 <html>
     <body>
-        <p><%t ContactEmail.Subject 'The following message was submitted to your site by'%> <a href="mailto:$Email">$Name:</a></p>
+        <p><%t ContactEmail.Subject 'New email from:'%> $Name</p>
+        <p><a href="mailto:$Email">$Email</a></p>
         <p>$Message</p>
     </body>
 </html>

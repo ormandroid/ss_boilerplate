@@ -187,7 +187,7 @@ JS
 
         $From = $data['Email'];
         $To = $this->MailTo;
-        $Subject = _t('ContactPage.EmailSubject', 'Website Contact message');
+        $Subject = _t('ContactPage.EmailSubject', SiteConfig::current_site_config()->Title.' - Website Contact message');
         $email = new Email($From, $To, $Subject);
         $email->setTemplate('ContactEmail')
             ->populateTemplate($data)
