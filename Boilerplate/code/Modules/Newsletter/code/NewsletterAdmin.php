@@ -2,6 +2,7 @@
 
 class NewsletterAdmin extends LeftAndMain {
 
+    private static $menu_icon = 'Boilerplate/code/Modules/Newsletter/images/envelope_menu.png';
     private static $url_segment = 'newsletter';
     private static $url_priority = 100;
     private static $menu_title = 'Newsletter';

@@ -199,6 +199,11 @@ JS
         }
         $this->setFlash($submitText, 'success');
 
+        //Create record
+        $contactMessage = new ContactMessage();
+        $form->saveInto($contactMessage);
+        $contactMessage->write();
+
         // Clear the form state
         Session::clear('FormInfo.Form_ContactForm.data');
 
