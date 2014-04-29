@@ -27,11 +27,4 @@ class NewsletterAdmin extends LeftAndMain {
         parent::init();
     }
 
-    /**
-     * @return HTMLText
-     */
-    public function SettingsContent() {
-        return $this->renderWith('ShopAdminSettings_Content');
-    }
-
 }

@@ -1,15 +1,26 @@
 <?php
+
 /**
- * Color field
+ * Class ColorField
  */
 class ColorField extends TextField {
 
-	public function __construct($name, $title = null, $value = '', $form = null){
+    /**
+     * @param string $name
+     * @param null $title
+     * @param string $value
+     * @param null $form
+     */
+    public function __construct($name, $title = null, $value = '', $form = null){
 		parent::__construct($name, $title, $value, 7, $form);
         $this->addExtraClass('text');
 	}
 
-	function Field($properties = array()) {
+    /**
+     * @param array $properties
+     * @return string
+     */
+    function Field($properties = array()) {
 		$this->addExtraClass('color-picker');
 		$style = 'background-image: none;background-color:' . ($this->value ? $this->value : '#ffffff'). '; color: ' . ($this->getTextColor()) . ';';
 		$attributes = array(
@@ -34,11 +45,18 @@ class ColorField extends TextField {
 		return $out;
 	}
 
-	function validate($validator){
+    /**
+     * @param $validator
+     * @return bool
+     */
+    function validate($validator){
 		return true;
 	}
 
-	protected function getTextColor(){
+    /**
+     * @return string
+     */
+    protected function getTextColor(){
 		if($this->value) {
 			$c = intval(str_replace("#", "", $this->value), 16);
 			$r = $c >> 16;
