@@ -6,41 +6,63 @@
     Left Menu
 \*---------------------------------------------*/
 
-.cms-menu{background: $brand-primary;
+.cms-menu{
+    background: $brand-primary;
     @include box-shadow(none);
     .icon{
         // NOTE: Use white icons for darker themes.
-        &.icon-16 {background-image: url(../img/menu-icons-white.png);}
+        &.icon-16 {
+            background-image: url(../img/menu-icons-white.png);
+        }
     }
-    .cms-logo-header {background: transparent none;
-        .cms-logo {border-width: 0;}
-        .cms-login-status {border-width: 0;}
+    .cms-logo-header {
+        background: transparent none;
+        .cms-logo {
+            border-width: 0;
+        }
+        .cms-login-status {
+            border-width: 0;
+        }
         span{
-            a{color: $brand-primary-color}
+            a{
+                color: $brand-primary-color
+            }
         }
     }
     .cms-menu-list{
         li{
-            a{background: transparent none;border-width: 0;text-shadow: none;color: $brand-primary-color;
+            a{
+                background: transparent none;
+                border-width: 0;
+                text-shadow: none;
+                color: $brand-primary-color;
                 @include box-shadow(none);
-                &:hover{background: $brand-secondary;}
-                .icon{opacity: 1;}
+                &:hover{
+                    background: $brand-secondary;
+                }
+                .icon{
+                    opacity: 1;
+                }
             }
             &.current{
-                > a{background: $brand-secondary;}
+                > a{
+                    background: $brand-secondary;
+                }
             }
         }
     }
     &.cms-panel{
         .cms-panel-toggle{
-            &.south {border-top-color: darken($brand-primary, 10%);
+            &.south {
+                border-top-color: darken($brand-primary, 10%);
                 @include box-shadow(inset 0 1px 0px rgba(255, 255, 255, 0.1));
             }
         }
     }
 }
 
-.cms-content-tools{background: #fff;
+.cms-content-tools{
+    background: #fff;
     @include box-shadow(none);
 }
 
@@ -49,18 +71,27 @@
 \*---------------------------------------------*/
 
 .cms{
-    .cms-content-header{background: $brand-primary;color: $brand-primary-color;
-        a{color: $brand-primary-color;}
+    .cms-content-header{
+        background: $brand-primary;
+        color: $brand-primary-color;
+        a{
+            color: $brand-primary-color;
+        }
     }
-    .cms-content-fields {background: $gray-lighter;}
+    .cms-content-fields {
+        background: $gray-lighter;
+    }
 }
 
-#MemberImportFormIframe{border: 1px solid $brand-default-border;
+#MemberImportFormIframe{
+    border: 1px solid $brand-default-border;
     @include border-radius(2px);
 }
 
 .cms-content-actions,
-.cms-preview-controls {background: $brand-default;border-color: $brand-default-border;
+.cms-preview-controls {
+    background: $brand-default;
+    border-color: $brand-default-border;
     @include box-shadow(none);
 }
 
@@ -68,12 +99,19 @@
     Buttons
 \*---------------------------------------------*/
 
-%btn-primary{background: $brand-secondary;border-color: $brand-secondary-border;text-shadow: none;
+%btn-primary{
+    background: $brand-secondary;
+    border-color: $brand-secondary-border;
+    text-shadow: none;
     &.ui-state-hover,
     &.ui-state-active,
     &.ui-state-focus,
     &:active,
-    &:focus{color: $brand-secondary-color;background: $brand-secondary;border-color: darken($brand-secondary-border, 20%);}
+    &:focus{
+        color: $brand-secondary-color;
+        background: $brand-secondary;
+        border-color: darken($brand-secondary-border, 20%);
+    }
     &.ui-state-active,
     &.ui-state-focus,
     &:active,
@@ -84,13 +122,18 @@
 
 .cms{
     .ss-ui-button,
-    %btn-default{color: $gray;border-color: lighten($gray, 40%);background: $gray-lighter;
+    %btn-default{
+        color: $gray;
+        border-color: lighten($gray, 40%);
+        background: $gray-lighter;
         @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 0 rgba(0,0,0,.08));
         &.ss-ui-action-constructive,
         &.backlink{
             @extend %btn-primary;
         }
-        &:focus{outline: 0;}
+        &:focus{
+            outline: 0;
+        }
     }
     .ss-ui-button.ui-state-hover{
         @extend %btn-default;
@@ -108,9 +151,13 @@
 \*---------------------------------------------*/
 
 .ss-toggle{
-    .ui-accordion-header{padding-top: 0.8em;padding-bottom: 0.8em;
+    .ui-accordion-header{
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
         @include border-radius(2px);
-        &.ui-state-default {background: $accordion-bg;}
+        &.ui-state-default {
+            background: $accordion-bg;
+        }
     }
 }
 
@@ -121,24 +168,42 @@
 .cms{
     .ui-tabs{
         .ui-tabs-nav{
-            .ui-state-default {background: $gray-light}
-            .ui-state-active {background: $gray-lighter}
+            .ui-state-default {
+                background: $gray-light
+            }
+            .ui-state-active {
+                background: $gray-lighter
+            }
             li{
                 a{
-                    &:focus{outline: 0}
+                    &:focus{
+                        outline: 0
+                    }
                 }
             }
         }
     }
     .cms-content-header-tabs{
-        .ui-tabs-nav{border-left-width: 0;
-            > .ui-state-default{border-width: 0;background: transparent none;
+        .ui-tabs-nav{
+            border-left-width: 0;
+            > .ui-state-default{
+                border-width: 0;
+                background: transparent none;
                 @include box-shadow(none);
-                > a{color: $brand-secondary-color;text-shadow: none;
-                    &:focus{outline: 0;}
+                > a{
+                    color: $brand-secondary-color;
+                    text-shadow: none;
+                    &:focus{
+                        outline: 0;
+                    }
                 }
-                &.ui-state-active{border-width: 0;background: $brand-secondary;}
-                &:focus{outline: 0;}
+                &.ui-state-active{
+                    border-width: 0;
+                    background: $brand-secondary;
+                }
+                &:focus{
+                    outline: 0;
+                }
             }
         }
     }
@@ -148,7 +213,9 @@
     Messages
 \*---------------------------------------------*/
 
-.message{border-width: 0;border-left-width: 4px;
+.message{
+    border-width: 0;
+    border-left-width: 4px;
     @include border-radius(0);
 }
 
@@ -163,8 +230,11 @@
     .TreeDropdownField {
         @include border-radius(2px);
     }
-    label{text-shadow: none;
-        &.left{text-shadow: none;}
+    label{
+        text-shadow: none;
+        &.left{
+            text-shadow: none;
+        }
     }
 }
 
@@ -187,32 +257,62 @@
             tr{
                 &.title,
                 &.sortable-header{
-                    th{background: $brand-default;border-color: $brand-default;border-left-width: 0;border-top-width: 0;
+                    th{
+                        background: $brand-default;
+                        border-color: $brand-default;
+                        border-left-width: 0;
+                        border-top-width: 0;
                         h1,
                         h2,
                         h3,
                         h4,
                         h5,
                         h6,
-                        span{color: $brand-default-color;text-shadow: none;}
+                        span{
+                            color: $brand-default-color;
+                            text-shadow: none;
+                        }
                     }
                 }
                 &.title{
-                    th{border: 1px solid $brand-default-border;border-width-bottom: 0;}
-                }
-                &.sortable-header{
-                    th{color: $brand-default-color;background: $brand-default;border-color: $brand-default;border-right: 1px solid $brand-default-border;
-                        &:first-child{border-left: 1px solid $brand-default-border;}
-                        span{color: $brand-default-color;}
+                    th{
+                        border: 1px solid $brand-default-border;
+                        border-width-bottom: 0;
                     }
                 }
-                th.extra{background: $gray-darker;
-                    label{color: #fff;}
+                &.sortable-header{
+                    th{
+                        color: $brand-default-color;
+                        background: $brand-default;
+                        border-color: $brand-default;
+                        border-right: 1px solid $brand-default-border;
+                        &:first-child{
+                            border-left: 1px solid $brand-default-border;
+                        }
+                        span{
+                            color: $brand-default-color;
+                        }
+                    }
                 }
-                th.main{border-bottom: 1px solid $brand-default-border}
-                td{border-color: $brand-default-border;
-                    &.bottom-all{background: $brand-default;border-color: $brand-default-border;border-top: 1px solid $brand-default-border;
-                        .pagination-records-number{color: $brand-default-color;text-shadow: none;}
+                th.extra{
+                    background: $gray-darker;
+                    label{
+                        color: #fff;
+                    }
+                }
+                th.main{
+                    border-bottom: 1px solid $brand-default-border
+                }
+                td{
+                    border-color: $brand-default-border;
+                    &.bottom-all{
+                        background: $brand-default;
+                        border-color: $brand-default-border;
+                        border-top: 1px solid $brand-default-border;
+                        .pagination-records-number{
+                            color: $brand-default-color;
+                            text-shadow: none;
+                        }
                     }
                     &.col-buttons{
                         button,
@@ -220,15 +320,22 @@
                             @include box-shadow(none);
                         }
                     }
-                    &:first-child{border-color: $brand-default-border}
+                    &:first-child{
+                        border-color: $brand-default-border
+                    }
                 }
-                &.even{background: lighten($gray-lighter, 5%)}
+                &.even{
+                    background: lighten($gray-lighter, 5%)
+                }
             }
             .ss-ui-button{
                 @include box-shadow(none);
             }
         }
-        .pagination-records-number{color: $brand-default-color;text-shadow: none;}
+        .pagination-records-number{
+            color: $brand-default-color;
+            text-shadow: none;
+        }
     }
 }
 
@@ -257,6 +364,13 @@
     TinyMCE
 \*---------------------------------------------*/
 
-#Form_EditForm_Content_tbl{border-color: $brand-default-border}
-#Form_EditForm_Content_toolbargroup{padding: 10px;background: $brand-default;}
-.cms .defaultSkin td.mceToolbar {padding-top: 0;}
+#Form_EditForm_Content_tbl{
+    border-color: $brand-default-border
+}
+#Form_EditForm_Content_toolbargroup{
+    padding: 10px;
+    background: $brand-default;
+}
+.cms .defaultSkin td.mceToolbar {
+    padding-top: 0;
+}
