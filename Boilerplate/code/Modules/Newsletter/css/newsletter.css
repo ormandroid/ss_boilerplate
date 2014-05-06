@@ -27,3 +27,19 @@
     position: absolute;
     z-index: 1;
 }
+
+.right .tab{
+    border-bottom: 1px solid #d0d3d5;
+    -webkit-box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    -moz-box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    -o-box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    box-shadow: 0 1px 0 rgba(245, 245, 245, 0.8);
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+.right .Actions{
+    margin-top: 16px;
+    padding-left: 0;
+    padding-right: 0;
+}

@@ -15,7 +15,7 @@
                     <div class="row">
                         <% loop $PaginatedPages %>
                             <article class="item $Top.ColumnClass $FirstLast $EvenOdd">
-                                <div class="content">
+                                <div class="content typography">
                                     <% if $BlogImage %>
                                         <a href="$Link" class="image" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">
                                             $BlogImage.CroppedImage(848, 340)
@@ -30,7 +30,7 @@
                                     <% end_if %>
                                     <p class="summary">$Content.LimitWordCountXML(40)</p><!-- /.summary -->
                                     <a href="$Link" class="btn btn-primary" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">Read more</a>
-                                </div><!-- /.content -->
+                                </div><!-- /.content typography -->
                             </article><!-- /.item -->
                             <% if $MultipleOf($Top.ColumnMultiple) %>
                                 <div class="clearfix"></div><!-- /.clearfix -->

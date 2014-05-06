@@ -26,37 +26,28 @@ class FileGroup extends DataObject{
 
         $fields = FieldList::create(TabSet::create('Root'));
 
+        $fields->addFieldToTab('Root.Main', new HeaderField('Settings'));
         $fields->addFieldToTab('Root.Main', new TextField('Title', _t('FileGroup.TitleLabel', 'Group Title')));
+        $fields->addFieldToTab('Root.Main', $panelClass = new DropdownField('PanelClass', _t('FileGroup.PanelClassLabel', 'Type'),
+            array(
+                'panel-default' => 'Default',
+                'panel-primary' => 'Primary',
+                'panel-secondary' => 'Secondary',
+                'panel-info' => 'Info',
+                'panel-success' => 'Success',
+                'panel-warning' => 'Warning',
+                'panel-danger' => 'Danger'
+            )
+        ));
+        $panelClass->setRightTitle('Color of the group');
 
         /* -----------------------------------------
          * Files
         ------------------------------------------*/
 
+        $fields->addFieldToTab('Root.Main', new HeaderField('Files'));
         $fields->addFieldToTab('Root.Main', $file = new UploadField('File', _t('FileGroup.FileLabel', 'Files for upload')));
         $file->setFolderName('Uploads/files');
-
-        /* -----------------------------------------
-         * Advanced
-        ------------------------------------------*/
-
-        $toggleFields = ToggleCompositeField::create(
-			'Advanced',
-            _t('FileGroup.AdvancedLabel', 'Advanced'),
-			array(
-                new DropdownField('PanelClass', _t('FileGroup.PanelClassLabel', 'Panel Type'),
-                    array(
-                        'panel-default' => 'Default',
-                        'panel-primary' => 'Primary',
-                        'panel-secondary' => 'Secondary',
-                        'panel-info' => 'Info',
-                        'panel-success' => 'Success',
-                        'panel-warning' => 'Warning',
-                        'panel-danger' => 'Danger'
-                    )
-                )
-			)
-		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.Main', $toggleFields);
 
         return $fields;
 

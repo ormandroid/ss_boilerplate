@@ -23,20 +23,22 @@ class BlogHolder extends Page {
         $fields = parent::getCMSFields();
 
         /* -----------------------------------------
-         * Advanced
+         * Settings
         ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.Main', new DropdownField('Columns', _t('BlogHolder.ColumnsLabel', 'Items per row'), array(
+        $fields->addFieldToTab('Root.Main', $columns = new DropdownField('Columns', _t('BlogHolder.ColumnsLabel', 'Columns'), array(
             'One Item (Full Width)',
             'Two Items',
             'Three Items',
             'Four Items'
         )), 'Content');
-        $fields->addFieldToTab('Root.Main', new TextField('Items', _t('BlogHolder.ItemsLabel', 'Items displayed per page')), 'Content');
+        $columns->setRightTitle('Items per row');
+        $fields->addFieldToTab('Root.Main', $items = new TextField('Items', _t('BlogHolder.ItemsLabel', 'Items')), 'Content');
+        $items->setRightTitle('Items displayed per page');
 
-        /* =========================================
+        /* -----------------------------------------
          * Blog Sidebar
-         =========================================*/
+        ------------------------------------------*/
 
         $fields->addFieldToTab('Root.BlogSidebar', new HtmlEditorField('BlogSidebarContent', _t('BlogHolder.BlogSidebarLabel', 'Content For the Sidebar')));
 

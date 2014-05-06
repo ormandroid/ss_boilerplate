@@ -37,27 +37,22 @@ class ContactPage extends Page {
          * Contact Page
         ------------------------------------------*/
 
-        $fields->addFieldToTab('Root.Main', new HeaderField('Contact Form'), 'Content');
-        $fields->addFieldToTab('Root.Main', new TextField('MailTo', _t('ContactPage.MailToLabel', 'Choose an email address for the contact page to send to')), 'Content');
-        $fields->addFieldToTab('Root.Main', new TextareaField('SubmitText', _t('ContactPage.SubmitTextLabel', 'Text for contact form submission')), 'Content');
+        $fields->addFieldToTab('Root.Main', new HeaderField('Settings'), 'Content');
+        $fields->addFieldToTab('Root.Main', $mailTo = new TextField('MailTo', _t('ContactPage.MailToLabel', 'Email')), 'Content');
+        $mailTo->setRightTitle('Choose an email address for the contact page to send to');
+        $fields->addFieldToTab('Root.Main', $submissionText = new TextareaField('SubmitText', _t('ContactPage.SubmitTextLabel', 'Submission Text')), 'Content');
+        $submissionText->setRightTitle('Text for contact form submission once the email has been sent i.e "Thank you for your enquiry"');
 
         /* -----------------------------------------
          * Google Map
         ------------------------------------------*/
 
-        $toggleFields = ToggleCompositeField::create(
-			'GoogleMap',
-			'Google Map',
-			array(
-                new Textfield('GoogleAPI', _t('ContactPage.GoogleAPILabel', 'Maps API (Optional)')),
-                new Textfield('Latitude', _t('ContactPage.LatitudeLabel', 'Latitude')),
-                new Textfield('Longitude', _t('ContactPage.LongitudeLabel', 'Longitude')),
-                new ColorField('MapColor', _t('ContactPage.MapColorLabel', 'Map Colour (Optional)')),
-                new ColorField('WaterColor', _t('ContactPage.WaterColorLabel', 'Water Colour (Optional)')),
-                new CheckboxField('MapMarker', _t('ContactPage.MapMarkerLabel', 'Map Marker')),
-			)
-		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.Main', $toggleFields, 'Content');
+        $fields->addFieldToTab('Root.Map', new Textfield('GoogleAPI', _t('ContactPage.GoogleAPILabel', 'Maps API (Optional)')));
+        $fields->addFieldToTab('Root.Map', new Textfield('Latitude', _t('ContactPage.LatitudeLabel', 'Latitude')));
+        $fields->addFieldToTab('Root.Map', new Textfield('Longitude', _t('ContactPage.LongitudeLabel', 'Longitude')));
+        $fields->addFieldToTab('Root.Map', new ColorField('MapColor', _t('ContactPage.MapColorLabel', 'Map Colour (Optional)')));
+        $fields->addFieldToTab('Root.Map', new ColorField('WaterColor', _t('ContactPage.WaterColorLabel', 'Water Colour (Optional)')));
+        $fields->addFieldToTab('Root.Map', new CheckboxField('MapMarker', _t('ContactPage.MapMarkerLabel', 'Show map marker')));
 
         return $fields;
 

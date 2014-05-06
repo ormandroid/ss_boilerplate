@@ -28,6 +28,13 @@ var leftContent = jQuery('#leftContent'),
                 this._super();
             }
         });
+        $('#newCampaignButton').entwine({
+            onclick: function(e){
+                e.preventDefault();
+                createNewCampaign();
+                this._super();
+            }
+        });
         // Lists
         //-------------------------
         $('#listsButton').entwine({
@@ -53,7 +60,7 @@ var leftContent = jQuery('#leftContent'),
 
 function loadCampaigns(){
     var button = jQuery('#campaignsButton');
-    button.addClass('loading');
+        button.addClass('loading');
     jQuery.ajax({
         url: 'admin/newsletter/campaigns',
         dataType: 'json',
@@ -75,7 +82,15 @@ function loadCampaigns(){
 function viewCampaign(e){
     var height = rightContent.height();
     rightContent.html('');
+    loader.show();
     rightContent.append('<iframe src="admin/newsletter/viewcampaign/' + jQuery(e).attr('id') + '?height=' + height + '&title=' + encodeURI(jQuery(e).attr('name')) + '" width="100%" height="' + height + 'px" scrolling="yes" style="overflow-x:hidden;"></iframe>');
+}
+
+function createNewCampaign(){
+    var height = rightContent.height();
+    rightContent.html('');
+    loader.show();
+    rightContent.append("<iframe src='admin/newsletter/viewcampaign/0?height=" + height + "' width='100%' height='" + height + "px' scrolling='yes' style='overflow-x: hidden;' ></iframe>");
 }
 
 /* -----------------------------------------

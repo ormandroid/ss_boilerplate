@@ -17,12 +17,13 @@ class FilePage extends Page {
 
         $fields = parent::getCMSFields();
 
-        $fields->addFieldToTab('Root.Main', new DropdownField('Columns', _t('FilePage.ColumnsLabel', 'How many groups to display on each row'), array(
+        $fields->addFieldToTab('Root.Main', $columns = new DropdownField('Columns', _t('FilePage.ColumnsLabel', 'Columns'), array(
             'One Item (Full Width)',
             'Two Items',
             'Three Items',
             'Four Items'
         )), 'Content');
+        $columns->setRightTitle('How many groups to display on each row');
 
         /* -----------------------------------------
          * Groups

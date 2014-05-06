@@ -13,6 +13,10 @@ class TestimonialPage extends Page {
 
     private static $description = 'Testimonial content page';
 
+    private static $defaults = array(
+        'ShowInMenus' => 0
+    );
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();

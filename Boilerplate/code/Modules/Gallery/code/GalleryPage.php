@@ -23,28 +23,26 @@ class GalleryPage extends Page {
 
         $fields = parent::getCMSFields();
 
-        /* =========================================
-         * Gallery Images
-         =========================================*/
+        $fields->addFieldToTab('Root.Gallery', new HeaderField('Settings'));
+        $fields->addFieldToTab('Root.Gallery', $columns = new DropdownField('Columns', _t('GalleryPage.ColumnsLabel', 'Columns'), array(
+            'One Item (Full Width)',
+            'Two Items',
+            'Three Items',
+            'Four Items',
+            'Six Items',
+            'Twelve Items'
+        )));
+        $columns->setRightTitle('How many items to display on each row');
+        $fields->addFieldToTab('Root.Gallery', $items = new TextField('Items', _t('GalleryPage.ItemsLabel', 'Items')));
+        $items->setRightTitle('How many items to display on each page');
 
-        $fields->addFieldToTab('Root.GalleryImages', $images = new UploadField('Images', _t('GalleryPage.ImagesLabel', 'Images'), $this->owner->Images()));
+        /* -----------------------------------------
+         * Gallery Images
+        ------------------------------------------*/
+
+        $fields->addFieldToTab('Root.Gallery', new HeaderField('Images'));
+        $fields->addFieldToTab('Root.Gallery', $images = new UploadField('Images', _t('GalleryPage.ImagesLabel', 'Images'), $this->owner->Images()));
         $images->setFolderName('Uploads/gallery');
-        $toggleFields = ToggleCompositeField::create(
-            'GalleryImages',
-            _t('GalleryPage.GalleryImagesLabel', 'Settings'),
-            array(
-                new DropdownField('Columns', _t('GalleryPage.ColumnsLabel', 'How many items to display on each row'), array(
-                    'One Item (Full Width)',
-                    'Two Items',
-                    'Three Items',
-                    'Four Items',
-                    'Six Items',
-                    'Twelve Items'
-                )),
-                new TextField('Items', _t('GalleryPage.ItemsLabel', 'How many items to display on each page'))
-            )
-        )->setHeadingLevel(4)->setStartClosed(true);
-        $fields->addFieldToTab('Root.GalleryImages', $toggleFields);
 
         return $fields;
 

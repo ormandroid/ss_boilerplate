@@ -7,7 +7,7 @@
     <div class="member-links">
         <% if $CurrentMember %>
             <% with $CurrentMember %>
-                <a id="editProfile" class="btn btn-secondary" href="$Link"><%t SecurityLogin.EditLink 'Edit Profile' %></a>
+                <a id="editProfile" class="btn btn-lg btn-secondary" href="$Link"><%t SecurityLogin.EditLink 'Edit Profile' %></a>
             <% end_with %>
         <% else %>
             <a href="$Page(register).Link"><%t SecurityLogin.RegisterLink 'Register' %></a>

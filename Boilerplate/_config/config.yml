@@ -1,6 +1,10 @@
 GDBackend:
   default_quality: 100
 
+Security:
+  extensions:
+    - SecurityExtension
+
 SiteConfig:
   extensions:
     - BoilerplateConfig
@@ -12,10 +16,6 @@ ContentController:
 PaginatedList:
   extensions:
     - PaginatedListExtension
-
-Security:
-  extensions:
-    - SecurityExtension
 
 #LeftAndMain:
 #  extra_requirements_css:

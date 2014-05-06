@@ -88,8 +88,7 @@ a {
                     color: $btn-primary-color;
                 }
                 > .dropdown-menu {
-                    @include opacity(1);
-                    @include transform(translate(0, 0) scale(1));
+                    display: block;
                 }
             }
             > a {
@@ -114,13 +113,9 @@ a {
                 border-width: 0;
                 background: transparent none;
                 padding-top: $gap-sm;
-                display: block;
-                @include opacity(0);
+                display: none;
                 @include border-radius(0);
                 @include box-shadow(none);
-                @include backface-visibility(hidden);
-                @include transition(all 0.2s ease-in-out);
-                @include transform(translate(0, -50%) scale(0));
                 > li {
                     &.divider {
                         margin: 0;
@@ -209,8 +204,7 @@ a {
             > li{
                 &:hover {
                     > .dropdown-menu {
-                        @include opacity(1);
-                        @include transform(translate(0, 0) scale(1));
+                        display: block;
                     }
                 }
             }

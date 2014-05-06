@@ -28,18 +28,12 @@ class SliderConfig extends DataExtension {
         $fields->addFieldToTab('Root.Slider', $gridField);
 
         /* -----------------------------------------
-         * Advanced
+         * Settings
         ------------------------------------------*/
 
-        $toggleFields = ToggleCompositeField::create(
-			'Advanced',
-            _t('SliderConfig.AdvancedLabel', 'Advanced'),
-			array(
-                new CheckboxField('FullWidth', _t('SliderConfig.FullWidthLabel', 'Full width')),
-                new TextField('Height', _t('SliderConfig.HeightLabel', 'Height of slider'))
-			)
-		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.Slider', $toggleFields);
+        $fields->addFieldToTab('Root.Slider', new HeaderField('Settings'));
+        $fields->addFieldToTab('Root.Slider', new CheckboxField('FullWidth', _t('SliderConfig.FullWidthLabel', 'Set slider to be full width')));
+        $fields->addFieldToTab('Root.Slider', $height = new TextField('Height', _t('SliderConfig.HeightLabel', 'Height of slider (optional)')));
 
     }
 

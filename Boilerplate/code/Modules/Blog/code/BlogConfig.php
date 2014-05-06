@@ -11,17 +11,15 @@ class BlogConfig extends DataExtension {
     public function updateCMSFields(FieldList $fields) {
 
         /* -----------------------------------------
-         * Disqus
+         * Comments
         ------------------------------------------*/
 
-        $toggleFields = ToggleCompositeField::create(
-			'Discus',
-			'Disqus Blog Comments',
-			array(
+        $fields->findOrMakeTab('Root.Settings.Comments', 'Comments');
+        $fields->addFieldsToTab('Root.Settings.Comments',
+            array(
                 new TextField('DisqusForumShortName', 'Disqus forum shortname')
-			)
-		)->setHeadingLevel(4)->setStartClosed(true);
-		$fields->addFieldToTab('Root.'.SiteConfig::current_site_config()->Title.'Settings', $toggleFields);
+            )
+        );
 
     }
 

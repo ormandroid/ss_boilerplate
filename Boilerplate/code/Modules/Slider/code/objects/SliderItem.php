@@ -34,7 +34,8 @@ class SliderItem extends DataObject{
         $fields = FieldList::create(TabSet::create('Root'));
 
         $fields->addFieldToTab('Root.Main', new TreeDropdownField('LinkID', _t('SliderItem.LinkIDLabel', 'Link to page'), 'SiteTree'));
-        $customLink = new TextField('CustomLink', _t('SliderItem.CustomLinkLabel', 'Custom link (Will override "Link to page")'));
+        $customLink = new TextField('CustomLink', _t('SliderItem.CustomLinkLabel', 'Custom link'));
+        $customLink->setRightTitle('Will override "Link to page"');
         $customLink->setAttribute('placeholder', _t('SliderItem.CustomLinkPlaceholder', 'Http://'));
         $fields->addFieldToTab('Root.Main', $customLink);
 

@@ -37,19 +37,18 @@ class PageItem extends DataObject{
         $fields->addFieldToTab('Root.Main',
             new TabSet(
                 $name = "WidgetTabs",
-                /* ========================================
-                * Item Title
-                =========================================*/
+                /* -----------------------------------------
+                 * Item Title
+                ------------------------------------------*/
                 new Tab(
                     $title = 'Page Item',
                     new HeaderField(_t('PageItem.PageItemTabText', 'Title')),
-                    new TextField('Title', _t('PageItem.TitleLabel', 'Page Item Title')),
-                    new LiteralField('WidgetTitleDescription', '<p>'._t('PageItem.WidgetTitleDescriptionText', 'Name your page item to be easily recognisable in the page item list e.g "Pricing columns"').'</p>'),
+                    $titleField = new TextField('Title', _t('PageItem.TitleLabel', 'Page Item Title')),
                     new HtmlEditorField('Content', _t('PageItem.ContentLabel', 'Content'))
                 ),
-                /* ========================================
-                * Columns
-                =========================================*/
+                /* -----------------------------------------
+                 * Columns
+                ------------------------------------------*/
                 new Tab(
                     $title = 'Columns',
                     new HeaderField(_t('PageItem.ColumnsTabText', 'Columns')),
@@ -58,9 +57,9 @@ class PageItem extends DataObject{
                     $columnThree = new HtmlEditorField('ColumnThree', _t('PageItem.ColumnThreeLabel', 'Column Three')),
                     $columnFour = new HtmlEditorField('ColumnFour', _t('PageItem.ColumnFourLabel', 'Column Four'))
                 ),
-                /* ========================================
-                * Settings
-                =========================================*/
+                /* -----------------------------------------
+                 * Settings
+                ------------------------------------------*/
                 new Tab(
                     $title = 'Settings',
                     new HeaderField(_t('PageItem.SettingsTabText', 'Settings (Optional)')),
@@ -77,6 +76,7 @@ class PageItem extends DataObject{
 
         $rowHeight = 20;
 
+        $titleField->setRightTitle(_t('PageItem.WidgetTitleDescriptionText', 'Name your page item to be easily recognisable in the page item list e.g "Pricing columns"'));
         $columnOne->setRows($rowHeight);
         $columnTwo->setRows($rowHeight);
         $columnThree->setRows($rowHeight);
