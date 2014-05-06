@@ -1,38 +1,116 @@
-/*======================================================================*\
+/*!
+======================================================================
     Forms
-\*======================================================================*/
+======================================================================
+*/
 
 /*---------------------------------------------*\
     Inputs
 \*---------------------------------------------*/
 
+%form-control-static{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    line-height: inherit;
+    background: transparent none;
+    border-width: 0;
+    @include border-radius(0);
+    @include box-shadow(none);
+    @include transition(none);
+}
+
+%input-static{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 12px;
+    height: auto;
+    @include border-radius();
+    @include box-shadow(none);
+    &:focus {
+        outline: 0;
+        border-color: $brand-primary;
+        @include box-shadow(none);
+    }
+}
+
 form{
     .field{
         &.form-control{
-            display: block;
-            width: 100%;
-            height: auto;
+            @extend %form-control-static;
+            .form-control{
+                &.text,
+                &.textarea{
+                    @extend %input-static;
+                }
+                &.input-sm{
+                    padding: $gap-xs;
+                }
+                &.readonly{
+                    border-width: 0;
+                    height: auto;
+                    padding: 0;
+                }
+            }
+        }
+        &.checkbox{
+            margin-bottom: $gap-md;
+            li{
+                list-style: none;
+            }
+        }
+        &.optionset{
             padding: 0;
-            line-height: inherit;
-            background: transparent none;
-            border-width: 0;
-            @include border-radius(0);
-            @include box-shadow(none);
-            @include transition(none);
+            margin-bottom: $gap-md;
+            > label{
+                font-weight:700;
+            }
+            .radio{
+                li{
+                    margin-bottom: $gap-xs;
+                    list-style: none;
+                }
+            }
+        }
+        &.confirmedpassword{
+            @extend %form-control-static;
+            margin-bottom: 0;
+            input.password{
+                @extend %input-static;
+                margin-bottom: $gap-md;
+            }
+        }
+        &.creditcard{
+            input{
+                @extend %input-static;
+                width: auto;
+                display: inline-block;
+            }
+        }
+        &.phonenumber{
+            input{
+                @extend %input-static;
+            }
+        }
+        &.file{
+            input{
+                border-width: 0;
+                padding: 0;
+                height: auto;
+                @include box-shadow(none);
+                &:focus{
+                    outline: 0;
+                }
+            }
         }
     }
-
     input:focus, textarea:focus, .form-control:focus {
         @include box-shadow(none);
     }
     .form-control {
         margin-bottom: $gap-md;
-        &:focus {
-            border-color: $gray;
-        }
-    }
-    .text{
-        @extend .form-control;
     }
     .holder-required {
         input, input:focus, textarea, textarea:focus {

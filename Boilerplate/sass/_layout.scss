@@ -1,3 +1,9 @@
+/*!
+======================================================================
+    Layout
+======================================================================
+*/
+
 /*======================================================================*\
     Global
 \*======================================================================*/
@@ -109,10 +115,12 @@ a {
                 }
             }
             .dropdown-menu {
+                margin-top: 0;
                 padding: 0;
+                left: auto;
+                right: 0;
                 border-width: 0;
                 background: transparent none;
-                padding-top: $gap-sm;
                 display: none;
                 @include border-radius(0);
                 @include box-shadow(none);
@@ -120,16 +128,24 @@ a {
                     &.divider {
                         margin: 0;
                     }
+                    &.first{
+                        > a{
+                            border-top: 1px solid $brand-primary;
+                        }
+                    }
+                    &.last{
+                        > a{
+                            border-bottom: 1px solid $brand-primary;
+                        }
+                    }
                     > a {
                         padding: $gap-sm;
                         background: $btn-default-bg;
                         color: $btn-default-color;
-                        @include box-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+                        border-left: 1px solid $brand-primary;
+                        border-right: 1px solid $brand-primary;
                         &:hover {
                             background: darken($btn-default-bg, 3%)
-                        }
-                        &:first-child {
-                            border-top-width: 0;
                         }
                     }
                     &:first-child {
@@ -203,7 +219,7 @@ a {
         > .nav {
             > li{
                 &:hover {
-                    > .dropdown-menu {
+                    > .dropdown-menu{
                         display: block;
                     }
                 }
@@ -310,7 +326,7 @@ a {
     Buttons
 \*---------------------------------------------*/
 
-.btn {
+%btn-static{
     padding: $gap-xs $gap-sm;
     white-space: normal;
     border-width: 0;
@@ -319,6 +335,10 @@ a {
     &:focus {
         outline: 0;
     }
+}
+
+.btn {
+    @extend %btn-static;
 }
 .btn-sm{
     padding: ($gap-xs / 2) ($gap-sm / 2);
@@ -415,6 +435,7 @@ a {
 
 .panel {
     margin-bottom: $gap-lg;
+    @include box-shadow(none);
     table {
         &.table {
             tr {

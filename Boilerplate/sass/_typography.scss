@@ -1,3 +1,9 @@
+/*!
+======================================================================
+    Typography
+======================================================================
+*/
+
 /*---------------------------------------------*\
     Regular
 \*---------------------------------------------*/
@@ -11,7 +17,12 @@ body {
     Semi-Bold
 \*---------------------------------------------*/
 
-strong, #main-nav .nav li a, .btn {
+strong,
+#main-nav .nav li a,
+.btn,
+input,
+select,
+textarea{
     font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
 }
@@ -20,7 +31,18 @@ strong, #main-nav .nav li a, .btn {
     Bold
 \*---------------------------------------------*/
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     font-family:"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     a {

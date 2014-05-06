@@ -3,17 +3,17 @@
     <ul class="nav navbar-nav pull-right hidden-xs">
         <% loop $Menu(1) %>
             <% if $Children %>
-                <li class="$LinkingMode dropdown">
-                    <a href="$Link" title="$Title" class="visible-lg">$MenuTitle <i class="fa fa-angle-down"></i></a>
-                    <a href="#" class="dropdown-toggle hidden-lg" data-toggle="dropdown">$MenuTitle <i class="fa fa-angle-down"></i></a>
+                <li class="$LinkingMode dropdown $EvenOdd $FirstLast">
+                    <a href="$Link" title="$Title" class="visible-lg">$MenuTitle <i class="fa fa-caret-down"></i></a>
+                    <a href="#" class="dropdown-toggle hidden-lg" data-toggle="dropdown">$MenuTitle <i class="fa fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <% loop $Children %>
-                            <li class="$LinkingMode"><a href="$Link" title="$Title">$MenuTitle</a></li>
+                            <li class="$LinkingMode $EvenOdd $FirstLast"><a href="$Link" title="$Title">$MenuTitle</a></li>
                         <% end_loop %>
                     </ul><!-- /.dropdown-menu -->
                 </li><!-- /.dropdown -->
             <% else %>
-                <li class="$LinkingMode"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
+                <li class="$LinkingMode $EvenOdd $FirstLast"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
             <% end_if %>
         <% end_loop %>
         <% if $SearchForm %>

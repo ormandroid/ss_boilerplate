@@ -90,7 +90,6 @@ class ContactPage_Controller extends Page_Controller {
 })(jQuery);
 JS
 );
-
         }
 
 	}
@@ -127,7 +126,7 @@ JS
             $question
         );
 
-        $action = new FormAction('SendContactForm', _t('ContactPage.SubmitText', 'Submit Form'));
+        $action = new FormAction('SendContactForm', _t('ContactPage.SubmitText', 'Submit'));
         $action->addExtraClass('btn btn-primary btn-lg');
 
         $actions = new FieldList(
