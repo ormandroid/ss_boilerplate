@@ -43,12 +43,12 @@
                 </div><!-- /.carousel-inner -->
 
                 <% if $SliderItems.Count > 1 %>
+                    <ol class="carousel-indicators">
+                        <% loop $SliderItems %>
+                            <li data-target="#pageSlider" data-slide-to="$Pos(0)" class="<%if First %> active<% end_if %>"></li>
+                        <% end_loop %>
+                    </ol>
                     <div class="hidden-xs">
-                        <ol class="carousel-indicators">
-                            <% loop $SliderItems %>
-                                <li data-target="#pageSlider" data-slide-to="$Pos(0)" class="<%if First %> active<% end_if %>"></li>
-                            <% end_loop %>
-                        </ol>
                         <a class="left carousel-control" href="#pageSlider" data-slide="prev">
                             <span class="fa fa-angle-left"></span>
                         </a><!-- /.left carousel-control -->

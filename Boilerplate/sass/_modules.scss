@@ -226,16 +226,6 @@
             }
         }
     }
-    .mobile-slider-controls{
-        background: $gray-lighter;
-        text-align: right;
-        a{
-            color: $gray;
-            display: inline-block;
-            font-size: 1.3em;
-            padding: $gap-sm;
-        }
-    }
 }
 
 @media (min-width: $screen-sm) {

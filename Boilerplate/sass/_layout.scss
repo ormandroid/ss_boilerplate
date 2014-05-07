@@ -373,6 +373,32 @@ a {
         @include transition(.1s linear background);
     }
 }
+.mobile-slider-controls{
+    font-size: 0;
+    background: $brand-secondary;
+    text-align: right;
+    a{
+        line-height: 20px;
+        font-size: 18px;
+        color: $btn-secondary-color;
+        display: inline-block;
+        padding: $gap-sm $gap-md;
+        width: 50%;
+        &:first-child{
+            text-align: left;
+        }
+    }
+}
+.carousel-indicators{
+    bottom: -($gap-sm + (20px));
+    margin-bottom: 0;
+}
+
+@media (min-width: $screen-sm) {
+    .carousel-indicators{
+        bottom: $gap-lg;
+    }
+}
 
 /*---------------------------------------------*\
     Buttons
