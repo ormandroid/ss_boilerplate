@@ -307,14 +307,16 @@
         max-width: 50%;
     }
 }
-.form-group {
-    .text {
-        @extend .form-control;
-    }
-}
 // Login Form
 #MemberLoginForm_LoginForm,
 #MemberLoginForm_LostPasswordForm {
+    .text {
+        @extend %form-control-static;
+        input{
+            @extend %input-static;
+            margin-bottom: $gap-md;
+        }
+    }
     .action {
         @extend .btn;
         @extend .btn-primary;
