@@ -5,7 +5,7 @@
     <% include Content %>
 
     <% if $PaginatedPages %>
-        <section class="gallery loop">
+        <section class="gallery loop<% if $NoMargin %> no-margin<% end_if %>">
             <div class="row">
                 <% loop $PaginatedPages %>
                     <figure class="item $Top.ColumnClass $FirstLast">

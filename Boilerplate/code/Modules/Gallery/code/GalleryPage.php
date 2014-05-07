@@ -5,7 +5,8 @@ class GalleryPage extends Page {
 
     private static $db = array(
         'Columns' => 'Int',
-        'Items' => 'Int'
+        'Items' => 'Int',
+        'NoMargin' => 'Boolean(0)'
     );
 
     public static $many_many = array(
@@ -35,6 +36,7 @@ class GalleryPage extends Page {
         $columns->setRightTitle('How many items to display on each row');
         $fields->addFieldToTab('Root.Gallery', $items = new TextField('Items', _t('GalleryPage.ItemsLabel', 'Items')));
         $items->setRightTitle('How many items to display on each page');
+        $fields->addFieldToTab('Root.Gallery', new CheckboxField('NoMargin', 'Remove margin from between gallery items'));
 
         /* -----------------------------------------
          * Gallery Images

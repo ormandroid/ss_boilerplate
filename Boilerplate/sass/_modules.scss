@@ -225,28 +225,6 @@
                 }
             }
         }
-        .carousel-indicators {
-            .active {
-                background: $brand-primary;
-                border-color: $brand-primary;
-            }
-        }
-        .carousel-control {
-            &.right, &.left {
-                background: 0 none;
-                filter: none;
-            }
-            .fa-angle-left, .fa-angle-right {
-                position: absolute;
-                top: 50%;
-                z-index: 5;
-                left: 50%;
-                display: inline-block;
-                font-size:$gap-lg;
-                margin-top: -$gap-md;
-                margin-left: -$gap-xs;
-            }
-        }
     }
     .mobile-slider-controls{
         background: $gray-lighter;

@@ -11,6 +11,10 @@ class SliderConfig extends DataExtension {
         'SliderItems' => 'SliderItem'
     );
 
+    private static $defaults = array(
+        'Height' => 400
+    );
+
     public function updateCMSFields(FieldList $fields) {
 
         $config = GridFieldConfig_RelationEditor::create(10);
