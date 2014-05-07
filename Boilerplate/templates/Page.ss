@@ -32,6 +32,6 @@
                 <% include Footer %>
             </div><!-- /.inner -->
         </div><!-- /#wrapper -->
-        $SiteConfig.TrackingCode
+        $SiteConfig.TrackingCode.RAW
     </body>
 </html>

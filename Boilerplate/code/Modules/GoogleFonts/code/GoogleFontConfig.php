@@ -15,7 +15,10 @@ class GoogleFontConfig extends DataExtension {
         ------------------------------------------*/
 
         $fields->findOrMakeTab('Root.Settings.GoogleFonts', 'Google Fonts');
-        $fields->addFieldToTab('Root.Settings.GoogleFonts', new TextField('FontAPI', _t('GoogleFontConfig.FontAPILabel', 'Google Fonts API Key')));
+        $fields->addFieldToTab('Root.Settings.GoogleFonts', $fontAPI = new TextField('FontAPI', _t('GoogleFontConfig.FontAPILabel', 'Google Fonts API Key')));
+        if(!SiteConfig::current_site_config()->FontAPI){
+            $fontAPI->setRightTitle('Once you\'ve saved your API key more font choices will be available');
+        }
 
         if(SiteConfig::current_site_config()->FontAPI){
             $googleFontsArray = SiteConfig::current_site_config()->getGoogleFonts('all');
@@ -39,14 +42,10 @@ class GoogleFontConfig extends DataExtension {
      */
     function getGoogleFonts( $amount = 30 ) {
 
-        $theme = Config::inst()->get('SSViewer', 'theme');
-
         $fontFile = Director::baseFolder().'/Boilerplate/fonts/google-web-fonts.txt';
-
         //Total time the file will be cached in seconds, set to a week
-        $cachetime = 86400 * 7;
-
-        if(file_exists($fontFile) && $cachetime < filemtime($fontFile)){
+        $cacheTime = 86400 * 7;
+        if(file_exists($fontFile) && $cacheTime < filemtime($fontFile)){
             $content = json_decode(file_get_contents($fontFile));
         } else {
             $url = 'https://www.googleapis.com/webfonts/v1/webfonts?key='.SiteConfig::current_site_config()->FontAPI;
@@ -66,12 +65,12 @@ class GoogleFontConfig extends DataExtension {
 
             $content = json_decode($fontContent);
         }
-
         if($amount == 'all'){
             return $content->items;
         } else {
             return array_slice($content->items, 0, $amount);
         }
+
     }
 
 }

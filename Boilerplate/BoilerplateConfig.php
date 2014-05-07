@@ -49,7 +49,7 @@ class BoilerplateConfig extends DataExtension {
             )
         );
         $logo->setRightTitle('Choose an Image For Your Logo');
-        $favicon->setRightTitle('Choose an Image For Your Favicon');
+        $favicon->setRightTitle('Choose an Image For Your Favicon (16x16)');
 
         /* -----------------------------------------
          * Company Details
@@ -72,9 +72,10 @@ class BoilerplateConfig extends DataExtension {
         $fields->findOrMakeTab('Root.Settings.TrackingCode', 'Tracking Code');
         $fields->addFieldsToTab('Root.Settings.TrackingCode',
             array(
-                new TextareaField('TrackingCode', _t('BoilerplateConfig.TrackingCodeLabel', 'Tracking Code'))
+                $trackingCode = new TextareaField('TrackingCode', _t('BoilerplateConfig.TrackingCodeLabel', 'Tracking Code'))
             )
         );
+        $trackingCode->setRows(20);
 
     }
 

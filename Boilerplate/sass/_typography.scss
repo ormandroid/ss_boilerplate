@@ -127,6 +127,10 @@ h5 {
             clear: both;
         }
     }
+    blockquote{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     .captionImage{
         width: 100%;
         margin-top: $gap-xs;

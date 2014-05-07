@@ -3,9 +3,7 @@
         <div class="row">
             <div id="logoContainer" class="col-xs-6 col-sm-3">
                 <% if $SiteConfig.LogoImage %>
-                    <a href="$BaseHref" rel="home">
-                        $SiteConfig.LogoImage
-                    </a>
+                    <a href="$BaseHref" rel="home">$SiteConfig.LogoImage</a>
                 <% else %>
                     <% if $SiteConfig.Title %><h3><a href="$BaseHref">$SiteConfig.Title</a></h3><% end_if %>
                     <% if $SiteConfig.Tagline %><h5 class="tagline">$SiteConfig.Tagline</h5><!-- /.tagline --><% end_if %>

@@ -17,8 +17,6 @@
         <% if $PaginatedPages.NotLastPage %>
             <li><a class="next" href="$PaginatedPages.NextLink"><%t Pagination.NextText 'Next' %></a></li>
         <% end_if %>
-
         <%--<li class="disabled"><span>$PaginatedPages.CurrentPosition</span></li>--%>
-
     </ul><!-- /.pagination -->
 <% end_if %>
