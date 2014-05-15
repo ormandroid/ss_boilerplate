@@ -7,21 +7,21 @@
                     <% if $ColumnOne %>
                         <article class="content typography">
                             <div class="row">
-                                <div class="$ColumnClass">
+                                <div class="<% if $HasColumnType %>$ColumnTypeOne<% else %>$ColumnClass<% end_if %>">
                                     $ColumnOne
                                 </div><!-- /.$ColumnClass -->
-                                <div class="$ColumnClass">
+                                <div class="<% if $HasColumnType %>$ColumnTypeTwo<% else %>$ColumnClass<% end_if %>">
                                     $ColumnTwo
-                                </div><!-- /.$ColumnClass -->
-                                <% if $ColumnThree %>
+                                </div>
+                                <% if $ColumnThree && $ColumnType = 0 %>
                                     <div class="$ColumnClass">
                                         $ColumnThree
-                                    </div><!-- /.$ColumnClass -->
+                                    </div>
                                 <% end_if %>
-                                <% if $ColumnFour %>
+                                <% if $ColumnFour && $ColumnType = 0 %>
                                     <div class="$ColumnClass">
                                         $ColumnFour
-                                    </div><!-- /.$ColumnClass -->
+                                    </div>
                                 <% end_if %>
                             </div><!-- /.row -->
                         </article><!-- /.content typography -->

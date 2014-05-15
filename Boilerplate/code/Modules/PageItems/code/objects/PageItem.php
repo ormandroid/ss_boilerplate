@@ -9,6 +9,7 @@ class PageItem extends DataObject{
         'ColumnTwo' => 'HTMLText',
         'ColumnThree' => 'HTMLText',
         'ColumnFour' => 'HTMLText',
+        'ColumnType' => 'Int',
         'BackgroundType' => 'Varchar',
         'BackgroundColor' => 'Varchar',
         'Padding' => 'Boolean(0)',
@@ -52,6 +53,11 @@ class PageItem extends DataObject{
                 new Tab(
                     $title = 'Columns',
                     new HeaderField(_t('PageItem.ColumnsTabText', 'Columns')),
+                    $columnType = new DropdownField('ColumnType', 'Column Type', array(
+                        0 => 'Default',
+                        1 => '2/3, 1/3',
+                        2 => '1/3, 2/3'
+                    )),
                     $columnOne = new HtmlEditorField('ColumnOne', _t('PageItem.ColumnOneLabel', 'Column One')),
                     $columnTwo = new HtmlEditorField('ColumnTwo', _t('PageItem.ColumnTwoLabel', 'Column Two')),
                     $columnThree = new HtmlEditorField('ColumnThree', _t('PageItem.ColumnThreeLabel', 'Column Three')),
@@ -87,9 +93,54 @@ class PageItem extends DataObject{
     }
 
     /**
+     * @return bool
+     */
+    public function getHasColumnType(){
+        if($this->ColumnType > 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    /**
      * @return string
      */
-    public function ColumnClass() {
+    public function getColumnTypeOne(){
+        $xsClass = 'col-xs-12';
+        switch($this->ColumnType){
+            case 1:
+                return $xsClass.' col-sm-4';
+                break;
+            case 2:
+                return $xsClass.' col-sm-8';
+                break;
+            default:
+                return $xsClass;
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getColumnTypeTwo(){
+        $xsClass = 'col-xs-12';
+        switch($this->ColumnType){
+            case 1:
+                return $xsClass.' col-sm-8';
+                break;
+            case 2:
+                return $xsClass.' col-sm-4';
+                break;
+            default:
+                return $xsClass;
+        }
+    }
+
+    /**
+     * @return string
+     */
+    public function getColumnClass() {
         $count = 1;
         $xsClass = 'col-xs-12';
         if($this->ColumnTwo){ $count++; }
