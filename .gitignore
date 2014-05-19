@@ -24,3 +24,4 @@ mysite/_config/config.yml
 mysite/code/Page.php
 boilerplate.tar.gz
 node_modules/
+Boilerplate/code/Modules/Newsletter/
