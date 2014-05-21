@@ -55,8 +55,8 @@ class PageItem extends DataObject{
                     new HeaderField(_t('PageItem.ColumnsTabText', 'Columns')),
                     $columnType = new DropdownField('ColumnType', 'Column Type', array(
                         0 => 'Default',
-                        1 => '2/3, 1/3',
-                        2 => '1/3, 2/3'
+                        1 => '1/3, 2/3',
+                        2 => '2/3, 1/3'
                     )),
                     $columnOne = new HtmlEditorField('ColumnOne', _t('PageItem.ColumnOneLabel', 'Column One')),
                     $columnTwo = new HtmlEditorField('ColumnTwo', _t('PageItem.ColumnTwoLabel', 'Column Two')),

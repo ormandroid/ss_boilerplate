@@ -15,13 +15,6 @@ $formats = array(
         'merge_siblings' => false
     ),
     array(
-        'title' => 'Well',
-        'block' => 'div',
-        'classes' => 'well',
-        'wrapper' => true,
-        'merge_siblings' => false
-    ),
-    array(
         'title' => 'Well - Default',
         'block' => 'div',
         'classes' => 'well well-default',
@@ -31,7 +24,7 @@ $formats = array(
     array(
         'title' => 'Well - Primary',
         'block' => 'div',
-        'classes' => 'well well-secondary',
+        'classes' => 'well well-primary',
         'wrapper' => true,
         'merge_siblings' => false
     ),
@@ -217,3 +210,15 @@ $formats = array(
 );
 
 HtmlEditorConfig::get('cms')->setOption('style_formats', $formats);
+
+/* -----------------------------------------
+ * Text Colour
+------------------------------------------*/
+
+HtmlEditorConfig::get('cms')->insertButtonsAfter('formatselect', 'forecolor');
+
+/* -----------------------------------------
+ * Remove Buttons
+------------------------------------------*/
+
+//HtmlEditorConfig::get('cms')->removeButtons('selectall', 'cut', 'copy');

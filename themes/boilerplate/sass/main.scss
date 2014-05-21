@@ -1,1 +1,10 @@
-/*! Theme main.scss */
+// Core variables and mixins for Boilerplate
+@import '../../../Boilerplate/sass/_vars';
+@import '../../../Boilerplate/sass/_mixins';
+
+// Core variables and mixins for boostrap
+@import '../../../Boilerplate/sass/bootstrap/_variables';
+@import '../../../Boilerplate/sass/bootstrap/_mixins';
+
+// Theme includes
+@import '_layout';
