@@ -9,9 +9,13 @@ SiteConfig:
   extensions:
     - BoilerplateConfig
 
-ContentController:
+Page:
   extensions:
     - PageExtension
+
+ContentController:
+  extensions:
+    - PageControllerExtension
 
 PaginatedList:
   extensions:
