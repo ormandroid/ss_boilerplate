@@ -24,7 +24,8 @@ class GoogleFontConfig extends DataExtension {
             $googleFontsArray = SiteConfig::current_site_config()->getGoogleFonts('all');
             $googleFontsDropdownArray[''] = '-- Theme Default --';
             foreach($googleFontsArray as $item) {
-                $googleFontsDropdownArray[$item->family] = $item->family;
+                $variants = ':'.implode(',', $item->variants);
+                $googleFontsDropdownArray[$item->family.$variants] = $item->family;
             }
             $fields->addFieldsToTab('Root.Settings.GoogleFonts',
                 array(

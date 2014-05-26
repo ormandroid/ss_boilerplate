@@ -1,15 +1,10 @@
 <% include PageHeader %>
 
 <div class="container">
-
     <div class="row">
-
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
-
         <div class="col-xs-12 col-sm-8 col-lg-9">
-
             <% include Content %>
-
             <% if $PaginatedPages %>
                 <section class="blog loop">
                     <div class="row">
@@ -39,11 +34,7 @@
                     </div><!-- /.row -->
                 </section><!-- /.blog loop -->
             <% end_if %>
-
             <% include Pagination %>
-
         </div><!-- /.col-xs-12 col-sm-9 -->
-
     </div><!-- /.row -->
-
 </div><!-- /.container -->

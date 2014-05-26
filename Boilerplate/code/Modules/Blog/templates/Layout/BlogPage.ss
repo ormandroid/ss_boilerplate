@@ -1,11 +1,8 @@
 <% include PageHeader %>
 
 <div class="container">
-
     <div class="row">
-
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
-
         <div class="col-xs-12 col-sm-8 col-lg-9">
             <section class="blog page">
                 <% if $BlogImage %>
@@ -18,7 +15,5 @@
                 <% include Disqus %>
             </section><!-- /.blog page -->
         </div><!-- /.col-xs-12 col-sm-9 -->
-
     </div><!-- /.row -->
-
 </div><!-- /.container -->
