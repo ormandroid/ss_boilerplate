@@ -4,9 +4,9 @@ var map,
 
 var MY_MAPTYPE_ID = 'custom_style';
 
-function getMap(lat, long, mapColor, waterColor, marker) {
+function getMap(lat, long, mapColor, waterColor, marker, InfoWindows) {
 
-    center = new google.maps.LatLng(lat, long)
+    center = new google.maps.LatLng(lat, long);
 
     featureOpts = [
         {
@@ -48,6 +48,29 @@ function getMap(lat, long, mapColor, waterColor, marker) {
             position: center,
             map: map
         });
+    }
+
+    if(InfoWindows.Objects){
+        var locations = [],
+            marker,
+            infowindow = new google.maps.InfoWindow();
+        for(i = 0;i < InfoWindows.Objects.length;i++){
+            locations.push([InfoWindows.Objects[i].title, InfoWindows.Objects[i].lat, InfoWindows.Objects[i].long, InfoWindows.Objects[i].phone, InfoWindows.Objects[i].email]);
+        }
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                map: map
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(
+                        '<strong>'+locations[i][0]+'</strong>'
+                    );
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
+        }
     }
 
     map.mapTypes.set(MY_MAPTYPE_ID, customMapType);

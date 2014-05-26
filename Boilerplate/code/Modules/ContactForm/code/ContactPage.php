@@ -4,7 +4,7 @@ class ContactPage extends Page {
 
     private static $icon = 'Boilerplate/code/Modules/ContactForm/images/envelope-at-sign.png';
 
-    public static $db = array(
+    private static $db = array(
         'MailTo' => 'Varchar(100)',
         'SubmitText' => 'Text',
         'GoogleAPI' => 'Varchar(255)',
@@ -15,7 +15,11 @@ class ContactPage extends Page {
         'MapMarker' => 'Boolean(1)'
     );
 
-    public static $defaults = array(
+    private static $has_many = array(
+        'InfoWindows' => 'InfoWindow'
+    );
+
+    private static $defaults = array(
         'SubmitText' => 'Thank you for contacting us, we will get back to you as soon as possible.'
     );
 
@@ -54,6 +58,23 @@ class ContactPage extends Page {
         $fields->addFieldToTab('Root.Map', new ColorField('WaterColor', _t('ContactPage.WaterColorLabel', 'Water Colour (Optional)')));
         $fields->addFieldToTab('Root.Map', new CheckboxField('MapMarker', _t('ContactPage.MapMarkerLabel', 'Show map marker')));
 
+        /* -----------------------------------------
+         * Info Windows
+        ------------------------------------------*/
+
+        $config = GridFieldConfig_RelationEditor::create(10);
+        $config->addComponent(new GridFieldDeleteAction());
+        $config->getComponentByType('GridFieldDataColumns')->setDisplayFields(array(
+            'Title' => 'Title'
+        ));
+        $gridField = new GridField(
+            'InfoWindows',
+            'Markers',
+            $this->owner->InfoWindows(),
+            $config
+        );
+        $fields->addFieldToTab('Root.MapMarkers', $gridField);
+
         return $fields;
 
     }
@@ -68,8 +89,24 @@ class ContactPage_Controller extends Page_Controller {
 
 		parent::init();
 
-        if($this->Latitude && $this->Longitude){
+        /**
+         * Get all info windows
+         */
+        $infoWindowList = $this->InfoWindows();
+        if ($infoWindowList) {
+            $InfoWindows = array();
+            foreach($infoWindowList as $obj){
+                $InfoWindows['Objects'][] = array(
+                    'title' => $obj->Title,
+                    'lat' => $obj->Lat,
+                    'long' => $obj->Long
+                );
+            }
+            $InfoWindows = Convert::array2json($InfoWindows);
+            Requirements::customScript("var infoWindowObject = $InfoWindows;");
+        }
 
+        if($this->Latitude && $this->Longitude){
             if($this->MapColor != ''){
                 $mapColor = "'".$this->MapColor."'";
             }else{
@@ -85,7 +122,7 @@ class ContactPage_Controller extends Page_Controller {
             Requirements::customScript(<<<JS
 (function($) {
     $(document).ready(function(){
-        getMap($this->Latitude, $this->Longitude, $mapColor, $waterColor, $this->MapMarker)
+        getMap($this->Latitude, $this->Longitude, $mapColor, $waterColor, $this->MapMarker, infoWindowObject)
     })
 })(jQuery);
 JS
