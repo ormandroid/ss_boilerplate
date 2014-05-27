@@ -29,11 +29,7 @@
         <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
             <% loop $Menu(1) %>
                 <% if $Children %>
-                    <% if $LinkOrCurrent = current %>
-                        <option selected value="$Link">$MenuTitle</option>
-                    <% else %>
-                        <option value="$Link">$MenuTitle</option>
-                    <% end_if %>
+                    <option value="$Link">$MenuTitle</option>
                     <% loop $Children %>
                         <% if $LinkOrCurrent = current %>
                             <option selected value="$Link">- $MenuTitle</option>
