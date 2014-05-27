@@ -3,16 +3,13 @@
 class SliderItem extends DataObject{
 
     static $db = array (
-        'CustomLink' => 'Varchar(255)',
-        'Heading' => 'Text',
-        'Caption' => 'Text',
+        'Caption' => 'HTMLText',
         'SortOrder' => 'Int'
     );
 
     static $has_one = array (
         'Page' => 'Page',
-        'Image' => 'Image',
-        'Link' => 'SiteTree'
+        'Image' => 'Image'
     );
 
     public static $summary_fields = array(
@@ -33,15 +30,9 @@ class SliderItem extends DataObject{
 
         $fields = FieldList::create(TabSet::create('Root'));
 
-        $fields->addFieldToTab('Root.Main', new TreeDropdownField('LinkID', _t('SliderItem.LinkIDLabel', 'Link to page'), 'SiteTree'));
-        $customLink = new TextField('CustomLink', _t('SliderItem.CustomLinkLabel', 'Custom link'));
-        $customLink->setRightTitle('Will override "Link to page"');
-        $customLink->setAttribute('placeholder', _t('SliderItem.CustomLinkPlaceholder', 'Http://'));
-        $fields->addFieldToTab('Root.Main', $customLink);
-
         $fields->addFieldToTab('Root.Main', new UploadField('Image'));
-        $fields->addFieldToTab('Root.Main', new TextField('Heading'));
-        $fields->addFieldToTab('Root.Main', new TextareaField('Caption'));
+        $fields->addFieldToTab('Root.Main', $caption = new HtmlEditorField('Caption'));
+        $caption->setRows(15);
 
         return $fields;
 

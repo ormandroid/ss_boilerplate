@@ -10,7 +10,6 @@
 
                     <% loop $SliderItems %>
                         <div class="item $FirstLast<%if $First %> active<% end_if %>"<% if $Top.FullWidth %> style="max-height: {$Top.Height}px"<% end_if %>>
-
                             <% if $Top.FullWidth %>
                                 $Image
                             <% else %>
@@ -21,22 +20,11 @@
                                 <% end_if %>
                             <% end_if %>
                             <% if $Caption %>
-                                <% if $Top.FullWidth %>
-                                    <div class="container">
-                                <% end_if %>
-                                <div class="carousel-caption hidden-xs">
-                                    <% if $CustomLink || $Link %>
-                                        <a href="<% if $CustomLink %>$CustomLink<% else %>$Link.Link<% end_if %>">
-                                    <% end_if %>
-                                        <h1>$Heading</h1>
-                                        <h5>$Caption</h5>
-                                    <% if $CustomLink || $Link %>
-                                        </a>
-                                    <% end_if %>
-                                </div><!-- /.carousel-caption hidden-xs -->
-                                <% if $Top.FullWidth %>
-                                    </div><!-- /.container -->
-                                <% end_if %>
+                                <div class="caption">
+                                    <div class="content typography">
+                                        $Caption
+                                    </div><!-- /.content typography -->
+                                </div><!-- /.caption -->
                             <% end_if %>
                         </div><!-- /.item -->
                     <% end_loop %>
