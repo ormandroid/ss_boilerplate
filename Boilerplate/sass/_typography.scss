@@ -58,35 +58,35 @@ h6,
 \*======================================================================*/
 
 h1 {
-    font-size: 28px;
+    font-size: $font-size-h1 * 0.8;
 }
 h2 {
-    font-size: 24px;
+    font-size: $font-size-h2 * 0.8;
 }
 h3 {
-    font-size: 20px;
+    font-size: $font-size-h3 * 0.8;
 }
 h4 {
-    font-size: 16px;
+    font-size: $font-size-h4 * 0.8;
 }
 h5 {
-    font-size: 14px;
+    font-size: $font-size-h5 * 0.8;
 }
 @media (min-width: $screen-sm) {
     h1 {
-        font-size: 34px;
+        font-size: $font-size-h1;
     }
     h2 {
-        font-size: 30px;
+        font-size: $font-size-h2;
     }
     h3 {
-        font-size: 24px;
+        font-size: $font-size-h3;
     }
     h4 {
-        font-size: 20px;
+        font-size: $font-size-h4;
     }
     h5 {
-        font-size: 16px;
+        font-size: $font-size-h5;
     }
 }
 .typography {
@@ -198,21 +198,6 @@ h5 {
 }
 @media (min-width: $screen-sm) {
     .typography {
-        h1 {
-            font-size: 34px;
-        }
-        h2 {
-            font-size: 30px;
-        }
-        h3 {
-            font-size: 24px;
-        }
-        h4 {
-            font-size: 20px;
-        }
-        h5 {
-            font-size: 16px;
-        }
         h1, h2 {
             margin-bottom: $gap-md;
             margin-top: $gap-lg;
@@ -225,6 +210,27 @@ h5 {
         }
         li {
             margin-bottom: $gap-sm;
+        }
+        h1.text-medium{
+            font-size: $font-size-h1 * 1.2;
+        }
+        h2.text-medium{
+            font-size: $font-size-h2 * 1.2;
+        }
+        h3.text-medium{
+            font-size: $font-size-h3 * 1.2;
+        }
+        h4.text-medium{
+            font-size: $font-size-h4 * 1.2;
+        }
+        h5.text-medium{
+            font-size: $font-size-h5 * 1.2;
+        }
+        p.text-medium{
+            font-size: $font-size-base * 1.2;
+        }
+        .text-large{
+            font-size: 2em;
         }
     }
 }

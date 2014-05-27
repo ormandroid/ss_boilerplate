@@ -60,7 +60,7 @@ a {
         #logoContainer,
         #navigationContainer{
             // Set font size after removing space between inline-block elements.
-            font-size: 14px;
+            font-size: $font-size-base;
             display: inline-block;
             vertical-align: middle;
             float: none;

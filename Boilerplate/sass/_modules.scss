@@ -239,7 +239,7 @@
 
 @media (min-width: $screen-sm) {
     #sliderContainer {
-        margin-bottom: $gap-lg;
+        margin-bottom: $gap-xl;
         .container{
             padding: 0 ($gutter / 2);
         }
@@ -273,7 +273,7 @@
     }
 }
 
-@media (max-width: $screen-lg) {
+@media (max-width: $screen-sm-max) {
     #sliderContainer {
         .item{
             max-height: none !important;
