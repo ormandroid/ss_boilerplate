@@ -56,6 +56,38 @@ class BlogPage extends Page {
 
     }
 
+    public function NavigationLink($direction){
+        switch($direction){
+            case 'next':
+                $sort = 'Sort:GreaterThan';
+                break;
+            case 'prev':
+                $sort = 'Sort:LessThan';
+                break;
+            default:
+                return false;
+        }
+        $page = BlogPage::get()->filter(array(
+            'ParentID' => $this->ParentID,
+            $sort => $this->Sort
+        ))->sort('Sort ASC')->first();
+
+        return $page;
+    }
+
+    public function BlogNavigation($class = 'blog-navigation'){
+        if($next = $this->NavigationLink('next')){
+            $out = '<a href="'.$next->Link().'"><h3 class="heading">'.$next->Title.'</h3><div class="image"><img src="'.$next->BlogImage()->CroppedImage(1140, 300)->URL.'"/></div></a>';
+        }else{
+            if($prev = $this->NavigationLink('prev')){
+                $out = '<a href="'.$prev->Link().'"><h3 class="heading">'.$prev->Title.'</h3><div class="image"><img src="'.$prev->BlogImage()->CroppedImage(1140, 300)->URL.'"/></div></a>';
+            }else{
+                return false;
+            }
+        }
+        return '<section class="'.$class.'"><div class="container">'.$out.'<i class="fa fa-chevron-down icon"></i></div></section>';
+    }
+
 }
 
 class BlogPage_Controller extends Page_Controller {}

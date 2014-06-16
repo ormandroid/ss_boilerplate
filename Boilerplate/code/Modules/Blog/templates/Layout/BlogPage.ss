@@ -1,5 +1,4 @@
 <% include PageHeader %>
-
 <div class="container">
     <div class="row">
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->
@@ -12,8 +11,10 @@
                     <p class="meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.meta -->
                 <% end_if %>
                 <% include Content %>
+                <% include Sharer %>
                 <% include Disqus %>
             </section><!-- /.blog page -->
         </div><!-- /.col-xs-12 col-sm-9 -->
     </div><!-- /.row -->
 </div><!-- /.container -->
+$BlogNavigation
