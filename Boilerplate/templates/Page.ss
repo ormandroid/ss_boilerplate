@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <% if $Siteconfig.Favicon %><link rel="shortcut icon" href="$SiteConfig.Favicon.Link" /><% else %><link rel="shortcut icon" href="{$ThemeDir}/favicon.ico" /><% end_if %>
     </head>
-    <body class="$ClassName $SliderClass $SliderLuminance" id="$URLSegment">
+    <body class="$ClassName $SliderClass" id="$URLSegment">
         <div id="wrapper">
             <div class="inner">
                 <!--[if lt IE 9]>
