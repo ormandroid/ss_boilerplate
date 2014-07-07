@@ -5,7 +5,7 @@ class PageControllerExtension extends Extension {
     /*
      * Combine and add JS files to the Page Class
      * */
-	public function onAfterInit() {
+	public function onBeforeInit() {
 
         /* =========================================
          * Combine JS
