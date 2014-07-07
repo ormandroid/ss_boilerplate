@@ -1,9 +1,6 @@
 <% include PageHeader %>
-
 <div class="container">
-
     <% include Content %>
-
     <% if $PortfolioImages %>
         <section class="portfolio page">
             <% loop $PortfolioImages %>
@@ -33,12 +30,9 @@
                     <% else %>
                         $Image.setWidth(1140)
                     <% end_if %>
-
                 </div><!-- /.item -->
             <% end_loop %>
         </section><!-- /.portfolio page -->
     <% end_if %>
-
 </div><!-- /.container -->
-
 <% include PageItems %>

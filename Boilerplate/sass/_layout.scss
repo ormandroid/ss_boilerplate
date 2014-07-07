@@ -84,14 +84,12 @@ a {
         > li {
             &:hover, &.section, &.current {
                 > a {
-                    background: $btn-primary-bg;
-                    color: $btn-primary-color
+                    // screen-lg open state
                 }
             }
             &.open {
                 > a, > a:hover, > a:focus {
-                    background: $btn-primary-bg;
-                    color: $btn-primary-color;
+                    // screen-sm - screen-md open state
                 }
                 > .dropdown-menu {
                     display: block;
@@ -100,19 +98,8 @@ a {
             > a {
                 margin-left: 2px;
                 padding: 8px $gap-sm;
-                font-weight: 600;
                 margin-bottom: $gap-xs;
                 @include border-radius();
-                @include transition(.1s linear background);
-                &.btn-primary {
-                    color: $btn-primary-color;
-                }
-                &.btn-secondary {
-                    color: $btn-secondary-color;
-                }
-                &.btn-inverse {
-                    color: $btn-inverse-color;
-                }
             }
             .dropdown-menu {
                 margin-top: 0;
@@ -125,37 +112,12 @@ a {
                 @include border-radius(0);
                 @include box-shadow(none);
                 > li {
-                    &.divider {
-                        margin: 0;
-                    }
-                    &.first{
-                        > a{
-                            border-top: 1px solid $brand-primary;
-                        }
-                    }
-                    &.last{
-                        > a{
-                            border-bottom: 1px solid $brand-primary;
-                        }
-                    }
                     > a {
                         padding: $gap-sm;
                         background: $btn-default-bg;
                         color: $btn-default-color;
-                        border-left: 1px solid $brand-primary;
-                        border-right: 1px solid $brand-primary;
                         &:hover {
                             background: darken($btn-default-bg, 3%)
-                        }
-                    }
-                    &:first-child {
-                        a {
-                            @include border-top-radius($border-radius-base);
-                        }
-                    }
-                    &:last-child {
-                        a {
-                            @include border-bottom-radius($border-radius-base);
                         }
                     }
                 }
@@ -284,11 +246,11 @@ a {
     Classes
 \*======================================================================*/
 
-.content{
+.content.typography{
     margin-bottom: $gap-md;
 }
 @media (min-width: $screen-sm) {
-    .content{
+    .content.typography{
         margin-bottom: $gap-lg;
     }
 }
@@ -393,7 +355,6 @@ a {
     bottom: -($gap-sm + (20px));
     margin-bottom: 0;
 }
-
 @media (min-width: $screen-sm) {
     .carousel-indicators{
         bottom: $gap-lg;
@@ -408,13 +369,11 @@ a {
     padding: $gap-xs $gap-sm;
     white-space: normal;
     border-width: 0;
-    font-weight: 600;
     @include border-radius();
     &:focus {
         outline: 0;
     }
 }
-
 .btn {
     @extend %btn-static;
 }
@@ -470,9 +429,7 @@ a {
 \*---------------------------------------------*/
 
 .alert {
-    border-width: 0;
-    border-left-width: $gap-xs;
-    @include border-radius(0);
+    @include border-radius();
     a {
         text-decoration: underline
     }

@@ -1,5 +1,4 @@
 <nav id="main-nav" class="navbar navbar-default" role="navigation">
-
     <ul class="nav navbar-nav pull-right hidden-xs">
         <% loop $Menu(1) %>
             <% if $Children %>
@@ -17,10 +16,9 @@
             <% end_if %>
         <% end_loop %>
         <% if $SearchForm %>
-            <li><a href="{$Link}SearchForm?Search" class="btn btn-secondary"><i class="fa fa-search"></i></a></li>
+            <li><a href="{$Link}SearchForm?Search" class="btn btn-link"><i class="fa fa-search"></i></a></li>
         <% end_if %>
     </ul><!-- /.nav navbar-nav pull-right hidden-xs -->
-
     <div id="select-navigation" class="visible-xs">
         <div class="menu-icon btn-primary"><i class="fa fa-align-justify"></i></div><!-- /.menu-icon -->
         <% if $SearchForm %>
@@ -48,5 +46,4 @@
         </select><!-- /.input-sm -->
         <div class="clearfix"></div><!-- /.clearfix -->
     </div><!-- /.select-navigation -->
-
 </nav><!-- /#main-nav .navbar navbar-default -->

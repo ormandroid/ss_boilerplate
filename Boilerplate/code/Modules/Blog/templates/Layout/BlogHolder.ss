@@ -14,12 +14,11 @@
                                     <% if $BlogImage %>
                                         <a href="$Link" class="image" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">
                                             $BlogImage.CroppedImage(848, 340)
-                                            <span class="hover-icon"><i class="fa fa-plus-square-o"></i></span><!-- /.hover-icon -->
                                         </a><!-- /.image -->
                                     <% end_if %>
-                                    <h3 class="title">
+                                    <h3 class="heading">
                                         <a href="$Link" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$Title</a>
-                                    </h3><!-- /.title -->
+                                    </h3><!-- /.heading -->
                                     <% if $Date && $Author %>
                                         <p class="meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.meta -->
                                     <% end_if %>

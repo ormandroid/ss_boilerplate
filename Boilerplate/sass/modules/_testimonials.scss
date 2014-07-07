@@ -11,7 +11,7 @@
         }
         .media-image{
             img{
-                @include border-radius(100%)
+                @include border-radius(50%)
             }
         }
         .fallback{
@@ -22,7 +22,7 @@
             text-align: center;
             color: $gray-light;
             display: block;
-            @include border-radius(100%)
+            @include border-radius(50%)
         }
     }
 }
