@@ -267,12 +267,13 @@ a {
     }
     &.no-margin{
         .row{
-            margin:0;
+            margin: 0;
         }
         .item{
-            padding:0;
+            padding: 0;
             margin: 0;
             &.last{
+                // overrides the media query
                 margin-bottom: 0;
             }
         }
