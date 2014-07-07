@@ -1,0 +1,20 @@
+/*---------------------------------------------*\
+    Contact Form
+\*---------------------------------------------*/
+
+#Form_ContactForm {
+    margin-bottom: $gap-md;
+}
+@media (min-width: $screen-sm) {
+    #Form_ContactForm {
+        margin-bottom: $gap-lg;
+    }
+}
+#map-canvas {
+    width: 100%;
+    display: block;
+    height: 300px;
+    img {
+        max-width: none;
+    }
+}

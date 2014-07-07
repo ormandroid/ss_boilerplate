@@ -1,0 +1,30 @@
+/*---------------------------------------------*\
+    Page Builder
+\*---------------------------------------------*/
+
+.page-item.loop {
+    margin-top: $gap-md;
+    .item {
+        margin: 0;
+        padding: $gap-md 0;
+        background: no-repeat center center;
+        background-size: cover;
+        &.fixed {
+            background-attachment: fixed;
+        }
+        &.no-padding {
+            padding: 0;
+        }
+    }
+    .content{
+        margin-bottom: 0;
+    }
+}
+@media (min-width: $screen-sm) {
+    .page-item.loop {
+        margin-top: $gap-lg;
+        .item {
+            padding: $gap-lg 0;
+        }
+    }
+}

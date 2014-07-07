@@ -1,0 +1,28 @@
+/*---------------------------------------------*\
+    Testimonials
+\*---------------------------------------------*/
+
+.testimonials.loop{
+    .item{
+        .media{
+            > .pull-left{
+                margin-right: $gutter;
+            }
+        }
+        .media-image{
+            img{
+                @include border-radius(100%)
+            }
+        }
+        .fallback{
+            background: $gray-lighter;
+            width: $gap-xl;
+            height: $gap-xl;
+            line-height: $gap-xl;
+            text-align: center;
+            color: $gray-light;
+            display: block;
+            @include border-radius(100%)
+        }
+    }
+}

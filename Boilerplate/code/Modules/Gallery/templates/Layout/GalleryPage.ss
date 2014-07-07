@@ -11,7 +11,6 @@
                     <figure class="item $Top.ColumnClass $FirstLast">
                         <a target="_blank" href="$Link">
                             <img src="$croppedImage($Top.ThumbnailWidth, $Top.ThumbnailHeight).Link" />
-                            <span class="hover-icon"><i class="fa fa-link"></i></span><!-- /.hover-icon -->
                         </a><!-- /.gallery-modal -->
                     </figure><!-- /.item col-xs-6 col-sm-3 -->
                     <% if $MultipleOf($Top.ColumnMultiple) %>

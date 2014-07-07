@@ -1,0 +1,71 @@
+/*---------------------------------------------*\
+    Portfolio
+\*---------------------------------------------*/
+
+.portfolio.loop{
+    .item {
+        a {
+            &:hover {
+                text-decoration: none;
+                img {
+                    opacity: 0.9
+                }
+                .hover-icon {
+                    @include opacity(1);
+                }
+            }
+        }
+        .image {
+            position: relative;
+            display: block;
+            background: $gray-darker;
+            @include absolute-arrow();
+            img {
+                -webkit-backface-visibility: hidden;
+                @include transition(.1s linear opacity);
+            }
+            .hover-icon {
+                color: $btn-primary-color;
+                @include icon-center();
+                @include opacity(0);
+                @include transition(.1s linear opacity);
+            }
+        }
+        .meta {
+            border: 1px solid $gray-lighter;
+            border-top-width: 0;
+            padding: $gap-md;
+            background: $btn-default-bg;
+            @include border-bottom-radius($border-radius-base);
+            h5 {
+                margin-top: 0;
+                font-weight: bold;
+                color: $gray;
+            }
+            .portfolio-subtitle {
+                color: $gray-light;
+            }
+        }
+    }
+}
+.portfolio.page {
+    .item {
+        margin-bottom: $gap-md
+    }
+    .caption-right{
+        margin-top: $gap-md;
+    }
+}
+@media (min-width: $screen-sm) {
+    .portfolio.page {
+        .item {
+            margin-bottom: add($gap-md, $gap-sm);
+            &.last {
+                margin-bottom: 0;
+            }
+        }
+        .caption-right{
+            margin-top: 0;
+        }
+    }
+}
