@@ -10,17 +10,17 @@
                     </a>
                 </li><!-- /.first -->
                 <li>
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink&amp;title=$Title" title="<%t Sharer.Facebook "Share to Facebook" %>">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=$AbsoluteLink&amp;title=$Title" onclick="window.open(this.href, 'facebook', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="<%t Sharer.Facebook "Share to Facebook" %>">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" href="http://twitter.com/home?status=$Title - +$AbsoluteLink" title="<%t Sharer.Twitter "Share to Twitter" %>">
+                    <a target="_blank" href="http://twitter.com/home?status=$Title - +$AbsoluteLink" onclick="window.open(this.href, 'facebook', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="<%t Sharer.Twitter "Share to Twitter" %>">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
                 <li class="last">
-                    <a target="_blank" href="https://plus.google.com/share?url=$AbsoluteLink" title="<%t Sharer.Google "Share to Google Plus" %>">
+                    <a target="_blank" href="https://plus.google.com/share?url=$AbsoluteLink" onclick="window.open(this.href, 'facebook', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="<%t Sharer.Google "Share to Google Plus" %>">
                         <i class="fa fa-google-plus"></i>
                     </a>
                 </li><!-- /.last -->
