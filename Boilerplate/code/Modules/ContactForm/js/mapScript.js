@@ -4,7 +4,7 @@ var map,
 
 var MY_MAPTYPE_ID = 'custom_style';
 
-function getMap(lat, long, mapColor, waterColor, marker, InfoWindows) {
+function getMap(lat, long, mapColor, waterColor, marker, InfoWindows, zoom) {
 
     center = new google.maps.LatLng(lat, long);
 
@@ -26,7 +26,7 @@ function getMap(lat, long, mapColor, waterColor, marker, InfoWindows) {
     ];
 
     var mapOptions = {
-        zoom: 12,
+        zoom: zoom,
         center: center,
         scrollwheel: false,
         mapTypeControlOptions: {

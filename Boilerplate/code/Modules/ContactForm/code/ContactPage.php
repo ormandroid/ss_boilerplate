@@ -12,6 +12,7 @@ class ContactPage extends Page {
         'Longitude' => 'Varchar(255)',
         'MapColor' => 'Varchar(255)',
         'WaterColor' => 'Varchar(255)',
+        'MapZoom' => 'Int(14)',
         'MapMarker' => 'Boolean(1)'
     );
 
@@ -54,6 +55,8 @@ class ContactPage extends Page {
         $fields->addFieldToTab('Root.Map', new Textfield('GoogleAPI', _t('ContactPage.GoogleAPILabel', 'Maps API (Optional)')));
         $fields->addFieldToTab('Root.Map', new Textfield('Latitude', _t('ContactPage.LatitudeLabel', 'Latitude')));
         $fields->addFieldToTab('Root.Map', new Textfield('Longitude', _t('ContactPage.LongitudeLabel', 'Longitude')));
+        $fields->addFieldToTab('Root.Map', $mapZoom = new Textfield('MapZoom', _t('ContactPage.MapZoomLabel', 'Zoom')));
+        $mapZoom->setRightTitle(_t('ContactPage.MapZoomTitle', 'Zoom level: 0-22 - The higher the number the more zoomed in the map will be.'));
         $fields->addFieldToTab('Root.Map', new ColorField('MapColor', _t('ContactPage.MapColorLabel', 'Map Colour (Optional)')));
         $fields->addFieldToTab('Root.Map', new ColorField('WaterColor', _t('ContactPage.WaterColorLabel', 'Water Colour (Optional)')));
         $fields->addFieldToTab('Root.Map', new CheckboxField('MapMarker', _t('ContactPage.MapMarkerLabel', 'Show map marker')));
@@ -122,7 +125,7 @@ class ContactPage_Controller extends Page_Controller {
             Requirements::customScript(<<<JS
 (function($) {
     $(document).ready(function(){
-        getMap($this->Latitude, $this->Longitude, $mapColor, $waterColor, $this->MapMarker, infoWindowObject)
+        getMap($this->Latitude, $this->Longitude, $mapColor, $waterColor, $this->MapMarker, infoWindowObject, $this->MapZoom)
     })
 })(jQuery);
 JS
