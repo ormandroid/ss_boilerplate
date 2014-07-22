@@ -13,10 +13,9 @@
 	],
 	"require":
 	{
-        	"silverstripe/framework": ">=3.0.1,<3.2",
-		"silverstripe/framework": ">=3.0.1,<3.2",
-        	"undefinedoffset/sortablegridfield": "dev-master",
-		"composer/installers": "*"
+        "silverstripe/framework": ">=3.0.1,<3.2",
+        "undefinedoffset/sortablegridfield": "dev-master",
+        "composer/installers": "*"
 	},
 	"support": {
 		"issues": "https://github.com/Rhym/ss_boilerplate/issues"
