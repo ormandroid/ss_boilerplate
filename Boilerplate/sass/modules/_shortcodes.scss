@@ -8,6 +8,9 @@
         padding: $gap-md;
         color: $btn-secondary-color;
         text-align: center;
+        @media(min-width: $screen-sm-min) {
+            padding: $gap-lg;
+        }
         .heading{
             font-weight: 300;
             margin: 0;
@@ -21,6 +24,9 @@
     .list{
         background: $gray-lighter;
         padding: $gap-md;
+        @media(min-width: $screen-sm-min) {
+            padding: $gap-lg;
+        }
         ul{
             margin: 0;
             padding: 0;
@@ -36,16 +42,6 @@
         }
         p{
             margin: 0;
-        }
-    }
-}
-@media(min-width: $screen-sm){
-    .pricing-table{
-        .price{
-            padding: $gap-lg;
-        }
-        .list{
-            padding: $gap-lg;
         }
     }
 }

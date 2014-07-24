@@ -4,9 +4,7 @@
 
 #Form_ContactForm {
     margin-bottom: $gap-md;
-}
-@media (min-width: $screen-sm) {
-    #Form_ContactForm {
+    @media (min-width: $screen-sm-min) {
         margin-bottom: $gap-lg;
     }
 }

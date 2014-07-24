@@ -4,11 +4,17 @@
 
 .page-item.loop {
     margin-top: $gap-md;
+    @media (min-width: $screen-sm-min) {
+        margin-top: $gap-lg;
+    }
     .item {
         margin: 0;
         padding: $gap-md 0;
         background: no-repeat center center;
         background-size: cover;
+        @media (min-width: $screen-sm-min) {
+            padding: $gap-lg 0;
+        }
         &.fixed {
             background-attachment: fixed;
         }
@@ -20,14 +26,6 @@
         margin-bottom: 0;
         p:last-child{
             margin-bottom: 0;
-        }
-    }
-}
-@media (min-width: $screen-sm) {
-    .page-item.loop {
-        margin-top: $gap-lg;
-        .item {
-            padding: $gap-lg 0;
         }
     }
 }

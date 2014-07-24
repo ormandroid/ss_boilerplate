@@ -10,7 +10,7 @@
 #editProfile {
     margin-top :$gap-md;
 }
-@media (min-width: $screen-sm) {
+@media (min-width: $screen-sm-min) {
     #MemberLoginForm_LoginForm,
     #Form_RegistrationForm,
     #MemberLoginForm_LostPasswordForm {

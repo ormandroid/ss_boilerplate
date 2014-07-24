@@ -25,9 +25,8 @@ class PageControllerExtension extends Extension {
          * CSS
          =========================================*/
 
-        Requirements::css('http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700');
         Requirements::css('Boilerplate/css/main.min.css');
-        Requirements::css('themes/boilerplate/css/main.min.css');
+        //Requirements::css('themes/boilerplate/css/main.min.css');
 
         /* =========================================
          * IE Shivs

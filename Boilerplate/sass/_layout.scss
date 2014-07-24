@@ -42,6 +42,12 @@ a {
     margin-bottom: $gap-md;
     position: relative;
     z-index: 2;
+    @media (min-width: $screen-sm-min) {
+            margin-bottom: $gap-lg;
+            padding: $gap-lg 0;
+            // Remove space between elements.
+            font-size: 0;
+    }
     #logoContainer {
         h1, h2, h3, h4, h5, h6 {
             margin: 0;
@@ -50,13 +56,7 @@ a {
             display: block;
         }
     }
-}
-@media (min-width: $screen-sm) {
-    #header {
-        margin-bottom: $gap-lg;
-        padding: $gap-lg 0;
-        // Remove space between elements.
-        font-size: 0;
+    @media (min-width: $screen-sm-min) {
         #logoContainer,
         #navigationContainer{
             // Set font size after removing space between inline-block elements.
@@ -85,6 +85,13 @@ a {
             &:hover, &.section, &.current {
                 > a {
                     // screen-lg open state
+                }
+            }
+            &:hover{
+                > .dropdown-menu{
+                    @media (min-width: $screen-lg-min) {
+                        display: block;
+                    }
                 }
             }
             &.open {
@@ -171,24 +178,7 @@ a {
         }
     }
 }
-@media (min-width: $screen-sm) {
-    #main-nav {
-        padding: 0;
-    }
-}
-@media (min-width: $screen-lg) {
-    #main-nav{
-        > .nav {
-            > li{
-                &:hover {
-                    > .dropdown-menu{
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-}
+
 
 /*---------------------------------------------*\
     Sidebar
@@ -231,9 +221,7 @@ a {
 
 #footer {
     padding: $gap-md 0;
-}
-@media (min-width: $screen-sm) {
-    #footer {
+    @media (min-width: $screen-sm-min) {
         padding: $gap-lg 0;
     }
 }
@@ -248,9 +236,7 @@ a {
 
 .content.typography{
     margin-bottom: $gap-md;
-}
-@media (min-width: $screen-sm) {
-    .content.typography{
+    @media (min-width: $screen-sm-min) {
         margin-bottom: $gap-lg;
     }
 }
@@ -263,6 +249,12 @@ a {
         }
         a{
             cursor: pointer;
+        }
+        @media (min-width: $screen-sm-min) {
+            margin-bottom: $gap-lg;
+            &.last{
+                margin-bottom: $gap-lg;
+            }
         }
     }
     &.no-margin{
@@ -278,16 +270,6 @@ a {
             }
         }
         margin-bottom: $gap-lg;
-    }
-}
-@media (min-width: $screen-sm) {
-    .loop{
-        .item {
-            margin-bottom: $gap-lg;
-            &.last{
-                margin-bottom: $gap-lg;
-            }
-        }
     }
 }
 
@@ -355,9 +337,7 @@ a {
 .carousel-indicators{
     bottom: -($gap-sm + (20px));
     margin-bottom: 0;
-}
-@media (min-width: $screen-sm) {
-    .carousel-indicators{
+    @media (min-width: $screen-sm-min) {
         bottom: $gap-lg;
     }
 }

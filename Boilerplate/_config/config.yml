@@ -17,10 +17,6 @@ ContentController:
   extensions:
     - PageControllerExtension
 
-PaginatedList:
-  extensions:
-    - PaginatedListExtension
-
 #LeftAndMain:
 #  extra_requirements_css:
 #    - Boilerplate/css/cms/css/cms.min.css

@@ -4,8 +4,14 @@
 
 #sliderContainer {
     margin-bottom: $gap-md;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: $gap-xl;
+    }
     .container{
         padding: 0;
+        @media (min-width: $screen-sm-min) {
+            padding: 0 ($gutter / 2);
+        }
     }
     #pageSlider {
         &.full-width {
@@ -18,23 +24,17 @@
             }
         }
     }
+    .item{
+        @media (max-width: $screen-sm-max) {
+            max-height: none !important;
+        }
+    }
     .caption{
         position: static;
         background: $brand-secondary;
         text-align: left;
         padding: $gap-md ($gutter / 2);
-        .content{
-            margin: 0;
-        }
-    }
-}
-@media (min-width: $screen-sm) {
-    #sliderContainer {
-        margin-bottom: $gap-xl;
-        .container{
-            padding: 0 ($gutter / 2);
-        }
-        .caption{
+        @media (min-width: $screen-sm-min) {
             background: transparent none;
             position: absolute;
             top: 20%;
@@ -44,27 +44,15 @@
             right: 0;
             margin: 0 auto;
         }
-    }
-}
-@media (min-width: $screen-md) {
-    #sliderContainer {
-        .caption{
+        @media (min-width: $screen-md-min) {
             top: 30%;
-            width: $container-md
+            width: $container-md;
         }
-    }
-}
-@media (min-width: $screen-lg) {
-    #sliderContainer {
-        .caption{
+        @media (min-width: $screen-lg-min) {
             width: $container-lg;
         }
-    }
-}
-@media (max-width: $screen-sm-max) {
-    #sliderContainer {
-        .item{
-            max-height: none !important;
+        .content{
+            margin: 0;
         }
     }
 }

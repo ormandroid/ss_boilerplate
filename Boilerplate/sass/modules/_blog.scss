@@ -23,15 +23,16 @@
     .meta {
         margin-bottom: $gap-md;
     }
-}
-@media (min-width: $screen-sm) {
-    .blog.page {
+    @media (min-width: $screen-sm-min) {
         margin-bottom: $gap-xl;
     }
 }
 .sharer{
     .inner{
         padding: $gap-md 0;
+        @media (min-width: $screen-sm-min) {
+            padding: $gap-lg 0;
+        }
     }
     input{
         background: transparent none;
@@ -61,17 +62,13 @@
         }
     }
 }
-@media (min-width: $screen-sm) {
-    .sharer{
-        .inner{
-            padding: $gap-lg 0;
-        }
-    }
-}
 .blog-navigation{
     .container{
         position: relative;
         padding: 0;
+        @media (min-width: $screen-sm-min) {
+            padding: 0 ($gutter / 2);
+        }
     }
     a{
         display: block;
@@ -100,11 +97,4 @@
         left: 50%;
     }
 
-}
-@media (min-width: $screen-sm) {
-    .blog-navigation{
-        .container{
-            padding: 0 ($gutter/2);
-        }
-    }
 }
