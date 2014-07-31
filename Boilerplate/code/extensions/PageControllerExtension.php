@@ -14,9 +14,9 @@ class PageControllerExtension extends Extension {
         Requirements::combine_files(
             'combined.js',
             array(
-                'Boilerplate/javascript/jquery.1.10.2.min.js',
-                'Boilerplate/javascript/modernizr.2.6.2.js',
-                'Boilerplate/javascript/bootstrap-3.1.0.min.js',
+                'Boilerplate/javascript/jquery.1.11.1.min.js',
+                'Boilerplate/javascript/modernizr.2.8.3.js',
+                'Boilerplate/javascript/bootstrap-3.2.0.min.js',
                 'Boilerplate/javascript/script.js'
             )
         );
