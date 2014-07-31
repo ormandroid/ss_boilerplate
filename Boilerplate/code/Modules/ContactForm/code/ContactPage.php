@@ -6,6 +6,7 @@ class ContactPage extends Page {
 
     private static $db = array(
         'MailTo' => 'Varchar(100)',
+        'MailCC' => 'Text',
         'SubmitText' => 'Text',
         'GoogleAPI' => 'Varchar(255)',
         'Latitude' => 'Varchar(255)',
@@ -45,6 +46,8 @@ class ContactPage extends Page {
         $fields->addFieldToTab('Root.Main', new HeaderField('Settings'), 'Content');
         $fields->addFieldToTab('Root.Main', $mailTo = new TextField('MailTo', _t('ContactPage.MailToLabel', 'Email')), 'Content');
         $mailTo->setRightTitle('Choose an email address for the contact page to send to');
+        $fields->addFieldToTab('Root.Main', $mailCC = new TextField('MailCC', _t('ContactPage.MailCCLabel', 'CC')), 'Content');
+        $mailCC->setRightTitle('Choose an email, or emails to CC (separate emails with a comma and no space e.g: email1@website.com,email2@website.com)');
         $fields->addFieldToTab('Root.Main', $submissionText = new TextareaField('SubmitText', _t('ContactPage.SubmitTextLabel', 'Submission Text')), 'Content');
         $submissionText->setRightTitle('Text for contact form submission once the email has been sent i.e "Thank you for your enquiry"');
 
@@ -206,6 +209,9 @@ JS
         $To = $this->MailTo;
         $Subject = _t('ContactPage.EmailSubject', SiteConfig::current_site_config()->Title.' - Website Contact message');
         $email = new Email($From, $To, $Subject);
+        if($cc = $this->MailCC){
+            $email->setCc($cc);
+        }
         $email->setTemplate('ContactEmail')
             ->populateTemplate($data)
             ->send();
