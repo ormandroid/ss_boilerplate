@@ -35,6 +35,12 @@ SSViewer:
 
 Run `dev/build` and `?flush=all` in your url i.e http://mydomain.com/dev/build and http://mydomain.com?flush=all
 
+#### Composer ####
+
+```
+composer require ryanpotter/ss_boilerplate
+```
+
 ### CMS theme ###
 
 If you would like to activate the CMS theme, go to Boilerplate/_config/config.yml and uncomment the extension then run a `?flush=all`
