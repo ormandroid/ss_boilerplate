@@ -205,9 +205,10 @@ JS
             return $this->redirectBack();
         }
 
+        $data['Logo'] = SiteConfig::current_site_config()->LogoImage();
         $From = $data['Email'];
         $To = $this->MailTo;
-        $Subject = _t('ContactPage.EmailSubject', SiteConfig::current_site_config()->Title.' - Website Contact message');
+        $Subject = _t('ContactPage.EmailSubject', SiteConfig::current_site_config()->Title.' - Contact message');
         $email = new Email($From, $To, $Subject);
         if($cc = $this->MailCC){
             $email->setCc($cc);
