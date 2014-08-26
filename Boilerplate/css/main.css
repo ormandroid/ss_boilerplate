@@ -6967,7 +6967,7 @@ a:active {
 }
 
 #select-navigation .menu-icon.search {
-	right: add(40px, 10px);
+	right: 50px;
 }
 
 /*---------------------------------------------*\

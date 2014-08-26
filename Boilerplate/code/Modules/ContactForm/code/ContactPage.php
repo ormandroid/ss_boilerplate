@@ -145,7 +145,7 @@ JS
         $name = new TextField('Name');
         $name->setAttribute('placeholder', _t('ContactPage.NamePlaceholder', 'Enter your name'))
             ->setAttribute('required', 'required')
-            ->addExtraClass('form-control');
+            ->addExtraClass('form-control icon envelope');
 
         $email = new EmailField('Email');
         $email->setAttribute('placeholder', _t('ContactPage.EmailPlaceholder', 'Enter your email address'))
