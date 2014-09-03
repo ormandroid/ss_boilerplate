@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 		sass: {
             dist: {
                 files: {
-                    'Boilerplate/css/main.css': 'Boilerplate/sass/main.scss'
+                    'boilerplate/css/main.css': 'boilerplate/sass/main.scss'
                 }
             }
         },
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'Boilerplate/css/main.css': 'Boilerplate/css/main.css'
+                    'boilerplate/css/main.css': 'boilerplate/css/main.css'
                 }
             }
         },
@@ -24,22 +24,22 @@ module.exports = function(grunt) {
             },
             your_target: {
                 files: {
-                    'Boilerplate/css/': ['Boilerplate/css/main.css']
+                    'boilerplate/css/': ['boilerplate/css/main.css']
                 }
             }
         },
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'Boilerplate/css/',
+                cwd: 'boilerplate/css/',
                 src: ['main.css'],
-                dest: 'Boilerplate/css/',
+                dest: 'boilerplate/css/',
                 ext: '.min.css'
             }
         },
 		watch: {
             dist: {
-                files: ['Boilerplate/sass/*.scss'],
+                files: ['boilerplate/sass/*.scss'],
                 tasks: ['sass:dist', 'autoprefixer', 'cmq', 'cssmin'],
                 options: {
                     spawn: false

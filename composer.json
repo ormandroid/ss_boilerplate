@@ -21,6 +21,6 @@
 		"issues": "https://github.com/Rhym/ss_boilerplate/issues"
 	},
     	"extra": {
-		"installer-name": "Boilerplate"
+		"installer-name": "boilerplate"
 	}
 }
