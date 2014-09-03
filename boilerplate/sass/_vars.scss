@@ -1,0 +1,71 @@
+/*======================================================================*\
+    Colors
+\*======================================================================*/
+
+$gray-darker: lighten(#000, 13.5%);
+$gray-dark: lighten(#000, 20%);
+$gray: lighten(#000, 33.5%);
+$gray-light: lighten(#000, 60%);
+$gray-lighter: lighten(#000, 93.5%);
+$gray-lightest: #f7f7f7;
+
+$brand-default: #fff;
+$brand-primary: #3bc492;
+$brand-secondary: #2f4154;
+$brand-inverse: #444;
+$brand-success: #5cb85c;
+$brand-info: #5bc0de;
+$brand-warning: #f0ad4e;
+$brand-danger: #d9534f;
+
+/*======================================================================*\
+    Colors - Buttons
+\*======================================================================*/
+
+$btn-default-color: $gray;
+$btn-default-bg: $brand-default;
+$btn-default-border: darken($btn-default-bg, 5%);
+
+$btn-primary-color: #fff;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: darken($btn-primary-bg, 5%);
+
+$btn-secondary-color: #fff;
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-border: darken($btn-secondary-bg, 5%);
+
+$btn-inverse-color: #fff;
+$btn-inverse-bg: $brand-inverse;
+$btn-inverse-border: darken($btn-inverse-bg, 5%);
+
+/*======================================================================*\
+    Colors - Panels
+\*======================================================================*/
+
+$panel-secondary-text: #fff;
+$panel-secondary-border: $brand-secondary;
+$panel-secondary-heading-bg: $brand-secondary;
+
+/*======================================================================*\
+    Gaps
+\*======================================================================*/
+
+$gutter: 30px;
+
+$gap-xl: 60px;
+$gap-lg: 30px;
+$gap-md: 15px;
+$gap-sm: 10px;
+$gap-xs: 5px;
+
+/*======================================================================*\
+    Border Radii
+\*======================================================================*/
+
+$border-radius-base: 0px;
+
+/*======================================================================*\
+    Text
+\*======================================================================*/
+
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;

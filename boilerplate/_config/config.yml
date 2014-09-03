@@ -1,0 +1,22 @@
+GDBackend:
+  default_quality: 100
+
+Security:
+  extensions:
+    - SecurityExtension
+
+SiteConfig:
+  extensions:
+    - BoilerplateConfig
+
+Page:
+  extensions:
+    - PageExtension
+
+ContentController:
+  extensions:
+    - PageControllerExtension
+
+#LeftAndMain:
+#  extra_requirements_css:
+#    - boilerplate/css/cms/css/cms.min.css

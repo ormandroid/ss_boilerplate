@@ -1,0 +1,58 @@
+/*---------------------------------------------*\
+    Slider
+\*---------------------------------------------*/
+
+#sliderContainer {
+    margin-bottom: $gap-md;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: $gap-xl;
+    }
+    .container{
+        padding: 0;
+        @media (min-width: $screen-sm-min) {
+            padding: 0 ($gutter / 2);
+        }
+    }
+    #pageSlider {
+        &.full-width {
+            > .carousel-inner {
+                > .item {
+                    a img, img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .item{
+        @media (max-width: $screen-sm-max) {
+            max-height: none !important;
+        }
+    }
+    .caption{
+        position: static;
+        background: $brand-secondary;
+        text-align: left;
+        padding: $gap-md ($gutter / 2);
+        @media (min-width: $screen-sm-min) {
+            background: transparent none;
+            position: absolute;
+            top: 20%;
+            width: $container-sm;
+            z-index: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        @media (min-width: $screen-md-min) {
+            top: 30%;
+            width: $container-md;
+        }
+        @media (min-width: $screen-lg-min) {
+            width: $container-lg;
+        }
+        .content{
+            margin: 0;
+        }
+    }
+}

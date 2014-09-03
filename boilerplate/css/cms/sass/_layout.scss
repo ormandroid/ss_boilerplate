@@ -1,0 +1,376 @@
+/*======================================================================*\
+    Global
+\*======================================================================*/
+
+/*---------------------------------------------*\
+    Left Menu
+\*---------------------------------------------*/
+
+.cms-menu{
+    background: $brand-primary;
+    @include box-shadow(none);
+    .icon{
+        // NOTE: Use white icons for darker themes.
+        &.icon-16 {
+            background-image: url(../img/menu-icons-white.png);
+        }
+    }
+    .cms-logo-header {
+        background: transparent none;
+        .cms-logo {
+            border-width: 0;
+        }
+        .cms-login-status {
+            border-width: 0;
+        }
+        span{
+            a{
+                color: $brand-primary-color
+            }
+        }
+    }
+    .cms-menu-list{
+        li{
+            a{
+                background: transparent none;
+                border-width: 0;
+                text-shadow: none;
+                color: $brand-primary-color;
+                @include box-shadow(none);
+                &:hover{
+                    background: $brand-secondary;
+                }
+                .icon{
+                    opacity: 1;
+                }
+            }
+            &.current{
+                > a{
+                    background: $brand-secondary;
+                }
+            }
+        }
+    }
+    &.cms-panel{
+        .cms-panel-toggle{
+            &.south {
+                border-top-color: darken($brand-primary, 10%);
+                @include box-shadow(inset 0 1px 0px rgba(255, 255, 255, 0.1));
+            }
+        }
+    }
+}
+
+.cms-content-tools{
+    background: #fff;
+    @include box-shadow(none);
+}
+
+/*---------------------------------------------*\
+    Content
+\*---------------------------------------------*/
+
+.cms{
+    .cms-content-header{
+        background: $brand-primary;
+        color: $brand-primary-color;
+        a{
+            color: $brand-primary-color;
+        }
+    }
+    .cms-content-fields {
+        background: $gray-lighter;
+    }
+}
+
+#MemberImportFormIframe{
+    border: 1px solid $brand-default-border;
+    @include border-radius(2px);
+}
+
+.cms-content-actions,
+.cms-preview-controls {
+    background: $brand-default;
+    border-color: $brand-default-border;
+    @include box-shadow(none);
+}
+
+/*---------------------------------------------*\
+    Buttons
+\*---------------------------------------------*/
+
+%btn-primary{
+    background: $brand-secondary;
+    border-color: $brand-secondary-border;
+    text-shadow: none;
+    &.ui-state-hover,
+    &.ui-state-active,
+    &.ui-state-focus,
+    &:active,
+    &:focus{
+        color: $brand-secondary-color;
+        background: $brand-secondary;
+        border-color: darken($brand-secondary-border, 20%);
+    }
+    &.ui-state-active,
+    &.ui-state-focus,
+    &:active,
+    &:focus{
+        @include box-shadow(inset 0 1px 3px #17181a, 0 1px 0 rgba(255, 255, 255, 0.6));
+    }
+}
+
+.cms{
+    .ss-ui-button,
+    %btn-default{
+        color: $gray;
+        border-color: lighten($gray, 40%);
+        background: $gray-lighter;
+        @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 1px 0 rgba(0,0,0,.08));
+        &.ss-ui-action-constructive,
+        &.backlink{
+            @extend %btn-primary;
+        }
+        &:focus{
+            outline: 0;
+        }
+    }
+    .ss-ui-button.ui-state-hover{
+        @extend %btn-default;
+        border-color: lighten($gray, 20%);
+    }
+}
+
+.view-mode-batchactions-wrapper,
+.cms-content-batchactions .chzn-container-single .chzn-single{
+    @extend %btn-default;
+}
+
+/*---------------------------------------------*\
+    Accordions
+\*---------------------------------------------*/
+
+.ss-toggle{
+    .ui-accordion-header{
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+        @include border-radius(2px);
+        &.ui-state-default {
+            background: $accordion-bg;
+        }
+    }
+}
+
+/*---------------------------------------------*\
+    Tabs
+\*---------------------------------------------*/
+
+.cms{
+    .ui-tabs{
+        .ui-tabs-nav{
+            .ui-state-default {
+                background: $gray-light
+            }
+            .ui-state-active {
+                background: $gray-lighter
+            }
+            li{
+                a{
+                    &:focus{
+                        outline: 0
+                    }
+                }
+            }
+        }
+    }
+    .cms-content-header-tabs{
+        .ui-tabs-nav{
+            border-left-width: 0;
+            > .ui-state-default{
+                border-width: 0;
+                background: transparent none;
+                @include box-shadow(none);
+                > a{
+                    color: $brand-secondary-color;
+                    text-shadow: none;
+                    &:focus{
+                        outline: 0;
+                    }
+                }
+                &.ui-state-active{
+                    border-width: 0;
+                    background: $brand-secondary;
+                }
+                &:focus{
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------------*\
+    Messages
+\*---------------------------------------------*/
+
+.message{
+    border-width: 0;
+    border-left-width: 4px;
+    @include border-radius(0);
+}
+
+/*---------------------------------------------*\
+    Forms
+\*---------------------------------------------*/
+
+.field{border-width: 0;
+    @include box-shadow(none);
+    input.text,
+    textarea,
+    .TreeDropdownField {
+        @include border-radius(2px);
+    }
+    label{
+        text-shadow: none;
+        &.left{
+            text-shadow: none;
+        }
+    }
+}
+
+.chzn-container-single{
+    .chzn-single{
+        @include border-radius(2px);
+    }
+    .chzn-drop{
+        @include border-bottom-radius(2px);
+    }
+}
+
+/*---------------------------------------------*\
+    Tables
+\*---------------------------------------------*/
+
+.cms{
+    .ss-gridfield{
+        table.ss-gridfield-table{
+            tr{
+                &.title,
+                &.sortable-header{
+                    th{
+                        background: $brand-default;
+                        border-color: $brand-default;
+                        border-left-width: 0;
+                        border-top-width: 0;
+                        h1,
+                        h2,
+                        h3,
+                        h4,
+                        h5,
+                        h6,
+                        span{
+                            color: $brand-default-color;
+                            text-shadow: none;
+                        }
+                    }
+                }
+                &.title{
+                    th{
+                        border: 1px solid $brand-default-border;
+                        border-width-bottom: 0;
+                    }
+                }
+                &.sortable-header{
+                    th{
+                        color: $brand-default-color;
+                        background: $brand-default;
+                        border-color: $brand-default;
+                        border-right: 1px solid $brand-default-border;
+                        &:first-child{
+                            border-left: 1px solid $brand-default-border;
+                        }
+                        span{
+                            color: $brand-default-color;
+                        }
+                    }
+                }
+                th.extra{
+                    background: $gray-darker;
+                    label{
+                        color: #fff;
+                    }
+                }
+                th.main{
+                    border-bottom: 1px solid $brand-default-border
+                }
+                td{
+                    border-color: $brand-default-border;
+                    &.bottom-all{
+                        background: $brand-default;
+                        border-color: $brand-default-border;
+                        border-top: 1px solid $brand-default-border;
+                        .pagination-records-number{
+                            color: $brand-default-color;
+                            text-shadow: none;
+                        }
+                    }
+                    &.col-buttons{
+                        button,
+                        a{
+                            @include box-shadow(none);
+                        }
+                    }
+                    &:first-child{
+                        border-color: $brand-default-border
+                    }
+                }
+                &.even{
+                    background: lighten($gray-lighter, 5%)
+                }
+            }
+            .ss-ui-button{
+                @include box-shadow(none);
+            }
+        }
+        .pagination-records-number{
+            color: $brand-default-color;
+            text-shadow: none;
+        }
+    }
+}
+
+.cms{
+    table{
+        &.ss-gridfield-table{
+            tr{
+                th{
+                    button{
+                        &.ss-ui-button{
+                            &.ss-gridfield-button-filter{
+                                &.trigger{
+                                    //NOTE: Use for lighter backgrounds
+                                    background-position: -17px -38px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------------*\
+    TinyMCE
+\*---------------------------------------------*/
+
+#Form_EditForm_Content_tbl{
+    border-color: $brand-default-border
+}
+#Form_EditForm_Content_toolbargroup{
+    padding: 10px;
+    background: $brand-default;
+}
+.cms .defaultSkin td.mceToolbar {
+    padding-top: 0;
+}
