@@ -22,6 +22,10 @@ class BlogPage extends Page {
 
     private static $description = 'Blog content page';
 
+    private static $allowed_children = 'none';
+
+    private static $can_be_root = false;
+
     public function getCMSFields() {
 
         $fields = parent::getCMSFields();

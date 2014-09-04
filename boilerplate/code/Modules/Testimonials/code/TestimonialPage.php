@@ -9,9 +9,11 @@ class TestimonialPage extends Page {
         'Image' => 'Image'
     );
 
-    private static $allowed_children = array('TestimonialPage');
-
     private static $description = 'Testimonial content page';
+
+    private static $allowed_children = 'none';
+
+    private static $can_be_root = false;
 
     private static $defaults = array(
         'ShowInMenus' => 0

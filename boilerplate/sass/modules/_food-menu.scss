@@ -1,0 +1,33 @@
+/*---------------------------------------------*\
+    Portfolio
+\*---------------------------------------------*/
+
+.food-menu.loop{
+    .category{
+        > .heading{
+            margin-bottom: $gap-md;
+            @media(min-width: $screen-sm-min){
+                margin-bottom: $gap-lg;
+            }
+        }
+    }
+    .item{
+        .price{
+            .variations{
+                list-style: none;
+                padding: 0;
+            }
+        }
+        .ingredients{
+            color: $gray-light;
+        }
+    }
+}
+.food-item.page{
+    .price{
+        .variations{
+            list-style: none;
+            padding: 0;
+        }
+    }
+}

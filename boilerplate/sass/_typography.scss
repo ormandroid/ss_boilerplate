@@ -17,12 +17,7 @@ body {
     Semi-Bold
 \*---------------------------------------------*/
 
-strong,
-#main-nav .nav li a,
-.btn,
-input,
-select,
-textarea{
+strong{
     font-family: $font-family-base;
     font-weight: 600;
 }
@@ -43,8 +38,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: $font-family-base;
-    font-weight: 700;
+    font-family: $headings-font-family;
+    font-weight: 900;
     a {
         text-decoration: none;
         &:hover, &:active {
@@ -97,6 +92,9 @@ h5 {
         &:first-child{
             margin-top: 0;
         }
+    }
+    p{
+        line-height: 1.7em;
     }
     em{
         font-style: italic;

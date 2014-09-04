@@ -1,4 +1,8 @@
 /*======================================================================*\
+    Fonts
+\*======================================================================*/
+
+/*======================================================================*\
     Colors
 \*======================================================================*/
 
@@ -16,10 +20,6 @@
 
 /*======================================================================*\
     Border Radii
-\*======================================================================*/
-
-/*======================================================================*\
-    Text
 \*======================================================================*/
 
 /*!
@@ -261,7 +261,7 @@ html {
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
 	font-size: 14px;
 	line-height: 1.42857;
 	color: #333333;
@@ -371,7 +371,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: inherit;
+	font-family: sans-serif;
 	font-weight: 500;
 	line-height: 1.1;
 	color: inherit;
@@ -6358,7 +6358,7 @@ button.close {
 \*---------------------------------------------*/
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: sans-serif;
 	font-weight: 400;
 }
 
@@ -6366,15 +6366,8 @@ body {
     Semi-Bold
 \*---------------------------------------------*/
 
-strong,
-#main-nav .nav li a,
-.btn,
-#MemberLoginForm_LoginForm .action,
-#MemberLoginForm_LostPasswordForm .action,
-input,
-select,
-textarea {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+strong {
+	font-family: sans-serif;
 	font-weight: 600;
 }
 
@@ -6394,8 +6387,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	font-family: sans-serif;
+	font-weight: 900;
 }
 
 h1 a,
@@ -6471,6 +6464,10 @@ h5 {
 .typography h5:first-child,
 .typography h6:first-child {
 	margin-top: 0;
+}
+
+.typography p {
+	line-height: 1.7em;
 }
 
 .typography em {
@@ -7055,6 +7052,10 @@ a:active {
 
 .loop.no-margin .item.last {
 	margin-bottom: 0;
+}
+
+.page .image {
+	margin-bottom: 15px;
 }
 
 /*---------------------------------------------*\
@@ -7882,6 +7883,28 @@ fieldset[disabled] .btn-inverse.active {
 }
 
 /*---------------------------------------------*\
+    Portfolio
+\*---------------------------------------------*/
+
+.food-menu.loop .category > .heading {
+	margin-bottom: 15px;
+}
+
+.food-menu.loop .item .price .variations {
+	list-style: none;
+	padding: 0;
+}
+
+.food-menu.loop .item .ingredients {
+	color: #999999;
+}
+
+.food-item.page .price .variations {
+	list-style: none;
+	padding: 0;
+}
+
+/*---------------------------------------------*\
     Gallery
 \*---------------------------------------------*/
 
@@ -8644,6 +8667,10 @@ h5 {
 	margin-bottom: 30px;
 }
 
+.page .image {
+	margin-bottom: 0;
+}
+
 .carousel-indicators {
 	bottom: 30px;
 }
@@ -8661,6 +8688,10 @@ h5 {
 }
 
 #Form_ContactForm {
+	margin-bottom: 30px;
+}
+
+.food-menu.loop .category > .heading {
 	margin-bottom: 30px;
 }
 

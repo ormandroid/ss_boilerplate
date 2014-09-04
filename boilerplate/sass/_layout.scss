@@ -272,6 +272,14 @@ a {
         margin-bottom: $gap-lg;
     }
 }
+.page{
+    .image{
+        margin-bottom: $gap-md;
+        @media(min-width: $screen-sm-min){
+            margin-bottom: 0;
+        }
+    }
+}
 
 /*---------------------------------------------*\
     Carousel
