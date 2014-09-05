@@ -3,7 +3,7 @@
     <div class="row">
         <section class="sidebar col-xs-12 col-sm-3">
             <aside class="sidebar-nav widget">
-                <h4>$Title</h4>
+                <h4 class="heading">$MenuTitle.XML</h4><!-- /.heading -->
                 <ul class="contact-info">
                     <% if $SiteConfig.Phone %><li>$SiteConfig.Phone</li><% end_if %>
                     <% if $SiteConfig.Email %><li><a href="mailto:$SiteConfig.Email">$SiteConfig.Email</a></li><% end_if %>

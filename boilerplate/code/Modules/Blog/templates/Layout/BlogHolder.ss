@@ -17,7 +17,7 @@
                                         </a><!-- /.image -->
                                     <% end_if %>
                                     <h3 class="heading">
-                                        <a href="$Link" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$Title</a>
+                                        <a href="$Link" title="<%t BlogHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$MenuTitle.XML</a>
                                     </h3><!-- /.heading -->
                                     <% if $Date && $Author %>
                                         <p class="meta"><%t BlogHolder.PostedOn "Posted on {Date} by {Author}" Date=$Date.Nice Author=$Author %></p><!-- /.meta -->

@@ -26,7 +26,7 @@
                                 <% end_if %>
                             </a><!-- /.pull-left media-image -->
                             <div class="media-body typography">
-                                <h4>$Title</h4>
+                                <h4 class="heading">$MenuTitle.XML</h4><!-- /.heading -->
                                 <p>$Content.LimitWordCountXML()</p>
                                 <a href="$Link" class="btn btn-primary"><%t TestimonialPage.ReadMore 'Read More' %></a>
                             </div><!-- /.media-body typography -->

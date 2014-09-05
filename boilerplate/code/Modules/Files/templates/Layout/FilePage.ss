@@ -17,7 +17,7 @@
                                 <ul class="list-unstyled">
                                     <% loop $File %>
                                         $test
-                                        <li><a href="$Link" target="_blank" title="Download {$Title}">$ExtensionIcon $Title </a></li>
+                                        <li><a href="$Link" target="_blank" title="Download {$Title}">$ExtensionIcon $Title</a></li>
                                     <% end_loop %>
                                 </ul><!-- /.list-unstyled -->
                             </div><!-- /.panel-body -->

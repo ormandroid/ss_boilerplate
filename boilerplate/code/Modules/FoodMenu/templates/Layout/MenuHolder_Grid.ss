@@ -17,7 +17,7 @@
                                     </a><!-- /.image -->
                                 <% end_if %>
                                 <h3 class="heading">
-                                    <a href="$Link" title="<%t MenuHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$Title</a>
+                                    <a href="$Link" title="<%t MenuHolder.ReadMore "Read more on &quot;{Title}&quot;" Title=$Title %>">$MenuTitle.XML</a>
                                 </h3><!-- /.heading -->
                                 <div class="summary">
                                     <p>$Content.LimitWordCountXML(40)</p>

@@ -3,7 +3,7 @@
     <form $FormAttributes role="form">
         <fieldset>
             <div class="well">
-                <h4><% sprintf(_t('SearchForm.SearchHeading',"Search %s"), $SiteConfig.Title) %></h4>
+                <h4 class="heading"><% sprintf(_t('SearchForm.SearchHeading',"Search %s"), $SiteConfig.Title) %></h4><!-- /.heading -->
                 <div class="form-group">
                     <input type="text" name="Search" placeholder="<% _t('SearchForm.SearchPlaceholder', 'Enter your search keywords...') %>" class="form-control" id="SearchForm_SearchForm_Search">
                 </div><!-- /.form-group -->
@@ -17,7 +17,7 @@
     <section class="search-results">
         <% if $Query %>
             <article class="content typography">
-                <h1><i class="fa fa-search"></i> "{$Title}"</h1>
+                <h1><i class="fa fa-search"></i> "{$MenuTitle.XML}"</h1>
             </article><!-- /.content typography -->
         <% end_if %>
         <% if $Results %>
@@ -27,7 +27,7 @@
                     <h4>
                         <a href="$Link">
                             <% if $MenuTitle %>
-                                $MenuTitle
+                                $MenuTitle.XML
                             <% else %>
                                 $Title
                             <% end_if %>

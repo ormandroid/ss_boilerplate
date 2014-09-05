@@ -5,7 +5,7 @@
                 <% if $SiteConfig.LogoImage %>
                     <a href="$BaseHref" rel="home">$SiteConfig.LogoImage</a>
                 <% else %>
-                    <% if $SiteConfig.Title %><h3><a href="$BaseHref" rel="home">$SiteConfig.Title</a></h3><% end_if %>
+                    <% if $SiteConfig.Title %><h3 class="heading"><a href="$BaseHref" rel="home">$SiteConfig.Title</a></h3><!-- /.heading --><% end_if %>
                     <% if $SiteConfig.Tagline %><h5 class="tagline">$SiteConfig.Tagline</h5><!-- /.tagline --><% end_if %>
                 <% end_if %>
             </div><!-- /#logoContainer .col-xs-6 col-sm-3 -->

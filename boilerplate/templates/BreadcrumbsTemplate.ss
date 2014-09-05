@@ -2,7 +2,7 @@
     <% loop $Pages %>
         <li<% if $Last %> class="active"<% end_if %>>
             <% if $Last %>
-                $Title.XML
+                $MenuTitle.XML
             <% else %>
                 <a href="$Link">$MenuTitle.XML</a>
             <% end_if %>

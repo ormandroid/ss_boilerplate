@@ -12,7 +12,7 @@
                                     $Image.CroppedImage($Top.PortfolioThumbnailWidth, $Top.PortfolioThumbnailHeight)
                                 <% end_loop %>
                                 <figcaption class="meta">
-                                    <h5 class="heading">$Title</h5><!-- /.heading -->
+                                    <h3 class="heading">$MenuTitle.XML</h3><!-- /.heading -->
                                     <span class="subtitle">
                                         $SubTitle
                                     </span><!-- /.subtitle -->

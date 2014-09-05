@@ -7,7 +7,7 @@
             <div class="row">
                 <% loop $AllChildren %>
                     <section class="category col-xs-12">
-                        <h2 class="heading">$MenuTitle</h2>
+                        <h2 class="heading">$MenuTitle.XML</h2><!-- /.heading -->
                         <% loop $AllChildren %>
                             <article class="item">
                                 <div class="row">
@@ -15,7 +15,7 @@
                                         <% if $Image %><a href="{$Link}" class="image" alt="{$Title}" title="{$Title}">$Image.croppedImage(200, 200)</a><% end_if %>
                                     </div><!-- /.col-xs-3 col-sm-2 -->
                                     <div class="col-xs-9 col-sm-8">
-                                        <a href="{$Link}" title="{$Title}" class="heading">{$MenuTitle}</a><!-- /.heading -->
+                                        <a href="{$Link}" title="{$Title}" class="heading">{$MenuTitle.XML}</a><!-- /.heading -->
                                         <div class="summary">
                                             <p>$Content.LimitWordCountXML(40)</p>
                                         </div><!-- /.summary -->

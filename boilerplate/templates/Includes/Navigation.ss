@@ -3,16 +3,16 @@
         <% loop $Menu(1) %>
             <% if $Children %>
                 <li class="$LinkingMode dropdown $EvenOdd $FirstLast">
-                    <a href="$Link" title="$Title" class="visible-lg">$MenuTitle <i class="fa fa-caret-down"></i></a>
-                    <a href="#" class="dropdown-toggle hidden-lg" data-toggle="dropdown">$MenuTitle <i class="fa fa-caret-down"></i></a>
+                    <a href="$Link" title="$Title" class="visible-lg">$MenuTitle.XML <i class="fa fa-caret-down"></i></a>
+                    <a href="#" class="dropdown-toggle hidden-lg" data-toggle="dropdown">$MenuTitle.XML <i class="fa fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
                         <% loop $Children %>
-                            <li class="$LinkingMode $EvenOdd $FirstLast"><a href="$Link" title="$Title">$MenuTitle</a></li>
+                            <li class="$LinkingMode $EvenOdd $FirstLast"><a href="$Link" title="$Title">$MenuTitle.XML</a></li>
                         <% end_loop %>
                     </ul><!-- /.dropdown-menu -->
                 </li><!-- /.dropdown -->
             <% else %>
-                <li class="$LinkingMode $EvenOdd $FirstLast"><a href="$Link" title="$MenuTitle">$MenuTitle</a></li>
+                <li class="$LinkingMode $EvenOdd $FirstLast"><a href="$Link" title="$Title">$MenuTitle.XML</a></li>
             <% end_if %>
         <% end_loop %>
         <% if $SearchForm %>
@@ -27,19 +27,19 @@
         <select class="input-sm" onchange="document.location.href=this.options[this.selectedIndex].value;">
             <% loop $Menu(1) %>
                 <% if $Children %>
-                    <option value="$Link">$MenuTitle</option>
+                    <option value="$Link">$MenuTitle.XML</option>
                     <% loop $Children %>
                         <% if $LinkOrCurrent = current %>
-                            <option selected value="$Link">- $MenuTitle</option>
+                            <option selected value="$Link">- $MenuTitle.XML</option>
                         <% else %>
-                            <option value="$Link">- $MenuTitle</option>
+                            <option value="$Link">- $MenuTitle.XML</option>
                         <% end_if %>
                     <% end_loop %>
                 <% else %>
                     <% if $LinkOrCurrent = current %>
-                        <option selected value="$Link">$MenuTitle</option>
+                        <option selected value="$Link">$MenuTitle.XML</option>
                     <% else %>
-                        <option value="$Link">$MenuTitle</option>
+                        <option value="$Link">$MenuTitle.XML</option>
                     <% end_if %>
                 <% end_if %>
             <% end_loop %>
