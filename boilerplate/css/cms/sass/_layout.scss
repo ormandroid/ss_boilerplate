@@ -10,9 +10,10 @@
     background: $brand-primary;
     @include box-shadow(none);
     .icon{
-        // NOTE: Use white icons for darker themes.
-        &.icon-16 {
-            background-image: url(../img/menu-icons-white.png);
+        @if $dark{
+            &.icon-16 {
+                background-image: url(../img/menu-icons-white.png);
+            }
         }
     }
     .cms-logo-header {
@@ -60,7 +61,6 @@
         }
     }
 }
-
 .cms-content-tools{
     background: #fff;
     @include box-shadow(none);
@@ -72,22 +72,17 @@
 
 .cms{
     .cms-content-header{
-        background: $brand-primary;
-        color: $brand-primary-color;
-        a{
-            color: $brand-primary-color;
-        }
+        background: #fff;
+        border-bottom: 1px solid #c0c0c2;
     }
     .cms-content-fields {
         background: $gray-lighter;
     }
 }
-
 #MemberImportFormIframe{
     border: 1px solid $brand-default-border;
-    @include border-radius(2px);
+    border-radius: 2px;
 }
-
 .cms-content-actions,
 .cms-preview-controls {
     background: $brand-default;
@@ -119,7 +114,6 @@
         @include box-shadow(inset 0 1px 3px #17181a, 0 1px 0 rgba(255, 255, 255, 0.6));
     }
 }
-
 .cms{
     .ss-ui-button,
     %btn-default{
@@ -140,7 +134,6 @@
         border-color: lighten($gray, 20%);
     }
 }
-
 .view-mode-batchactions-wrapper,
 .cms-content-batchactions .chzn-container-single .chzn-single{
     @extend %btn-default;
@@ -154,7 +147,7 @@
     .ui-accordion-header{
         padding-top: 0.8em;
         padding-bottom: 0.8em;
-        @include border-radius(2px);
+        border-radius: 2px;
         &.ui-state-default {
             background: $accordion-bg;
         }
@@ -191,7 +184,6 @@
                 background: transparent none;
                 @include box-shadow(none);
                 > a{
-                    color: $brand-secondary-color;
                     text-shadow: none;
                     &:focus{
                         outline: 0;
@@ -205,6 +197,11 @@
                     outline: 0;
                 }
             }
+            > .ui-state-active{
+                > a{
+                    color: $brand-secondary-color;
+                }
+            }
         }
     }
 }
@@ -216,7 +213,7 @@
 .message{
     border-width: 0;
     border-left-width: 4px;
-    @include border-radius(0);
+    border-radius: 0;
 }
 
 /*---------------------------------------------*\
@@ -228,7 +225,7 @@
     input.text,
     textarea,
     .TreeDropdownField {
-        @include border-radius(2px);
+        border-radius: 0;
     }
     label{
         text-shadow: none;
@@ -237,13 +234,18 @@
         }
     }
 }
-
 .chzn-container-single{
     .chzn-single{
-        @include border-radius(2px);
+        border-radius: 2px;
     }
     .chzn-drop{
-        @include border-bottom-radius(2px);
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+}
+.cms{
+    .ss-uploadfield .middleColumn{
+        border-radius: 0;
     }
 }
 
@@ -337,9 +339,6 @@
             text-shadow: none;
         }
     }
-}
-
-.cms{
     table{
         &.ss-gridfield-table{
             tr{
@@ -373,4 +372,21 @@
 }
 .cms .defaultSkin td.mceToolbar {
     padding-top: 0;
+}
+
+/*======================================================================*\
+    Modules
+\*======================================================================*/
+
+.cms-menu{
+    .icon{
+        @if $dark{
+            &.icon-16.icon-newsletteradmin {
+                background-image: url(../../../code/Modules/Newsletter/images/envelope_menu_alt.png);
+            }
+            &.icon-16.icon-contactmessageadmin {
+                background-image: url(../../../code/Modules/ContactForm/images/message_menu_alt.png);
+            }
+        }
+    }
 }

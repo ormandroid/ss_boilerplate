@@ -1,13 +1,8 @@
 <% if $SliderItems %>
-
     <section id="sliderContainer">
-
         <% if $FullWidth %><% else %><div class="container"><% end_if %>
-
             <div id="pageSlider" class="carousel slide<% if $FullWidth %> full-width<% end_if %> " data-ride="carousel">
-
                 <div class="carousel-inner">
-
                     <% loop $SliderItems %>
                         <div class="item $FirstLast<%if $First %> active<% end_if %>"<% if $Top.FullWidth %> style="max-height: {$Top.Height}px"<% end_if %>>
                             <% if $Top.FullWidth %>
@@ -29,7 +24,6 @@
                         </div><!-- /.item -->
                     <% end_loop %>
                 </div><!-- /.carousel-inner -->
-
                 <% if $SliderItems.Count > 1 %>
                     <ol class="carousel-indicators">
                         <% loop $SliderItems %>
@@ -45,11 +39,8 @@
                         </a><!-- /.right carousel-control icon-prev -->
                     </div><!-- /.hidden-xs -->
                 <% end_if %>
-
             </div><!-- /#pageSlider .carousel slide -->
-
         <% if $FullWidth %><% else %></div><!-- /.container --><% end_if %>
-
         <% if $SliderItems.Count > 1 %>
             <section class="mobile-slider-controls visible-xs">
                 <div class="container">
@@ -62,7 +53,5 @@
                 </div><!-- /.container -->
             </section><!-- /.mobile-slider-controls visible-xs -->
         <% end_if %>
-
     </section><!-- /#sliderContainer -->
-
 <% end_if %>
