@@ -17,7 +17,7 @@ ContentController:
   extensions:
     - PageControllerExtension
 
-LeftAndMain:
-  extra_requirements_css:
-    - http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300
-    - boilerplate/css/cms/css/cms.min.css
+#LeftAndMain:
+#  extra_requirements_css:
+#    - http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300
+#    - boilerplate/css/cms/css/cms.min.css
