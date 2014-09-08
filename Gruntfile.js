@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         },
 		watch: {
             dist: {
-                files: ['boilerplate/sass/*.scss'],
+                files: ['boilerplate/sass/**/*.scss'],
                 tasks: ['sass:dist', 'autoprefixer', 'cmq', 'cssmin'],
                 options: {
                     spawn: false
