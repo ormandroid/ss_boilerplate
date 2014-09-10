@@ -1,9 +1,7 @@
 <% include PageHeader %>
 
 <div class="container">
-
     <% include Content %>
-
     <div class="member-links">
         <% if $CurrentMember %>
             <% with $CurrentMember %>
@@ -13,7 +11,6 @@
             <a href="$Page(register).Link"><%t SecurityLogin.RegisterLink 'Register' %></a>
         <% end_if %>
     </div><!-- /.member-links -->
-
 </div><!-- /.container -->
 
 <% include PageItems %>

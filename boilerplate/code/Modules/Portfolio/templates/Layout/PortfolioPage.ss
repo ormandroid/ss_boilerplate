@@ -1,4 +1,5 @@
 <% include PageHeader %>
+
 <div class="container">
     <% include Content %>
     <% if $PortfolioImages %>
@@ -35,4 +36,5 @@
         </section><!-- /.portfolio page -->
     <% end_if %>
 </div><!-- /.container -->
+
 <% include PageItems %>

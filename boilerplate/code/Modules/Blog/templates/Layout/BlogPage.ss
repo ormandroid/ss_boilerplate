@@ -1,4 +1,5 @@
 <% include PageHeader %>
+
 <div class="container">
     <div class="row">
         <div class="hidden-xs"><% include BlogSideBar %></div><!-- /.hidden-xs -->

@@ -6771,9 +6771,13 @@ form .holder-required textarea:focus {
 \*---------------------------------------------*/
 
 .message {
+	border-radius: 2px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
 	margin: 5px 0;
 	display: block;
 	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
 }
 
 .message > p {
@@ -7144,13 +7148,10 @@ a:active {
 .btn,
 #MemberLoginForm_LoginForm .action,
 #MemberLoginForm_LostPasswordForm .action {
+	border-radius: 2px;
 	padding: 5px 10px;
 	white-space: normal;
 	border-width: 0;
-	border-top-right-radius: 0px;
-	border-top-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius: 0px;
 }
 
 .btn:focus,
@@ -7280,7 +7281,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #f2f2f2;
 }
 
-.well.well-default a {
+.well.well-default a,
+.well.well-default label {
 	color: #555555;
 }
 
@@ -7326,7 +7328,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #35b083;
 }
 
-.well.well-primary a {
+.well.well-primary a,
+.well.well-primary label {
 	color: white;
 }
 
@@ -7372,7 +7375,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #263444;
 }
 
-.well.well-secondary a {
+.well.well-secondary a,
+.well.well-secondary label {
 	color: white;
 }
 
@@ -7418,7 +7422,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #373737;
 }
 
-.well.well-inverse a {
+.well.well-inverse a,
+.well.well-inverse label {
 	color: white;
 }
 
@@ -7464,7 +7469,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #46b8da;
 }
 
-.well.well-info a {
+.well.well-info a,
+.well.well-info label {
 	color: white;
 }
 
@@ -7510,7 +7516,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #eea236;
 }
 
-.well.well-warning a {
+.well.well-warning a,
+.well.well-warning label {
 	color: white;
 }
 
@@ -7556,7 +7563,8 @@ fieldset[disabled] .btn-inverse.active {
 	border-color: #d43f3a;
 }
 
-.well.well-danger a {
+.well.well-danger a,
+.well.well-danger label {
 	color: white;
 }
 
@@ -7605,10 +7613,8 @@ fieldset[disabled] .btn-inverse.active {
 \*---------------------------------------------*/
 
 .alert {
-	border-top-right-radius: 0px;
-	border-top-left-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius: 0px;
+	border-radius: 2px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 .alert a {

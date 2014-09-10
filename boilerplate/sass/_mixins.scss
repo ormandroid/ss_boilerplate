@@ -76,7 +76,8 @@
     color: $color;
     background-color: $brand;
     border-color: darken($brand, 5%);
-    a {
+    a,
+    label {
         color: $color;
     }
     .btn-default{

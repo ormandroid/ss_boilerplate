@@ -142,29 +142,59 @@ JS
      */
     public function ContactForm() {
 
-        $name = new TextField('Name');
-        $name->setAttribute('placeholder', _t('ContactPage.NamePlaceholder', 'Enter your name'))
-            ->setAttribute('required', 'required')
+        /* -----------------------------------------
+         * Scaffolding
+        ------------------------------------------*/
+
+        $row = new LiteralField('', '<div class="row">');
+        $column = new LiteralField('', '<div class="col-xs-12 col-sm-6">');
+        $close = new LiteralField('', '</div>');
+
+        /* -----------------------------------------
+         * Fields
+        ------------------------------------------*/
+
+        $firstName = new TextField('FirstName', 'First Name');
+        $firstName->setAttribute('required', 'required')
             ->addExtraClass('form-control');
 
-        $email = new EmailField('Email');
-        $email->setAttribute('placeholder', _t('ContactPage.EmailPlaceholder', 'Enter your email address'))
-            ->setAttribute('required', 'required')
+        $lastName = new TextField('LastName', 'Last Name');
+        $lastName->setAttribute('required', 'required')
             ->addExtraClass('form-control');
 
-        $message = new TextareaField('Message');
+        $email = new EmailField('Email', 'Email Address');
+        $email->setAttribute('required', 'required')
+            ->addExtraClass('form-control');
+
+        $phone = new TextField('Phone', 'Phone Number (optional)');
+        $phone->addExtraClass('form-control');
+
+        $message = new TextareaField('Message', 'Message');
         $message->setAttribute('placeholder', _t('ContactPage.MessagePlaceholder', 'Enter your message'))
             ->setAttribute('required', 'required')
             ->addExtraClass('form-control');
 
-        $question = new TextField('Question');
-        $question->setTitle(_t('ContactPage.QuestionLabel', '3 &plus; 7 &equals; ?'))
-            ->setAttribute('required', 'required')
+        $question = new TextField('Question', '3 &plus; 7 &equals; ?');
+        $question->setAttribute('required', 'required')
             ->addExtraClass('form-control');
 
         $fields = new FieldList(
-            $name,
-            $email,
+            $row,
+                $column,
+                    $firstName,
+                $close,
+                $column,
+                    $lastName,
+                $close,
+            $close,
+            $row,
+                $column,
+                    $email,
+                $close,
+                $column,
+                    $phone,
+                $close,
+            $close,
             $message,
             $question
         );
@@ -177,7 +207,8 @@ JS
         );
 
         $validator = new RequiredFields(
-            'Name',
+            'FirstName',
+            'LastName',
             'Email',
             'Message'
         );

@@ -1,4 +1,5 @@
 <% include PageHeader %>
+
 <div class="container">
     <div class="row">
         <section class="sidebar col-xs-12 col-sm-3">
@@ -26,4 +27,5 @@
         </div><!-- /.col-xs-12 col-sm-6 -->
     </div><!-- /.row -->
 </div><!-- /.container -->
+
 <% include PageItems %>

@@ -1,4 +1,5 @@
 <% include PageHeader %>
+
 <div class="container">
     <% include Content %>
     <% if $PaginatedPages %>
@@ -29,4 +30,5 @@
     <% end_if %>
     <% include Pagination %>
 </div><!-- /.container -->
+
 <% include PageItems %>

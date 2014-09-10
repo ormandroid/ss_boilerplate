@@ -1,9 +1,7 @@
 <% include PageHeader %>
 
 <div class="container">
-
     <% include Content %>
-
     <% if $FileGroups %>
         <section class="file-group loop">
             <div class="row">
@@ -30,7 +28,6 @@
             </div><!-- /.row -->
         </section><!-- /.file-group loop -->
     <% end_if %>
-
 </div><!-- /.container -->
 
 <% include PageItems %>

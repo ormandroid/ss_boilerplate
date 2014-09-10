@@ -1,9 +1,7 @@
 <% include PageHeader %>
 
 <div class="container">
-
     <% include Content %>
-
     <% if $PaginatedPages %>
         <section class="gallery loop<% if $NoMargin %> no-margin<% end_if %>">
             <div class="row">
@@ -20,9 +18,7 @@
             </div><!-- /.row -->
         </section><!-- /.gallery loop -->
     <% end_if %>
-
     <% include Pagination %>
-
 </div><!-- /.container -->
 
 <% include PageItems %>
